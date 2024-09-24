@@ -86,7 +86,6 @@
 
 <!-- Contingut principal -->
 <div class="content-container">
-    <h1>Benvinguts</h1>
            <h3>Càlcul  de la posició d'un robot amb dos braços</h3>
         <!-- h1 vol dir títol gran de l'anglés heading one i es fa més petit amb h2, fins a h6 que és el més petit possible-->
         <!-- div és un divisor i conte en aquet cas unes quantes instrucions html que severixen per introduir totes les dades que vulgui l'usari-->
@@ -99,17 +98,13 @@
         <!-- value significa valor per defecte que sortirà directament -->
         <!-- step es la variabilitat que jo puc escriure, no puc escriure 4,32, si vulgues escriure 4,32 amb dos decimals hauria d'escriure step="0.01" -->
         <!-- br significa "break"  que deixa una linia en blanc darrera, si hi han 2 bs hi hauran dos linies en blanc -->
-    
-    
-    <p>Em dic Carla M i sóc alumne de robótica de 1r de batxillerat de <a href="https://agora.xtec.cat/ies-pompeu-fabra-martorell/">l'institut Pompeu Fabra</a></p>
-    <p>A continuació veuràs un llistat amb diferents projectes que farem durant el curs:</p>
-    <ul>
-      <!-- <ul> -> unorder list "punts" <ol> -> order list "numeros" / <li> -> elements de la llista -->
-        <li> Codis amb JavaScript, CSS i HTML que construiran una pàgina web, on l'usuari introduirà diferents dades d'un braç robótic i el sistema ens calcularà altres dades i les representarà visualment. </li>
-        <li> Projecte 2</li>
-        <li> Projecte 3</li> 
-    </ul>
-</div>
+     <label>for="a2"> Longitud del segon braç (a2):</label>
+    <input type="number" id="a2" value="1.5" step="0.1"> <br><br>
+    <label>for="q1"> Longitud del primer braç (q1, en graus):</label>
+    <input type="number" id="q1" value="45" step="0.1"> <br><br>
+    <label>for="q2"> Longitud del segon braç (q2, en graus):</label>
+    <input type="number" id="q2" value="30" step="0.1"> <br><br>
+       <!-- finns aqui els camps d'entrada de dades de l'usuari per fer el problema-->
 
 <!-- Scripts necessaris -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
