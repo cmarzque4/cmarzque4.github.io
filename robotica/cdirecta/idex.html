@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html lang="ca">
+<link rel="icon" type="image/png" href="roboticlogo.png">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <title>Web de C. Marzque </title>
+    <style>body {
+    padding: 0; /* Elimina l'espai extra al voltant del cos */
+}
 
+.container-fluid {
+    max-width: 100%; /* Assegura que la navbar ocupa tota l'amplada */
+}
+
+    
+    .navbar {
+    padding-left: 0; /* Elimina el padding esquerra de la navbar */
+}
+
+.logo {
+    margin-right: 20px; /* Ajustar el marge si vols separar el logo del text */
+    margin-left: 0; /* Assegurar que no hi hagi marge a l'esquerra */
+}
+
+    
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+
+}
+
+.brand-text {
+    white-space: nowrap; /* Això assegura que el text no es trenqui en múltiples línies */
+    font-size: 1.25rem; /* Ajusta la mida de la font si és necessari */
+}  
+.content-container {
+            margin-left: 10px;
+            margin-right: 10px; /* Marges laterals ajustats */
+            margin-top: 20px; /* Afegeix espai superior entre el contingut i la barra de menú */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+       <a class="navbar-brand d-flex align-items-center" href="#">
+    <img src="logo.png" alt="Logo" width="60" class="logo">
+    <span class="brand-text">Web d'alumne</span>
+</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Inici</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tema 1</a>
+                       </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">Braç robótic</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://cmarzque4.github.io/robotica/cdirecta">Cinemàtica directa</a>
+                        <a class="dropdown-item" href="#">Cinemàtica inversa</a>
+                        <a class="dropdown-item" href="#">Projecte 3</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tema 2</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Contingut principal -->
+<div class="content-container">
+    <h1>Benvinguts</h1>
+           <h3>Càlcul  de la posició d'un robot amb dos braços</h3>
+        <!-- h1 vol dir títol gran de l'anglés heading one i es fa més petit amb h2, fins a h6 que és el més petit possible-->
+        <!-- div és un divisor i conte en aquet cas unes quantes instrucions html que severixen per introduir totes les dades que vulgui l'usari-->
+        <!-- etiquetes per a les dades del robot--> 
+        <label for="a1">longitud del primer braç (a1):</label>
+        <!-- label és una etiqueta que ens ajuda a identficar un text-->
+        <input type="number" id="a1" value="2" steps="0.1"><br><br>
+        <!-- input vol dir entrada d'informació per part de l'usuari que pot ser de molts típus, en aquest cas és un numero,però podria ser un input type text, date o buttonque serien respectivament que només accepta text, dates o botons respectivament, més exemples aquí: https://www.w3schools.com/ -->
+        <!-- id significa identificador i és com un DNI, no es pot repetir en la mateixa pàgina i ens ajuda a manipular Javasript getElementById -->
+        <!-- value significa valor per defecte que sortirà directament -->
+        <!-- step es la variabilitat que jo puc escriure, no puc escriure 4,32, si vulgues escriure 4,32 amb dos decimals hauria d'escriure step="0.01" -->
+        <!-- br significa "break"  que deixa una linia en blanc darrera, si hi han 2 bs hi hauran dos linies en blanc -->
+    <p>Em dic Carla M i sóc alumne de robótica de 1r de batxillerat de <a href="https://agora.xtec.cat/ies-pompeu-fabra-martorell/">l'institut Pompeu Fabra</a></p>
+    <p>A continuació veuràs un llistat amb diferents projectes que farem durant el curs:</p>
+    <ul>
+      <!-- <ul> -> unorder list "punts" <ol> -> order list "numeros" / <li> -> elements de la llista -->
+        <li> Codis amb JavaScript, CSS i HTML que construiran una pàgina web, on l'usuari introduirà diferents dades d'un braç robótic i el sistema ens calcularà altres dades i les representarà visualment. </li>
+        <li> Projecte 2</li>
+        <li> Projecte 3</li> 
+    </ul>
+</div>
+
+<!-- Scripts necessaris -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
