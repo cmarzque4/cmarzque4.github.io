@@ -86,11 +86,19 @@
 
 <!-- Contingut principal -->
 <div class="content-container">
-    <!-- h1 vol dir títol gran del anglés heading one i es a més pertit amb h2 i fins h6 que es el més petit possible-->
-    <div> 
-        <!-- div es un divisor i conte en aquet cas unes quantes instrucions html que severixen per introduir totes les dades que vulgui l'usari-->
     <h1>Benvinguts</h1>
            <h3>Càlcul  de la posició d'un robot amb dos braços</h3>
+        <!-- h1 vol dir títol gran de l'anglés heading one i es fa més petit amb h2, fins a h6 que és el més petit possible-->
+        <!-- div és un divisor i conte en aquet cas unes quantes instrucions html que severixen per introduir totes les dades que vulgui l'usari-->
+        <!-- etiquetes per a les dades del robot--> 
+        <label for="a1">longitud del primer braç (a1):</label>
+        <!-- label és una etiqueta que ens ajuda a identficar un text-->
+        <input type="number" id="a1" value="2" steps="0.1"><br><br>
+        <!-- input vol dir entrada d'informació per part de l'usuari que pot ser de molts típus, en aquest cas és un numero,però podria ser un input type text, date o buttonque serien respectivament que només accepta text, dates o botons respectivament, més exemples aquí: https://www.w3schools.com/ -->
+        <!-- id significa identificador i és com un DNI, no es pot repetir en la mateixa pàgina i ens ajuda a manipular Javasript getElementById -->
+        <!-- value significa valor per defecte que sortirà directament -->
+        <!-- step es la variabilitat que jo puc escriure, no puc escriure 4,32, si vulgues escriure 4,32 amb dos decimals hauria d'escriure step="0.01" -->
+        <!-- br significa "break"  que deixa una linia en blanc darrera, si hi han 2 bs hi hauran dos linies en blanc -->
     <p>Em dic Carla M i sóc alumne de robótica de 1r de batxillerat de <a href="https://agora.xtec.cat/ies-pompeu-fabra-martorell/">l'institut Pompeu Fabra</a></p>
     <p>A continuació veuràs un llistat amb diferents projectes que farem durant el curs:</p>
     <ul>
