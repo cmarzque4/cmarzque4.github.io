@@ -138,8 +138,25 @@
                 let output = "<div class='equation'> Les equacions per calcular la posició final  del robot son:</div>";
                 output = "<div class='equation'>\\[ x = a_1 \\cos(q1) + a_2 \\cos(q_1 + q_2) \\] </div>";
                 output = "<div class='equation'>\\[ x = a_1 \\sin(q1) + a_2 \\sin(q_1 + q_2) \\] </div>";
-                  
-                /* Estic creant una variable anomenada "output" en JavaScript que conté un element "div" o divisor HTML dintre del qual hi han equacions del robot en llenguatge JavaScript de la biblioteca (library) MathJax3 que permet veure fórmules matemàtiques en una web. MathJax3 utilitza \\ per avisar que comença un mathJax i té unes normes com que la _ indica "subíndex", si poso una \\ davant de sinus o cosinus es veu escrit com a fórmula */
+                //Substituirles fórmules per calcular la posició del robot
+                output += "<div class='equation'> Substituint els valors:</div>";
+                output += '<div class='equation'>\\[ x = ${a1} \\cos(${q1_deg}&deg;) + ${a2} \\cos(${q1_deg}&deg; + ${q2_deg}&deg;) \\] </div>';
+                output += "<div class='equation'>\\[ x = ${a1} \\sin(${q1_deg}&deg;) + ${a2} \\sin(${q1_deg}&deg; + ${q2_deg}&deg;) \\] </div>';
+                //Càlculs numérics detallats
+                let x1 = a1 * Math.cos(q1); // Posició en x  del primer braç
+                let x2 = a2 * Math.cos(q1 + q2); // Posició en x  del segón braç
+                let y1 = a1 * Math.sin(q1); // Posició en y  del primer braç
+                let y2 = a2 * Math.sin(q1 + q2); // Posició en y  del segón braç
+               output += "<div class='equation'>Desglossant els càlculs:</div>;
+                output = '<div class='equation'>\\[ x_1 = a_1 \\cos(q_1) + ${a1} \\times \\cos($q1_deg}&deg;) = ${x1. toFixed(2)}\\]</div>';
+                output = '<div class='equation'>\\[ x_2 = a_2 \\cos(q_1 + q_2) + ${a2} \\times \\cos(${q1_deg}&deg;) + (${q2_deg}&deg;)= ${x2. toFixed(2)}\\]</div>';
+                output = '<div class='equation'>\\[ y_1 = a_1 \\sin(q_1) + ${a1} \\times \\sin($q1_deg}&deg;) = ${y1. toFixed(2)}\\]</div>';
+                output = '<div class='equation'>\\[ y_2 = a_2 \\sin(q_1 + q_2) + ${a2} \\times \\sin(${q1_deg}&deg;) + (${q2_deg}&deg;)= ${y2. toFixed(2)}\\]</div>';           
+               //Càlcul de les coordenades finals (x, y) de la mà del robot
+                let x= x1 + x2
+                let y= y1 + y2
+           
+           /* Estic creant una variable anomenada "output" en JavaScript que conté un element "div" o divisor HTML dintre del qual hi han equacions del robot en llenguatge JavaScript de la biblioteca (library) MathJax3 que permet veure fórmules matemàtiques en una web. MathJax3 utilitza \\ per avisar que comença un mathJax i té unes normes com que la _ indica "subíndex", si poso una \\ davant de sinus o cosinus es veu escrit com a fórmula */
                     </script>
     
 <!-- Scripts necessaris -->
