@@ -148,10 +148,10 @@
                 let y1 = a1 * Math.sin(q1); // Posició en y  del primer braç
                 let y2 = a2 * Math.sin(q1 + q2); // Posició en y  del segón braç
                output += "<div class='equation'>Desglossant els càlculs:</div>;
-                output = '<div class='equation'>\\[ x_1 = a_1 \\cos(q_1) + ${a1} \\times \\cos(${q1_deg}&deg;) = ${x1. toFixed(2)}\\]</div>';
-                output = '<div class='equation'>\\[ x_2 = a_2 \\cos(q_1 + q_2) + ${a2} \\times \\cos(${q1_deg}&deg;) + (${q2_deg}&deg;)= ${x2. toFixed(2)}\\]</div>';
-                output = '<div class='equation'>\\[ y_1 = a_1 \\sin(q_1) + ${a1} \\times \\sin(${q1_deg}&deg;) = ${y1. toFixed(2)}\\]</div>';
-                output = '<div class='equation'>\\[ y_2 = a_2 \\sin(q_1 + q_2) + ${a2} \\times \\sin(${q1_deg}&deg;) + (${q2_deg}&deg;)= ${y2. toFixed(2)}\\]</div>';           
+                output = '<div class='equation'>\\[x_1 = a_1 \\cos(q_1) + ${a1} \\times \\cos(${q1_deg}&deg;) = ${x1. toFixed(2)}\\]</div>';
+                output = '<div class='equation'>\\[x_2 = a_2 \\cos(q_1 + q_2) + ${a2} \\times \\cos(${q1_deg}&deg;) + (${q2_deg}&deg;)= ${x2. toFixed(2)}\\]</div>';
+                output = '<div class='equation'>\\[y_1 = a_1 \\sin(q_1) + ${a1} \\times \\sin(${q1_deg}&deg;) = ${y1. toFixed(2)}\\]</div>';
+                output = '<div class='equation'>\\[y_2 = a_2 \\sin(q_1 + q_2) + ${a2} \\times \\sin(${q1_deg}&deg;) + (${q2_deg}&deg;)= ${y2. toFixed(2)}\\]</div>';           
                //Càlcul de les coordenades finals (x, y) de la mà del robot
                 let x= x1 + x2
                 let y= y1 + y2
