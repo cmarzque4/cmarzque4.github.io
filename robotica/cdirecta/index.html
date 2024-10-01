@@ -158,7 +158,10 @@
                 output += "<div class= 'equation'> Calculant els resulats numèrics totals </div>
                 output += "<div class= 'equation'> \\[ x = ${x.toFixed(2)}\\]</div>" </div>
                 output += "<div class= 'equation'> \\[ y = ${y.toFixed(2)}\\]</div>" </div>
-               // .toFixed(2) és un métode d'arrodoniment que apliquem amb la sintaxi del punt a la llentra x i la lletra y que corresponen a l posició final del robot. let x= x1 + x2; emmagatzema el valor de la posició x final en x i el $ selecciona el valor x i el posa dos decimals arrodonits amb .toFixed i els \\[indiquen que estem escrivint un codi MathJax3 que es derivat de Latex per escriuren fòrmules matemàtiques que renderitzen bé a la pantalla. output += el que fa es sumar un element div anomenat output o sortida d'informació que al principi està buit, però quan cliquem calculate comença a sortir tot el output.
+               // .toFixed(2) és un métode d'arrodoniment que apliquem amb la sintaxi del punt a la llentra x i la lletra y que corresponen a l posició final del robot. let x= x1 + x2; emmagatzema el valor de la posició x final en x i el $ selecciona el valor x i el posa dos decimals arrodonits amb .toFixed i els \\[indiquen que estem escrivint un codi MathJax3 que es derivat de Latex per escriuren fòrmules matemàtiques que renderitzen bé a la pantalla. output += el que fa es sumar un element div anomenat output o sortida d'informació que al principi està buit, però quan cliquem calculate comença a sortir tot el output. Ens hem d'adonar que el div output te al seu interior molts divs anomenats equations, però no són "id" perquè si en fossin hauria de ser 1, i són clases*/
+           //Mostrar el resultat
+           document.getElementById('output').innerHTML = output;
+           MathJax.typeset(); //Renderitzar les fòrmules matemàtiques amb MathJax
            
            /* Estic creant una variable anomenada "output" en JavaScript que conté un element "div" o divisor HTML dintre del qual hi han equacions del robot en llenguatge JavaScript de la biblioteca (library) MathJax3 que permet veure fórmules matemàtiques en una web. MathJax3 utilitza \\ per avisar que comença un mathJax i té unes normes com que la _ indica "subíndex", si poso una \\ davant de sinus o cosinus es veu escrit com a fórmula */
                     </script>
