@@ -208,9 +208,23 @@ canvas{
            clearRect. significa netejar el rectangle i nomes necesitem dos coordenades per 
            netejar-ho la cantonada superior esquerra i la cantonada inferior dreta.*/
         //definim el centre del canvas i l'escala 
-        let centerX = canvas.width / 2;
-        let centerY = canvas.height / 2;
+        let centerX = canvas.width / 2; // punt mitjà de X
+        let centerY = canvas.height / 2; // punt mitjà de Y
+        /*Si el canvas fa 400,400 centerX i centerY serien 200,200*/
         let scale = 80; // Escala per dibuixar les distancies
+        /* La escala de dibuix voll dir que si poso una unitat física en la entrada de text corresponent a a1 o a2 equival a 80px en el canvas. Per exemple si el robot té un braç de un metre serien 80px*/
+        let x1_screen = centerX + x1*scale;
+        let y1_screen = centerY + y1*scale;
+        let x2_screen = centerX + x2*scale;
+        let y2_screen = centerY + y2*scale;
+        /* x1_screen, y1_screen, x2_screen, y2_screen són les coordenades del robot que comencen pel centre perquè el braç robotic es pogués moure en qualsevol direcció i el que faig és aplicar l'escala a les distàncies dels braços introduits*/
+        // Aquí el que farem es dibuixar elprimer braç
+          ctx.beginPath();
+          /* Estic applicant el métode beginPath amb la sintaxi del punt amb ctx que és el context ctx de 2D i el que fa es iniciar un nou camí de dibuix (path) i es prepara per dibuixar una línia.*/
+          ctx.moveTo(centerX, centerY);
+          // Estic avisant que es mogui al centre del canvas per començar a dibuixar des de el centre del dibuix
+          ctx.lineTo(x1_screen, y1_screen);
+          // Aixó vol dir: dibuixa una línia des del centre del canvas, que és l'inici del primer braç fins a la posició x11_screen i y1_screen */
           
                     </script>
     
