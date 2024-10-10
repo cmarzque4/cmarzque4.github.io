@@ -224,7 +224,21 @@ canvas{
           ctx.moveTo(centerX, centerY);
           // Estic avisant que es mogui al centre del canvas per començar a dibuixar des de el centre del dibuix
           ctx.lineTo(x1_screen, y1_screen);
-          // Aixó vol dir: dibuixa una línia des del centre del canvas, que és l'inici del primer braç fins a la posició x11_screen i y1_screen */
+          // Aixó vol dir: dibuixa una línia des del centre del canvas, que és l'inici del primer braç fins a la posició x1_screen i y1_screen */
+          ctx.strokeStyle = 'blue';
+          // strokeStyle: indica el color de la línea pel primer braç*/
+          ctx.lineWidth = '5';
+          // lineWidth és l'amplada de la línea en píxels, en aquest cas 5px de gruix*/
+          ctx.stroke();
+          // stroke és una funció, ho se perquè té doble parentesis i dins dels parentesis no hi ha paràmetres, amb aquesta funcióaconseguim dibuixar la línea al canvas*/
+          // A partir d'aquí dibuixarem el segon braç i el vull verd amb 5px de gruix */
+          ctx.beginPath(); //com que té dos parentesis també és una funció
+          ctx.moveTo(x1_screen, y1_screen); // Posem que comenci al final del primer braç perquè aquest és l'inici del segon braç
+          ctx.lineTo(x2_screen, y2_screen); // Ara la línea no pot anar pot tornar a anar a x1_screen i y1_screen (surt d'allà), així que possem que vagi cap a x2_screen i y2_screen, que és el final del braç
+          ctx.strokeStyle = 'red';
+          ctx.lineWidth = '5';
+          ctx.stroke();
+          
           
                     </script>
     
