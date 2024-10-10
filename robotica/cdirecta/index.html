@@ -10,22 +10,9 @@
     </script>
     <title>Web de C. Marzque </title>
     <style> 
-        /*Aquest llenguatge es CSS i es pot posar un arxiu extern style.css i escriure el que està a continuació
-        o es pot posar com aquí, entre style i final d'style (pràctica no recomenada), també el JavaScript
-        s'hauria de posar en un arxiu extern script.js perquè així aconseguim separar l'esquelet on està tot
-        el contingut estàtic que està en llenguatge HTML de l'script.js on està tota l'activitat interactiva,
-        de tot els estils (tipus de lletra, colors, marges...) en llenguatge CSS. Així tinc tres arxius un index.html
-        que cridarà a l'style.css i a l'script.js */
-        /*El CSS significa Cascade Style Sheets o fulles d'estil en cascada i sempre té la mateixa estructura:
-        nometiquetahtml{propietat1:valor1;propietat2:valor2;}
-        Per exemple s'aplica el nom de l'etiqueta HTML "body" una propietat relacionada amb els marges anomenada
-        padding que prové del model CSS Box o model de caixes CSS a l'interior de la caixa tenim el contingut o "content",
-        i al voltant tenim el "padding" que s'expressa en píxel, al voltant tenim el "border", i al voltent tenim el "margin".
-        Si posem un sol número (0 o 10px) s'aplica a tots els costats, si posem dos números s'aplica el primer número a dalt
-        i a baix i el segon s'aplica a dreta i esquerra. Si son tres números, el primer a dalt, el segon a dreta i esquerra i 
-        el tercer a baix. Si afegim quatre números el primer anirà a dalt, el segon a la dreta, el tercer a baix i l'ultim a l'esquerra.
-        Si no recordem l'ordre podem escriure"border-top:10px", "border-bottom:20px", border-right:10px", border-left:30px".
-        "Padding" és similar a "border" o a "margin"*/
+        
+        /*Aquest llenguatge es CSS i es pot posar un arxiu extern style.css i escriure el que està a continuació o es pot posar com aquí, entre style i final d'style (pràctica no recomenada), també el JavaScript s'hauria de posar en un arxiu extern script.js perquè així aconseguim separar l'esquelet on està tot el contingut estàtic que està en llenguatge HTML de l'script.js on està tota l'activitat interactiva, de tot els estils (tipus de lletra, colors, marges...) en llenguatge CSS. Així tinc tres arxius un index.html que cridarà a l'style.css i a l'script.js */
+        /*El CSS significa Cascade Style Sheets o fulles d'estil en cascada i sempre té la mateixa estructura: nometiquetahtml{propietat1:valor1;propietat2:valor2;} Per exemple s'aplica el nom de l'etiqueta HTML "body" una propietat relacionada amb els marges anomenada padding que prové del model CSS Box o model de caixes CSS a l'interior de la caixa tenim el contingut o "content", i al voltant tenim el "padding" que s'expressa en píxel, al voltant tenim el "border", i al voltent tenim el "margin". Si posem un sol número (0 o 10px) s'aplica a tots els costats, si posem dos números s'aplica el primer número a dalt i a baix i el segon s'aplica a dreta i esquerra. Si son tres números, el primer a dalt, el segon a dreta i esquerra i el tercer a baix. Si afegim quatre números el primer anirà a dalt, el segon a la dreta, el tercer a baix i l'ultim a l'esquerra. Si no recordem l'ordre podem escriure"border-top:10px", "border-bottom:20px", border-right:10px", border-left:30px". "Padding" és similar a "border" o a "margin"*/
         
         body {
     font-family: "Monaco", monospace;
@@ -135,20 +122,13 @@ canvas{
        <!-- fins aqui els camps d'entrada de dades de l'usuari per fer el problema-->
     <!--tots els inputs són com caixes blanques d'entrada d'informació-->
     <Button onclick="calculatePosition()">Calcula la posició:</button>
-    <!--calcula la posició té forma de botó i quan el cliquem s'executa una funció 
-    Javascript anomenada calculatedPosition() que té els parentesis buits perqué no depen de cap parametre
-    o argument. Button és un tag principal com label, p per paràgraf, input per entrada i el que té al costat tots
-    els tags principals són atributs com en aquest cas onclick-->
-    <!--en comptes de fer un clic al botó puc fer ondblclick que obligaria a l'usuari a fer 2 clics o puc fer onmouseover
-    el botó s'activa quan paso per sobre amb el ratolí i puc fer que canvii de color o una explicació de lo que fa el botó
-    o tooltip o informació del que fa el botó-->
+    <!--calcula la posició té forma de botó i quan el cliquem s'executa una funció Javascript anomenada calculatedPosition() que té els parentesis buits perqué no depen de cap parametre o argument. Button és un tag principal com label, p per paràgraf, input per entrada i el que té al costat tots els tags principals són atributs com en aquest cas onclick-->
+    <!--en comptes de fer un clic al botó puc fer ondblclick que obligaria a l'usuari a fer 2 clics o puc fer onmouseover, el botó s'activa quan paso per sobre amb el ratolí i puc fer que canvii de color o una explicació de lo que fa el botó o tooltip o informació del que fa el botó-->
 </div><!--aquest és el divisor que conté l'entrada de numeros de l'usuri i el botó calcula la posició-->
     <div id="output"></div>
-    <!--l'anterior és un divisor buit que és una part de la pantalla que ara està buida que té un nom, output,
-    anomenat així perqué serà on estaran tots els calculs quan apretem el botó calcula la posició-->
+    <!--l'anterior és un divisor buit que és una part de la pantalla que ara està buida que té un nom, output, anomenat així perqué serà on estaran tots els calculs quan apretem el botó calcula la posició-->
     <canvas id="robotCanvas" width="400" height="400"></canvas>
-    <!--un canvas és una zona on hi haura un gràfic que representarà en el nostre cas els 2 braços del robot,
-    en aquest cas quedarà un requadre de 400x400 buit fins que apreti calcula la posició-->
+    <!--un canvas és una zona on hi haura un gràfic que representarà en el nostre cas els 2 braços del robot, en aquest cas quedarà un requadre de 400x400 buit fins que apreti calcula la posició-->
 
       <script>
        function calculatePosition() {
@@ -196,20 +176,12 @@ canvas{
         // Dibuixar graficament el robot amb els dos braços
         let canvas = document.getElementById('robotCanvas');
         /* Canvas és semblant a img que servia per introduir una imatge, perquè no té els atributs o paràmetres que indica la font (cource = src = nom o direccióde la imatge) o la direcció d'internet de la imatge i tampoc té el parámetre alt, que s'auria de posar en totes les imatges, per exemple alt=" aquest text només sortirá si no es troba la imatge, o per persones cegues per que entenguin la imatge". En canvi canvasnomés té dos atributs = width i height (altura i amplada) en píxels. L'element canvas es pot estilitzar amb CSS amb margin, border, background, però aquest CSS no afecta a l'interior del canvas sinó al exterior*/
-        /*Agafa un element que s'anomena robotCanvas i que està situat en el div buit de sota del div buit del output,
-         es a dir hi ha un divisor buit HTML anomenat output on surten totes les formules i un divisor buit anomenat HTML anomenat 
-         robotCanvas on sortira el dibuix del robot.*/
+        /*Agafa un element que s'anomena robotCanvas i que està situat en el div buit de sota del div buit del output, es a dir hi ha un divisor buit HTML anomenat output on surten totes les formules i un divisor buit anomenat HTML anomenat robotCanvas on sortira el dibuix del robot.*/
         let ctx = canvas.getContext("2d");//El dibuix ha de ser 2D i no 3D
         ctx.clearRect(0,0, canvas.width, canvas.height);
         //Netejem el canvas abans de dibuixar
         //ctx l'hem anomenat aixi perque significa context de canvas en 2D
-        /* Posem el punt davant de .clearRect perquè és un mètode que s'aplica 
-           al context (ctx) i te 4 arguments o parametres els dos primers és la 
-           catonada superior esquerra del rectangle que sempre és el punt de referència 
-           de qualsevol dibuix i la cantonada inferior dreta son els 2 darrers numeros.
-           Quins són els dos darrers numeros? Són 400 perquè son canvas.heigth i canvas.width.
-           clearRect. significa netejar el rectangle i nomes necesitem dos coordenades per 
-           netejar-ho la cantonada superior esquerra i la cantonada inferior dreta.*/
+        /* Posem el punt davant de .clearRect perquè és un mètode que s'aplica al context (ctx) i te 4 arguments o parametres els dos primers és la catonada superior esquerra del rectangle que sempre és el punt de referència de qualsevol dibuix i la cantonada inferior dreta son els 2 darrers numeros. Quins són els dos darrers numeros? Són 400 perquè son canvas.heigth i canvas.width. clearRect. significa netejar el rectangle i nomes necesitem dos coordenades per netejar-ho la cantonada superior esquerra i la cantonada inferior dreta.*/
         //definim el centre del canvas i l'escala 
         let centerX = canvas.width / 2; // punt mitjà de X
         let centerY = canvas.height / 2; // punt mitjà de Y
