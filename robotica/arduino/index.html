@@ -1,3 +1,27 @@
+<html>
+  <head>
+    <style>
+      table{ 
+        width:50%; //Ocupa el 50% de l'amplada de la pàgina
+        border-collapse: collapse;// Evita que apareixin dobles linies a les cel·les 
+        margin: 20px auto;} //Marge de 20px a la part superior i centra la taula
+      
+      th,td{
+        border: 1px solid #ddd; //Afegieix una vora fina d'un píxel de color gris clar al voltant de totes les cel·les th i td.
+        padding: 10px auto; //Espai intern dins de cada cel·la, per fer-la més llegible.
+        text-algin: center} //Centrar el text dins de cada cel·la.
+        
+      thead{
+        background: #f4f4f4; //Cavia el color del fons del thead a gris clar.
+        font-weight: bold;} //Fa que la capçelera de la aula estigui en negreta.
+        
+      tbody tr: nth-child(even){ //És una pseudoclasse aplicada a tr segons si es parell o imparell, even és parell i odd és imparell.
+        background-color: #f9f9f9;}
+
+      tbody tr: hover{  //És una pseudoclasse hover per quan passo per sobre amb el ratolí pel contngut de la taula és fa més fosc.
+        background-color: #e2e2e2;}
+    </style>
+  </head>
 <h1> Conceptes generals de microcontroladors </h1>
 <p> Els diferents microcontroladors tenen en comú els seguents aspectes:</p>
 <ul>
@@ -50,6 +74,5 @@
 <p>La freqüència es la inversa del periode, 976 Hz o cicles per segon corespon a un període de 1/976 segons que és igual a 1,024 milisegons</p>
 <h2>Convertidor analògic-digtal</h2>
 <p>Apliquem el teorema de Nyquist que diu que hem de fer el dole de mostres com a minim que la freqüencia màxima per aconseguirr convertir en senyal analogic contínu anaògic en un senyal digital mostrejat segons la figura següent</p>
-<img
 </body>
 </html>
