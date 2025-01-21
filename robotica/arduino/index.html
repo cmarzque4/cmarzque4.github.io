@@ -101,14 +101,20 @@
       </tr>
     </thead>
   </table>
-
+<p> A continuació tenim un codi general que pot servir per moltissimes coses diferents, i totes relacionades amb la capacitat que té l'Arduino de llegir de 0 a 1023 en una entrada analògica, si fos un ESP32S3 llegiria de 0 a 4095 i si fos un ADS1115 llegiria de 0 a 65536. Per què?
+Els microxips i els microcontroladors tenen transistors i aquests només poden fer una cosa, encendre's o apagar-se, és a dir 0 o 1 i cada bit és un 0 o 1. Si tenim 12 bits en un ADC (Analog Digital Converter) significa que té 2 <sub>12</sub> combinacions de zeros i uns, és a dir, 4096 nivells diferents que numericamentva des del 0 al 4095. Ara justifiquem el número 65536 seria correcte si fos 2<sup>16</sup> com diu el fabricant, pero al datasheet parla d'un nivell màxim de 8000h (Nùmero hexadecimalque corrwspon a 32768) es a dir són 15 bits utilitzables. Sempre s'ha de comprobar el <a href="#"> datasheet o  fulla de característiques </a>del fabricant</p>
+ 
   <pre><code>
-    int valor_ADC=0;
-    void setup(){    //9600 en Arduino
+    int valor_ADC=0;  // Int significa integer o valor enter numéric (float seria "floating point number o decimal", char seria un character o caracter de lletra de l'alfabet, string seria una cadena de caràcters o paraula, etc. El més important és que la primera paraula defineix el tipus de paraula que tenim, en aquest cas enter). "valor_ADC" és un nom que triem nsaltrs per definir una variable, és a dir, un valor que no serà constant, i que té inicialment un valor 0, si posem int valor_ADC; és a dir, no posem que és igual a 0 per defecte hauria de donar valor 0. Si jo volgués posar un potenciomentre possaria pot i si volgués posar un LDR posaria ldr en minúscula. Sempre la primera línea és la definici´de les variables. A vegades abans de la primera línea necessitem carregar biblioteques. 
+    void setup(){    //9600 en Arduino 
+                    // Sempre hi ha un setup o funció de configuració del microcontrolador en llenguatge Arduino que té un parentasis buit perquè no té cap paràmetre o argument del qual depengui en molts casos. La paraula void seria l'equivalent a la paraula function en JavaScript. També es diu void setup en Processing perquè deriva de Processing aquest llenguatge. Posem una clau per agrupar totes les instruccions que volem executar una sola vegada, perque setup s'executa només al principi quan arranquen o encenem l'Arduino o microcontrolador.  
     Serial_begin(9600);  //115200 en S3
+                        // Serial s'escriu amb majuscules perquè és una classe que és una part important del codi Arduino que antigamnt era una classe de Processing i té un métode que es fa servir amb la sintaxi del punt, dot syntax que consisteix en que quan j escric un punt estic aplicant un mètode normalment a un objecte d'una classe i a vegades a una classe, com aquí. El mètode begin connecta per al cable serie del ordinador amb l'Arduino, i té només un paràmetre que és un número enter que correspon a la velocitat en bits/segon. Pel cas de l'Arduino Uno 9600 bits/segon o bauds, mentres que en ESP32S3 són 115200 bits/segon o bauts "Serial.begin (115200)". És molt important posar un ; en cada insucció per informar que ja ha acabat.   
     }
-    void loop(){
-    valor ADC=analogRead(A0)  //34 en S3
+    void loop(){          // És una funció que repeteix sense parar fins que desconecto físicament o poso un codi per aturar-ho
+    valor ADC=analogRead(A0);  //34 en S3
+                              // La variable que hem creat abans, que era 0 inicialment ara canviarà perquè la instrucció analogRead el que fa és llegir valors entre 0 i 1023 si es un Arduino Uno, A0 és una de les 6 entrades analògiques
+    valor ADC=analogRead(34); //
     Serial.println(valorADC);  //0-1023
     delay(500);}  //0-4095
   </code></pre>
