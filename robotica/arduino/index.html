@@ -114,9 +114,19 @@ Els microxips i els microcontroladors tenen transistors i aquests només poden f
     void loop(){          // És una funció que repeteix sense parar fins que desconecto físicament o poso un codi per aturar-ho
     valor ADC=analogRead(A0);  //34 en S3
                               // La variable que hem creat abans, que era 0 inicialment ara canviarà perquè la instrucció analogRead el que fa és llegir valors entre 0 i 1023 si es un Arduino Uno, A0 és una de les 6 entrades analògiques
-    valor ADC=analogRead(34); //
-    Serial.println(valorADC);  //0-1023
-    delay(500);}  //0-4095
+    valor_ADC=analogRead(34); // La variable de valor 0 ara estarà entre els valors 0 i 4095 Perquè és un microcontrolador de 12 bits ADC
+                    //ADC és Analog Digital converter, és a dir que convertim un valor analògic en digital (convertidor analògic digital)
+                    // DAC és Digital Analog Converter, és a dir el contrari que ADC, convertim digital a analògic com el PWM (Pulse Width Modlation) que vol dir modulació de l'ample de banda
+                // D'acord amb el <a src="https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf"> datasheet o fulla de caracterísitques de ESP32S3 </a>
+                // Hi ha 20 entrades analògiques de 12 bits mentres que en Arduino Uno hi ha 6 entrades analògiques de 10 bits
+    Serial.println(valorADC); // Println significa que imprimeixi via serial el valor de ADC (0-1023 o 0-4095)
+    delay(500); //Espera 500 milisegons o mig segons per mostrar el resultat
   </code></pre>
+  <p> Com podem veure a la foto de més amunt d'arduino a la contonada inferior dreta es troben els 6 ADCs o entrades analógiques amb les lletres d'A0 fins a A6, i la part superior de l'Arduino podem veure els pins que són els 6 DACs o sortides analògiques de tipus PWM que estan senyalades amb ~ (Pins 3, 5, 6, 9, 10, 11).</p>
+  <p> En la image següent podem veure un esquema de ESP23S3</p>
+  <img src="esp32s3.webp" width="800" height="600">
+  <p> Podem observarr que a diferència d'Arduino Uno la gran majoria de pins son GPIO, que significa General Purpose Input Output, en català Pin d'entrada i sortida de propòsit general, és a dir, que pot tenir moltes utilitats, entrada digital, sortida digital, entrada analògica, sortida analògica. Si volem veure un esquema dels pins podem escriure "pinout".</p>
+  <p>Alguns pins són RTC, que significa Real Time Clock, que és un rellotge intern que funciona mitjançant una pila interna que dona suficient energia perque vibri un cristall de quars que és el que compta el temps</p>
+  <p> En el codi tenim un pin 34 que és un pin intern qu no veu l'usuari, perquè està a la placa base fent la funció SPIQ, segons el Datasheet el GTIO34 correspon al pin físic 39, per tant sempre hem de mirar el Pin Out oficial</p>
 </body>
 </html>
