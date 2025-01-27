@@ -32,14 +32,6 @@
         <input type="number" id="q2" value="30" step="0.1">  (step= variabilitat que jo puc escriure)
 
     <Button onclick="calculatePosition()">Calcula la posició:</button>
-    <!--calcula la posició té forma de botó i quan el cliquem s'executa una funció Javascript anomenada calculatedPosition() que té els parentesis buits perqué no depen de cap parametre o argument. Button és un tag principal com label, p per paràgraf, input per entrada i el que té al costat tots els tags principals són atributs com en aquest cas onclick-->
-    <!--en comptes de fer un clic al botó puc fer ondobleclick que obligaria a l'usuari a fer 2 clics o puc fer onmouseover, el botó s'activa quan paso per sobre amb el ratolí i puc fer que canvii de color o una explicació de lo que fa el botó o tooltip o informació del que fa el botó-->
-</div><!--aquest és el divisor que conté l'entrada de numeros de l'usuri i el botó calcula la posició-->
-    <div id="output"></div>
-    <!--l'anterior és un divisor buit que és una part de la pantalla que ara està buida que té un nom, output, anomenat així perqué serà on estaran tots els calculs quan apretem el botó calcula la posició-->
-    <canvas id="robotCanvas" width="400" height="400"></canvas>
-    <!--un canvas és una zona on hi haura un gràfic que representarà en el nostre cas els 2 braços del robot, en aquest cas quedarà un requadre de 400x400 buit fins que apreti calcula la posició-->
-
       <script lang="javascript">
           let x1, x2, y1, y2;
        function calculatePosition() {
@@ -48,20 +40,11 @@
                 let a2 = parseFloat(document.getElementById('a2').value); //longitud segon braç 
                 let q1_deg = parseFloat(document.getElementById('q1').value); //angle en graus del primer braç
                 let q2_deg = parseFloat(document.getElementById('q2').value); //angle en graus del segon braç
-                //La funció "let" ens permet crear variables locals perquè estan a dins d'una funció (en aquest cas seria variable global si estiguessin al principi del codi i afectés a tot el codi) que emmagatzemen els valors introduits per l'usuari perquè a banda de fer getElementById aplico el mètode .value per assegurar-me que agafo el valor escrit i aplico la funció "parseFloat" per convertit el valor introduit per l'usuari en un nombre decimal o "Floating point number" en anglès (si hagués posat "parseInt" el convertiria en nombres enters). En aquest tros de codi anterior de la l11 a la l14 hem aconseguit guardar les 4 dades geomètriques del nostre robot per fer càlculs de la seva posició en funció de les 4 dades introduides per l'usuari */
-                //convertir graus a radians per als calculs trigonometrics
-                let q1 = q1_deg * Math.PI / 180
-                let q2 = q2_deg * Math.PI / 180
-                //això es el mateix que 2PI/360
-                //mostrar les fórmules per calcular la posició del robot
+                (let= crea variables dins d'una funció)
                 let output = "<div class='equation'> Les equacions per calcular la posició final  del robot son:</div>";
                 output += "<div class='equation'>\\[ x = a_1 \\cos(q1) + a_2 \\cos(q_1 + q_2) \\] </div>";
                 output += "<div class='equation'>\\[ y = a_1 \\sin(q1) + a_2 \\sin(q_1 + q_2) \\] </div>";
-                //Substituir les fórmules per calcular la posició del robot
-                output += "<div class='equation'> Substituint els valors:</div>";
-                output += "<div class='equation'>\\[ x = ${a1} \\cdot \\cos(${q1_deg}&deg;) + ${a2} \\cos(${q1_deg}&deg; + ${q2_deg}&deg;) \\] </div>";
-                output += "<div class='equation'>\\[ y = ${a1} \\cdot \\sin(${q1_deg}&deg;) + ${a2} \\sin(${q1_deg}&deg; + ${q2_deg}&deg;) \\] </div>";
-                //Càlculs numérics detallats
+               //Càlculs numérics detallats
                 x1 = a1 * Math.cos(q1); // Posició en x  del primer braç
                 x2 = a2 * Math.cos(q1 + q2); // Posició en x  del segón braç
                 y1 = a1 * Math.sin(q1); // Posició en y  del primer braç
@@ -71,67 +54,29 @@
                 output += "<div class='equation'>\\[x_2 = a_2 \\cos(q_1 + q_2) + ${a2} \\times \\cos(${q1_deg}&deg;) + (${q2_deg}&deg;)= ${x2. toFixed(2)}\\]</div>";
                 output += "<div class='equation'>\\[y_1 = a_1 \\sin(q_1) + ${a1} \\times \\sin(${q1_deg}&deg;) = ${y1. toFixed(2)}\\]</div>";
                 output += "<div class='equation'>\\[y_2 = a_2 \\sin(q_1 + q_2) + ${a2} \\times \\sin(${q1_deg}&deg;) + (${q2_deg}&deg;)= ${y2. toFixed(2)}\\]</div>";           
-               //Càlcul de les coordenades finals (x, y) de la mà del robot
+               //Càlcul de les coordenades finals (x, y)
                 let x= x1 + x2
                 let y= y1 + y2
-                output += "<div class='equation'> Calculant els resulats numèrics totals </div>";
-                output += "<div class='equation'> \\[ x = ${x.toFixed(2)}\\]</div>";
-                output += "<div class='equation'> \\[ y = ${y.toFixed(2)}\\]</div>";
-               // .toFixed(2) és un métode d'arrodoniment que apliquem amb la sintaxi del punt a la llentra x i la lletra y que corresponen a l posició final del robot. let x= x1 + x2; emmagatzema el valor de la posició x final en x i el $ selecciona el valor x i el posa dos decimals arrodonits amb .toFixed i els \\[indiquen que estem escrivint un codi MathJax3 que es derivat de Latex per escriuren fòrmules matemàtiques que renderitzen bé a la pantalla. output += el que fa es sumar un element div anomenat output o sortida d'informació que al principi està buit, però quan cliquem calculate comença a sortir tot el output. Ens hem d'adonar que el div output te al seu interior molts divs anomenats equations, però no són "id" perquè si en fossin hauria de ser 1, i són clases*/
-               /* Estic creant una variable anomenada "output" en JavaScript que conté un element "div" o divisor HTML dintre del qual hi han equacions del robot en llenguatge JavaScript de la biblioteca (library) MathJax3 que permet veure fórmules matemàtiques en una web. MathJax3 utilitza \\ per avisar que comença un mathJax i té unes normes com que la _ indica "subíndex", si poso una \\ davant de sinus o cosinus es veu escrit com a fórmula */
-           //Mostrar el resultat
-        document.getElementById('output').innerHTML = output;
-        MathJax.typeset();  // Renderitzar MathJax per mostrar les fórmules correctament
-        
+                output += "<div class='equation'> Calculant els resulats numèrics totals </div>";      
           
         // Dibuixar graficament el robot amb els dos braços
         let canvas = document.getElementById('robotCanvas');
-        /* Canvas és semblant a img que servia per introduir una imatge, perquè no té els atributs o paràmetres que indica la font (cource = src = nom o direccióde la imatge) o la direcció d'internet de la imatge i tampoc té el parámetre alt, que s'auria de posar en totes les imatges, per exemple alt=" aquest text només sortirá si no es troba la imatge, o per persones cegues per que entenguin la imatge". En canvi canvasnomés té dos atributs = width i height (altura i amplada) en píxels. L'element canvas es pot estilitzar amb CSS amb margin, border, background, però aquest CSS no afecta a l'interior del canvas sinó al exterior*/
-        /*Agafa un element que s'anomena robotCanvas i que està situat en el div buit de sota del div buit del output, es a dir hi ha un divisor buit HTML anomenat output on surten totes les formules i un divisor buit anomenat HTML anomenat robotCanvas on sortira el dibuix del robot.*/
-        let ctx = canvas.getContext("2d");//El dibuix ha de ser 2D i no 3D
-        ctx.clearRect(0,0, canvas.width, canvas.height);
-        //Netejem el canvas abans de dibuixar
-        //ctx l'hem anomenat aixi perque significa context de canvas en 2D
-        /* Posem el punt davant de .clearRect perquè és un mètode que s'aplica al context (ctx) i te 4 arguments o parametres els dos primers és la catonada superior esquerra del rectangle que sempre és el punt de referència de qualsevol dibuix i la cantonada inferior dreta son els 2 darrers numeros. Quins són els dos darrers numeros? Són 400 perquè son canvas.heigth i canvas.width. clearRect. significa netejar el rectangle i nomes necesitem dos coordenades per netejar-ho la cantonada superior esquerra i la cantonada inferior dreta.*/
-        //definim el centre del canvas i l'escala 
         let centerX = canvas.width / 2; // punt mitjà de X
         let centerY = canvas.height / 2; // punt mitjà de Y
-        /*Si el canvas fa 400,400 centerX i centerY serien 200,200*/
-        let scale = 80; // Escala per dibuixar les distancies
-        /* La escala de dibuix voll dir que si poso una unitat física en la entrada de text corresponent a a1 o a2 equival a 80px en el canvas. Per exemple si el robot té un braç de un metre serien 80px*/
         let x1_screen = centerX + x1*scale;
         let y1_screen = centerY + y1*scale;
         let x2_screen = centerX + x2*scale;
         let y2_screen = centerY + y2*scale;
-        /* x1_screen, y1_screen, x2_screen, y2_screen són les coordenades del robot que comencen pel centre perquè el braç robotic es pogués moure en qualsevol direcció i el que faig és aplicar l'escala a les distàncies dels braços introduits*/
-        // Aquí el que farem es dibuixar elprimer braç
-          ctx.beginPath();
-          /* Estic applicant el métode beginPath amb la sintaxi del punt amb ctx que és el context ctx de 2D i el que fa es iniciar un nou camí de dibuix (path) i es prepara per dibuixar una línia.*/
-          ctx.moveTo(centerX, centerY);
-          // Estic avisant que es mogui al centre del canvas per començar a dibuixar des de el centre del dibuix
-          ctx.lineTo(x1_screen, y1_screen);
-          // Aixó vol dir: dibuixa una línia des del centre del canvas, que és l'inici del primer braç fins a la posició x1_screen i y1_screen */
-          ctx.strokeStyle = 'blue';
-          // strokeStyle: indica el color de la línea pel primer braç*/
-          ctx.lineWidth = '5';
-          // lineWidth és l'amplada de la línea en píxels, en aquest cas 5px de gruix*/
+
+          ctx.beginPath(); (comença a dibuixar)
+          ctx.moveTo(centerX, centerY); (mou al centre)
+          ctx.lineTo(x1_screen, y1_screen); (línia des del centre del canvas)
           ctx.stroke();
-          // stroke és una funció, ho se perquè té doble parentesis i dins dels parentesis no hi ha paràmetres, amb aquesta funcióaconseguim dibuixar la línea al canvas*/
-          // A partir d'aquí dibuixarem el segon braç i el vull verd amb 5px de gruix */
           ctx.beginPath(); //com que té dos parentesis també és una funció
-          ctx.moveTo(x1_screen, y1_screen); // Posem que comenci al final del primer braç perquè aquest és l'inici del segon braç
-          ctx.lineTo(x2_screen, y2_screen); // Ara la línea no pot anar pot tornar a anar a x1_screen i y1_screen (surt d'allà), així que possem que vagi cap a x2_screen i y2_screen, que és el final del braç
-          ctx.strokeStyle = 'red';
-          ctx.lineWidth = '5';
-          ctx.stroke();
+          ctx.moveTo(x1_screen, y1_screen); // (comença al final del primer braç)
+          ctx.lineTo(x2_screen, y2_screen); // (recta de x1/y1 a x2/y2)
            }
           
-                    </script>
-    
-<!-- Scripts necessaris -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-
+    </script>
 </body>
 </html>
