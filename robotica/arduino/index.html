@@ -50,7 +50,8 @@
 <table>
   <thead>
     <tr>
-      <th>PIN de Sortida</th><th>Freqüència PWM (Hz)</th>
+      <th>PIN de Sortida</th>
+      <th>Freqüència PWM (Hz)</th>
     </tr>
   </thead>
   <tbody>
@@ -70,13 +71,13 @@
    La taula la defineix el tag table que agrupa thead i tbody. Totes les fileres tant del thead com el tbody es defineixen amb el tag tr, que vol dir table row.
    Dintre de thead hi ha ellements indivituals que són cel·les que pertanyen a la primera filera i s'anomenen th o table heading.
    En el table body hi ha també fileres tr però dintre d'aquestes fileres els elements individuals han de ser td, que significa table data. Per últim, s'han de tancar el table o el body.
-  Tots aquest elements es poden modificar amb CSS i fer la taula amb unn estil propi.</p>
+  Tots aquest elements es poden modificar amb CSS i fer la taula amb un estil propi.</p>
 <p>Les freqüències baixes proueixen soroll en els motors. Per tant és preferible conectar motors als pins 5 i 6.</p>
 <p>La freqüència es la inversa del periode, 976 Hz o cicles per segon corespon a un període de 1/976 segons que és igual a 1,024 milisegons</p>
 <h2>Convertidor analògic-digtal</h2>
-<p>Apliquem el teorema de Nyquist que diu que hem de fer el dole de mostres com a minim que la freqüencia màxima per aconseguirr convertir en senyal analogic contínu anaògic en un senyal digital mostrejat segons la figura següent</p>
+<p>Apliquem el teorema de Nyquist que diu que hem de fer el doble de mostres com a minim que la freqüencia màxima per aconseguir convertir en senyal analogic contínu en un senyal digital mostrejat segons la figura següent</p>
 <img src="nyquist.jpeg" witgh="600" height="400">
-  <p>Nyquist és important, perque si en el codi poso una freq¨`encia de mostreig de 20 Hz per un so, no funcionarà, perque la freqüència mínima del so es de 20 Hz i la màxima 20 kHz, pel que es refereix al so audible en humans. Això es per que agafem mostres massa grans, i no opdem veure pujades i baixades de la senyal</p>
+  <p>Nyquist és important, perque si en el codi poso una freqüència de mostreig de 20 Hz per un so, no funcionarà, perque la freqüència mínima del so es de 20 Hz i la màxima 20 kHz, pel que es refereix al so audible en humans. Això es per que agafem mostres massa grans, i no opdem veure pujades i baixades de la senyal</p>
   <p>A continuació veurem una taula comparativa sobre els micrcontroladors Arduino uno i ESP32S3 i el circuit ADS1115</p>
   <table>
     <thead>
