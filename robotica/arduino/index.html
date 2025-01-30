@@ -29,7 +29,7 @@
   <li>Tipus d'entrades i sortides: el microcontrolador té un processador tipus AVR o Espressif on es conecta entrades digitals, entrades analògiques, sortides digitals i sortides analògiques</li>
   <li>Les entrades i sortides digitals només funcionen amb 0 o 1 es a dir codi binari, zero significa 0 volts i 1 pot significar 5 volts o 3,3 volts depenent del microcontrolador i del pin que utilitzem. A aquestes entrades podem connectar per exemple interruptors, sensor "foscor/claror" </li>  
 </ul>
-<h2> Sortides analògiques tipus PWM</h2>
+<h2> Sortides analògiques tipus PWM:DAC (Convertidor de digital a analógic)</h2>
 <p> PWM significa modulació de l'ample de banda, en anglès <i> Pulse Width Modulation</i> i és una forma d'aconseguir una sortida analògica a partir de diverses sortides digitals, molt ràpides.</p>
 <p>PWM es representa amb el símbol "~" tal com podem veure a la imatge següent d'un Arduino Uno</p>
 <img src="arduino_uno.png" width="600" height="400">
@@ -124,11 +124,39 @@ Els microxips i els microcontroladors tenen transistors i aquests només poden f
     Serial.println(valorADC); // Println significa que imprimeixi via serial el valor de ADC (0-1023 o 0-4095)
     delay(500); //Espera 500 milisegons o mig segons per mostrar el resultat
   </code></pre>
-  <p> Com podem veure a la foto de més amunt d'arduino a la contonada inferior dreta es troben els 6 ADCs o entrades analógiques amb les lletres d'A0 fins a A6, i la part superior de l'Arduino podem veure els pins que són els 6 DACs o sortides analògiques de tipus PWM que estan senyalades amb ~ (Pins 3, 5, 6, 9, 10, 11).</p>
+  <p> Com podem veure a la foto de més amunt d'arduino a la contonada inferior dreta es troben els 6 ADCs o entrades analógiques amb les lletres d'A0 fins a A5, i la part superior de l'Arduino podem veure els pins que són els 6 DACs o sortides analògiques de tipus PWM que estan senyalades amb ~ (Pins 3, 5, 6, 9, 10, 11).</p>
   <p> En la image següent podem veure un esquema de ESP23S3</p>
   <img src="esp32s3.webp" width="800" height="600">
   <p> Podem observarr que a diferència d'Arduino Uno la gran majoria de pins son GPIO, que significa General Purpose Input Output, en català Pin d'entrada i sortida de propòsit general, és a dir, que pot tenir moltes utilitats, entrada digital, sortida digital, entrada analògica, sortida analògica. Si volem veure un esquema dels pins podem escriure "pinout".</p>
   <p>Alguns pins són RTC, que significa Real Time Clock, que és un rellotge intern que funciona mitjançant una pila interna que dona suficient energia perque vibri un cristall de quars que és el que compta el temps</p>
   <p> En el codi tenim un pin 34 que és un pin intern qu no veu l'usuari, perquè està a la placa base fent la funció SPIQ, segons el Datasheet el GTIO34 correspon al pin físic 39, per tant sempre hem de mirar el Pin Out oficial</p>
-</body>
+<h3> Com funciona les entrades analógiques dels microcontroladors?</h3>
+  <p> Els pins A0 fins A5 són entrades analógiques i allà podem connectar una série d'elements: </p>
+    <ul>
+      <li> Sensor de llum: LDR (light dependent resistor), Fotodiodes, Cél·lules solars</li>
+      <li> Sensors de temperatura: LM35 (té una sortida lineal, 10 milivolts és un grau centrigrads i un rang -55 +150 semblant a TMP36, té menys rang i és menys precís), DHT11 O DHT22, mesuren temperatura i humitat i el 22 és més precía que el 11, DS18820 té protocol one-wire</li>
+    </ul>
+  <h4> Exemple amb el sensor de temperatura LM35</h4>
+   <pre>
+     <code>
+ const int sensorPin= A0;
+
+void setup()
+{
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  int value = analogRead(sensorPin);
+  float millivolts = (value / 1023.0) * 5000;
+  float celsius = millivolts / 10; 
+  Serial.print(celsius);
+  Serial.println(" C");
+  delay(1000);
+}       
+     </code>
+   </pre>
+      
+  </body>
 </html>
