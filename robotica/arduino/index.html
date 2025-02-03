@@ -157,6 +157,40 @@ void loop()
 }       
      </code>
    </pre>
-      
+<p> El codi de més amunt funcionaria amb un sensor de temperatura LM35, però es podria adaptar per qualsevol sensor
+perque? Si soc un Arduino, els pins A0 - A5 només soc capaç de fer una cosa, llegir el senyal del sensor entre
+0 i 1023. Mentres que en els pins PWM seria capaç d'escriure de 0 - 255</p>
+  <p> const int sensorPin= A0; Significa que el valor és cons o constant, i que no variarà en tot el codi, int que és
+  un variable que és de tipus integer o número enter, sensorPin és el nom que trio per identificar el pin anomenat A0
+  i podia haver triat qualsevol altre nom, com: sensorT, sonsorTemperatura, sensorLM35... Per tant la instruacció sencera
+  que fa? Estem donant un nom al pin A0 per identificar-lo i que sigui una constant en tot el codi que no pot variar, perque
+  si varia, canvia el número de pin</p>
+    <p>void setup()
+{
+  Serial.begin(9600);
+}
+ Tots els codis sempre tenen les mateixes parts, al principi es posarien les biblioteques necessaries, seguides de les variables
+    que necessiten (en aquest cas sensorPin) i a continuació va el bloc de codi o funció de configuració anomenada setup,
+      el setup s'executa una sola vegada i  Serial.begin(9600); el que fa és aplicar el mètode begin amb la sintaxi del punt 
+      (dot syntax) amb un argument o paràmetre que està entre parèntesis. Serial vol dir comunicació en serie a través d'una
+      cable USB, 9600 és la velocitat en bits per segon a través del cable USB. En un ESP32S3 es comunica una velocitat més alta
+      115200 bits per segon i aquesta velocitat no només ha d'estar al codi, sinó que ha de coincidir en el IDE o entorn de 
+      programació d'Arduino, concretament a la consola de sortida de comunicació sèrie. Si no ho faig poden sortir caràcters
+      extranys quan premo el botó superior dret de comunicació sèrie. El punt i coma final és molt important, prque indica que he 
+      acabat la instrucció. </p>
+  <p> Per finalitzar hi ha el codi principal o loop que es repeteix sense parar </p>
+    <p> int value = analogRead(sensorPin); int és integer i només agafa números enters, value és el nom que vull posar per
+    enmmagatzemar tots els valor que va agafant Arduino. Com els emmagatzemo? Amb la instrucció analogRead que llegeix de 
+    0 a 1023 i un cop llegit, el sensor pin (el paràmetre) el guarda dins de value.</p>
+    <p> <b>float millivolts = (value / 1023.0) * 5000; </b> float significa floating point number, o número decimal en anglés, millivolts
+    és el nom de la variable on emmagatzemem els mollivolts reals que està generant el sensor de temperatura. Perquè genera en 
+    millivolts? Perque l'Arduino Uno funciona a 5V o 5000mV, que passa si divideixo el valor entre 1023, que tinc el valor en tant
+    per 1, i si aquest valor en tant per 1 ho multiplico per 5000 em donen 1023 valors diferents entre 0 i 5000.
+    Posem diversos exemples: que passaria si el value és 0, que passaria si el value és 10? 10/1023x5000 = 49 millivolts, si 
+    fosin 100 = 488 millivolts, si fosin 500 donaria 500/1023x5000= 2443 millivolts. Això passaria amb tots els sensors</p>
+    <p> Com seria si fos un ESP32S3? Seria 3.3V i 4095, per tant el codi seria <b>float millivolts = (value / 4095.0) * 3300; </b>
+      i aconseguiriem millor resolució o presició, es a dir, el termometre o sensor agafaria més valors diferents (seria més precis).
+      value / 4095 sempre serà un número entre 0 i 1 perque value va enttre 0 i 4095, i si el multiplico per 3300 tindré un número de 0 a 3300 millivolts
+    <p> float celsius = millivolts / 10; float demana un número decimal </p>
   </body>
 </html>
