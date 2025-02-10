@@ -197,7 +197,27 @@ perque? Si soc un Arduino, els pins A0 - A5 només soc capaç de fer una cosa, l
     <p> Per exemple, Arduino és i era una classe de llenguatge Processing, i s'utilitza molt més Arduino com a llenguatge de programació actualment. Si utilitzo processing i la biblioteca Arduino, l'avantatge que tinc és que puc utilitzar totes les biblioteques de visió per ordinador, d'intel·ligencia artificial de l'ordinador i fer aplicacions que només amb Arduino serien impossible</p>
     <img src="lm35.png">
     <p> La imatge anterior procedeix de la fulla de característiques de LM35, i es veu que té una resposta lineal del voltatge i de la temperatura, de forma que a 2.9V ens donaria -55 graus i a 4.15V ens donaria 155 graus. Com fariem el codi de mapeig per això?</p>
-     float temp = map (value,0,1023,2900,4150)
-     float celsius = map (value,2900,4150,-55,150)
+     float temp = map (value,0,1023,2900,4150); 
+    <p> Value és un valor que agafa amb la instrucció analogRead i va entre 0 i 1023 (en aquest cas) perque és un conversor d'analògica a digital de 10 bits 2^10, el transforma en un entre 2900 i 4150 millivolts</p>
+     float celsius = map (temp,2900,4150,-55,150); 
+    <p> La variable <b>temp</b> no conté temperatura, sinó millivolts i els convertim d'aquesta manera perque la fulla de característiques de LM35 diu que hi ha una resposta lineal, vista en el gràfic de més amunt entre els millivolts mesurats i la temperatura en celcius</p>
+    <p> Què passaria si utilitzo ESP32S3 i no Arduino respecre als resultats de mesura de temperatura? </p>
+    <p> El codi canviarà de la seguent manera: </p>
+    
+  int value = analogRead(sensorPin);
+  float millivolts = (value / 4096.0) * 5000;
+  float celsius = millivolts / 12; 
+  Serial.print(celsius);
+  Serial.println(" C");
+  delay(1000);
+     float temp = map (value,0,4095,2900,4150); 
+     float celsius = map (temp,2900,4150,-55,150); 
+<p> Canvia ja que hi té 12 bits, que és 2^12 que dona 4095 i s'hauria de connectar a 5 volts, ja que és pot connectar també a 3.3 volts, però no es llegiria correctament.</p>
+<p> Quina mesura donaria en un o altre controlador?</p>
+  <p> En ESP32S3 tenim 4096 nivells diferents i tenim 1250 millivolts disponibles (4150 - 2900).</p>
+<p> Quina és la resolució que tinc per cada nivell?</p>
+  <p> 1250/4096, que dona 0.30517578125, que vol dir que cada vegada que augmenta un número de nivell augmenten 0.305 millivolts</p>
+<p> Això quant seria en graus?</p>
+  <p> Tindriem 205 graus de diferència de temperatura (sempre), per tant la resolució seria més baixa en el cas de 1024 nivells que en el cas de 4096 nivells, que seria més alt, no importa el valor intermig.</p>
   </body>
 </html>
