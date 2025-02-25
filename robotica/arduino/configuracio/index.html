@@ -377,8 +377,8 @@
     <p> A la imatge superior podem veure que está conectat MAX6675 a ESP32S3 per alimentació elèctrica al pin de 3.3 volts (cable vermall) i al pin GND (cable negre), també a de estar connectat a un MISO perque volem que funcioni com un sensor, és a dir, master input, que vol dir que el microcontrolador actua com a meste que rep entrades o inputs i els sensor és un esclau que dona a output. En ESP32S3 MISO es posa amb les sigles SO, que vol dir serial out (que està en el GPIO19), que surt informació en sèrie cap a l'exterior (mestre).</p>
     <p> La comunicació SPI necessita ser síncrona, i per això connectem el cable GPIO5 que és un SSK o serial clock o rellotge que sincronitza el enviament de temperatures al microcontrolador. </p>
     <p> Necesitem connectar un cable CS al pin CS que significa Chip select ens permet fer la comunicació en sèrie i està en el GPIO23. </p>
-    <p> Resumint, necesitem molts cables per comunicació entre el sensor de temperatura i el microcontrolador. Hi ha tecnologies que necesiten un cable i es diuen one-wire
-
+    <p> Resumint,necessitem molts cables per comunicació entre el sensor de temperatura i el microcontrolador. Hi ha tecnologies que necessiten un cable i es diuen one-wire com per exemple com el sensor de temperatura DS20 </p>
+        
     <p>You can work with different software as you can read under Microcontrollers>Software for microcontollers in this
         web as for example using the <a
             href="https://docs.platformio.org/en/latest/boards/espressif32/esp32-s3-devkitc-1.html"
