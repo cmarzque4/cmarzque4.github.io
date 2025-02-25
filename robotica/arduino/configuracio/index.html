@@ -370,7 +370,12 @@
                 </SPI.h>
             </code>
         </pre>
-      
+     <h2> Exemple comunicació SPI entre MAX6675 I ESP32S3</h2>
+    <p>El MAX6675 és un sensor de temperatura amb molts circuits interns. En primer lloc té un termoparell de  tipus K, que permet mesurar temperatures molt altes amplies de -50 graus a 1000 graus amb una precisió de 0,25 graus i amb un preu de 5€. També té un convertidor analògic digital de 12 bits i un circuit per adaptar a la comunicació</p>
+    <p>Un termoparell de tipus K és una unió de 2 aliatges que genera un corrent electric proporcionada a la temperatura. Els 2 aliatges més comuns: El Cromel, constituit per Crom i Níquel, i el Alumel que està constituit per Aluminni i Níquel. L'efecte Seebeck és la tennsió electrica provocada per el canvi de temperatura que és molt petita la corrent  del ordre de microvolts i que necesitem amplificar amb un circuit amplificador amb l'ordre de microvolts  i que necesitem ampllificar  amb unn circuit amplificador amb l'ordre de minivolts i després amb un convertidor analogic digital de 12 bits, convertirlo en un número hexadecimal (hexadecimal com 0x, binaria com a 0b i octals 0o), dins del número pot haver el valor per convertir en celsius</p>
+        <img src="max6675.png">
+    <p> A la imatge superior podem veure que está conectat MAX6675 a ESP32S3 per alimentació elèctrica al pin de 3.3 volts i al pin GND</p>
+
 
     <p>You can work with different software as you can read under Microcontrollers>Software for microcontollers in this
         web as for example using the <a
@@ -447,9 +452,6 @@
     Serial.println("Hello World");
     delay(1000);
     }</code></pre>
-    <h2> Exemple comunicació SPI entre MAX6675 I ESP32S3</h2>
-        <p>El MAX6675 és un sensor de temperatura amb molts circuits interns. En primer lloc té un termoparell de  tipus K, que permet mesurar temperatures molt altes amplies de -50 graus a 1000 graus amb una precisió de 0,25 graus i amb un preu de 5€. També té un convertidor analògic digital de 12 bits i un circuit per adaptar a la comunicació</p>
-        <p>Un termoparell de tipus K és una unió de 2 aliatges que genera un corrent electric proporcionada a la temperatura. Els 2 aliatges més comuns: El Cromel, constituit per Crom i Níquel, i el Alumel que està constituit per Aluminni i Níquel. L'efecte Seebeck és la tennsió electrica provocada per el canvi de temperaturaque és </p>
     <p><a href="http://blocs.xtec.cat/tecno/files/2022/07/helloworld1.png"><img
                 class="alignnone size-large wp-image-2716"
                 src="http://blocs.xtec.cat/tecno/files/2022/07/helloworld1-1024x640.png" alt="" width="474" height="296"
