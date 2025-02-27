@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anàlisi de dades amb pandas de Python i openair a R</title>
+    <title>Programació amb Arduino</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
@@ -48,6 +48,78 @@ void loop() { // És un codi que s'executa sense parar fins que desconnecto l'Ar
  delay(500);
 }
 
+</code></pre>
+    
+<pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-python">  
+// Blink amb dos variables globals
+// Avantatge: Quan canvio un número al principi canviarà tot el codi / S'enten millor perquè jo poso els noms de les variables
+// Desavantatge: és una mica més llarg
+int ledPin = 13;
+int delayPeriod = 500; // Declarem dos variables globals com a números enters
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+ digitalWrite(ledPin, HIGH); 
+ delay(delayPeriod);
+ digitalWrite(ledPin, LOW); // Utilitzo una variable global
+ delay(delayPeriod); // Utilitzo una variable global
+}
+</code></pre>  
+
+<pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-python">  
+// Codi blink amb un condicional
+
+int ledPin = 13;
+int delayPeriod = 100;
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+ digitalWrite(ledPin, HIGH);
+ delay(delayPeriod);
+ digitalWrite(ledPin, LOW);
+ delay(delayPeriod);
+ delayPeriod = delayPeriod + 100; // Augmenta el temps 100 millisegons cada vegada
+ if (delayPeriod == 1000) { // Quan arriba a 1000 millisegons torna a començar, això significa que quan arriba als 1000 torna a començar perquè hem posat que delayPeriod sigui 100 de nou. 
+  // Cada vegada és més lent perquè el temps que triga en encendre i apagar-se és major (més lent). Si volgues que cada vegada fos més ràpid, i s'hauria de canviar varies coses: al principi del codi canviar la variable de //int delayPeriod = 1000, i al final de codi posar el menys "delayPeriod -100", i finalment canviar el condicional per: if (delayPeriod == 100); delayPeriod = 1000;
+  // Si volem que el canvi sigui més lent s'hauria de posar un número més alt en "delayPeriod + x"
+  // Si volem que el canvi sigui més ràpid s'hauria de posar un número més baix en "delayPeriod + x"
+    delayPeriod = 100;
+ }
+}
+</code></pre>
+    
+<pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-python">  
+// Operacions matemàtiques (Útils per sensors o per problemes matemàtics)
+
+void setup() {
+  Serial.begin(9600); // Hem de connectar l'Arduino a la consola aèrie a 9600 bauds, que són 9600 símbols per segon, I poden ser aproximadament 9600 bits per segon, però, en alguns cassos, necessitem més d'un bit per a un símbol
+  int a = 2;
+  int b = 2;
+  int c = a + b; // Llenguatge arduino accepta les operacions matemàtiques bàsiques
+  Serial.println(c); 
+}
+
+void loop() {}
+</code></pre>
+
+<pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-python">  
+// Exemple de temperatura amb operacions matemàtiques
+
+void setup() {
+  Serial.begin(9600);
+  int degC = 20; // Representa que el sensor ja ha agafat 20 graus i els volem convertir a Fahrenheit
+  int degF;
+  degF = degC * 9 / 5 + 32;
+  Serial.println(degF); // Fes una impressió a la consola de l'ordinador en una línea println el valor de la variable fahrenheit
+}
+
+void loop(){}
 </code></pre>
 </body>
 </html>
