@@ -1,12 +1,53 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anàlisi de dades amb pandas de Python i openair a R</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+        pre { background: #f4f4f4; padding: 10px; overflow-x: auto; position: relative; }
+        code { font-family: monospace; }
+        .copy-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            color: #007bff;
+        }
+    </style>
+    <script>
+        function copyCode(button) {
+            const codeBlock = button.nextElementSibling.innerText;
+            navigator.clipboard.writeText(codeBlock).then(() => {
+                button.innerHTML = '<i class="fas fa-check"></i>';
+                setTimeout(() => { button.innerHTML = '<i class="fas fa-copy"></i>'; }, 2000);
+            });
+        }
+    </script>
+</head>
+<pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-python">  
+  
 // 02_01_blink
 
-void setup() {
-  pinMode(13, OUTPUT);
+void setup() { // Codi que s'executa una vegada i és la configuració
+  pinMode(13, OUTPUT); // Estem dient que el pin 13 és una sortida de corrent o OUTPUT on puc connectar un led
 }
 
-void loop() {
- digitalWrite(13, HIGH);
- delay(500);
- digitalWrite(13, LOW);
+void loop() { // És un codi que s'executa sense parar fins que desconnecto l'Arduino o li dono una instrucció de parada
+ digitalWrite(13, HIGH); // <b>digitalWrite</b>  és una sortida digital i permet encendre i apagar. Només tñe 2 balors, HIGH i LOW (encès i apagat)
+ delay(500); // És el temps de millisegons en el que ha d'estar, en aquest cas encès
+ digitalWrite(13, LOW); // Aquí digitalWrite fa que s'apagui
  delay(500);
 }
+
+</code></pre>
+</body>
+</html>
