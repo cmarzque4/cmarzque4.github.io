@@ -408,5 +408,41 @@ void flash(int duration) {
    delay(duration);
 }
 </code></pre>
+    <p> Puc crear una funció que em serveixi per 4 lletres i només quan la crido he de possar el número de repeticions com paràmetre o arguments</p>
+    <pre><code>
+    void eosz (int numFlash) {
+        for (int i = 0; i <numFlashes; i ++){
+            digitalWrite(ledPin, HIGH);
+            delay (200);
+            digitalWrite(ledPin, LOW);
+            delay (200); }
+    }
+    void loop (){
+        eosz(1); // Lletra e
+        eosz(2); // Lletra o
+        eosz(3); // Lletra s
+        eosz(4); // Lletra z    
+    </code></pre>
+
+   // A continuació creem una funció que serà vàlida per als punts repetits i per les linies repetides amb dos paràmetres
+    <pre><code>
+    void eosz (int numFlash) {
+        for (int i = 0; i <numFlashes; i ++){
+            digitalWrite(ledPin, HIGH);
+            delay (d);
+            digitalWrite(ledPin, LOW);
+            delay (d); }
+    }
+    void loop () {
+            eosztmo(1, 600) // Lletra t
+            eosztmo(2, 600) // Lletra m
+    
+    <h1> Normes internacionals del codi Morse</h1>
+    <ol>
+        <li> Una linea (dash) és igual a 3 punts (dots)</li>
+        <li> L'espai entre les parts d'una mateixa lletra és d'un punt (dot)</li>
+        <li> L'espai entre dues lletres d'una matèixa paraula és de 3 punts</li>
+        <li> L'espai entre dues paraules diferents és de 5 punts (dots)</li>
+    </ol>
 </body>
 </html>
