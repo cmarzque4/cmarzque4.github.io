@@ -240,5 +240,67 @@ perque? Si soc un Arduino, els pins A0 - A5 només soc capaç de fer una cosa, l
           // 500 analogValue 
         </code>
       </pre>
+  </div>
+        <div class="content-container">
+        <p>L'objectiu del codi següent és entendre que les cadenes o strings són conjunts de caràcters ASCII i podem accedir 
+            amb ells amb arrays que esta formats per parèntesis quadrats i el primer element és el 0. En llenguatge C i derivats
+            del C com Arduino podem utilitzar punters o pointers que permeten apuntar a un element. En python o JavaScript no hi
+            ha punters.</p>
+            <p>A continuació veuras els caracter ASCII en una taula, que son els utilitzats en els strings o cadenes</p>
+            <p>La taula següent està basada en un codi binari de 7 bits, perque 2 elevat a 7 (2^7) es 128, hi hauran desde 0 a 
+               127 caràcters diferents</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>ASCII</th>
+                    <th>DECIMAL</th>
+                    <th>BINARI</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A-Z</td>
+                    <td>65-90</td>
+                    <td>1000001-1011010</td>
+                </tr>
+                <tr>
+                    <td>a-z</td>
+                    <td>97-122</td>
+                    <td>1100001-1111010</td>
+                </tr>
+                <tr>
+                    <td>0-9</td>
+                    <td>48-57</td>
+                    <td>110000-111001</td>
+                </tr>
+                <tr>
+                    <td>espai</td>
+                    <td>32</td>
+                    <td>100000</td>
+                </tr>
+            </tbody>
+            </th>
+        </table>
+        <p>ASCII significa American Standard Code for Information Interchange i va ser descrit a l'any 1967 amb l'objectiu 
+            d'intercambiar informació amb ordinadors</p>
+        <p>UTF8 és un sistema Unicode Transformation Format que permet escriure més d'un milió de caràcters diferents
+            “🙂” U+1F642</p>
+            <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+                // sketch 05-03
+
+                char message[] = "Hello";
+                
+                void setup() {
+                  Serial.begin(9600);
+                  message[0] = 'h';
+                }
+                
+                void loop() {
+                  Serial.println(message);
+                  delay(1000);
+                }
+            </code></pre>
+
+        </div>
   </body>
 </html>
