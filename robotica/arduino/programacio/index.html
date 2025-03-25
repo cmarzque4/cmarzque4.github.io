@@ -444,5 +444,141 @@ void flash(int duration) {
         <li> L'espai entre dues lletres d'una matèixa paraula és de 3 punts</li>
         <li> L'espai entre dues paraules diferents és de 5 punts (dots)</li>
     </ol>
+            <div class="content-container">
+        <p>L'objectiu del codi següent és entendre que les cadenes o strings són conjunts de caràcters ASCII i podem accedir 
+            amb ells amb arrays que esta formats per parèntesis quadrats i el primer element és el 0. En llenguatge C i derivats
+            del C com Arduino podem utilitzar punters o pointers que permeten apuntar a un element. En python o JavaScript no hi
+            ha punters.</p>
+            <p>A continuació veuras els caracter ASCII en una taula, que son els utilitzats en els strings o cadenes</p>
+            <p>La taula següent està basada en un codi binari de 7 bits, perque 2 elevat a 7 (2^7) es 128, hi hauran desde 0 a 
+               127 caràcters diferents</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>ASCII</th>
+                    <th>DECIMAL</th>
+                    <th>BINARI</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A-Z</td>
+                    <td>65-90</td>
+                    <td>1000001-1011010</td>
+                </tr>
+                <tr>
+                    <td>a-z</td>
+                    <td>97-122</td>
+                    <td>1100001-1111010</td>
+                </tr>
+                <tr>
+                    <td>0-9</td>
+                    <td>48-57</td>
+                    <td>110000-111001</td>
+                </tr>
+                <tr>
+                    <td>espai</td>
+                    <td>32</td>
+                    <td>100000</td>
+                </tr>
+            </tbody>
+            </th>
+        </table>
+        <p>ASCII significa American Standard Code for Information Interchange i va ser descrit a l'any 1967 amb l'objectiu 
+            d'intercambiar informació amb ordinadors</p>
+        <p>UTF8 és un sistema Unicode Transformation Format que permet escriure més d'un milió de caràcters diferents
+            “🙂” U+1F642</p>
+                
+            <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+                // sketch 05-03
+
+                char message[] = "Hello"; // Hi ha un array simbolitzat per "[]" que conté el caràcter "char", Cada caràcter d'ASCII te assignat un valor de 7 bits. Un valor de 7 bits va de 0 a 127 ja que 2^7 es 128. La "H" es 72, la "e" 101, etc... Per especificar el final de paraula posem un 0
+                
+                void setup() {
+                  Serial.begin(9600);
+                  message[0] = 'h';
+                }
+                
+                void loop() {
+                  Serial.println(message);
+                  delay(1000);
+                }
+            </code></pre>
+
+        </div>
+
+ <h3> Importància dels punters + Exemple del codi Morse</h3>
+ <p> Hi ha llenguatges amb punters i sense punters (amb: C i els seus derivats, com Arduino) o (sense: python o JavaScript)</p>
+<p> El punter llegeix una adreça a la memória de l'ordinador, el contingut de l'adreça dins de la memória i la possició de l'adreça en hexadecimal, també es pot manipular. Hi ha possicions de l'adeça / memória especial, com els sectors d'arrancada (així es poden arreclar errors d'arrancada) </p>
+<p> Els punters permeten per tenir un control total per part del programador de la memória i els recursos de l'ordinador. El problema que té és que pot provocar errors a la memória o accesos no permesos si no saps com fer funcionar el punter</p>
+ <p> Els dos símbols per utilitzar punters són: l'asterisc '*', que serveix per veure el contingut de l'aderça de memória. I l'ampersand '&', que llegeix la posició de l'adreça de memória</p>
+<p> La memória d'un ordinador la podem imaginar com caixetes d'un array, on cada caixa té una direcció en hexadecimal que comença amb <b>0x</b> i un contingut de cadascuna d'aquestes caixa (que pot ser buit o pot contenir un valor) </p>
+
+    <h4> Operacions avançades amb punters</h4> 
+        <ul>
+            <li><b> Accés directe a la memória:</b> Permet modificar valors en posicions específiques</li>
+            <li><b> Manipulació eficient d'arrays i strings (cadenes):</b> Un array és en essència una llista d'adeçes amb principi i final amb punter al primer element</li>
+           <li><b> Passar graus quantitats de dades a funcions:</b> En lloc de copiar valors, els punters passen la seva aderça, estalviant memória i temps. Aquest és un dels motius pels que C i derivats són més ràpids que python o JavaScript.</li>
+            <li><b> Creació d'estructures dinàmiques:</b> Es pot crear coses com gràfics o lliestes enllaçades de forma fàcil</li>
+            <li><b> Interacció fàcil amb microcontroladors:</b> Els microcontroladors utilitzen llengutges de baix nivell ja que és més fàcil de manipular (encara que són més propers al hardware. Encara que, gràcies a l'augment de la memória, s'ha pogut crear llenguatges com micropython o circutpython). </li>
+        </ul>
+        <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+const int ledPin = 13;
+const int dotDelay = 200;
+
+char* letters[] = { // Això és un array d'arrays perque dins de l'array letters hi han arrays més petites formats per una combinació de punts i ratlles (array filles)
+  ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..",    // A-I
+  ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.",  // J-R
+  "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."          // S-Z
+};
+
+char* numbers[] = { // En el cas concret del codi Morse, l'asterisc s'utilitza per especificar la memória de cada lletra del codi Morse
+  "-----", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----."};
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  char ch;
+  if (Serial.available() > 0) {
+    ch = Serial.read();
+    if (ch >= 'a' && ch <= 'z') {
+      flashSequence(letters[ch - 'a']);
+    }
+    else if (ch >= 'A' && ch <= 'Z') {
+      flashSequence(letters[ch - 'A']);
+    }
+    else if (ch >= '0' && ch <= '9') {
+      flashSequence(numbers[ch - '0']);
+    }
+    else if (ch == ' ') {
+      delay(dotDelay * 4);  // gap between words  
+    }
+  }
+}
+
+void flashSequence(char* sequence) {
+  int i = 0;
+  while (sequence[i] != NULL) {
+    flashDotOrDash(sequence[i]);
+    i++;
+  }
+  delay(dotDelay * 3);    // gap between letters
+}
+
+void flashDotOrDash(char dotOrDash) {
+  digitalWrite(ledPin, HIGH);
+  if (dotOrDash == '.') {
+    delay(dotDelay);           
+  }
+  else { 
+    // must be a dash 
+    delay(dotDelay * 3);           
+  }
+  digitalWrite(ledPin, LOW);    
+  delay(dotDelay); // gap between flashes
+}
 </body>
 </html>
