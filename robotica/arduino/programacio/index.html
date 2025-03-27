@@ -523,15 +523,21 @@ void flash(int duration) {
             <li><b> Interacció fàcil amb microcontroladors:</b> Els microcontroladors utilitzen llengutges de baix nivell ja que és més fàcil de manipular (encara que són més propers al hardware. Encara que, gràcies a l'augment de la memória, s'ha pogut crear llenguatges com micropython o circutpython). </li>
         </ul>
         <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+// El principi del codi, abans de la funció de configuració 'setup' i la funció principal 'loop' que s'executa continuament, hem d'escriure sempre variables o constants. A més, al principi del codi trobem les constants i variables globals, anomenades així perquè es poden cridar o executar des de qualsevol part del codi, a diferencia de les variables locals que es defineixen i utilitzen dins de la mateixa funció 'loop' o una funció addicional. Devant de les variables i constants globals hauriem d'afegiu les biblioteques necessàries per fer funcionar el nostre codi (amb '#include <nom_de_biblioteca.h>') l'extenció 'h' deriva de C y significa 'biblioteca de headers' o encapçalament.
 const int ledPin = 13;
 const int dotDelay = 200;
-
-char* letters[] = { // Això és un array d'arrays perque dins de l'array letters hi han arrays més petites formats per una combinació de punts i ratlles (array filles)
+//'const' vol dir que la variable no es modificarà dins del codi. 'int' o integer significa que el nombre que hagafem haurà de ser enter, ja que els pins tenen números enters. El pin 13 és especial, té una resistència interna en el cas d'Arduino uno permet connectar direcatment un led, perquè està al costat del pin GND i puc clavar o connectar un led directament sense cap circuit o placa. 'ledPin' és una variable constant i s'anomena així per l'usuari , utilitzant camelCase i referint-nos  al que fa aquest pin.
+char* letters[] = { // Això és un array d'arrays perque dins de l'array letters hi han arrays més petites formats per una combinació de punts i ratlles (array filles), això és un array de caràcters -> És  un arrey o una matriu composada per diferents matrius
   ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..",    // A-I
   ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.",  // J-R
   "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."          // S-Z
 };
-
+// Més amunt i més abaix tinc dos arrays composats cadascun d'ells per arrays interns i cada array intern està composat de caràcters que només poden ser punts o ratlles ('.' o '-').
+//Quan jo crido 'letters[0]' el que obtinc és '.-' o sigui, la lletra A en codi Morse. Aquesta forma detreballar és molt dolenta des d'un punt de vista d'eficiencia, perquè estic utilitzant un byte (un conjunt de 8 bits) senser per cada punt o ratlla. Un bit és un valor de 0 o 1 i això és podria utilitzar per fer els punts o les ratlles perquè els dos valors són dos estats (0 o 1) i el codi Morse també en té dos ('.' i '-') llabors podem substituir els caràcters (asignar el 0 al punt i l'1 a la ratlla). 
+// Quants bytes de memória necessitarem utilitzant bytes o bits per codificar Morse?
+// Aproximadament el Morse té (83 lletres + 26 números) 109 punts o ratlles de caràcters, de la manera més eficient tindriem (109/8) 14 bytes i de la manera menys eficient (109 x 8) 872 bytes. Hem de tenir en compte
+// En un byte hi han 8 bits diferent, iper això es podrien fer 256 caràcters diferents. De fer ASCII utilitza 7 bits per creat 128 caràcters (de 0 a 127).
+// L'asterisc '*' és molt impostant, ja que ens indica que és un punter, '[]'ens indica que és un array, 'numbers' m'indica el nom de l'array, i 'char' m'indica el tipus d'elements (caràcters) que hi ha dins de l'array. L'array d'asota es diu numbers però està constituit per caràcters, perquè tant els números com com les lletres estan constituides per punts i ratlles que són caràcters
 char* numbers[] = { // En el cas concret del codi Morse, l'asterisc s'utilitza per especificar la memória de cada lletra del codi Morse
   "-----", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----."};
 
