@@ -544,9 +544,19 @@ char* numbers[] = { // En el cas concret del codi Morse, l'asterisc s'utilitza p
 void setup() {
   pinMode(ledPin, OUTPUT);
   Serial.begin(9600);
+// En el setup o configuració del microcontrolador indiquem que el pin 13 ara es diu "ledPin" sigui una sortida o "Output". Indiquem que l'Arduino que es comuniquiamb l'ordinador a través del port serial o sèrie i comenci a una velocitat de 9600 bauds o símbols que són aproximadament 9600 bits / segon
 }
 
 void loop() {
+// El loop és el codi principal, i el que el seu nom indica que es repeteix sense parar en un "loop". "char" significa que utilitzem una variable de tipus caràcter i l'anomenem <b>ch</b>. "Serial.available" significa si està disponible la comunicació sèrie o un 'serial monitor' que comunica el microcontrolador aArduin amb el nostre dispositiu (ordinador)
+// La comunicació entre Arduino i l'ordinador és complexa:
+// Primer pas: L'ordinador envia dades al monitor sèrie a traves del USB per un mecanisme que s'anomena 'USB to Serial'
+// Segon pas: La transfornació anterior 'USB to Serial' ho fa un xip especial dins d'Arduino
+// Tercer pas: Les dades en format sèrie arriven a una part del microcontrolador anomenada 'UART' que significa Univeral Asynchronous Receiver Transmiter
+// Quart pas: Envia les dades que rep a una memória temporal o 'buffer' que pot emmagatzemar 128 bytes fins que s'elimina en el moment que es llegeix
+// La funció serial available retorna el número de bytes de dades en el 'buffer' que estan esperant per ser llegits. Si no hi ha cap missatge esperant a ser llegit, la funció retorna a 0
+// La funció 'Serial.read' el que fa és llegir el primer o el següent caràcter disponible i l'emmagatzema a la variable "ch"
+// El símbol >= o <= s'utilitza per comparar amb el número d'ASCII que correspon a la lletra 'a' per tant, podriem canviar l'a pel número 97 i la z el número 122. Els altres caràcters que podem canviar serien 'A' (mayus) pel número 65 i 'Z' (mayus) pel número 90. El caràcter '0' correspon al número 48 i el caràcter '9' correspon al 57. El caràcter ' ' (espai en blanc) correspon al número 32
   char ch;
   if (Serial.available() > 0) {
     ch = Serial.read();
