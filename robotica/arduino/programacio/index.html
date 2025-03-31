@@ -557,7 +557,12 @@ void loop() {
 // La funció serial available retorna el número de bytes de dades en el 'buffer' que estan esperant per ser llegits. Si no hi ha cap missatge esperant a ser llegit, la funció retorna a 0
 // La funció 'Serial.read' el que fa és llegir el primer o el següent caràcter disponible i l'emmagatzema a la variable "ch"
 // El símbol >= o <= s'utilitza per comparar amb el número d'ASCII que correspon a la lletra 'a' per tant, podriem canviar l'a pel número 97 i la z el número 122. Els altres caràcters que podem canviar serien 'A' (mayus) pel número 65 i 'Z' (mayus) pel número 90. El caràcter '0' correspon al número 48 i el caràcter '9' correspon al 57. El caràcter ' ' (espai en blanc) correspon al número 32
-  char ch;
+// Els condicionals que hi ha dins del condicional general "Serial.available" el que fan és dir si es caràcter és entre la a i la z, li restes el valor menys a. Imaginem que la lletra és una 'c', que equival al número 99, llavors li restem la 'a' que és 97 quedaria el número 2, que està dins d'un [] és a dir dins d'un array i correspondria al tercer element de l'array de les lletres. Aquest tercer element és "-.-."
+// Un altre exemple 'H' estaria evaluat en un altre condicional (el de les majúscules), aquest caràcter equivilaria al número 72 i li hem de restar 'A' que equival a 65, per tant ch- 'A' és 7, que és el vuité element de l'array de majúscula [7] i letters[7] és "...."
+// Per què s'ha de restar? 
+// Per conèixer la posició de la lletra a l'array, perquè he possat l'array ordenat des de la 'a'-'z' i des de la 'A'-'Z'
+// Ara tenim el número per exemple letters [7] igual a "...." i el que volem és aplicar una funió.
+    char ch;
   if (Serial.available() > 0) {
     ch = Serial.read();
     if (ch >= 'a' && ch <= 'z') {
