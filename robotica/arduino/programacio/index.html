@@ -612,7 +612,19 @@ void flashDotOrDash(char dotOrDash) {
   <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
 
 const int outPin = 3;
-// pinMode és una funció predeterminada o 'built-in', vol dir que està predefinida en el llenguatge Arduino i sempre ha de rebre 2 arguments o paràmetres, el primer sempre ha de ser un número enter o "int" (integer) que correspon al número de pin que volem connectar (en aquest cas el 3), el segon argument és el mode que pot ser OUTPUT que significa sortida, o INPUT que significa entrada, també existeix INPUT_PULLUP
+// pinMode és una funció predeterminada o 'built-in', vol dir que està predefinida en el llenguatge Arduino i sempre ha de rebre 2 arguments o paràmetres, el primer sempre ha de ser un número enter o "int" (integer) que correspon al número de pin que volem connectar (en aquest cas el 3), el segon argument és el mode que pot ser OUTPUT que significa sortida, o INPUT que significa entrada, també existeix INPUT_PULLUP. 
+// Posarem un exemple per entendre millor el input 'pullup'. Tenim un ascensor que s'atura a l'inici i al final gràcies al 
+// interriuptor de final de cursa (palanca que al arribar al final o principi fa). El pullup per definició fa que és
+//connecti a una resistencia física de entre 20 i 50kOhms que per defecte està en HIGH, al arribar al final de cursa
+//es defineix el canvi a LOW. El cas 'pulldown' no existeix com a mode a Arduino, però si existeix el modo input 
+// (faria el contrari, sempre obert i a l'arribar al final de carrera tancat) aquest mode no és ni pullup ni pulldown,
+// és indetenminat, si connecto un cable a una entrada INPUT i el toco començaré a donar senyals que variaran, és a dir
+// per defecte va donant valors indeterminats. D'alguna forma l'INPUT és molt sensible a elements externs (canvis elèctrics)
+// Si volem un comportament pullup sense escriure pullup hauriem d'utilitzar una resistència externa de 20 a 50 kOhms que 
+// evitarà valors indeterminats
+// Perquè el pin 13 podria tenir un comportament inesperat o diferent amb el pullup?
+// Ja que el pin 13 té una resistència interna incorporada, segurament d'un valor de 200 Ohm, suficient per a un led
+      
 void setup() {
   pinMode(outPin, OUTPUT);
   Serial.begin(9600);
@@ -630,6 +642,42 @@ void loop() {
     }
   }
 }
+  </code></pre>
+      
+// Quan tenim una entrada hem de possar mode input i en comptes de fer un digitalWrite que fem a les sortides
+// hem de fer un digitalRead per obtenir l'entrada, que només pot ser un valor digital de 0 o 1 (binari)
+// Si el voltatge és menor a 2,5 volts es traduirà com un 0, en canvi si és superior com un 1
+<pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+const int inputPin = 5;
+
+void setup() {
+  pinMode(inputPin, INPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int reading = digitalRead(inputPin);
+  Serial.println(reading);
+  delay(1000);
+}
 </code></pre>  
+
+// El pullup estabilitza la senyal que rep per a que la transcripció a binari (0 i 1) sigui correcta. Si analitzem el que
+// passa amb un oscil·loscopi (mesura les oxilacions de la corrent)
+<pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+const int inputPin = 5;
+
+void setup() {
+  pinMode(inputPin, INPUT_PULLUP);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int reading = digitalRead(inputPin);
+  Serial.println(reading);
+  delay(1000);
+}
+</code></pre>
+    
 </body>
 </html>
