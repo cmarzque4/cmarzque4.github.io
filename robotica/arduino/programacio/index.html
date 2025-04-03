@@ -663,7 +663,10 @@ void loop() {
 </code></pre>  
 
 // El pullup estabilitza la senyal que rep per a que la transcripció a binari (0 i 1) sigui correcta. Si analitzem el que
-// passa amb un oscil·loscopi (mesura les oxilacions de la corrent)
+// passa amb un oscil·loscopi (mesura les oscil·lacions de la corrent) si mirem un oscil·loscopi unveurem que hi han 
+// pujades i baixades quan premo el botó no baixa de forma ideal sinó que té alguns pics que es diuen rebots 
+// (bouncing / debouncing) en el cas de debouncing és més correcte ja que el senyal per defecte és inestable i el que fem
+// és estabilitzar-lo -> desrebotar.
 <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
 const int inputPin = 5;
 
@@ -678,6 +681,25 @@ void loop() {
   delay(1000);
 }
 </code></pre>
-    
+
+// El togger 
+<pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+const int inputPin = 5;
+const int ledPin = 13;
+int ledValue = LOW;
+
+void setup()  {
+  pinMode(inputPin, INPUT_PULLUP);
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop()  {
+  if (digitalRead(inputPin) == LOW) {
+     ledValue = ! ledValue;
+     digitalWrite(ledPin, ledValue);
+  }
+}
+</code></pre>
+        
 </body>
 </html>
