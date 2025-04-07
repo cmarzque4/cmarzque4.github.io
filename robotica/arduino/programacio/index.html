@@ -682,7 +682,7 @@ void loop() {
 }
 </code></pre>
 <p> Negació: el signe d'exclamació "!" significa negar la variable que es posa després del signe</p>
-// Hi ha dos variables inicials, que són constants per definició del codi. La variable ledPin és el pin el qual connectem el led, que és normalment el 13. I el pin 5 és un pin on connectem un interruptor 
+// Hi ha dos variables inicials, que són constants per definició del codi. La variable ledPin és el pin el qual connectem el led, que és normalment el 13. I el pin 5 és un pin on connectem un interruptor per entrada de dades. El pin 5 està encés per defecte perque li hem dit que 
 <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
 const int inputPin = 5;
 const int ledPin = 13;
@@ -703,5 +703,71 @@ void loop()  {
 <p> Clica a la imatge per veure la simulació</p>
 <a href ="https://www.tinkercad.com/things/00ca5XpFBJJ-circuit-54-monk" Target="_blank"> <img src = "54.png"> </a>
 
+<pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+
+const int inputPin = 5;
+const int ledPin = 13;
+int ledValue = LOW;
+
+void setup()  {
+  pinMode(inputPin, INPUT_PULLUP);
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop()  {
+  if (digitalRead(inputPin) == LOW) {
+     ledValue = ! ledValue;
+     digitalWrite(ledPin, ledValue);
+  }
+}
+</code></pre>
+ <p> Solució amb llibreria</p>
+ <a href ="https://www.tinkercad.com/things/3eOSwW4E1xi-circuit-55-monk" Target="_blank"> <img src = "54.png"> </a>
+
+        
+<pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+
+const int inputPin = 5;
+const int ledPin = 13;
+int ledValue = LOW;
+
+void setup()  {
+  pinMode(inputPin, INPUT_PULLUP);
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  if (digitalRead(inputPin) == LOW) {
+     ledValue = ! ledValue;
+     digitalWrite(ledPin, ledValue);
+     delay(500);
+  }
+}
+</code></pre>
+
+<pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+
+#include <Bounce2.h>
+
+const int inputPin = 5;
+const int ledPin = 13;
+
+int ledValue = LOW;
+Bounce bouncer = Bounce(); 
+
+void setup() {
+  pinMode(inputPin, INPUT_PULLUP);
+  pinMode(ledPin, OUTPUT);
+  bouncer.attach(inputPin);
+ // bouncer.interval(50); // interval in ms
+}
+
+void loop() {
+  if (bouncer.update() && bouncer.read() == LOW) {
+   ledValue = ! ledValue;
+   digitalWrite(ledPin, ledValue);
+  }
+}
+</code></pre>
 </body>
 </html>
