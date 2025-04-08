@@ -746,7 +746,10 @@ void loop() {
 </code></pre>
 
 <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
-
+// El 'contact bounce' podriem traduir-ho com a rebot de contacte, és un problema comú en diferents dispositius, com per exemple interruptors mecànics reles (interruptor que canvia la posició d'una palanca interna mitjançant electromagnetisme), contactes de bateria. Tots aquests elements tenen en comú que estan fets de metalls elàstics, de forma que quan jo apreto un interruptor mecànic el metall que tanca el circuit rebota diverses vegades sobre el contacte, provocant una inestabilitat en el senyal
+<img src="">
+// Els moviments que veiem a dalt poden ser poc importants en un circuit de potència que utilitza 220 volts a vegades no s'aprecien aquests canvis, però en un circuit de control que funciona amb un voltatge de 3.3 o 5 volts iq ue està dissenyat per entendrei resoldre senyals digitals i analògiques pot provocar que entenguin les pujades i baixades com un flux de dades
+// Com es pot evitar?  Ho podem evitar per software com veiem més avall amb una biblioteca o per hardware, que vol dir, modificar físicament els elements per reduir el rebot. Per exemple, una superfície llisa de contacte seria millor perquè donaria menys rebots, si el metall fos menys elàstic, rebotaria menys. Antigament els contactes dels interruptors en mullaven en mercuri, per evitar el rebot. També es pot afegir un flitre com un condensador, per exemple que emmagatzemaria tots els excesos de càrrega produits.
 #include <Bounce2.h>
 
 const int inputPin = 5;
