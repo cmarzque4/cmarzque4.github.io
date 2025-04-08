@@ -724,7 +724,7 @@ void loop()  {
  <p> Solució amb llibreria</p>
  <a href ="https://www.tinkercad.com/things/3eOSwW4E1xi-circuit-55-monk" Target="_blank"> <img src = "54.png"> </a>
 
-        
+<p> Solució sense llibreria (simplement posant un delay de 500 millisegons) aconsegueix que el senyal que era inestable, després de 500 millisegons ja sigui estable, donant-li temps suficient.</p>        
 <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
 
 const int inputPin = 5;
@@ -747,30 +747,50 @@ void loop() {
 
 <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
 // El 'contact bounce' podriem traduir-ho com a rebot de contacte, és un problema comú en diferents dispositius, com per exemple interruptors mecànics reles (interruptor que canvia la posició d'una palanca interna mitjançant electromagnetisme), contactes de bateria. Tots aquests elements tenen en comú que estan fets de metalls elàstics, de forma que quan jo apreto un interruptor mecànic el metall que tanca el circuit rebota diverses vegades sobre el contacte, provocant una inestabilitat en el senyal
-<img src="">
+<img src="bouncy.png">
 // Els moviments que veiem a dalt poden ser poc importants en un circuit de potència que utilitza 220 volts a vegades no s'aprecien aquests canvis, però en un circuit de control que funciona amb un voltatge de 3.3 o 5 volts iq ue està dissenyat per entendrei resoldre senyals digitals i analògiques pot provocar que entenguin les pujades i baixades com un flux de dades
 // Com es pot evitar?  Ho podem evitar per software com veiem més avall amb una biblioteca o per hardware, que vol dir, modificar físicament els elements per reduir el rebot. Per exemple, una superfície llisa de contacte seria millor perquè donaria menys rebots, si el metall fos menys elàstic, rebotaria menys. Antigament els contactes dels interruptors en mullaven en mercuri, per evitar el rebot. També es pot afegir un flitre com un condensador, per exemple que emmagatzemaria tots els excesos de càrrega produits.
-#include <Bounce2.h>
+#include <Bounce2.h> // Instal·la i inclou la llibreria <a href="https://docs.arduino.cc/libraries/bounce2/">'Bounce2.h'</a> que és compatible amb totes les plàques Arduino.
 
-const int inputPin = 5;
-const int ledPin = 13;
-
-int ledValue = LOW;
+const int inputPin = 5; // Aquest valor és constant i correspon al interruptor
+const int ledPin = 13; // Aquest valor és constant i correspon al led
+int ledValue = LOW; // Aquest valor no és constant, però és un valor enter (integer), que per defecte, en aquest cas, té un valor inicial 0 (LOW)
 Bounce bouncer = Bounce(); 
-
+// La majúscula de Bounce m'indica que és una classe, i al costat de la classe poso el nom de l'objecte que tindrà totes les característiques de la classe anterior. Per exemple: Homo sapiens carla. Bounce(); escrit amb majúscules és un mètode d'una classe que s'aplica a l'objecte bounce. Aquest sistema està basat en el llenguatge C++ perquè l'autor de la biblioteca ho ha descrit així
 void setup() {
   pinMode(inputPin, INPUT_PULLUP);
   pinMode(ledPin, OUTPUT);
-  bouncer.attach(inputPin);
+  bouncer.attach(inputPin); // La sintaxi del punt o dot syntax és molt important perquè apliquem un mètode o una funció deinida a la classe com a un objecte concret que és bouncer. Aquesta funció attach depèn només d'un argument o paràmetre que és inpunPin. Que farà attach? L'attach lliga l'interruptor físic que està en inputPin a l'objecte bouncer que hem de controlar 
  // bouncer.interval(50); // interval in ms
 }
 
 void loop() {
-  if (bouncer.update() && bouncer.read() == LOW) {
-   ledValue = ! ledValue;
+  if (bouncer.update() && bouncer.read() == LOW) { // linia clau perquè està comprovant si ha conviat (bouncer.update retorna verdader o true si alguna cosa ha canviat a l'objecte bouncer) i la segona mart del codi comprova si a més a més '&&'comprova si el botó de l'interruptor està apagat perquè LOW = 0
+   ledValue = ! ledValue; // Si està encés, apagat, si està apagat, encén
    digitalWrite(ledPin, ledValue);
   }
 }
 </code></pre>
+
+<pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+
+<h2> Sortides analógiques</h2>
+<p> Algunes sortides d'Arduino i altres microcontroladors són PMW (pulse with modulation), vol dir que en comples de donar 0 i 1, poden donar molts valors intermitjos</p> 
+const int outputPin = 3;
+
+void setup() {
+  pinMode(outputPin, OUTPUT);
+  Serial.begin(9600);
+  Serial.println("Enter Volts 0 to 5");
+}
+
+void loop() {
+  if (Serial.available() > 0) {
+    float volts = Serial.parseFloat();
+    int pwmValue = volts * 255.0 / 5.0;
+    analogWrite(outputPin, pwmValue);
+  }
+}
+</code></pre>       
 </body>
 </html>
