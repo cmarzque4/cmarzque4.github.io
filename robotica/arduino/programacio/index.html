@@ -772,7 +772,7 @@ void loop() {
 }
 <h2> Sortides analógiques</h2>
 <p> Algunes sortides d'Arduino i altres microcontroladors són PMW (Pulse Width Modulation), es tracta d'una modulació de l'ample dels pols. És a dir, es modula el temps que és 0 i que es 1, aconsegueix que en 0 s'apagui i que en 1 s'encengui. Nosaltres no observem que s'encén i s'apaga, perquè és molt ràpid el canvi i la nostra visió no ens permet veure-ho. Nosaltres veiem la llum en un percentatge que depén del percentatge de temps que ha estat encés la sortida, vol dir que en comples de donar 0 i 1, poden donar molts valors intermitjos</p> 
-   
+<img rsc= "PMWduty.jpeg">  
 </code></pre>
 
 <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
@@ -798,7 +798,6 @@ void loop() {
 <p> La variable pwmValue és entra (int o 'integer') i el que fa és convertir el valor volts (0-5) a valors de 0 - 255, que és el número de bits (2^14) tal i com indica el data sheet o fulla de característiques del ESP32S3. Si fos un ESP32S3 la línea de codi seria 
     "Serial.println("enter volts 0 - 3.3")"
     "int pmwValue = volts * 16384.0 / 3.3"</p>
-<img rsc= "PMWduty.jpeg">
 <p> El ESP32S3 té l'avantatge de tenir més resolució, és a dir, pot donar 16384 valors diferents entre 0 i 3.3 volts. Aixó potser no es noti per un led, però es nota en un motor, on l'ESP32S3 permet accedir a més velocitats diferents. Els motors poden arribar a 16 bits, que és 2^16 o 25536 valors diferents, que depenent del tipus de motor, pot ser observat o no.</p>
 </code></pre>
         
