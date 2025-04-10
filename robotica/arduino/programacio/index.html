@@ -798,6 +798,7 @@ void loop() {
 <p> La variable pwmValue és entra (int o 'integer') i el que fa és convertir el valor volts (0-5) a valors de 0 - 255, que és el número de bits (2^14) tal i com indica el data sheet o fulla de característiques del ESP32S3. Si fos un ESP32S3 la línea de codi seria 
     "Serial.println("enter volts 0 - 3.3")"
     "int pmwValue = volts * 16384.0 / 3.3"</p>
+<img rsc= "PMWduty.jpeg">
 <p> El ESP32S3 té l'avantatge de tenir més resolució, és a dir, pot donar 16384 valors diferents entre 0 i 3.3 volts. Aixó potser no es noti per un led, però es nota en un motor, on l'ESP32S3 permet accedir a més velocitats diferents. Els motors poden arribar a 16 bits, que és 2^16 o 25536 valors diferents, que depenent del tipus de motor, pot ser observat o no.</p>
 </code></pre>
         
