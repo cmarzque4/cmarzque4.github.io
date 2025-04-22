@@ -781,19 +781,19 @@ const int outputPin = 3;
 
 void setup() {
   pinMode(outputPin, OUTPUT);
-  Serial.begin(9600);
-  Serial.println("Enter Volts 0 to 5");
+  Serial.begin(9600); // comença lo comunicació sèrie USB entre Arduino i l'ordinador a una velocitat de 9600 bauds (9600 símbols per segon). L'objecte Serial és de la classe serial i li apliquem amb la sintaxi del punt el mètode begin que té com a paràmetre o argument els un número sencer que correspondrà als bauds
+  Serial.println("Enter Volts 0 to 5"); // demana a l'usuari que entri per la consola o per el serial monitor de l'Arduino IDE un número entre 0 i 5. Println significa imprimeix una linea i li apliquem aen la sintaxis del punt a la classe serial pot rebre diversos paràmetres, si els posem entre comemtes s'escriuen tal qual i sinó, escriu el valor de la variable
 }
 
-void loop() {
-  if (Serial.available() > 0) {
-    float volts = Serial.parseFloat();
-    int pwmValue = volts * 255.0 / 5.0;
+void loop() { // codi rincipal que no s'atura mai, es repeteix fins que desconecto l'Arduino
+  if (Serial.available() > 0) { // El mètode Serial.available espera caràcters, major a 0 és que hi ha algún caràcter
+    float volts = Serial.parseFloat(); // parseFloat és una funció o mètode que s'aplica a l'objecte serial i la seva funció és parsejar o analitzar el contingut de caràcters que arriba pel port serial i si és de tipus decimal o floating point number (número amb coma flotant) o variable tipus float. Les variables tipus float inclouen les variable int o integer -> números sencers. També existeix parseInt que només acceptaria números enters. El float volts crea un espai a la memória de l'ordinador anomenat volts que haurà de ser del tipus floating point number que emmagatzemarà el que li arribi del port serial escrit per l'usuari. la variable volts emmagatzema el número decimal que escriu l'usuari
+    int pwmValue = volts * 255.0 / 5.0; // Els volts no ens serveixen perquè volem PWM perquè no velem valors entre 0 i 5, sinó entre 0 i 255. Perquè entre 0 i 255? per que és el número de bits (2^8 -> 256). Faig una regla de tres i multiplico el valor per 255 i divideixo entre 5. Per exemple si l'usuari inserta 2.5 tindras 2.5 * 255 / 5 = 127.5. Aquet valor es transformara en 127 perque ha de ser integer i es guardara en pwmValue.
     analogWrite(outputPin, pwmValue);
   }
 }
 
-<p> El "const int outputPin" defineix el pin de sortida constant que no es pot canviar. Després de defiir el pin de sortida 3 i en output (sortida) i la velocitat bauds (9600), el codi demana que escriguim a la consola del programa AArduino IDE: Entre volts 0 - 5.</p>
+<p> El "const int outputPin" defineix el pin de sortida constant que no es pot canviar. Després de defiir el pin de sortida 3 i en output (sortida) i la velocitat bauds (9600), el codi demana que escriguim a la consola del programa Arduino IDE: Entre volts 0 - 5.</p>
 <p> El loop principal comprova que hi hagi caràcters escrits a la consola, després agafa el valor que hem donat i el guarda en la variable volts. El valor por ser en decimal perquè posa float ('Floating point number'). El mètode parseFloat l'apliquem amb la sintaxi del punt a l'objecte Serial (Que es posa en  majúscula, normalment seria una classe en majúscula) i agafa el valor de la consola en sèrie. </p>
 <p> La variable pwmValue és entra (int o 'integer') i el que fa és convertir el valor volts (0-5) a valors de 0 - 255, que és el número de bits (2^14) tal i com indica el data sheet o fulla de característiques del ESP32S3. Si fos un ESP32S3 la línea de codi seria 
     "Serial.println("enter volts 0 - 3.3")"
