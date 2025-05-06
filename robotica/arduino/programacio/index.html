@@ -1000,11 +1000,100 @@ void loop() {}</code></pre>
     <li>\(c = 12345\)</li>
     <li>\(m = 2^{31}\)</li>
   </ul>
-  <p>
-    Aquesta seqüència de valors entre 0 i \(m-1\) és previsible si es coneix la llavor inicial  
-    — per això és <em>pseudo</em>aleatòria.
+  <p> Aquesta seqüència de valors entre 0 i \(m-1\) és previsible si es coneix la llavor inicial, per això és <em>pseudo</em>aleatòria. </p>
+    
+<div class="content-container">
+    <h2>Numeros aleatoris, perque son imporannts y com es fan</h2>     
+    <p> La funció random de Ardunio IDE deriva de la funció rnd del llenguatge C i C++ i fuaniona de la mateixa manera. 
+        No genera números aleatoris sinó pseudoaleatois, perque estan creats per un algorisme o algoritme, anomenat "Generador líneal congruecial". 
+        Aquet algoritme és determinista, sempre onara els mateixos resulatats.
+        La funció random necesita una llavo o seed per generar els números i sinó s'indica acostuma a ser 1 o 0, en Arduino és 1.  Donarem un exempe matematic</p>
 
-      
+                    
+<h1>Generació de Nombres Pseudoaleatoris: LCG + Arduino</h1>
+
+  <h2>1. Algorisme LCG (Linear Congruential Generator)</h2>
+  <p>
+    L’algorisme congruencial lineal genera seqüències pseudoaleatòries segons la fórmula de recursió:
   </p>
+  <div>
+    \[
+      X_{n+1} \;=\; \bigl(a \cdot X_n + c\bigr)\;\bmod\; m
+    \]
+  </div>
+  <p>On:</p>
+  <ul>
+    <li><strong>\(X_n\)</strong> = valor anterior.</li>
+    <li><strong>\(a\)</strong> = multiplicador.</li>
+    <li><strong>\(c\)</strong> = increment.</li>
+    <li><strong>\(m\)</strong> = mòdul.</li>
+    <li><strong>\(X_0\)</strong> = llavor inicial (seed).</li>
+  </ul>
+
+  <h3>Exemple Numèric Pas a Pas</h3>
+  <p>Suposem:</p>
+  <ul>
+    <li>\(a = 5\)</li>
+    <li>\(c = 3\)</li>
+    <li>\(m = 16\)</li>
+    <li>\(X_0 = 7\)</li>
+  </ul>
+  <ol>
+    <li>
+      \(X_1 = (5 \times 7 + 3) \bmod 16 = 38 \bmod 16 = 6\)
+    </li>
+    <li>
+      \(X_2 = (5 \times 6 + 3) \bmod 16 = 33 \bmod 16 = 1\)
+    </li>
+    <li>
+      \(X_3 = (5 \times 1 + 3) \bmod 16 = 8  \bmod 16 = 8\)
+    </li>
+    <li>
+      \(X_4 = (5 \times 8 + 3) \bmod 16 = 43 \bmod 16 = 11\)
+    </li>
+    <li>
+      \(X_5 = (5 \times 11 + 3) \bmod 16 = 58 \bmod 16 = 10\)
+    </li>
+  </ol>
+  <p><strong>Seqüència completa:</strong> 7, 6, 1, 8, 11, 10</p>
+</div>
+<div class="content-studio">
+<h1>Números aleatoris i arduino</h1>
+      <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+      void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  int number = random(1, 7); //genera numeros aleatoris entre 1 i 7 que siguin enters, amb una llavor 0
+  Serial.println(number);
+  delay(500); 
+}   
+      </code></pre>
+      <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+        void setup() {
+  Serial.begin(9600);
+  randomSeed (analogRead(0)); // Tant si no posem res al detector analògic, com si posem alguna cosa, el pin A0 de Arduino llegirà valors de 0 a 1023. Aquests valors seran aleatoris en cas de que no hi hagi res connectart a A0. Si connectem un simple cable a A0 observarem que quan toquem amb els dits o  inclús sense tocar hi ha un senyal de soroll que es mou entre 0 i 1023 normalment pel rang baix. L'aire és una barreja complexa de gassos en moviment i l'entrada analògica és un sistema molt sensible amb aquest gassos. Resumint, analogRead(0) donarà valors enters aleatoris i serà la nostra primera capa d'aleatorietat. La segona capa de l'aleatorietat és randomSeed perquè utilitza un algoritme lineal congruencial, que es basa en un mètode recursiu, és a dir, que agafa el número anterior o un primer número, que pot ser 0. Aquest priemr número el multipliquem per un númerofix que no canvia mai i el sumem amb un número fix que no canvia mai (només canvia si canviem el llenguatge de programació o la versió del llenguatge). Quan ja tenim aquest número fem una operació mòdul per obtenir el número aleatori, això vol dir, dividir el número obtingut entre un número conegut sempre igual i el residu serà pseudoaleatori. Perquè és pseudoaleatori? Sempre serà la mateixa seqüència si fessim randomSeed(4), i la mateixa seüència si fessim randomSeed(x) sent "x" qualsevol número. Perquè no puc saber quin número aleatori sortirà? Encara que hi ha una relació matemàtica entre el número de llavor i el número aleatori perquè el númerode llavor és aleatori (analogRead(0)). és un número pseudoaleatoride un número aleatori, perquè la funció randomSeed és pseudoaleatoria i analogRead(0) és aleatòria pel soroll de fons.
+    // Utilitat de randomSeed. Pot servir per tenir sempre el mateixos números? Sí, perquè quan triem una Seed determinana sempre tindrem una seüència, pot ser útil perquè jo puc fer un aparell o programa amb una randomSeed(184) i si l dic a un altre investigador / fabricant de hardware li dic la meva llavor (Seed), ell podrà reproduir els meus resultats. A més a més de random hem de conèixer les funcions matemàtiques d'arduino que poden se útils per fer càlculs, per exemple, per convertir valorsde 0 a 1023 en valors de temperatura, humitat, concentració de contaminant, etc.
+    <p> La <b>funció abs</b> donarà el valor absolut, que serà el valor (número) sense signe, per exemple abs(12) = 12, i abs(-12) = 12 </p>
+    <p> La <b>funció constrain</b> fa constrenyir o reduïr un número d'un rang determinat. La funció constrain té tres números o arguments el primer argument és un número que volem constrenyir, el segon númeroés el principal del rang i el tercer número és el final del rang permés.
+ Exemple: 
+     <ul>
+         <li> constrain(8,1,10); ens retornarà el númeor 8 perquè en el rang 1-10, 8 és correcte. </li>
+         <li> constrain(11,1,10); ens retorna 10 perquè no pot ser major a 10. </li>
+         <li> constrain(0,1,10); en retorna el número 1 perquè no pot ser menor a 1 </li>
+     </ul>
+     <p> La funció map té 5 arguments, que són 
+     <ul> 
+         <li> El primer número és el número que ens interesa, que està a dins del primer rang </li>
+         <li> Els segon número és el número mínim del primer rang </li>
+         <li> El tercer número és el màxim del primer rang </li>
+         <li> El quart número és el número mínim del segon rang </li>
+         <li> El cinqué número és el valor màxim del segon ranng </li>
+     <ul> 
+     <p> Per exemple: map(200,0,1023,0,100); seria un exemple d'ua lectura analògica de 200 en un rang de 0 a 1023 d'un lector analògic A0 d'Arduino que es converteix en 20 graus aproximadament de temperatura e un rang de 0 a 100 graus. t=map(200,0,1023,0,100) = 20 </p>
+     <p> La funció màs i min ens donarà el valor màxim i valor mínim de 2 números, per exemple max(3,4) = 4 i min (3,4) = 3. </p>
+     <p> La funció pow és la poténcia, té dos arguments, el primer argument és la base i el segon argument és l'exponent, per exemple pow(2,5) = 32, ja que és 2^5 </p>
+    
 </body>
 </html>
