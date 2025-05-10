@@ -35,3 +35,15 @@
 </head>
 <body>
 
+<h1> Fractals, atractors de De Jong i ampolla Klein </h1>
+    <p> Els objectes del títol tenen en comú que es oden definir amb fórmules matemàtiques que poden ser recursives i es poden representar amb números complexos (en cas dels fractals) o números trigonometrics (en el cas dels atractors i ampolla de Klein) </p>
+    <img src = "">
+    <p> Els atractors de De Jong es poden crear amb el programa "Fyre" que permet escriure els valors de les variables a, b, c, d, que estan a les fòrmules del sinus i cosinus: </p>
+    <ul>
+        <li> x' = sin (a * y) - cos (b * x) </li>
+        <li> y' = sin (c * x) - cos (d * y) </li>
+    </ul>
+    <p> Els fractals són formes geomètriques repetitives i tenen una dimenció fraccionaria que es repeteix infinites vegades. La dimensió dels fractals està entre 1 i 2 / 2 i 3. </p>
+    <p> L'ampolla Klein té dimensió 2D, però sembla que té volum (3D) </p>
+  </body>
+</html>
