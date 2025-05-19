@@ -106,7 +106,7 @@ canvas{
   <li> El segon argument és 'la freqüència' i s'expressa en Herz </li>
   <li> El tercer argument és optatiu i és 'el temps de durada' </li>
 </ul>
-<img src = "arduino_music.webp.png"> 
+<img src = "arduino_music.webp"> 
 <img src = "not_inter.jpg">
 <img src = "patitura_harry.webp"
     
@@ -118,3 +118,41 @@ void setup()
 }
 
 void loop() {}
+    
+         
+        #define NOTE_B4 493.883
+        #define NOTE_E5 659.255
+        #define NOTE_G5 783.991
+        #define NOTE_#F5 739.989
+        #define NOTE_B5 987.767
+        #define NOTE_A5 880.000
+        #define NOTE_#D5 622.254
+        #define NOTE_F5 698.456
+        #define NOTE_D6 1174.66
+        #define NOTE_#C6 1108.73
+        #define NOTE_C6 1046.50
+    
+    int harrypotter[]{
+        NOTE_B4, NOTE_E5, NOTE_G5, NOTE_#F5, NOTE_E5, NOTE_B5, NOTE_A5, NOTE_#F5,
+        NOTE_E5, NOTE_G5, NOTE_#F5, NOTE_#D5, NOTE_F5, NOTE_B4,  NOTE_B4,  NOTE_B4, 
+        NOTE_E5, NOTE_G5, NOTE_#F5, NOTE_E5, NOTE_B5, NOTE_D6, NOTE_#C6,
+        NOTE_C6
+        
+    }
+
+    int durades[]{
+        100, 150, 50, 100, 200, 100, 300, 300,
+        150, 50, 100, 200, 100, 300, 200, 100, 
+        150, 50, 100, 200, 100, 200, 100,
+        200, 
+    
+    }
+    void setup(){
+    
+        }
+
+        void loop() {
+    int numNotes= sizeof(harrypotter)/sizeof(harrypotter[0]), 
+    //Calculem el número de notes dividint el número de bytes totals de la canço que ho calcula la funció "sizeof" entre el número de bytes de una de les notes (en aquest cas la primera). En aquest exemple tenim 5 notes i cada nota ocuparà un número enter que es igual a 2 bytes en arduino. Per tant harry potter ocupa 10 bytes que dividit entre el tamany de la primera nota que son 2 bytes dona 5 notes musicals. El número 5 el guardem a la variable numNotes 
+    // L'avantatge que té aquest codi és que sempre contarà les notes i puc canviar quan vulgi la cançó
+        }
