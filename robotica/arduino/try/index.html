@@ -1,148 +1,161 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>La meva Web Preciosa</title>
+  <title>Web de Carla</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --main-color: #4f46e5;
-      --accent-color: #22c55e;
-      --background: #f9fafb;
-      --text-color: #111827;
-      --font-stack: 'Segoe UI', Roboto, sans-serif;
+      --blue-dark: #023e8a;
+      --blue-mid: #0077b6;
+      --blue-light: #90e0ef;
+      --blue-extra-light: #e0f7fa;
+      --white: #ffffff;
+      --shadow: rgba(0, 119, 182, 0.15);
     }
 
     body {
       margin: 0;
-      padding: 0;
-      font-family: var(--font-stack);
-      background-color: var(--background);
-      color: var(--text-color);
-      line-height: 1.6;
+      font-family: 'Nunito', sans-serif;
+      background: linear-gradient(to bottom, var(--blue-extra-light), var(--white));
+      color: var(--blue-dark);
     }
 
     header {
-      background: var(--main-color);
-      color: white;
-      padding: 1rem 2rem;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(to right, var(--blue-dark), var(--blue-mid));
+      color: var(--white);
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 3px 10px var(--shadow);
     }
 
-    h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-
-    nav {
-      margin-top: 0.5rem;
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
     }
 
     nav a {
-      color: white;
-      margin: 0 1rem;
+      margin-left: 2rem;
+      color: var(--white);
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
       transition: color 0.3s ease;
     }
 
     nav a:hover {
-      color: var(--accent-color);
+      color: var(--blue-light);
     }
 
     main {
+      max-width: 960px;
+      margin: 2.5rem auto;
       padding: 2rem;
-      max-width: 800px;
-      margin: auto;
+      background: var(--white);
+      border-radius: 14px;
+      box-shadow: 0 8px 20px var(--shadow);
     }
 
-    footer {
-      background: #e5e7eb;
+    h1 {
+      font-size: 2.5rem;
       text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #6b7280;
-      margin-top: 2rem;
+      color: var(--blue-mid);
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    a {
+      color: var(--blue-mid);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .projectes {
+      display: grid;
+      gap: 1.2rem;
+    }
+
+    .projecte {
+      background: var(--blue-light);
+      padding: 1rem 1.5rem;
+      border-left: 5px solid var(--blue-dark);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px var(--shadow);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .projecte:hover {
+      transform: translateY(-5px);
+      background: #caf0f8;
+    }
+
+    .emoji {
+      margin-right: 0.5rem;
     }
 
     @media (max-width: 600px) {
-      h1 {
-        font-size: 1.5rem;
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 1rem;
       }
 
       nav a {
         display: block;
-        margin: 0.5rem 0;
+        margin: 0.4rem 0;
+      }
+
+      main {
+        margin: 1rem;
       }
     }
+
   </style>
 </head>
 
-<body>
-
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-       <a class="navbar-brand d-flex align-items-center" href="https://agora.xtec.cat/ies-pompeu-fabra-martorell/">
-    <img src="logo.png" alt="Logo" width="60" class="logo">
-</a>
-         <a class="navbar-brand d-flex align-items-center" href="https://cmarzque4.github.io/">
-    <span class="brand-text">Web de Carla</span>
-</a>
+<body>
+  <header>
+    <div class="logo">Web de Carla</div>
+    <nav>
+      <a href="#">Inici</a>
+      <a href="#">Braç robòtic</a>
+      <a href="#">Arduino</a>
+      <a href="#">Música</a>
+    </nav>
+  </header>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="https://cmarzque4.github.io/">Inici</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">Braç robótic</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="https://cmarzque4.github.io/robotica/cdirecta">Cinemàtica directa</a>
-                        <a class="dropdown-item" href="https://cmarzque4.github.io/robotica/cinversa">Cinemàtica inversa</a>
-                        <a class="dropdown-item" href="https://cmarzque4.github.io/robotica/projecte%201">Projecte</a>
-                        <a class="dropdown-item" href="https://www.tinkercad.com/things/4H1zJ3NW7Ea-magnificent-snaget">Projecte Tinkercard</a>
-                    </div>
-                </li>
-
-           <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">Arduino</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="https://cmarzque4.github.io/robotica/arduino/programacio"> Programació</a>
-                        <a class="dropdown-item" href="https://cmarzque4.github.io/robotica/arduino/programacio"> Configuració</a>
-                        <a class="dropdown-item" href="https://cmarzque4.github.io/robotica/fractals"> Fractals</a>
-                    </div>
-                </li>
-             <li class="nav-item">
-                    <a class="nav-link" href="https://cmarzque4.github.io/robotica/arduino/musica"> Música</a>
-              </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<!-- Contingut principal -->
-<div class="content-container">
+  <main>
     <h1>Benvinguts</h1>
-    <p>Em dic Carla M i sóc alumne de robótica de 1r de batxillerat de <a href="https://agora.xtec.cat/ies-pompeu-fabra-martorell/">l'institut Pompeu Fabra</a></p>
-    <p>A continuació veuràs un llistat amb diferents projectes que farem durant el curs:</p>
-    <ul>
-      <!-- <ul> -> unorder list "punts" <ol> -> order list "numeros" / <li> -> elements de la llista -->
-        <li> Codis amb JavaScript, CSS i HTML que construiran una pàgina web, on l'usuari introduirà diferents dades d'un braç robótic i el sistema ens calcularà altres dades i les representarà visualment. </li>
-        <li> Projecte 2</li>
-        <li> Projecte 3</li> 
-    </ul>
-</div>
+    <p>
+      Em dic Carla M i sóc alumne de robòtica de 1r de batxillerat de 
+      <a href="https://www.ins-pompeufabra.cat/">l'Institut Pompeu Fabra</a>.
+    </p>
+    <p>A continuació veuràs una llista amb diferents projectes que farem durant el curs:</p>
 
-<!-- Scripts necessaris -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-
+    <div class="projectes">
+      <div class="projecte">
+        <span class="emoji">💡</span> <strong>Projecte 1:</strong> Pàgina web amb JavaScript i HTML per representar les dades d’un braç robòtic.
+      </div>
+      <div class="projecte">
+        <span class="emoji">🎨</span> <strong>Projecte 2:</strong> Art interactiu que reacciona a la veu i moviments amb P5.js.
+      </div>
+      <div class="projecte">
+        <span class="emoji">🧪</span> <strong>Projecte 3:</strong> Simulació farmacocinètica amb fórmules i gràfics.
+      </div>
+    </div>
+  </main>
 </body>
 </html>
