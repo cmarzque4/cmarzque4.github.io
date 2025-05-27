@@ -34,7 +34,7 @@
     }
 
     .logo {
-      font-size: 1.8rem;
+      font-size: 2.8rem;
       font-weight: bold;
     }
 
@@ -120,46 +120,58 @@
         margin: 0.4rem 0;
       }
 
-      main {
-        margin: 1rem;
-      }
-    }
 
   </style>
 </head>
-
-<!-- Navbar -->
-<body>
-  <header>
-    <img src="logo.png" alt="Logo" width="60" class="logo">
-    <a href="https://cmarzque4.github.io/"> Web de Carla</a>
-    <nav>
-      <a href="https://cmarzque4.github.io/">Inici</a>
-      <a href="#">Braç robòtic</a>
-      <a href="#">Arduino</a>
-      <a href="#">Música</a>
+<nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://ecastro4.github.io">
+                <img src="https://ecastro4.github.io/logo.png" alt="Logo" width="50">
+                Web d'Eric
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul.n class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://ecastro4.github.io">Inici</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Programació
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="https://ecastro4.github.io/cara">Cara interactiva</a>
+                            <a class="dropdown-item" href="https://ecastro4.github.io/ocell">Ocell</a>
+                            <a class="dropdown-item" href="https://ecastro4.github.io/wepray">We Pray</a>
+                            <a class="dropdown-item" href="https://ecastro4.github.io/coldplay">Coldplay</a>
+                            <a class="dropdown-item" href="https://ecastro4.github.io/python">Python</a>
+                            <a class="dropdown-item" href="https://ecastro4.github.io/astronomia">Astronomia</a>
+                            <a class="dropdown-item" href="https://ecastro4.github.io/openair">Openair</a>
+                            <a class="dropdown-item" href="https://ecastro4.github.io/fractals">Fractals</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Robòtica
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                            <a class="dropdown-item" href="https://ecastro4.github.io/robotica/cdirecta">Cinemàtica directa</a>
+                            <a class="dropdown-item" href="https://ecastro4.github.io/robotica/cinversa">Cinemàtica
+                                inversa</a>
+                            <a class="dropdown-item" href="https://ecastro4.github.io/robotica/coldplay">Coldplay</a>
+                            <a class="dropdown-item" href="https://ecastro4.github.io/robotica/arduino">Arduino</a>
+                            <a class="dropdown-item" href="https://ecastro4.github.io/robotica/fractals">Fractals</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://ecastro4.github.io/enllaços">Enllaços</a>
+                    </li>
+                </ul.n>
+            </div>
+        </div>
     </nav>
-  </header>
-
-  <main>
-    <h1>Benvinguts</h1>
-    <p>
-      Em dic Carla M i sóc alumne de robòtica de 1r de batxillerat de 
-      <a href="https://www.ins-pompeufabra.cat/">l'Institut Pompeu Fabra</a>.
-    </p>
-    <p>A continuació veuràs una llista amb diferents projectes que farem durant el curs:</p>
-
-    <div class="projectes">
-      <div class="projecte">
-        <span class="emoji">💡</span> <strong>Projecte 1:</strong> Pàgina web amb JavaScript i HTML per representar les dades d’un braç robòtic.
-      </div>
-      <div class="projecte">
-        <span class="emoji">🎨</span> <strong>Projecte 2:</strong> Art interactiu que reacciona a la veu i moviments amb P5.js.
-      </div>
-      <div class="projecte">
-        <span class="emoji">🧪</span> <strong>Projecte 3:</strong> Simulació farmacocinètica amb fórmules i gràfics.
-      </div>
-    </div>
-  </main>
-</body>
-</html>
