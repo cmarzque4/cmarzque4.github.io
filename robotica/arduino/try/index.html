@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Web de Carla</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     :root {
       --blue-dark: #023e8a;
@@ -16,46 +16,9 @@
       --shadow: rgba(0, 119, 182, 0.15);
     }
 
-        padding: 0; /* Elimina l'espai extra al voltant del cos */
-}
-
-.container-fluid {
-    max-width: 100%; /* Assegura que la navbar ocupa tota l'amplada */
-}
-
-    
-    .navbar {
-    padding-left: 0; /* Elimina el padding esquerra de la navbar */
-}
-
-.logo {
-    margin-right: 20px; /* Ajustar el marge si vols separar el logo del text */
-    margin-left: 0; /* Assegurar que no hi hagi marge a l'esquerra */
-}
-
-    
-
-.navbar-brand {
-    display: flex;
-    align-items: center;
-}
-
-
-}
-
-.brand-text {
-    white-space: nowrap; /* Això assegura que el text no es trenqui en múltiples línies */
-    font-size: 1.25rem; /* Ajusta la mida de la font si és necessari */
-}  
-.content-container {
-            margin-left: 10px;
-            margin-right: 10px; /* Marges laterals ajustats */
-            margin-top: 20px; /* Afegeix espai superior entre el contingut i la barra de menú */
-        }
-
     body {
       margin: 0;
-      font-family: 'Nunito', sans-serif;
+      font-family: 'Poppins', sans-serif;
       background: linear-gradient(to bottom, var(--blue-extra-light), var(--white));
       color: var(--blue-dark);
     }
@@ -71,7 +34,7 @@
     }
 
     .logo {
-      font-size: 2.8rem;
+      font-size: 1.8rem;
       font-weight: bold;
     }
 
@@ -157,7 +120,12 @@
         margin: 0.4rem 0;
       }
 
-      .dropdown {
+      main {
+        margin: 1rem;
+      }
+    }
+
+    .dropdown {
   position: relative;
   display: inline-block;
 }
@@ -189,7 +157,39 @@
   display: block;
 }
 
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+  position: absolute;
+  background-color: var(--white);
+  min-width: 160px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  padding: 0; /* inicialment sense padding */
+}
 
+.dropdown-content a {
+  color: var(--blue-dark);
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--blue-light);
+}
+
+.dropdown:hover .dropdown-content {
+  max-height: 500px; /* prou espai per mostrar tot */
+  opacity: 1;
+  padding: 0.5rem 0;
+}
+  
   </style>
 </head>
 
