@@ -157,6 +157,38 @@
         margin: 0.4rem 0;
       }
 
+      .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--white);
+  min-width: 160px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+}
+
+.dropdown-content a {
+  color: var(--blue-dark);
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.2s;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--blue-light);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 
   </style>
 </head>
