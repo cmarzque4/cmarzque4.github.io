@@ -695,9 +695,9 @@ const int delayPeriod = 250;
 void setup() {
   pinMode(ledPin, OUTPUT);
 }
-// Aquest codi és el principal, anomenat a "main" en alguns llenguatges. És el que s'aplica continuadament, en aquest cas void loop(). 
-  El loop repeteix 20 vegades el flash.Per cridar la funció només cal posar el nom de la funció dintre del loop per cridar-la i que 
-  s'executi sempre
+// Aquest codi és el principal, anomenat a "main" en alguns llenguatges. És el que s'aplica continuadament, 
+  en aquest cas void loop(). El loop repeteix 20 vegades el flash.Per cridar la funció només cal posar el nom
+  de la funció dintre del loop per cridar-la i que s'executi sempre
 void loop() {
   for (int i = 0; i < 20; i ++) {
     flash();
@@ -744,8 +744,19 @@ void flash(int numFlashes, int d) {
 }
 </code></pre>
 <h2>Funcions en Arduino</h2>
-<p> Els funcions de Arduino són semblants a les funcions que veiem a cinemàtica directa i inversa. En el cas de cinemàtica robòtica utilitzem funcions JavaScript dins d'un codi html. Abans cada funció com per exemple, calculatePosition(); era una funció sense paràmetres o arguments que estava identificada amb un bloc de codi anomenat function, i s'executava quan clicavem un botó. Dins d'aquest bloc hi havien instruccions que permetien fer càlculs matemàtics. En el seguent codi d'Arduino tenim una funció flash amb dos paràmetres amb números sencers, anomenat ledPin i de delayPeriod que identifiquen el pin que está connectat i el temps que ha d'estar encès o apagat.</p>
-<p> Ara farem que un bucle s'executi només 20 o x vegades dins d'un bucle for localitzat dins d'un bucle infinit loop. Ho aconseguin amb la paraula clau static, que fa que una variables'inicialitzi només una vegada que será la primera vegada que correm el codi. La paraula static es deriva del llenguatge C i Arduino és un derivat de C++ i precessing. Si eliminem només la paraula static del codi següent s'executarà infinites vegades. Així aconseguim dins la funció loop controlar el número de execucions, també ho podriem aplicar a altres funcions</p>
+<p> Els funcions de Arduino són semblants a les funcions que veiem a cinemàtica directa i inversa. 
+  En el cas de cinemàtica robòtica utilitzem funcions JavaScript dins d'un codi html. Abans cada funció 
+  com per exemple, calculatePosition(); era una funció sense paràmetres o arguments que estava identificada 
+  amb un bloc de codi anomenat function, i s'executava quan clicavem un botó. Dins d'aquest bloc hi havien 
+  instruccions que permetien fer càlculs matemàtics. En el seguent codi d'Arduino tenim una funció flash amb 
+  dos paràmetres amb números sencers, anomenat ledPin i de delayPeriod que identifiquen el pin que está 
+  connectat i el temps que ha d'estar encès o apagat.</p>
+<p> Ara farem que un bucle s'executi només 20 o x vegades dins d'un bucle for localitzat dins d'un bucle 
+  infinit loop. Ho aconseguin amb la paraula clau static, que fa que una variables'inicialitzi només una
+  vegada que será la primera vegada que correm el codi. La paraula static es deriva del llenguatge C i Arduino 
+  és un derivat de C++ i precessing. Si eliminem només la paraula static del codi següent s'executarà infinites 
+  vegades. Així aconseguim dins la funció loop controlar el número de execucions, també ho podriem aplicar a 
+  altres funcions</p>
 
 <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-python"> 
 // 03_04_blink_20_static
