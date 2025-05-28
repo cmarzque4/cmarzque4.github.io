@@ -868,12 +868,12 @@ de repeticions com paràmetre o arguments</p>
     </ol>
             <div class="content-container">
     <p>L'objectiu del codi següent és entendre que les cadenes o strings són conjunts de caràcters ASCII
-    i podem accedir amb ells amb arrays que esta formats per parèntesis quadrats i el primer element és 
-    el 0. En llenguatge C i derivats del C com Arduino podem utilitzar punters o pointers que permeten
-    apuntar a un element. En python o JavaScript no hi ha punters.</p>
-    <p>A continuació veuras els caracter ASCII en una taula, que son els utilitzats en els strings o cadenes</p>
-    <p>La taula següent està basada en un codi binari de 7 bits, perque 2 elevat a 7 (2<sub>7</sub>) es 128, hi 
-    hauran desde 0 a 127 caràcters diferents</p>
+  i podem accedir amb ells amb arrays que esta formats per parèntesis quadrats i el primer element és 
+  el 0. En llenguatge C i derivats del C com Arduino podem utilitzar punters o pointers que permeten
+  apuntar a un element. En python o JavaScript no hi ha punters.</p>
+  <p>A continuació veuras els caracter ASCII en una taula, que son els utilitzats en els strings o cadenes</p>
+  <p>La taula següent està basada en un codi binari de 7 bits, perque 2 elevat a 7 (2<sub>7</sub>) es 128, hi 
+  hauran desde 0 a 127 caràcters diferents</p>
         <table>
             <thead>
                 <tr>
@@ -955,8 +955,8 @@ buit o pot contenir un valor) </p>
             memória i temps. Aquest és un dels motius pels que C i derivats són més ràpids que python o JavaScript.</li>
             <li><b> Creació d'estructures dinàmiques:</b> Es pot crear coses com gràfics o lliestes enllaçades de forma fàcil</li>
             <li><b> Interacció fàcil amb microcontroladors:</b> Els microcontroladors utilitzen llengutges de baix nivell ja que és més fàcil 
-            de manipular (encara que són més propers al hardware. Encara que, gràcies a l'augment de la memória, s'ha pogut crear llenguatges 
-            com micropython o circutpython). </li>
+            de manipular (encara que són més propers al hardware. Encara que, gràcies a l'augment de la memória, s'ha pogut 
+            crear llenguatges com micropython o circutpython). </li>
         </ul>
         <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
 // El principi del codi, abans de la funció de configuració 'setup' i la funció principal 'loop' que s'executa continuament, 
@@ -1063,8 +1063,12 @@ void flashSequence(char* sequence) {
   delay(dotDelay * 3);    // gap between letters
 // El delay serveix per deixar espai entre les lletres o seqüències
 }
-// La funció "flashSequence ()" llegeix una determinada lletra que rep com a argument, letters [7] i reconeix que està formada per "...." i crida la funció "flashDotOrDash ()" fins que s'acaben els punts o ratlles i deixa un espai al final per indicar que és una lletra
-// La funció "flashDotOrDash ()" té un paràmetre intern anomenat 'DotOrDash'. Aquesta funció sempre encèn un led, i el deixa encés un temps escés o delay. En cas de que sigui una ratlla , el fa 3 vegades més llarg que un punt, gràcies a un condicional 'if' o en cas del contrari 'else'. No diem si és ratlla,  diem si no és punt
+// La funció "flashSequence ()" llegeix una determinada lletra que rep com a argument, letters [7] i reconeix que està formada 
+per "...." i crida la funció "flashDotOrDash ()" fins que s'acaben els punts o ratlles i deixa un espai al final per indicar que 
+és una lletra
+// La funció "flashDotOrDash ()" té un paràmetre intern anomenat 'DotOrDash'. Aquesta funció sempre encèn un led, i el deixa 
+encés un temps escés o delay. En cas de que sigui una ratlla , el fa 3 vegades més llarg que un punt, gràcies a un condicional 
+'if' o en cas del contrari 'else'. No diem si és ratlla,  diem si no és punt
 void flashDotOrDash(char dotOrDash) {
   digitalWrite(ledPin, HIGH);
   if (dotOrDash == '.') {
@@ -1078,14 +1082,23 @@ void flashDotOrDash(char dotOrDash) {
   delay(dotDelay); // gap between flashes
 }
 </code></pre>
-// El loop és un bucle i contínuament va cridant la funció 'flashSequence ()' i el que fa és llegir cada lletra i convertirles en punts i ratlles, aquesta funció crida a la funció 'flashDotOrDash ()' continuament que fa que s'encengui els leds segon els punts i ratlles. Sempre hem de dividir el codi en diverses funcions, perimer per fer-lo més modular i entendre que fa cada funció i a més ens fa més fàcil el manteniment i canvis futurs.
+// El loop és un bucle i contínuament va cridant la funció 'flashSequence ()' i el que fa és llegir cada lletra i convertirles 
+en punts i ratlles, aquesta funció crida a la funció 'flashDotOrDash ()' continuament que fa que s'encengui els leds segon els 
+punts i ratlles. Sempre hem de dividir el codi en diverses funcions, perimer per fer-lo més modular i entendre que fa cada funció 
+i a més ens fa més fàcil el manteniment i canvis futurs.
 
 <h2> Input i Output: Entrades i Sortides</h2>    
-    <p> Les entrades i sortides poden ser de dues maneres diferents, digitals o analógiques, les digitals poden ser de 0 volts o de 3.3 volts i en altres plàques Arduino poden ser 0 i 5 volts. Les analógiques srien graduals (0-3.3v) en 2<sub>n</sub> passos, sent 'n' el número de bits</p>
+  <p> Les entrades i sortides poden ser de dues maneres diferents, digitals o analógiques, 
+  les digitals poden ser de 0 volts o de 3.3 volts i en altres plàques Arduino poden 
+  ser 0 i 5 volts. Les analógiques srien graduals (0-3.3v) en 2<sub>n</sub> passos, 
+  sent 'n' el número de bits</p>
   <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
 
 const int outPin = 3;
-// pinMode és una funció predeterminada o 'built-in', vol dir que està predefinida en el llenguatge Arduino i sempre ha de rebre 2 arguments o paràmetres, el primer sempre ha de ser un número enter o "int" (integer) que correspon al número de pin que volem connectar (en aquest cas el 3), el segon argument és el mode que pot ser OUTPUT que significa sortida, o INPUT que significa entrada, també existeix INPUT_PULLUP. 
+// pinMode és una funció predeterminada o 'built-in', vol dir que està predefinida en el llenguatge Arduino i sempre ha de 
+rebre 2 arguments o paràmetres, el primer sempre ha de ser un número enter o "int" (integer) que correspon al número de pin 
+que volem connectar (en aquest cas el 3), el segon argument és el mode que pot ser OUTPUT que significa sortida, o INPUT que 
+significa entrada, també existeix INPUT_PULLUP. 
 // Posarem un exemple per entendre millor el input 'pullup'. Tenim un ascensor que s'atura a l'inici i al final gràcies al 
 // interriuptor de final de cursa (palanca que al arribar al final o principi fa). El pullup per definició fa que és
 //connecti a una resistencia física de entre 20 i 50kOhms que per defecte està en HIGH, al arribar al final de cursa
@@ -1155,7 +1168,10 @@ void loop() {
 }
 </code></pre>
 <p> Negació: el signe d'exclamació "!" significa negar la variable que es posa després del signe</p>
-// Hi ha dos variables inicials, que són constants per definició del codi. La variable ledPin és el pin el qual connectem el led, que és normalment el 13. I el pin 5 és un pin on connectem un interruptor per entrada de dades. El pin 5 està encés per defecte perque li hem dit que 
+// Hi ha dos variables inicials, que són constants per definició del codi. La variable ledPin és el pin el qual connectem el led,
+que és normalment el 13. I el pin 5 és un pin on connectem un interruptor per entrada de dades. El pin 5 està encés per defecte 
+perque li hem dit que: 
+      
 <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
 const int inputPin = 5;
 const int ledPin = 13;
@@ -1197,7 +1213,8 @@ void loop()  {
  <p> Solució amb llibreria</p>
  <a href ="https://www.tinkercad.com/things/3eOSwW4E1xi-circuit-55-monk" width="150" Target="_blank"> <img src = "54.png"> </a>
 
-<p> Solució sense llibreria (simplement posant un delay de 500 millisegons) aconsegueix que el senyal que era inestable, després de 500 millisegons ja sigui estable, donant-li temps suficient.</p>        
+<p> Solució sense llibreria (simplement posant un delay de 500 millisegons) aconsegueix que el 
+senyal que era inestable, després de 500 millisegons ja sigui estable, donant-li temps suficient.</p>        
 <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
 
 const int inputPin = 5;
@@ -1219,32 +1236,56 @@ void loop() {
 </code></pre>
 
 <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
-// El 'contact bounce' podriem traduir-ho com a rebot de contacte, és un problema comú en diferents dispositius, com per exemple interruptors mecànics reles (interruptor que canvia la posició d'una palanca interna mitjançant electromagnetisme), contactes de bateria. Tots aquests elements tenen en comú que estan fets de metalls elàstics, de forma que quan jo apreto un interruptor mecànic el metall que tanca el circuit rebota diverses vegades sobre el contacte, provocant una inestabilitat en el senyal
+// El 'contact bounce' podriem traduir-ho com a rebot de contacte, és un problema comú en diferents dispositius,
+com per exemple interruptors mecànics reles (interruptor que canvia la posició d'una palanca interna mitjançant 
+electromagnetisme), contactes de bateria. Tots aquests elements tenen en comú que estan fets de metalls elàstics, 
+de forma que quan jo apreto un interruptor mecànic el metall que tanca el circuit rebota diverses vegades sobre el
+contacte, provocant una inestabilitat en el senyal
+<br>
 <img src="bouncy.png">
-// Els moviments que veiem a dalt poden ser poc importants en un circuit de potència que utilitza 220 volts a vegades no s'aprecien aquests canvis, però en un circuit de control que funciona amb un voltatge de 3.3 o 5 volts iq ue està dissenyat per entendrei resoldre senyals digitals i analògiques pot provocar que entenguin les pujades i baixades com un flux de dades
-// Com es pot evitar?  Ho podem evitar per software com veiem més avall amb una biblioteca o per hardware, que vol dir, modificar físicament els elements per reduir el rebot. Per exemple, una superfície llisa de contacte seria millor perquè donaria menys rebots, si el metall fos menys elàstic, rebotaria menys. Antigament els contactes dels interruptors en mullaven en mercuri, per evitar el rebot. També es pot afegir un flitre com un condensador, per exemple que emmagatzemaria tots els excesos de càrrega produits.
+// Els moviments que veiem a dalt poden ser poc importants en un circuit de potència que utilitza 220 volts a vegades no 
+s'aprecien aquests canvis, però en un circuit de control que funciona amb un voltatge de 3.3 o 5 volts iq ue està dissenyat
+per entendrei resoldre senyals digitals i analògiques pot provocar que entenguin les pujades i baixades com un flux de dades
+// Com es pot evitar?  Ho podem evitar per software com veiem més avall amb una biblioteca o per hardware, que vol dir,
+modificar físicament els elements per reduir el rebot. Per exemple, una superfície llisa de contacte seria millor perquè 
+donaria menys rebots, si el metall fos menys elàstic, rebotaria menys. Antigament els contactes dels interruptors en mullaven 
+en mercuri, per evitar el rebot. També es pot afegir un flitre com un condensador, per exemple que emmagatzemaria tots els 
+excesos de càrrega produits.
 #include <Bounce2.h> // Instal·la i inclou la llibreria <a href="https://docs.arduino.cc/libraries/bounce2/">'Bounce2.h'</a> que és compatible amb totes les plàques Arduino.
 
 const int inputPin = 5; // Aquest valor és constant i correspon al interruptor
 const int ledPin = 13; // Aquest valor és constant i correspon al led
-int ledValue = LOW; // Aquest valor no és constant, però és un valor enter (integer), que per defecte, en aquest cas, té un valor inicial 0 (LOW)
+int ledValue = LOW; // Aquest valor no és constant, però és un valor enter (integer), que per defecte, en aquest cas,
+té un valor inicial 0 (LOW)
 Bounce bouncer = Bounce(); 
-// La majúscula de Bounce m'indica que és una classe, i al costat de la classe poso el nom de l'objecte que tindrà totes les característiques de la classe anterior. Per exemple: Homo sapiens carla. Bounce(); escrit amb majúscules és un mètode d'una classe que s'aplica a l'objecte bounce. Aquest sistema està basat en el llenguatge C++ perquè l'autor de la biblioteca ho ha descrit així
+// La majúscula de Bounce m'indica que és una classe, i al costat de la classe poso el nom de l'objecte que tindrà totes 
+les característiques de la classe anterior. Per exemple: Homo sapiens carla. Bounce(); escrit amb majúscules és un mètode 
+d'una classe que s'aplica a l'objecte bounce. Aquest sistema està basat en el llenguatge C++ perquè l'autor de la biblioteca 
+ho ha descrit així
 void setup() {
   pinMode(inputPin, INPUT_PULLUP);
   pinMode(ledPin, OUTPUT);
-  bouncer.attach(inputPin); // La sintaxi del punt o dot syntax és molt important perquè apliquem un mètode o una funció deinida a la classe com a un objecte concret que és bouncer. Aquesta funció attach depèn només d'un argument o paràmetre que és inpunPin. Que farà attach? L'attach lliga l'interruptor físic que està en inputPin a l'objecte bouncer que hem de controlar 
+  bouncer.attach(inputPin); // La sintaxi del punt o dot syntax és molt important perquè apliquem un mètode o una funció deinida 
+  a la classe com a un objecte concret que és bouncer. Aquesta funció attach depèn només d'un argument o paràmetre que és inpunPin. 
+  Que farà attach? L'attach lliga l'interruptor físic que està en inputPin a l'objecte bouncer que hem de controlar 
  // bouncer.interval(50); // interval in ms
 }
 
 void loop() {
-  if (bouncer.update() && bouncer.read() == LOW) { // linia clau perquè està comprovant si ha conviat (bouncer.update retorna verdader o true si alguna cosa ha canviat a l'objecte bouncer) i la segona mart del codi comprova si a més a més '&&'comprova si el botó de l'interruptor està apagat perquè LOW = 0
+  if (bouncer.update() && bouncer.read() == LOW) { // linia clau perquè està comprovant si ha conviat (bouncer.update retorna 
+  verdader o true si alguna cosa ha canviat a l'objecte bouncer) i la segona mart del codi comprova si a més a més '&&'comprova 
+  si el botó de l'interruptor està apagat perquè LOW = 0
    ledValue = ! ledValue; // Si està encés, apagat, si està apagat, encén
    digitalWrite(ledPin, ledValue);
   }
 }
 <h2> Sortides analógiques</h2>
-<p> Algunes sortides d'Arduino i altres microcontroladors són PMW (Pulse Width Modulation), es tracta d'una modulació de l'ample dels pols. És a dir, es modula el temps que és 0 i que es 1, aconsegueix que en 0 s'apagui i que en 1 s'encengui. Nosaltres no observem que s'encén i s'apaga, perquè és molt ràpid el canvi i la nostra visió no ens permet veure-ho. Nosaltres veiem la llum en un percentatge que depén del percentatge de temps que ha estat encés la sortida, vol dir que en comples de donar 0 i 1, poden donar molts valors intermitjos</p> 
+<p> Algunes sortides d'Arduino i altres microcontroladors són PMW (Pulse Width Modulation), 
+es tracta d'una modulació de l'ample dels pols. És a dir, es modula el temps que és 0 i que es 1, 
+aconsegueix que en 0 s'apagui i que en 1 s'encengui. Nosaltres no observem que s'encén i s'apaga, 
+perquè és molt ràpid el canvi i la nostra visió no ens permet veure-ho. Nosaltres veiem la llum 
+en un percentatge que depén del percentatge de temps que ha estat encés la sortida, vol dir que 
+en comples de donar 0 i 1, poden donar molts valors intermitjos</p> 
 <img rsc= "PMWduty.jpeg">  
 </code></pre>
 
@@ -1254,14 +1295,27 @@ const int outputPin = 3;
 
 void setup() {
   pinMode(outputPin, OUTPUT);
-  Serial.begin(9600); // comença lo comunicació sèrie USB entre Arduino i l'ordinador a una velocitat de 9600 bauds (9600 símbols per segon). L'objecte Serial és de la classe serial i li apliquem amb la sintaxi del punt el mètode begin que té com a paràmetre o argument els un número sencer que correspondrà als bauds
-  Serial.println("Enter Volts 0 to 5"); // demana a l'usuari que entri per la consola o per el serial monitor de l'Arduino IDE un número entre 0 i 5. Println significa imprimeix una linea i li apliquem aen la sintaxis del punt a la classe serial pot rebre diversos paràmetres, si els posem entre comemtes s'escriuen tal qual i sinó, escriu el valor de la variable
+  Serial.begin(9600); // comença lo comunicació sèrie USB entre Arduino i l'ordinador a una velocitat de 9600 bauds 
+  (9600 símbols per segon). L'objecte Serial és de la classe serial i li apliquem amb la sintaxi del punt el mètode 
+  begin que té com a paràmetre o argument els un número sencer que correspondrà als bauds
+  Serial.println("Enter Volts 0 to 5"); // demana a l'usuari que entri per la consola o per el serial monitor de 
+  l'Arduino IDE un número entre 0 i 5. Println significa imprimeix una linea i li apliquem aen la sintaxis del punt 
+  a la classe serial pot rebre diversos paràmetres, si els posem entre comemtes s'escriuen tal qual i sinó, escriu el 
+  valor de la variable
 }
 
 void loop() { // codi rincipal que no s'atura mai, es repeteix fins que desconecto l'Arduino
   if (Serial.available() > 0) { // El mètode Serial.available espera caràcters, major a 0 és que hi ha algún caràcter
-    float volts = Serial.parseFloat(); // parseFloat és una funció o mètode que s'aplica a l'objecte serial i la seva funció és parsejar o analitzar el contingut de caràcters que arriba pel port serial i si és de tipus decimal o floating point number (número amb coma flotant) o variable tipus float. Les variables tipus float inclouen les variable int o integer -> números sencers. També existeix parseInt que només acceptaria números enters. El float volts crea un espai a la memória de l'ordinador anomenat volts que haurà de ser del tipus floating point number que emmagatzemarà el que li arribi del port serial escrit per l'usuari. la variable volts emmagatzema el número decimal que escriu l'usuari
-    int pwmValue = volts * 255.0 / 5.0; // Els volts no ens serveixen perquè volem PWM perquè no velem valors entre 0 i 5, sinó entre 0 i 255. Perquè entre 0 i 255? per que és el número de bits (2<sub>8</sub> -> 256). Faig una regla de tres i multiplico el valor per 255 i divideixo entre 5. Per exemple si l'usuari inserta 2.5 tindras 2.5 * 255 / 5 = 127.5. Aquet valor es transformara en 127 perque ha de ser integer i es guardara en pwmValue.
+    float volts = Serial.parseFloat(); // parseFloat és una funció o mètode que s'aplica a l'objecte serial i la seva funció 
+    és parsejar o analitzar el contingut de caràcters que arriba pel port serial i si és de tipus decimal o floating point 
+    number (número amb coma flotant) o variable tipus float. Les variables tipus float inclouen les variable int o integer 
+    -> números sencers. També existeix parseInt que només acceptaria números enters. El float volts crea un espai a la memória 
+    de l'ordinador anomenat volts que haurà de ser del tipus floating point number que emmagatzemarà el que li arribi del port 
+    serial escrit per l'usuari. la variable volts emmagatzema el número decimal que escriu l'usuari
+    int pwmValue = volts * 255.0 / 5.0; // Els volts no ens serveixen perquè volem PWM perquè no velem valors entre 0 i 5,
+    sinó entre 0 i 255. Perquè entre 0 i 255? per que és el número de bits (2<sub>8</sub> -> 256). Faig una regla de tres 
+    i multiplico el valor per 255 i divideixo entre 5. Per exemple si l'usuari inserta 2.5 tindras 2.5 * 255 / 5 = 127.5. 
+    Aquet valor es transformara en 127 perque ha de ser integer i es guardara en pwmValue.
     analogWrite(outputPin, pwmValue); // analogWrite és una funció predefinida al llengutge Arduino, derivada de C++ i 
     és també una biblioteca de processing. Té dos arguments o paràmetres, el pin al que està connectat i el valor que
     volem escriure en el pin led (0-255), que farà que el led s'encengui de forma proporcional als volts que l'usuari ha
@@ -1269,12 +1323,23 @@ void loop() { // codi rincipal que no s'atura mai, es repeteix fins que desconec
   }
 }
 
-<p> El "const int outputPin" defineix el pin de sortida constant que no es pot canviar. Després de defiir el pin de sortida 3 i en output (sortida) i la velocitat bauds (9600), el codi demana que escriguim a la consola del programa Arduino IDE: Entre volts 0 - 5.</p>
-<p> El loop principal comprova que hi hagi caràcters escrits a la consola, després agafa el valor que hem donat i el guarda en la variable volts. El valor por ser en decimal perquè posa float ('Floating point number'). El mètode parseFloat l'apliquem amb la sintaxi del punt a l'objecte Serial (Que es posa en  majúscula, normalment seria una classe en majúscula) i agafa el valor de la consola en sèrie. </p>
-<p> La variable pwmValue és entra (int o 'integer') i el que fa és convertir el valor volts (0-5) a valors de 0 - 255, que és el número de bits (2<sub>14</sub>) tal i com indica el data sheet o fulla de característiques del ESP32S3. Si fos un ESP32S3 la línea de codi seria 
+<p> El "const int outputPin" defineix el pin de sortida constant que no es pot canviar. 
+Després de defiir el pin de sortida 3 i en output (sortida) i la velocitat bauds (9600), 
+el codi demana que escriguim a la consola del programa Arduino IDE: Entre volts 0 - 5.</p>
+<p> El loop principal comprova que hi hagi caràcters escrits a la consola, després agafa el valor 
+que hem donat i el guarda en la variable volts. El valor por ser en decimal perquè posa float 
+('Floating point number'). El mètode parseFloat l'apliquem amb la sintaxi del punt a l'objecte 
+Serial (Que es posa en  majúscula, normalment seria una classe en majúscula) i agafa el valor 
+de la consola en sèrie. </p>
+<p> La variable pwmValue és entra (int o 'integer') i el que fa és convertir el valor volts (0-5) 
+a valors de 0 - 255, que és el número de bits (2<sub>14</sub>) tal i com indica el data sheet o 
+fulla de característiques del ESP32S3. Si fos un ESP32S3 la línea de codi seria 
     "Serial.println("enter volts 0 - 3.3")"
     "int pmwValue = volts * 16384.0 / 3.3"</p>
-<p> El ESP32S3 té l'avantatge de tenir més resolució, és a dir, pot donar 16384 valors diferents entre 0 i 3.3 volts. Aixó potser no es noti per un led, però es nota en un motor, on l'ESP32S3 permet accedir a més velocitats diferents. Els motors poden arribar a 16 bits, que és 2<sub>16</sub> o 25536 valors diferents, que depenent del tipus de motor, pot ser observat o no.</p>
+<p> El ESP32S3 té l'avantatge de tenir més resolució, és a dir, pot donar 16384 valors diferents entre 
+0 i 3.3 volts. Aixó potser no es noti per un led, però es nota en un motor, on l'ESP32S3 permet accedir 
+a més velocitats diferents. Els motors poden arribar a 16 bits, que és 2<sub>16</sub> o 25536 valors
+diferents, que depenent del tipus de motor, pot ser observat o no.</p>
 </code></pre>
 
 
@@ -1310,7 +1375,8 @@ void loop() {
 <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
 
 void setup() {
-  Serial.begin(9600); // comença la comunicació sèrie USB entre Arduino i l'ordinador a una velocitat de 9600 bauds (9600 símbols per segon).
+  Serial.begin(9600); // comença la comunicació sèrie USB entre Arduino i l'ordinador a una velocitat de 9600 bauds 
+ (9600 símbols per segon).
 }
 
 void loop() {
@@ -1340,9 +1406,14 @@ void loop() {
 </code></pre>
         
 <h2> Números aleatoris, perquè són importants i com es fan?</h2>
-        <p> La funció random deriva de la funció rnd del llenguatge C i C++ i funciona de la mateixa manera. No genera números aleatoris, sinó que speudoaleatoris, perquè estan creat amb un algorisme o algoritme annomenat 'Generador lineal congruencial'. Aquest algoritme és determinista, es a dir, que sempre donarà els mateixos resultats. La fucció randm necessita una llavor o seed per generr els números i s no s'indica acostuma a ser 0 o 1, en Arduino és 1. Donarem un exemple matematic: </p>
+        <p> La funció random deriva de la funció rnd del llenguatge C i C++ i funciona de la mateixa manera. 
+        No genera números aleatoris, sinó que speudoaleatoris, perquè estan creat amb un algorisme o algoritme 
+        annomenat 'Generador lineal congruencial'. Aquest algoritme és determinista, es a dir, que sempre 
+        donarà els mateixos resultats. La fucció randm necessita una llavor o seed per generr els números si
+        no s'indica acostuma a ser 0 o 1, en Arduino és 1. Donarem un exemple matematic: </p>
     
-<h1>Generació de Nombres Pseudoaleatoris: LCG + Arduino</h1>
+<h1>Generació de Nombres Pseudoaleatoris: 
+  LCG + Arduino</h1>
 
   <h2>1. Algorisme LCG (Linear Congruential Generator)</h2>
   <p>
@@ -1391,7 +1462,8 @@ void loop() {
 
 <h2>2. Arduino: random(), randomSeed() i LCG</h2>
   <p>
-    Arduino implementa un LCG similar al de C. La funció <code>random()</code> crida internament un LCG, i <code>randomSeed()</code> estableix <em>X₀</em>.
+    Arduino implementa un LCG similar al de C. La funció <code>random()</code> crida internament un LCG, 
+    i <code>randomSeed()</code> estableix <em>X₀</em>.
   </p>
 
   <h3>Pas 1: Sense llavor (seed) — seqüència fixa</h3>
@@ -1473,17 +1545,20 @@ void loop() {}</code></pre>
     <li>\(c = 12345\)</li>
     <li>\(m = 2^{31}\)</li>
   </ul>
-  <p> Aquesta seqüència de valors entre 0 i \(m-1\) és previsible si es coneix la llavor inicial, per això és <em>pseudo</em>aleatòria. </p>
+  <p> Aquesta seqüència de valors entre 0 i \(m-1\) és previsible si es coneix la llavor inicial, 
+  per això és <em>pseudo</em>aleatòria. </p>
     
 <div class="content-container">
     <h2>Numeros aleatoris, perque son imporannts y com es fan</h2>     
-    <p> La funció random de Ardunio IDE deriva de la funció rnd del llenguatge C i C++ i fuaniona de la mateixa manera. 
-        No genera números aleatoris sinó pseudoaleatois, perque estan creats per un algorisme o algoritme, anomenat "Generador líneal congruecial". 
-        Aquet algoritme és determinista, sempre onara els mateixos resulatats.
-        La funció random necesita una llavo o seed per generar els números i sinó s'indica acostuma a ser 1 o 0, en Arduino és 1.  Donarem un exempe matematic</p>
+    <p> La funció random de Ardunio IDE deriva de la funció rnd del llenguatge C i C++ i fuaniona de
+    la mateixa manera. No genera números aleatoris sinó pseudoaleatois, perque estan creats per un 
+    algorisme o algoritme, anomenat "Generador líneal congruecial". Aquet algoritme és determinista,
+    sempre onara els mateixos resulatats. La funció random necesita una llavo o seed per generar els
+    números i sinó s'indica acostuma a ser 1 o 0, en Arduino és 1.  Donarem un exempe matematic</p>
 
                     
-<h1>Generació de Nombres Pseudoaleatoris: LCG + Arduino</h1>
+<h1>Generació de Nombres Pseudoaleatoris: 
+  LCG + Arduino</h1>
 
   <h2>1. Algorisme LCG (Linear Congruential Generator)</h2>
   <p>
@@ -1546,10 +1621,30 @@ void loop() {
       <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
         void setup() {
   Serial.begin(9600);
-  randomSeed (analogRead(0)); // Tant si no posem res al detector analògic, com si posem alguna cosa, el pin A0 de Arduino llegirà valors de 0 a 1023. Aquests valors seran aleatoris en cas de que no hi hagi res connectart a A0. Si connectem un simple cable a A0 observarem que quan toquem amb els dits o  inclús sense tocar hi ha un senyal de soroll que es mou entre 0 i 1023 normalment pel rang baix. L'aire és una barreja complexa de gassos en moviment i l'entrada analògica és un sistema molt sensible amb aquest gassos. Resumint, analogRead(0) donarà valors enters aleatoris i serà la nostra primera capa d'aleatorietat. La segona capa de l'aleatorietat és randomSeed perquè utilitza un algoritme lineal congruencial, que es basa en un mètode recursiu, és a dir, que agafa el número anterior o un primer número, que pot ser 0. Aquest priemr número el multipliquem per un númerofix que no canvia mai i el sumem amb un número fix que no canvia mai (només canvia si canviem el llenguatge de programació o la versió del llenguatge). Quan ja tenim aquest número fem una operació mòdul per obtenir el número aleatori, això vol dir, dividir el número obtingut entre un número conegut sempre igual i el residu serà pseudoaleatori. Perquè és pseudoaleatori? Sempre serà la mateixa seqüència si fessim randomSeed(4), i la mateixa seüència si fessim randomSeed(x) sent "x" qualsevol número. Perquè no puc saber quin número aleatori sortirà? Encara que hi ha una relació matemàtica entre el número de llavor i el número aleatori perquè el númerode llavor és aleatori (analogRead(0)). és un número pseudoaleatoride un número aleatori, perquè la funció randomSeed és pseudoaleatoria i analogRead(0) és aleatòria pel soroll de fons.
-    // Utilitat de randomSeed. Pot servir per tenir sempre el mateixos números? Sí, perquè quan triem una Seed determinana sempre tindrem una seüència, pot ser útil perquè jo puc fer un aparell o programa amb una randomSeed(184) i si l dic a un altre investigador / fabricant de hardware li dic la meva llavor (Seed), ell podrà reproduir els meus resultats. A més a més de random hem de conèixer les funcions matemàtiques d'arduino que poden se útils per fer càlculs, per exemple, per convertir valorsde 0 a 1023 en valors de temperatura, humitat, concentració de contaminant, etc.
-    <p> La <b>funció abs</b> donarà el valor absolut, que serà el valor (número) sense signe, per exemple abs(12) = 12, i abs(-12) = 12 </p>
-    <p> La <b>funció constrain</b> fa constrenyir o reduïr un número d'un rang determinat. La funció constrain té tres números o arguments el primer argument és un número que volem constrenyir, el segon númeroés el principal del rang i el tercer número és el final del rang permés.
+  randomSeed (analogRead(0)); // Tant si no posem res al detector analògic, com si posem alguna cosa, el pin A0 de Arduino llegirà
+  valors de 0 a 1023. Aquests valors seran aleatoris en cas de que no hi hagi res connectart a A0. Si connectem un simple cable a A0 
+  observarem que quan toquem amb els dits o  inclús sense tocar hi ha un senyal de soroll que es mou entre 0 i 1023 normalment pel 
+  rang baix. L'aire és una barreja complexa de gassos en moviment i l'entrada analògica és un sistema molt sensible amb aquest gassos.
+  Resumint, analogRead(0) donarà valors enters aleatoris i serà la nostra primera capa d'aleatorietat. La segona capa de l'aleatorietat 
+  és randomSeed perquè utilitza un algoritme lineal congruencial, que es basa en un mètode recursiu, és a dir, que agafa el número 
+  anterior o un primer número, que pot ser 0. Aquest priemr número el multipliquem per un númerofix que no canvia mai i el sumem amb 
+  un número fix que no canvia mai (només canvia si canviem el llenguatge de programació o la versió del llenguatge). Quan ja tenim 
+  aquest número fem una operació mòdul per obtenir el número aleatori, això vol dir, dividir el número obtingut entre un número conegut 
+  sempre igual i el residu serà pseudoaleatori. Perquè és pseudoaleatori? Sempre serà la mateixa seqüència si fessim randomSeed(4), i 
+  la mateixa seüència si fessim randomSeed(x) sent "x" qualsevol número. Perquè no puc saber quin número aleatori sortirà? Encara que 
+  hi ha una relació matemàtica entre el número de llavor i el número aleatori perquè el númerode llavor és aleatori (analogRead(0)). 
+  És un número pseudoaleatoride un número aleatori, perquè la funció randomSeed és pseudoaleatoria i analogRead(0) és aleatòria pel 
+  soroll de fons.
+  // Utilitat de randomSeed. Pot servir per tenir sempre el mateixos números? Sí, perquè quan triem una Seed determinana sempre 
+  tindrem una seüència, pot ser útil perquè jo puc fer un aparell o programa amb una randomSeed(184) i si l dic a un altre 
+  investigador / fabricant de hardware li dic la meva llavor (Seed), ell podrà reproduir els meus resultats. A més a més de
+  random hem de conèixer les funcions matemàtiques d'arduino que poden se útils per fer càlculs, per exemple, per convertir 
+  valorsde 0 a 1023 en valors de temperatura, humitat, concentració de contaminant, etc.
+    <p> La <b>funció abs</b> donarà el valor absolut, que serà el valor (número) sense signe, per exemple 
+    abs(12) = 12, i abs(-12) = 12 </p>
+    <p> La <b>funció constrain</b> fa constrenyir o reduïr un número d'un rang determinat. 
+    La funció constrain té tres números o arguments el primer argument és un número que volem constrenyir, 
+    el segon númeroés el principal del rang i el tercer número és el final del rang permés.
    </code>
     Exemple: 
      <ul>
@@ -1566,10 +1661,17 @@ void loop() {
          <li> El cinqué número és el valor màxim del segon ranng </li>
      </ul>
      <ul> 
-     <p> Per exemple: map(200,0,1023,0,100); seria un exemple d'ua lectura analògica de 200 en un rang de 0 a 1023 d'un lector analògic A0 d'Arduino que es converteix en 20 graus aproximadament de temperatura e un rang de 0 a 100 graus. t=map(200,0,1023,0,100) = 20 </p>
-     <p> La funció màs i min ens donarà el valor màxim i valor mínim de 2 números, per exemple max(3,4) = 4 i min (3,4) = 3. </p>
-     <p> La funció pow és la poténcia, té dos arguments, el primer argument és la base i el segon argument és l'exponent, per exemple pow(2,5) = 32, ja que és 2<sub>5</sub> </p>
-<p> Soposem que volem calcular els nivells de CO<sub>2</sub> amb Arduino avui dia 12/5/25, estem a 425,76ppm mesurat a Manua Loa (Hawaii) i volem saber no la concentració exterior de CO<sub>2</sub> perquè sempre es igual, sinó la concentració interior, que com a màxim és  1000 ppm (partícules per mil·lió) segons el codi tècnic d'edificació (CTE).org
+     <p> Per exemple: map(200,0,1023,0,100); seria un exemple d'ua lectura analògica de 200 
+     en un rang de 0 a 1023 d'un lector analògic A0 d'Arduino que es converteix en 20 graus 
+     aproximadament de temperatura e un rang de 0 a 100 graus. t=map(200,0,1023,0,100) = 20 </p>
+     <p> La funció màs i min ens donarà el valor màxim i valor mínim de 2 números, per exemple 
+     max(3,4) = 4 i min (3,4) = 3. </p>
+     <p> La funció pow és la poténcia, té dos arguments, el primer argument és la base i el segon
+     argument és l'exponent, per exemple pow(2,5) = 32, ja que és 2<sub>5</sub> </p>
+     <p> Soposem que volem calcular els nivells de CO<sub>2</sub> amb Arduino avui dia 12/5/25, 
+     estem a 425,76ppm mesurat a Manua Loa (Hawaii) i volem saber no la concentració exterior 
+     de CO<sub>2</sub> perquè sempre es igual, sinó la concentració interior, que com a màxim és 
+     1000 ppm (partícules per mil·lió) segons el codi tècnic d'edificació (CTE).org
 <a href = "https://www.codigotecnico.org/"></p>
      </ul>        
       </main>
