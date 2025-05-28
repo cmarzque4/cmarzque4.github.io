@@ -420,6 +420,9 @@
 
 <body>
     <main>
+
+  <h1>Programació: Simon Monk</h1>
+  <br>
 <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-python">  
   
 // 02_01_blink
@@ -1337,9 +1340,9 @@ fulla de característiques del ESP32S3. Si fos un ESP32S3 la línea de codi seri
     "Serial.println("enter volts 0 - 3.3")"
     "int pmwValue = volts * 16384.0 / 3.3"</p>
 <p> El ESP32S3 té l'avantatge de tenir més resolució, és a dir, pot donar 16384 valors diferents entre 
-0 i 3.3 volts. Aixó potser no es noti per un led, però es nota en un motor, on l'ESP32S3 permet accedir 
-a més velocitats diferents. Els motors poden arribar a 16 bits, que és 2<sub>16</sub> o 25536 valors
-diferents, que depenent del tipus de motor, pot ser observat o no.</p>
+0 i 3.3 volts. Aixó potser no es noti per un led, però es nota en un motor, on l'ESP32S3 permet 
+accedir a més velocitats diferents. Els motors poden arribar a 16 bits, que és 2<sub>16</sub> o 
+25536 valors diferents, que depenent del tipus de motor, pot ser observat o no.</p>
 </code></pre>
 
 
@@ -1406,11 +1409,11 @@ void loop() {
 </code></pre>
         
 <h2> Números aleatoris, perquè són importants i com es fan?</h2>
-        <p> La funció random deriva de la funció rnd del llenguatge C i C++ i funciona de la mateixa manera. 
-        No genera números aleatoris, sinó que speudoaleatoris, perquè estan creat amb un algorisme o algoritme 
-        annomenat 'Generador lineal congruencial'. Aquest algoritme és determinista, es a dir, que sempre 
-        donarà els mateixos resultats. La fucció randm necessita una llavor o seed per generr els números si
-        no s'indica acostuma a ser 0 o 1, en Arduino és 1. Donarem un exemple matematic: </p>
+  <p> La funció random deriva de la funció rnd del llenguatge C i C++ i funciona de la mateixa manera. 
+  No genera números aleatoris, sinó que speudoaleatoris, perquè estan creat amb un algorisme o algoritme 
+  annomenat 'Generador lineal congruencial'. Aquest algoritme és determinista, es a dir, que sempre 
+  donarà els mateixos resultats. La fucció randm necessita una llavor o seed per generr els números si
+  no s'indica acostuma a ser 0 o 1, en Arduino és 1. Donarem un exemple matematic: </p>
     
 <h1>Generació de Nombres Pseudoaleatoris: 
   LCG + Arduino</h1>
