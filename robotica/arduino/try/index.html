@@ -259,6 +259,30 @@
   color: var(--blue-dark); /* manté la visibilitat en hover */
 }
 
+.dropdown-content {
+  background-color: white;
+  padding: 0; /* <- això és clau */
+  margin: 0;
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 10px 16px;
+  margin: 0;
+  display: block;
+  background-color: white;
+}
+
+.dropdown-content * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
   
   </style>
 </head>
