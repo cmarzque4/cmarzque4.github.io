@@ -519,18 +519,35 @@
 Els microxips i els microcontroladors tenen transistors i aquests només poden fer una cosa, encendre's o apagar-se, és a dir 0 o 1 i cada bit és un 0 o 1. Si tenim 12 bits en un ADC (Analog Digital Converter) significa que té 2 <sub>12</sub> combinacions de zeros i uns, és a dir, 4096 nivells diferents que numericamentva des del 0 al 4095. Ara justifiquem el número 65536 seria correcte si fos 2<sup>16</sup> com diu el fabricant, pero al datasheet parla d'un nivell màxim de 8000h (Nùmero hexadecimalque correspon a 32768) es a dir són 15 bits utilitzables. Sempre s'ha de comprobar el <a href="#"> datasheet o  fulla de característiques </a>del fabricant</p>
  
   <pre><code>
-    int valor_ADC=0;  // Int significa integer o valor enter numéric (float seria "floating point number o decimal", char seria un character o caracter de lletra de l'alfabet, string seria una cadena de caràcters o paraula, etc. El més important és que la primera paraula defineix el tipus de paraula que tenim, en aquest cas enter). "valor_ADC" és un nom que triem nosaltrs per definir una variable, és a dir, un valor que no serà constant, i que té inicialment un valor 0, si posem int valor_ADC; és a dir, no posem que és igual a 0 per defecte hauria de donar valor 0. Si jo volgués posar un potenciomentre possaria pot i si volgués posar un LDR posaria ldr en minúscula. Sempre la primera línea és la definicióde les variables. A vegades abans de la primera línea necessitem carregar biblioteques. 
+    int valor_ADC=0;  // Int significa integer o valor enter numéric (float seria "floating point number o decimal", char seria 
+    un character o caracter de lletra de l'alfabet, string seria una cadena de caràcters o paraula, etc. El més important és que 
+    la primera paraula defineix el tipus de paraula que tenim, en aquest cas enter). "valor_ADC" és un nom que triem nosaltrs per 
+    definir una variable, és a dir, un valor que no serà constant, i que té inicialment un valor 0, si posem int valor_ADC; és a dir,
+    no posem que és igual a 0 per defecte hauria de donar valor 0. Si jo volgués posar un potenciomentre possaria pot i si volgués 
+    posar un LDR posaria ldr en minúscula. Sempre la primera línea és la definicióde les variables. A vegades abans de la primera 
+    línea necessitem carregar biblioteques. 
     void setup(){    //9600 en Arduino 
-                    // Sempre hi ha un setup o funció de configuració del microcontrolador en llenguatge Arduino que té un parentasis buit perquè no té cap paràmetre o argument del qual depengui en molts casos. La paraula void seria l'equivalent a la paraula function en JavaScript. També es diu void setup en Processing perquè deriva de Processing aquest llenguatge. Posem una clau per agrupar totes les instruccions que volem executar una sola vegada, perque setup s'executa només al principi quan arranquen o encenem l'Arduino o microcontrolador.  
+                    // Sempre hi ha un setup o funció de configuració del microcontrolador en llenguatge Arduino que té un parentasis 
+    buit perquè no té cap paràmetre o argument del qual depengui en molts casos. La paraula void seria l'equivalent a la paraula 
+    function en JavaScript. També es diu void setup en Processing perquè deriva de Processing aquest llenguatge. Posem una clau per 
+    agrupar totes les instruccions que volem executar una sola vegada, perque setup s'executa només al principi quan arranquen o 
+    encenem l'Arduino o microcontrolador.  
     Serial_begin(9600);  //115200 en S3
-                        // Serial s'escriu amb majuscules perquè és una classe que és una part important del codi Arduino que antigamnt era una classe de Processing i té un métode que es fa servir amb la sintaxi del punt, dot syntax que consisteix en que quan jo escric un punt estic aplicant un mètode normalment a un objecte d'una classe i a vegades a una classe, com aquí. El mètode begin connecta per al cable serie del ordinador amb l'Arduino, i té només un paràmetre que és un número enter que correspon a la velocitat en bits/segon. Pel cas de l'Arduino Uno 9600 bits/segon o bauds, mentres que en ESP32S3 són 115200 bits/segon o bauts "Serial.begin (115200)". És molt important posar un ; en cada insucció per informar que ja ha acabat.   
+                        // Serial s'escriu amb majuscules perquè és una classe que és una part important del codi Arduino que antigamnt 
+    era una classe de Processing i té un métode que es fa servir amb la sintaxi del punt, dot syntax que consisteix en que quan jo 
+    escric un punt estic aplicant un mètode normalment a un objecte d'una classe i a vegades a una classe, com aquí. El mètode begin 
+    connecta per al cable serie del ordinador amb l'Arduino, i té només un paràmetre que és un número enter que correspon a la velocitat 
+    en bits/segon. Pel cas de l'Arduino Uno 9600 bits/segon o bauds, mentres que en ESP32S3 són 115200 bits/segon o bauts 
+    "Serial.begin (115200)". És molt important posar un ; en cada insucció per informar que ja ha acabat.   
     }
     void loop(){          // És una funció que repeteix sense parar fins que desconecto físicament o poso un codi per aturar-ho
     valor ADC=analogRead(A0);  //34 en S3
-                              // La variable que hem creat abans, que era 0 inicialment ara canviarà perquè la instrucció analogRead el que fa és llegir valors entre 0 i 1023 si es un Arduino Uno, A0 és una de les 6 entrades analògiques
-    valor_ADC=analogRead(34); // La variable de valor 0 ara estarà entre els valors 0 i 4095 Perquè és un microcontrolador de 12 bits ADC
-                    //ADC és Analog Digital converter, és a dir que convertim un valor analògic en digital (convertidor analògic digital)
-                    // DAC és Digital Analog Converter, és a dir el contrari que ADC, convertim digital a analògic com el PWM (Pulse Width Modlation) que vol dir modulació de l'ample de banda
+                           // La variable que hem creat abans, que era 0 inicialment ara canviarà perquè la instrucció analogRead 
+    el que fa és llegir valors entre 0 i 1023 si es un Arduino Uno, A0 és una de les 6 entrades analògiques
+    valor_ADC=analogRead(34); // La variable de valor 0 ara estarà entre 0 i 4095 Perquè és un microcontrolador de 12 bits ADC
+            //ADC és Analog Digital converter, és a dir que convertim un valor analògic en digital (convertidor analògic digital)
+            // DAC és Digital Analog Converter, és a dir el contrari que ADC, convertim digital a analògic com el PWM 
+    (Pulse Width Modlation) que vol dir modulació de l'ample de banda
                 // D'acord amb el <a src="https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf"> datasheet o fulla de caracterísitques de ESP32S3 </a>
                 // Hi ha 20 entrades analògiques de 12 bits mentres que en Arduino Uno hi ha 6 entrades analògiques de 10 bits
     Serial.println(valorADC); // Println significa que imprimeixi via serial el valor de ADC (0-1023 o 0-4095)
@@ -565,7 +582,8 @@ void loop()
   float celsius = millivolts / 10; 
   Serial.print(celsius);
   Serial.println(" C");
-  delay(1000); // Mirem aquest codi i quins valors donaria. Entre 0 i 500 graus, és a dir, no dona valors negatius, i no coincideix entre -55 i 150 en resposta lineal mapejada
+  delay(1000); // Mirem aquest codi i quins valors donaria. Entre 0 i 500 graus, és a dir, no dona valors negatius, i no coincideix
+                  entre -55 i 150 en resposta lineal mapejada
 }       
      </code>
    </pre>
