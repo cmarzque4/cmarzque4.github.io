@@ -189,6 +189,49 @@
   opacity: 1;
   padding: 0.5rem 0;
 }
+
+.dropdown-content {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease, visibility 0.4s;
+  position: absolute;
+  background-color: var(--white);
+  min-width: 160px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  padding: 0;
+}
+
+.dropdown-content a {
+  color: var(--blue-dark);
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--blue-light);
+}
+
+/* Quan el ratolí passa per sobre, desplega el menú */
+.dropdown:hover .dropdown-content {
+  max-height: 500px;
+  opacity: 1;
+  visibility: visible;
+  padding: 0.5rem 0;
+  transition-delay: 0s;
+}
+
+/* Quan surt el cursor, que trigui a desaparèixer */
+.dropdown:not(:hover) .dropdown-content {
+  transition-delay: 0.4s;
+}
+
   
   </style>
 </head>
