@@ -429,7 +429,8 @@ void setup() { // Codi que s'executa una vegada i és la configuració
 }
 
 void loop() { // És un codi que s'executa sense parar fins que desconnecto l'Arduino o li dono una instrucció de parada
- digitalWrite(13, HIGH); // <b>digitalWrite</b>  és una sortida digital i permet encendre i apagar. Només tñe 2 balors, HIGH i LOW (encès i apagat)
+ digitalWrite(13, HIGH); // <b>digitalWrite</b>  és una sortida digital i permet encendre i apagar. Només tñe 2 balors, HIGH i LOW 
+  (encès i apagat)
  delay(500); // És el temps de millisegons en el que ha d'estar, en aquest cas encès
  digitalWrite(13, LOW); // Aquí digitalWrite fa que s'apagui
  delay(500);
@@ -472,8 +473,11 @@ void loop() {
  digitalWrite(ledPin, LOW);
  delay(delayPeriod);
  delayPeriod = delayPeriod + 100; // Augmenta el temps 100 millisegons cada vegada
- if (delayPeriod == 1000) { // Quan arriba a 1000 millisegons torna a començar, això significa que quan arriba als 1000 torna a començar perquè hem posat que delayPeriod sigui 100 de nou. 
-  // Cada vegada és més lent perquè el temps que triga en encendre i apagar-se és major (més lent). Si volgues que cada vegada fos més ràpid, i s'hauria de canviar varies coses: al principi del codi canviar la variable de //int delayPeriod = 1000, i al final de codi posar el menys "delayPeriod -100", i finalment canviar el condicional per: if (delayPeriod == 100); delayPeriod = 1000;
+ if (delayPeriod == 1000) { // Quan arriba a 1000 millisegons torna a començar, això significa que quan arriba als 1000 torna a
+  començar perquè hem posat que delayPeriod sigui 100 de nou. 
+  // Cada vegada és més lent perquè el temps que triga en encendre i apagar-se és major (més lent). Si volgues que cada vegada fos 
+  més ràpid, i s'hauria de canviar varies coses: al principi del codi canviar la variable de //int delayPeriod = 1000, i al final 
+  de codi posar el menys "delayPeriod -100", i finalment canviar el condicional per: if (delayPeriod == 100); delayPeriod = 1000;
   // Si volem que el canvi sigui més lent s'hauria de posar un número més alt en "delayPeriod + x"
   // Si volem que el canvi sigui més ràpid s'hauria de posar un número més baix en "delayPeriod + x"
     delayPeriod = 100;
@@ -485,7 +489,8 @@ void loop() {
 // Operacions matemàtiques (Útils per sensors o per problemes matemàtics)
 
 void setup() {
-  Serial.begin(9600); // Hem de connectar l'Arduino a la consola aèrie a 9600 bauds, que són 9600 símbols per segon, I poden ser aproximadament 9600 bits per segon, però, en alguns cassos, necessitem més d'un bit per a un símbol
+  Serial.begin(9600); // Hem de connectar l'Arduino a la consola aèrie a 9600 bauds, que són 9600 símbols per segon, I poden ser 
+  aproximadament 9600 bits per segon, però, en alguns cassos, necessitem més d'un bit per a un símbol
   int a = 2;
   int b = 2;
   int c = a + b; // Llenguatge arduino accepta les operacions matemàtiques bàsiques
@@ -639,7 +644,9 @@ void setup() {
 }
 
 void loop() {
-  for (int i = 0; i < 20; i ++) { // Dins del circle for, tenim les condicions que ha de complir el cicle que són de i = 0 fins a i = 20, ves augmentant d'un en un. és a dor i++ que és el mateix que i = i + 1. Si volgués podria canviar les condicions, fent que els números augmentessin diferent (per exemple i = i + 5)
+  for (int i = 0; i < 20; i ++) { // Dins del circle for, tenim les condicions que ha de complir el cicle que són de i = 0 fins a 
+    i = 20, ves augmentant d'un en un. és a dor i++ que és el mateix que i = i + 1. Si volgués podria canviar les condicions,
+    fent que els números augmentessin diferent (per exemple i = i + 5)
    digitalWrite(ledPin, HIGH);
    delay(delayPeriod);
    digitalWrite(ledPin, LOW);
@@ -666,13 +673,16 @@ void loop() {
  delay(delayPeriod);
  digitalWrite(ledPin, LOW);
  delay(delayPeriod);
- count ++; // és una variable global que podria ser local, perquè només afecta al loop. Si escric "int count ++;" estaria definint una variable local dins del loop i no la podria utilitzar en cap altre funció que jo defineixi o al set up 
- if (count == 20) { // Quan el contador arriba a 20 deixa de fer parpadejos de 100 millisegons i fa una aturada de 3 segons abans de tornar a començar
+ count ++; // és una variable global que podria ser local, perquè només afecta al loop. Si escric "int count ++;" estaria definint 
+  una variable local dins del loop i no la podria utilitzar en cap altre funció que jo defineixi o al set up 
+ if (count == 20) { // Quan el contador arriba a 20 deixa de fer parpadejos de 100 millisegons i fa una aturada de 3 segons abans 
+  de tornar a començar
    count = 0;
    delay(3000); 
  }
 }
-    // Dos iguals vol dir que és exactament igual, si possesim 3 iguals seria una comparació estricta (no només compara el número, tot tipus de variables). Si possem un igual, és una assignació, que pot ser temporal (temp) o constant (const)
+    // Dos iguals vol dir que és exactament igual, si possesim 3 iguals seria una comparació estricta (no només compara el número,
+  tot tipus de variables). Si possem un igual, és una assignació, que pot ser temporal (temp) o constant (const)
 
 <p> El següent codi és un exemple de creació d'una funció. Una funció és com un programa dins d'un programa</p>
 <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-python"> 
@@ -684,14 +694,19 @@ const int delayPeriod = 250;
 void setup() {
   pinMode(ledPin, OUTPUT);
 }
-// Aquest codi és el principal, anomenat a "main" en alguns llenguatges. És el que s'aplica continuadament, en aquest cas void loop(). El loop repeteix 20 vegades el flash.Per cridar la funció només cal posar el nom de la funció dintre del loop per cridar-la i que s'executi sempre
+// Aquest codi és el principal, anomenat a "main" en alguns llenguatges. És el que s'aplica continuadament, en aquest cas void loop(). 
+  El loop repeteix 20 vegades el flash.Per cridar la funció només cal posar el nom de la funció dintre del loop per cridar-la i que 
+  s'executi sempre
 void loop() {
   for (int i = 0; i < 20; i ++) {
     flash();
   }
  delay(3000);
 }
-// Per crear una funció només cal escriure el nom de la funció i uns paréntesis que poden ser buits o no. Si agués alguna cosa entre paréntesis serien els parámetres o arguments de la funció (en aquest cas no hi han). <b></b>Void</b> en aquest cas és equivalent a <b>function</b> de JavaScript. Triem un nom explicatiu de lo que fa la funció, i dins les claus posem les linies de codi que s'han d'executar quan la cridem pel seu nom dins del void loop.
+// Per crear una funció només cal escriure el nom de la funció i uns paréntesis que poden ser buits o no. Si agués alguna cosa entre paréntesis
+    serien els parámetres o arguments de la funció (en aquest cas no hi han). <b></b>Void</b> en aquest cas és equivalent a <b>function</b> de 
+    JavaScript. Triem un nom explicatiu de lo que fa la funció, i dins les claus posem les linies de codi que s'han d'executar quan la cridem pel 
+    seu nom dins del void loop.
 void flash() { 
    digitalWrite(ledPin, HIGH);
    delay(delayPeriod);
@@ -715,7 +730,9 @@ void loop() {
   flash(20, delayPeriod);
   delay(3000);
 }
-// Podem veure que la funció té dos parámentre que són dos nombres enters i que s'anomemen "nunFlashes" i "d". numFlashes no está definit com una variable global, és una variable local definida dins de la funció flash, i no té un valor predeterminat (només ha de ser un valor entre).
+// Podem veure que la funció té dos parámentre que són dos nombres enters i que s'anomemen "nunFlashes" i "d". 
+  numFlashes no está definit com una variable global, és una variable local definida dins de la funció flash, 
+  i no té un valor predeterminat (només ha de ser un valor entre).
 void flash(int numFlashes, int d) {
   for (int i = 0; i &lt; numFlashes; i ++) {
     digitalWrite(ledPin, HIGH);
@@ -878,7 +895,9 @@ void flash(int duration) {
             <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
                 // sketch 05-03
 
-                char message[] = "Hello"; // Hi ha un array simbolitzat per "[]" que conté el caràcter "char", Cada caràcter d'ASCII te assignat un valor de 7 bits. Un valor de 7 bits va de 0 a 127 ja que 2^7 es 128. La "H" es 72, la "e" 101, etc... Per especificar el final de paraula posem un 0
+                char message[] = "Hello"; // Hi ha un array simbolitzat per "[]" que conté el caràcter "char", Cada caràcter d'ASCII 
+              te assignat un valor de 7 bits. Un valor de 7 bits va de 0 a 127 ja que 2^7 es 128. La "H" es 72, la "e" 101, etc... 
+              Per especificar el final de paraula posem un 0
                 
                 void setup() {
                   Serial.begin(9600);
