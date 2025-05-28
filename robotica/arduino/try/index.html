@@ -232,12 +232,49 @@
   transition-delay: 0.4s;
 }
 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--white);
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  z-index: 1;
+  padding: 0.5rem 0;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+
   
   </style>
 </head>
 
 <!-- Navbar -->
+
 <body>
+
+<script>
+  let closeTimeout;
+
+  function openDropdown(element) {
+    clearTimeout(closeTimeout);
+    const menu = element.querySelector('.dropdown-content');
+    menu.classList.add('show');
+  }
+
+  function closeDropdown(element) {
+    const menu = element.querySelector('.dropdown-content');
+    closeTimeout = setTimeout(() => {
+      menu.classList.remove('show');
+    }, 300); // Espera 300ms abans de tancar
+  }
+</script>
+
+  
   <header>
 
 <div class="header-left">
