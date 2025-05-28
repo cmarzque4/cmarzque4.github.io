@@ -744,19 +744,19 @@ void flash(int numFlashes, int d) {
 }
 </code></pre>
 <h2>Funcions en Arduino</h2>
-<h5><p> Els funcions de Arduino són semblants a les funcions que veiem a cinemàtica directa i inversa. 
-  En el cas de cinemàtica robòtica utilitzem funcions JavaScript dins d'un codi html. Abans cada funció 
-  com per exemple, calculatePosition(); era una funció sense paràmetres o arguments que estava identificada 
-  amb un bloc de codi anomenat function, i s'executava quan clicavem un botó. Dins d'aquest bloc hi havien 
-  instruccions que permetien fer càlculs matemàtics. En el seguent codi d'Arduino tenim una funció flash amb 
-  dos paràmetres amb números sencers, anomenat ledPin i de delayPeriod que identifiquen el pin que está 
-  connectat i el temps que ha d'estar encès o apagat.</p></h5>
-<h6><p> Ara farem que un bucle s'executi només 20 o x vegades dins d'un bucle for localitzat dins d'un bucle 
-  infinit loop. Ho aconseguin amb la paraula clau static, que fa que una variables'inicialitzi només una
-  vegada que será la primera vegada que correm el codi. La paraula static es deriva del llenguatge C i Arduino 
-  és un derivat de C++ i precessing. Si eliminem només la paraula static del codi següent s'executarà infinites 
-  vegades. Així aconseguim dins la funció loop controlar el número de execucions, també ho podriem aplicar a 
-  altres funcions</p></h6>
+<p> Els funcions de Arduino són semblants a les funcions que veiem a cinemàtica directa i inversa. 
+  En el cas de cinemàtica robòtica utilitzem funcions JavaScript dins d'un codi html. 
+  Abans cada funció com per exemple, calculatePosition(); era una funció sense paràmetres o arguments
+  que estava identificada amb un bloc de codi anomenat function, i s'executava quan clicavem un botó.
+  Dins d'aquest bloc hi havien instruccions que permetien fer càlculs matemàtics. En el seguent codi 
+  d'Arduino tenim una funció flash amb dos paràmetres amb números sencers, anomenat ledPin i de 
+  delayPeriod que identifiquen el pin que está connectat i el temps que ha d'estar encès o apagat.</p>
+<p> Ara farem que un bucle s'executi només 20 o x vegades dins d'un bucle for localitzat dins d'un 
+  bucle infinit loop. Ho aconseguin amb la paraula clau static, que fa que una variables'inicialitzi
+  només una vegada que será la primera vegada que correm el codi. La paraula static es deriva del 
+  llenguatge C i Arduino és un derivat de C++ i precessing. Si eliminem només la paraula static del 
+  codi següent s'executarà infinites vegades. Així aconseguim dins la funció loop controlar el número
+  de execucions, també ho podriem aplicar a altres funcions</p>
 
 <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-python"> 
 // 03_04_blink_20_static
@@ -783,10 +783,10 @@ void loop() {
 </code></pre>
 
 <h1>Arrays i strings</h1>
-<p> Un array és una forma de contenir un llistat de valors, moltes vegades són valors enters i s'accedeix a ells per la seva posició, 
-  sent la primeraposició [0] del array, o element 0</p>
-  <p> El codi seguent el que fa és, a la primera línea defineix un array amb diferents valors i els imprimeix al monitor sèrie  els seus valors. 
-    Serà útil pel nostre codi morse.</p>
+<p> Un array és una forma de contenir un llistat de valors, moltes vegades són valors enters i 
+  s'accedeix a ells per la seva posició, sent la primeraposició [0] del array, o element 0</p>
+  <p> El codi seguent el que fa és, a la primera línea defineix un array amb diferents valors i 
+    els imprimeix al monitor sèrie  els seus valors. Serà útil pel nostre codi morse.</p>
 
 <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-python"> 
 int durations[] = {200, 200, 200, 500, 500, 500, 200, 200, 200};
@@ -801,7 +801,9 @@ void setup() {
 void loop() {}
 </code></pre>
 
-<p> El codi seguent ja és un codi morse, perquè combina un array, un bucle for (que llegeix l'array) i l'aplica a la funció flash, d'aquesta forma és com si escrivís flash(200), flash(200), flash(200), flash(500), flash(500), flash(500), flash(200), flash(200), flash(200)</p> 
+<p> El codi seguent ja és un codi morse, perquè combina un array, un bucle for (que llegeix l'array) 
+  i l'aplica a la funció flash, d'aquesta forma és com si escrivís flash(200), flash(200), flash(200), 
+  flash(500), flash(500), flash(500), flash(200), flash(200), flash(200)</p> 
 <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-python"> 
 const int ledPin = 13;
 
@@ -825,7 +827,8 @@ void flash(int duration) {
    delay(duration);
 }
 </code></pre>
-    <p> Puc crear una funció que em serveixi per 4 lletres i només quan la crido he de possar el número de repeticions com paràmetre o arguments</p>
+    <p> Puc crear una funció que em serveixi per 4 lletres i només quan la crido he de possar el número
+      de repeticions com paràmetre o arguments</p>
     <pre><code>
     void eosz (int numFlash) {
         for (int i = 0; i <numFlashes; i ++){
