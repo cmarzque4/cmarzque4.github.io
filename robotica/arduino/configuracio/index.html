@@ -486,26 +486,37 @@
         <pre>
             <code>
                 #include <SPI.h> // Afegim la biblioteca C++ Arduino que controla el protocol de comunicació SPI.
-                #include <SD.h> // Afegim o importem la biblioteca que controlen els arxius per "Read Write Rewrite Delate" és a dir, per llegir arxius, escriuse'ls, borrar-los
-                const int chipSelect = 10; // Tem que el pin 10 sigui un número enter i constant i s'anomeni "chipSelect" perquè controlarà la secció de la targeta SD. Aquest pin serveix per activar la targeta SD, quan l'Arduino vol comunicar-se amb ella.
+                #include <SD.h> // Afegim o importem la biblioteca que controlen els arxius per "Read Write Rewrite Delate" és a dir,
+                per llegir arxius, escriuse'ls, borrar-los
+                const int chipSelect = 10; // Tem que el pin 10 sigui un número enter i constant i s'anomeni "chipSelect" perquè 
+                controlarà la secció de la targeta SD. Aquest pin serveix per activar la targeta SD, quan l'Arduino vol 
+                comunicar-se amb ella.
                 void setup (){
-                Serial.begin(9600); // 9600 són bauds, els bauds són la quantitat de símbols transmesos per segon, en la comunicació sèrie 1 baud = 1 bit/segon, però en alguns casos 1 baud pot ser més d'1 bit/segon.
+                Serial.begin(9600); // 9600 són bauds, els bauds són la quantitat de símbols transmesos per segon, en la comunicació 
+                sèrie 1 baud = 1 bit/segon, però en alguns casos 1 baud pot ser més d'1 bit/segon.
                 Serial.print("Inicialitzant la targeta SD"); // Això significa que sortirà a la consola aquest misatge.
                 if(!SD.Begin(chipSelect)){ // El signe ! nega (si no funciona SD)
-                Serial.println("Error: no s'ha detectat la targeta SD"); // Si es compleix la condició anterior, posa aquest missatge a la consola.
+                Serial.println("Error: no s'ha detectat la targeta SD"); // Si es compleix la condició anterior, posa aquest
+                missatge a la consola.
                 return; // Segnifica que cabi la funció setup si la targeta no està disponible
                     } // Aquesta clau tanca el condicional si no detecta la tergeta SD.
 
                 Serial.println("Targeta SD detectada correctament");
-                File fitxer = SD.open ("dades.txt"); // File és una classe d'objectes que gestiona arxius i quan escric un nom al costat, com fitxer, declaro una variable per gestionar un fitxer. Si el fitxer existeix i es pot obrir correctament la paraula fixter serà vàlida, en cas contrari, el fitxer donarà com a resposta nul.
-                if (fitxer){ // Vol dir, si el fitxer s'ha pogut obrir perquè és vàlid, executa el codi següent, i si no passa directament per el else i mostra un error.
+                File fitxer = SD.open ("dades.txt"); // File és una classe d'objectes que gestiona arxius i quan escric un nom al 
+                costat, com fitxer, declaro una variable per gestionar un fitxer. Si el fitxer existeix i es pot obrir correctament 
+                la paraula fixter serà vàlida, en cas contrari, el fitxer donarà com a resposta nul.
+                if (fitxer){ // Vol dir, si el fitxer s'ha pogut obrir perquè és vàlid, executa el codi següent, i si no passa 
+                directament per el else i mostra un error.
                 Serial.println("Llegint dades.txt");  // Ha començat a llegir el fitxer
                 Serial.begin(9600); //9600 cón bauds o els bauds
                 while(fitxer.available()){ // Mentre que hi hagin dades per llegir dins del fitxer
-                Serial.write(fitxer.read()); // El que faria és mostrar el contingut del fitxer. El mètode read el que fa amb la sintexi del punt aplicat al fitxer va llegint caràcter per caràcter i els mostra al monitor rèrie fins que no hi ha més caràcters per mostrar 
+                Serial.write(fitxer.read()); // El que faria és mostrar el contingut del fitxer. El mètode read el que fa amb la
+                sintexi del punt aplicat al fitxer va llegint caràcter per caràcter i els mostra al monitor rèrie fins que no hi 
+                ha més caràcters per mostrar 
                   fitxer.close (); // Sempre s'ha de tancar el fitxer quan no es necessita , per evitar errors i alliberar memòria.
                     } // Aquesta clau tanca el bloc de configuració o setup.
-                void loop () { // Aquesta part del codi és la que s'executaria tota lestona de forma repetitiva. No posariem per exemple llegir un fitxer, ja que estaria llegint tota l'estona sense pausa
+                void loop () { // Aquesta part del codi és la que s'executaria tota lestona de forma repetitiva. No posariem per 
+                exemple llegir un fitxer, ja que estaria llegint tota l'estona sense pausa
                     }
                 </SD.h>
                 </SPI.h>
