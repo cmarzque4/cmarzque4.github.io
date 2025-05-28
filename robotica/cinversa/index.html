@@ -521,6 +521,105 @@
                 ctx.fillStyle='red';
                 ctx.fill();}        
     </script>   
+
+<!-- [Resto del código HTML y JavaScript sin cambios] -->
+<!-- Contingut -->
+<div class="content-container">
+    <h1>Cinemàtica Inversa d'un robot amb dos braços</h1>
+    
+    <div>
+        <label for="a1">Longitud del primer braç (a1):</label>
+        <input type="number" id="a1" value="2" step="0.1"><br><br>
+        
+        <label for="a2">Longitud del segon braç (a2):</label>
+        <input type="number" id="a2" value="1.5" step="0.1"><br><br>
+        
+        <label for="x">Posició X:</label>
+        <input type="number" id="x" value="2.5" step="0.1"><br><br>
+        
+        <label for="y">Posició Y:</label>
+        <input type="number" id="y" value="1.5" step="0.1"><br><br>
+
+        <button onclick="calculateAngles()">Calcula els angles</button><br><br>
+    </div>
+    
+    <div id="output"></div>
+    <canvas id="robotCanvas" width="600" height="400"></canvas>
+</div>
+
+<script>
+    function calculateAngles() { 
+        // Agafar les dades introduïdes per l'usuari
+        let a1 = parseFloat(document.getElementById('a1').value);
+        let a2 = parseFloat(document.getElementById('a2').value);
+        let x = parseFloat(document.getElementById('x').value);
+        let y = parseFloat(document.getElementById('y').value);
+
+        // Càlcul de q2
+        let d = Math.sqrt(x * x + y * y);
+        let q2 = Math.acos((d * d - a1 * a1 - a2 * a2) / (2 * a1 * a2));
+
+        // Càlcul de q1
+        let k1 = a1 + a2 * Math.cos(q2);
+        let k2 = a2 * Math.sin(q2);
+        let q1 = Math.atan2(y, x) - Math.atan2(k1, k2);
+
+        // Convertir radians a graus
+        let q1_deg = q1 * 180 / Math.PI;
+        let q2_deg = q2 * 180 / Math.PI;
+
+        // Resultat
+        let output = "<div class='equation'>Les equacions per calcular els angles són:</div>";
+        output += "<div class='equation'>\\[q_2=\\arccos\\left(\\frac{d^2-a_1^2-a_2^2}{2 a_1 a_2}\\right)\\]</div>";
+        output += "<div class='equation'>\\[q_1=\\arctan\\left(y,x\\right)-\\arctan\\left(\\frac{a_2\\sin(q_2)}{a_1+a_2\\cos(q_2)}\\right)\\]</div>";
+
+        // Substituir les variables
+        output += `<div class='equation'>Substituint els valors:</div>`;
+        output += `<div class='equation'>\\[d=\\sqrt{${x}^2+${y}^2}=${d.toFixed(2)}\\]</div>`;
+        output += `<div class='equation'>\\[q_2=\\arccos\\left(\\frac{${d.toFixed(2)}^2-${a1}^2-${a2}^2}{2\\times${a1}\\times${a2}}\\right)=${q2_deg.toFixed(2)}°\\]</div>`;
+        output += `<div class='equation'>\\[q_1=\\arctan(${y},${x})-\\arctan\\left(\\frac{${a2}\\sin(${q2_deg.toFixed(2)})}{${a1}+${a2}\\cos(${q2_deg.toFixed(2)})}\\right)=${q1_deg.toFixed(2)}°\\]</div>`;
+        
+        document.getElementById("output").innerHTML = output;
+        MathJax.typeset();
+
+        // Dibuixar el braç robòtic
+        let canvas = document.getElementById('robotCanvas');
+        let ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Convertir els angles a radians
+        let q1_rad = q1;
+        let q2_rad = q2;
+
+        // Posició del primer segment
+        let x1 = a1 * Math.cos(q1_rad);
+        let y1 = a1 * Math.sin(q1_rad);
+
+        // Posició del segon segment
+        let x2 = x1 + a2 * Math.cos(q1_rad + q2_rad);
+        let y2 = y1 + a2 * Math.sin(q1_rad + q2_rad);
+
+        // Dibuixar el braç 1
+        ctx.beginPath();
+        ctx.moveTo(200, 200);  // Punt central (base del braç)
+        ctx.lineTo(200 + x1 * 100, 200 - y1 * 100); // Escala de 100 per fer-lo visible
+        ctx.strokeStyle = 'rgb(220, 30, 84)';
+        ctx.lineWidth = 5;
+        ctx.stroke();
+
+        // Dibuixar el braç 2
+        ctx.beginPath();
+        ctx.moveTo(200 + x1 * 100, 200 - y1 * 100);
+        ctx.lineTo(200 + x2 * 100, 200 - y2 * 100);
+        ctx.strokeStyle = 'rgb(35, 57, 194)';
+        ctx.lineWidth = 5;
+        ctx.stroke();
+
+     }
+
+</script>
+
+  
 </main>
 </body>
 </html>
