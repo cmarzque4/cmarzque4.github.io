@@ -745,18 +745,19 @@ void flash(int numFlashes, int d) {
 </code></pre>
 <h2>Funcions en Arduino</h2>
 <p> Els funcions de Arduino són semblants a les funcions que veiem a cinemàtica directa i inversa. 
-  En el cas de cinemàtica robòtica utilitzem funcions JavaScript dins d'un codi html. 
-  Abans cada funció com per exemple, calculatePosition(); era una funció sense paràmetres o arguments
-  que estava identificada amb un bloc de codi anomenat function, i s'executava quan clicavem un botó.
-  Dins d'aquest bloc hi havien instruccions que permetien fer càlculs matemàtics. En el seguent codi 
-  d'Arduino tenim una funció flash amb dos paràmetres amb números sencers, anomenat ledPin i de 
-  delayPeriod que identifiquen el pin que está connectat i el temps que ha d'estar encès o apagat.</p>
-<p> Ara farem que un bucle s'executi només 20 o x vegades dins d'un bucle for localitzat dins d'un 
-  bucle infinit loop. Ho aconseguin amb la paraula clau static, que fa que una variables'inicialitzi
-  només una vegada que será la primera vegada que correm el codi. La paraula static es deriva del 
-  llenguatge C i Arduino és un derivat de C++ i precessing. Si eliminem només la paraula static del 
-  codi següent s'executarà infinites vegades. Així aconseguim dins la funció loop controlar el número
-  de execucions, també ho podriem aplicar a altres funcions</p>
+En el cas de cinemàtica robòtica utilitzem funcions JavaScript dins d'un codi html. 
+Abans cada funció com per exemple, calculatePosition(); era una funció sense paràmetres 
+o arguments que estava identificada amb un bloc de codi anomenat function, i s'executava quan
+clicavem un botó. Dins d'aquest bloc hi havien instruccions que permetien fer càlculs matemàtics. 
+En el seguent codi d'Arduino tenim una funció flash amb dos paràmetres amb números sencers, 
+anomenat ledPin i de delayPeriod que identifiquen el pin que está connectat i el temps que ha 
+d'estar encès o apagat.</p>
+<p> Ara farem que un bucle s'executi només 20 o x vegades dins d'un bucle for localitzat dins 
+d'un bucle infinit loop. Ho aconseguin amb la paraula clau static, que fa que una variables
+inicialitzi només una vegada que será la primera vegada que correm el codi. La paraula static 
+es deriva del llenguatge C i Arduino és un derivat de C++ i precessing. Si eliminem només la 
+paraula static del codi següent s'executarà infinites vegades. Així aconseguim dins la funció 
+loop controlar el número de execucions, també ho podriem aplicar a altres funcions</p>
 
 <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-python"> 
 // 03_04_blink_20_static
@@ -784,9 +785,9 @@ void loop() {
 
 <h1>Arrays i strings</h1>
 <p> Un array és una forma de contenir un llistat de valors, moltes vegades són valors enters i 
-  s'accedeix a ells per la seva posició, sent la primeraposició [0] del array, o element 0</p>
-  <p> El codi seguent el que fa és, a la primera línea defineix un array amb diferents valors i 
-    els imprimeix al monitor sèrie  els seus valors. Serà útil pel nostre codi morse.</p>
+s'accedeix a ells per la seva posició, sent la primeraposició [0] del array, o element 0</p>
+<p> El codi seguent el que fa és, a la primera línea defineix un array amb diferents valors i 
+els imprimeix al monitor sèrie  els seus valors. Serà útil pel nostre codi morse.</p>
 
 <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-python"> 
 int durations[] = {200, 200, 200, 500, 500, 500, 200, 200, 200};
@@ -801,9 +802,10 @@ void setup() {
 void loop() {}
 </code></pre>
 
-<p> El codi seguent ja és un codi morse, perquè combina un array, un bucle for (que llegeix l'array) 
-  i l'aplica a la funció flash, d'aquesta forma és com si escrivís flash(200), flash(200), flash(200), 
-  flash(500), flash(500), flash(500), flash(200), flash(200), flash(200)</p> 
+<p> El codi seguent ja és un codi morse, perquè combina un array, un bucle for 
+(que llegeix l'array) i l'aplica a la funció flash, d'aquesta forma és com si 
+escrivís flash(200), flash(200), flash(200), flash(500), flash(500), flash(500), 
+flash(200), flash(200), flash(200)</p> 
 <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-python"> 
 const int ledPin = 13;
 
@@ -827,8 +829,8 @@ void flash(int duration) {
    delay(duration);
 }
 </code></pre>
-    <p> Puc crear una funció que em serveixi per 4 lletres i només quan la crido he de possar el número
-      de repeticions com paràmetre o arguments</p>
+<p> Puc crear una funció que em serveixi per 4 lletres i només quan la crido he de possar el número
+de repeticions com paràmetre o arguments</p>
     <pre><code>
     void eosz (int numFlash) {
         for (int i = 0; i <numFlashes; i ++){
@@ -865,13 +867,13 @@ void flash(int duration) {
         <li> L'espai entre dues paraules diferents és de 5 punts (dots)</li>
     </ol>
             <div class="content-container">
-        <p>L'objectiu del codi següent és entendre que les cadenes o strings són conjunts de caràcters ASCII i podem accedir 
-            amb ells amb arrays que esta formats per parèntesis quadrats i el primer element és el 0. En llenguatge C i derivats
-            del C com Arduino podem utilitzar punters o pointers que permeten apuntar a un element. En python o JavaScript no hi
-            ha punters.</p>
-            <p>A continuació veuras els caracter ASCII en una taula, que son els utilitzats en els strings o cadenes</p>
-            <p>La taula següent està basada en un codi binari de 7 bits, perque 2 elevat a 7 (2^7) es 128, hi hauran desde 0 a 
-               127 caràcters diferents</p>
+    <p>L'objectiu del codi següent és entendre que les cadenes o strings són conjunts de caràcters ASCII
+    i podem accedir amb ells amb arrays que esta formats per parèntesis quadrats i el primer element és 
+    el 0. En llenguatge C i derivats del C com Arduino podem utilitzar punters o pointers que permeten
+    apuntar a un element. En python o JavaScript no hi ha punters.</p>
+    <p>A continuació veuras els caracter ASCII en una taula, que son els utilitzats en els strings o cadenes</p>
+    <p>La taula següent està basada en un codi binari de 7 bits, perque 2 elevat a 7 (2<sub>7</sub>) es 128, hi 
+    hauran desde 0 a 127 caràcters diferents</p>
         <table>
             <thead>
                 <tr>
@@ -904,16 +906,16 @@ void flash(int duration) {
             </tbody>
             </th>
         </table>
-        <p>ASCII significa American Standard Code for Information Interchange i va ser descrit a l'any 1967 amb l'objectiu 
-            d'intercambiar informació amb ordinadors</p>
-        <p>UTF8 és un sistema Unicode Transformation Format que permet escriure més d'un milió de caràcters diferents
-            “🙂” U+1F642</p>
+        <p>ASCII significa American Standard Code for Information Interchange i va ser descrit a l'any 1967 
+        amb l'objectiu d'intercambiar informació amb ordinadors</p>
+        <p>UTF8 és un sistema Unicode Transformation Format que permet escriure més d'un milió de caràcters 
+        diferents “🙂” U+1F642</p>
                 
             <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
                 // sketch 05-03
 
                 char message[] = "Hello"; // Hi ha un array simbolitzat per "[]" que conté el caràcter "char", Cada caràcter d'ASCII 
-              te assignat un valor de 7 bits. Un valor de 7 bits va de 0 a 127 ja que 2^7 es 128. La "H" es 72, la "e" 101, etc... 
+              te assignat un valor de 7 bits. Un valor de 7 bits va de 0 a 127 ja que 2<sub>7</sub> es 128. La "H" es 72, la "e" 101, etc... 
               Per especificar el final de paraula posem un 0
                 
                 void setup() {
@@ -930,60 +932,103 @@ void flash(int duration) {
         </div>
 
  <h3> Importància dels punters + Exemple del codi Morse</h3>
- <p> Hi ha llenguatges amb punters i sense punters (amb: C i els seus derivats, com Arduino) o (sense: python o JavaScript)</p>
-<p> El punter llegeix una adreça a la memória de l'ordinador, el contingut de l'adreça dins de la memória i la possició de l'adreça en hexadecimal, també es pot manipular. Hi ha possicions de l'adeça / memória especial, com els sectors d'arrancada (així es poden arreclar errors d'arrancada) </p>
-<p> Els punters permeten per tenir un control total per part del programador de la memória i els recursos de l'ordinador. El problema que té és que pot provocar errors a la memória o accesos no permesos si no saps com fer funcionar el punter</p>
- <p> Els dos símbols per utilitzar punters són: l'asterisc '*', que serveix per veure el contingut de l'aderça de memória. I l'ampersand '&', que llegeix la posició de l'adreça de memória</p>
-<p> La memória d'un ordinador la podem imaginar com caixetes d'un array, on cada caixa té una direcció en hexadecimal que comença amb <b>0x</b> i un contingut de cadascuna d'aquestes caixa (que pot ser buit o pot contenir un valor) </p>
+<p> Hi ha llenguatges amb punters i sense punters (amb: C i els seus derivats, com Arduino) o 
+(sense: python o JavaScript)</p>
+<p> El punter llegeix una adreça a la memória de l'ordinador, el contingut de l'adreça dins de la 
+memória i la possició de l'adreça en hexadecimal, també es pot manipular. Hi ha possicions de l'adeça
+o memória especial, com els sectors d'arrancada (així es poden arreclar errors d'arrancada) </p>
+<p> Els punters permeten per tenir un control total per part del programador de la memória i els 
+recursos de l'ordinador. El problema que té és que pot provocar errors a la memória o accesos no 
+permesos si no saps com fer funcionar el punter</p>
+<p> Els dos símbols per utilitzar punters són: l'asterisc '*', que serveix per veure el contingut de 
+l'aderça de memória. I l'ampersand '&', que llegeix la posició de l'adreça de memória</p>
+<p> La memória d'un ordinador la podem imaginar com caixetes d'un array, on cada caixa té una direcció 
+en hexadecimal que comença amb <b>0x</b> i un contingut de cadascuna d'aquestes caixa (que pot ser 
+buit o pot contenir un valor) </p>
 
     <h4> Operacions avançades amb punters</h4> 
         <ul>
             <li><b> Accés directe a la memória:</b> Permet modificar valors en posicions específiques</li>
-            <li><b> Manipulació eficient d'arrays i strings (cadenes):</b> Un array és en essència una llista d'adeçes amb principi i final amb punter al primer element</li>
-           <li><b> Passar graus quantitats de dades a funcions:</b> En lloc de copiar valors, els punters passen la seva aderça, estalviant memória i temps. Aquest és un dels motius pels que C i derivats són més ràpids que python o JavaScript.</li>
+            <li><b> Manipulació eficient d'arrays i strings (cadenes):</b> Un array és en essència una llista d'adeçes amb principi i final
+            amb punter al primer element</li>
+            <li><b> Passar graus quantitats de dades a funcions:</b> En lloc de copiar valors, els punters passen la seva aderça, estalviant 
+            memória i temps. Aquest és un dels motius pels que C i derivats són més ràpids que python o JavaScript.</li>
             <li><b> Creació d'estructures dinàmiques:</b> Es pot crear coses com gràfics o lliestes enllaçades de forma fàcil</li>
-            <li><b> Interacció fàcil amb microcontroladors:</b> Els microcontroladors utilitzen llengutges de baix nivell ja que és més fàcil de manipular (encara que són més propers al hardware. Encara que, gràcies a l'augment de la memória, s'ha pogut crear llenguatges com micropython o circutpython). </li>
+            <li><b> Interacció fàcil amb microcontroladors:</b> Els microcontroladors utilitzen llengutges de baix nivell ja que és més fàcil 
+            de manipular (encara que són més propers al hardware. Encara que, gràcies a l'augment de la memória, s'ha pogut crear llenguatges 
+            com micropython o circutpython). </li>
         </ul>
         <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
-// El principi del codi, abans de la funció de configuració 'setup' i la funció principal 'loop' que s'executa continuament, hem d'escriure sempre variables o constants. A més, al principi del codi trobem les constants i variables globals, anomenades així perquè es poden cridar o executar des de qualsevol part del codi, a diferencia de les variables locals que es defineixen i utilitzen dins de la mateixa funció 'loop' o una funció addicional. Devant de les variables i constants globals hauriem d'afegiu les biblioteques necessàries per fer funcionar el nostre codi (amb '#include <nom_de_biblioteca.h>') l'extenció 'h' deriva de C y significa 'biblioteca de headers' o encapçalament.
+// El principi del codi, abans de la funció de configuració 'setup' i la funció principal 'loop' que s'executa continuament, 
+hem d'escriure sempre variables o constants. A més, al principi del codi trobem les constants i variables globals, anomenades 
+així perquè es poden cridar o executar des de qualsevol part del codi, a diferencia de les variables locals que es defineixen i 
+utilitzen dins de la mateixa funció 'loop' o una funció addicional. Devant de les variables i constants globals hauriem d'afegiu 
+les biblioteques necessàries per fer funcionar el nostre codi (amb '#include <nom_de_biblioteca.h>') l'extenció 'h' deriva de C y 
+significa 'biblioteca de headers' o encapçalament.
 const int ledPin = 13;
 const int dotDelay = 200;
-//'const' vol dir que la variable no es modificarà dins del codi. 'int' o integer significa que el nombre que hagafem haurà de ser enter, ja que els pins tenen números enters. El pin 13 és especial, té una resistència interna en el cas d'Arduino uno permet connectar direcatment un led, perquè està al costat del pin GND i puc clavar o connectar un led directament sense cap circuit o placa. 'ledPin' és una variable constant i s'anomena així per l'usuari , utilitzant camelCase i referint-nos  al que fa aquest pin.
-char* letters[] = { // Això és un array d'arrays (pointer*) perque dins de l'array letters hi han arrays més petites formats per una combinació de punts i ratlles (array filles), això és un array de caràcters -> És  un arrey o una matriu composada per diferents matrius
+//'const' vol dir que la variable no es modificarà dins del codi. 'int' o integer significa que el nombre que hagafem haurà de ser 
+enter, ja que els pins tenen números enters. El pin 13 és especial, té una resistència interna en el cas d'Arduino uno permet connectar
+direcatment un led, perquè està al costat del pin GND i puc clavar o connectar un led directament sense cap circuit o placa. 'ledPin' 
+és una variable constant i s'anomena així per l'usuari , utilitzant camelCase i referint-nos  al que fa aquest pin.
+char* letters[] = { // Això és un array d'arrays (pointer*) perque dins de l'array letters hi han arrays més petites formats per una 
+combinació de punts i ratlles (array filles), això és un array de caràcters -> És  un arrey o una matriu composada per diferents matrius
   ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..",    // A-I
   ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.",  // J-R
   "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."          // S-Z
 };
-// Més amunt i més abaix tinc dos arrays composats cadascun d'ells per arrays interns i cada array intern està composat de caràcters que només poden ser punts o ratlles ('.' o '-').
-//Quan jo crido 'letters[0]' el que obtinc és '.-' o sigui, la lletra A en codi Morse. Aquesta forma detreballar és molt dolenta des d'un punt de vista d'eficiencia, perquè estic utilitzant un byte (un conjunt de 8 bits) senser per cada punt o ratlla. Un bit és un valor de 0 o 1 i això és podria utilitzar per fer els punts o les ratlles perquè els dos valors són dos estats (0 o 1) i el codi Morse també en té dos ('.' i '-') llabors podem substituir els caràcters (asignar el 0 al punt i l'1 a la ratlla). 
+// Més amunt i més abaix tinc dos arrays composats cadascun d'ells per arrays interns i cada array intern està composat de caràcters 
+que només poden ser punts o ratlles ('.' o '-').
+//Quan jo crido 'letters[0]' el que obtinc és '.-' o sigui, la lletra A en codi Morse. Aquesta forma detreballar és molt dolenta des 
+d'un punt de vista d'eficiencia, perquè estic utilitzant un byte (un conjunt de 8 bits) senser per cada punt o ratlla. Un bit és un 
+valor de 0 o 1 i això és podria utilitzar per fer els punts o les ratlles perquè els dos valors són dos estats (0 o 1) i el codi Morse 
+també en té dos ('.' i '-') llabors podem substituir els caràcters (asignar el 0 al punt i l'1 a la ratlla). 
 // Quants bytes de memória necessitarem utilitzant bytes o bits per codificar Morse?
-// Aproximadament el Morse té (83 lletres + 26 números) 109 punts o ratlles de caràcters, de la manera més eficient tindriem (109/8) 14 bytes i de la manera menys eficient (109 x 8) 872 bytes. Hem de tenir en compte
-// En un byte hi han 8 bits diferent, iper això es podrien fer 256 caràcters diferents. De fer ASCII utilitza 7 bits per creat 128 caràcters (de 0 a 127).
-// L'asterisc '*' és molt impostant, ja que ens indica que és un punter, '[]'ens indica que és un array, 'numbers' m'indica el nom de l'array, i 'char' m'indica el tipus d'elements (caràcters) que hi ha dins de l'array. L'array d'asota es diu numbers però està constituit per caràcters, perquè tant els números com com les lletres estan constituides per punts i ratlles que són caràcters
+// Aproximadament el Morse té (83 lletres + 26 números) 109 punts o ratlles de caràcters, de la manera més eficient tindriem (109/8) 
+14 bytes i de la manera menys eficient (109 x 8) 872 bytes. Hem de tenir en compte
+// En un byte hi han 8 bits diferent, iper això es podrien fer 256 caràcters diferents. De fer ASCII utilitza 7 bits per creat 128 
+caràcters (de 0 a 127).
+// L'asterisc '*' és molt impostant, ja que ens indica que és un punter, '[]'ens indica que és un array, 'numbers' m'indica el nom de
+l'array, i 'char' m'indica el tipus d'elements (caràcters) que hi ha dins de l'array. L'array d'asota es diu numbers però està 
+constituit per caràcters, perquè tant els números com com les lletres estan constituides per punts i ratlles que són caràcters
 char* numbers[] = { // En el cas concret del codi Morse, l'asterisc s'utilitza per especificar la memória de cada lletra del codi Morse
   "-----", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----."};
 
 void setup() {
   pinMode(ledPin, OUTPUT);
   Serial.begin(9600);
-// En el setup o configuració del microcontrolador indiquem que el pin 13 ara es diu "ledPin" sigui una sortida o "Output". Indiquem que l'Arduino que es comuniquiamb l'ordinador a través del port serial o sèrie i comenci a una velocitat de 9600 bauds o símbols que són aproximadament 9600 bits / segon
+// En el setup o configuració del microcontrolador indiquem que el pin 13 ara es diu "ledPin" sigui una sortida o "Output". 
+Indiquem que l'Arduino que es comuniquiamb l'ordinador a través del port serial o sèrie i comenci a una velocitat de 9600 bauds
+o símbols que són aproximadament 9600 bits / segon
 }
 
 void loop() {
-// El loop és el codi principal, i el que el seu nom indica que es repeteix sense parar en un "loop". "char" significa que utilitzem una variable de tipus caràcter i l'anomenem <b>ch</b>. "Serial.available" significa si està disponible la comunicació sèrie o un 'serial monitor' que comunica el microcontrolador aArduin amb el nostre dispositiu (ordinador)
+// El loop és el codi principal, i el que el seu nom indica que es repeteix sense parar en un "loop". "char" significa que utilitzem 
+una variable de tipus caràcter i l'anomenem <b>ch</b>. "Serial.available" significa si està disponible la comunicació sèrie o un 
+'serial monitor' que comunica el microcontrolador aArduin amb el nostre dispositiu (ordinador)
 // La comunicació entre Arduino i l'ordinador és complexa:
 // Primer pas: L'ordinador envia dades al monitor sèrie a traves del USB per un mecanisme que s'anomena 'USB to Serial'
 // Segon pas: La transfornació anterior 'USB to Serial' ho fa un xip especial dins d'Arduino
-// Tercer pas: Les dades en format sèrie arriven a una part del microcontrolador anomenada 'UART' que significa Univeral Asynchronous Receiver Transmiter
-// Quart pas: Envia les dades que rep a una memória temporal o 'buffer' que pot emmagatzemar 128 bytes fins que s'elimina en el moment que es llegeix
-// La funció serial available retorna el número de bytes de dades en el 'buffer' que estan esperant per ser llegits. Si no hi ha cap missatge esperant a ser llegit, la funció retorna a 0
+// Tercer pas: Les dades en format sèrie arriven a una part del microcontrolador anomenada 
+'UART' que significa Univeral Asynchronous Receiver Transmiter
+// Quart pas: Envia les dades que rep a una memória temporal o 'buffer' que pot emmagatzemar 128 bytes 
+fins que s'elimina en el moment que es llegeix
+// La funció serial available retorna el número de bytes de dades en el 'buffer' que estan esperant per ser llegits. 
+Si no hi ha cap missatge esperant a ser llegit, la funció retorna a 0
 // La funció 'Serial.read' el que fa és llegir el primer o el següent caràcter disponible i l'emmagatzema a la variable "ch"
-// El símbol >= o <= s'utilitza per comparar amb el número d'ASCII que correspon a la lletra 'a' per tant, podriem canviar l'a pel número 97 i la z el número 122. Els altres caràcters que podem canviar serien 'A' (mayus) pel número 65 i 'Z' (mayus) pel número 90. El caràcter '0' correspon al número 48 i el caràcter '9' correspon al 57. El caràcter ' ' (espai en blanc) correspon al número 32
-// Els condicionals que hi ha dins del condicional general "Serial.available" el que fan és dir si es caràcter és entre la a i la z, li restes el valor menys a. Imaginem que la lletra és una 'c', que equival al número 99, llavors li restem la 'a' que és 97 quedaria el número 2, que està dins d'un [] és a dir dins d'un array i correspondria al tercer element de l'array de les lletres. Aquest tercer element és "-.-."
-// Un altre exemple 'H' estaria evaluat en un altre condicional (el de les majúscules), aquest caràcter equivilaria al número 72 i li hem de restar 'A' que equival a 65, per tant ch- 'A' és 7, que és el vuité element de l'array de majúscula [7] i letters[7] és "...."
+// El símbol >= o <= s'utilitza per comparar amb el número d'ASCII que correspon a la lletra 'a' per tant, podriem canviar l'a
+pel número 97 i la z el número 122. Els altres caràcters que podem canviar serien 'A' (mayus) pel número 65 i 'Z' (mayus) pel número 90. 
+El caràcter '0' correspon al número 48 i el caràcter '9' correspon al 57. El caràcter ' ' (espai en blanc) correspon al número 32
+// Els condicionals que hi ha dins del condicional general "Serial.available" el que fan és dir si es caràcter és entre la a i la z,
+li restes el valor menys a. Imaginem que la lletra és una 'c', que equival al número 99, llavors li restem la 'a' que és 97 quedaria 
+el número 2, que està dins d'un [] és a dir dins d'un array i correspondria al tercer element de l'array de les lletres. Aquest tercer 
+element és "-.-."
+// Un altre exemple 'H' estaria evaluat en un altre condicional (el de les majúscules), aquest caràcter equivilaria al número 72 i li 
+hem de restar 'A' que equival a 65, per tant ch- 'A' és 7, que és el vuité element de l'array de majúscula [7] i letters[7] és "...."
 // Per què s'ha de restar? 
 // Per conèixer la posició de la lletra a l'array, perquè he possat l'array ordenat des de la 'a'-'z' i des de la 'A'-'Z'
-// Ara tenim el número per exemple letters [7] igual a "...." i el que volem és aplicar una funció. Aquesta funció és la funció "flashSequence" que agafarà l'element vuité de l'array com arguments
+// Ara tenim el número per exemple letters [7] igual a "...." i el que volem és aplicar una funció. Aquesta funció és la funció 
+"flashSequence" que agafarà l'element vuité de l'array com arguments
     char ch;
   if (Serial.available() > 0) {
     ch = Serial.read();
@@ -1001,8 +1046,14 @@ void loop() {
     }
   }
 }
-// El "void flashSequence()" és una funció que rep un argument, el que fa aquest argument és utilitzar un punter i seguir la seqüència que es troba amb letters [7], que és "...." aquest quatre caràcters o punts són una seqüència de caràcters ordenada gràcies al punter
-// El codi següent el que fa és, amb la posició 'i' inicial de 0, que és el pointer* 'e' al principi de l'array "...." I el que fa és que, mentres aquests elements (while) de la seqüència no sigui (!) = NULL, és a dir, mentres hi hagi un caràcter, crida una funció diferent anomenada 'flashDotOrDash' que rep com a argument ell valor de 'i' concret en aquella seqüència. Després de rebre'l pasa el següent valor de 'i', si la 'i' era el primer punt ".", la 'i++' primera o 'i = i+1' és el segón punt "." I així fins al cinquè punt que s'atura tot, perqué es NULL (no hi ha 5è punt).
+// El "void flashSequence()" és una funció que rep un argument, el que fa aquest argument és utilitzar un punter i seguir 
+la seqüència que es troba amb letters [7], que és "...." aquest quatre caràcters o punts són una seqüència de caràcters ordenada 
+gràcies al punter
+// El codi següent el que fa és, amb la posició 'i' inicial de 0, que és el pointer* 'e' al principi de l'array "...." 
+I el que fa és que, mentres aquests elements (while) de la seqüència no sigui (!) = NULL, és a dir, mentres hi hagi un caràcter, 
+crida una funció diferent anomenada 'flashDotOrDash' que rep com a argument ell valor de 'i' concret en aquella seqüència. 
+Després de rebre'l pasa el següent valor de 'i', si la 'i' era el primer punt ".", la 'i++' primera o 'i = i+1' 
+és el segón punt "." I així fins al cinquè punt que s'atura tot, perqué es NULL (no hi ha 5è punt).
 void flashSequence(char* sequence) {
   int i = 0;
   while (sequence[i] != NULL) {
@@ -1030,7 +1081,7 @@ void flashDotOrDash(char dotOrDash) {
 // El loop és un bucle i contínuament va cridant la funció 'flashSequence ()' i el que fa és llegir cada lletra i convertirles en punts i ratlles, aquesta funció crida a la funció 'flashDotOrDash ()' continuament que fa que s'encengui els leds segon els punts i ratlles. Sempre hem de dividir el codi en diverses funcions, perimer per fer-lo més modular i entendre que fa cada funció i a més ens fa més fàcil el manteniment i canvis futurs.
 
 <h2> Input i Output: Entrades i Sortides</h2>    
-    <p> Les entrades i sortides poden ser de dues maneres diferents, digitals o analógiques, les digitals poden ser de 0 volts o de 3.3 volts i en altres plàques Arduino poden ser 0 i 5 volts. Les analógiques srien graduals (0-3.3v) en 2^n passos, sent 'n' el número de bits</p>
+    <p> Les entrades i sortides poden ser de dues maneres diferents, digitals o analógiques, les digitals poden ser de 0 volts o de 3.3 volts i en altres plàques Arduino poden ser 0 i 5 volts. Les analógiques srien graduals (0-3.3v) en 2<sub>n</sub> passos, sent 'n' el número de bits</p>
   <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
 
 const int outPin = 3;
@@ -1210,7 +1261,7 @@ void setup() {
 void loop() { // codi rincipal que no s'atura mai, es repeteix fins que desconecto l'Arduino
   if (Serial.available() > 0) { // El mètode Serial.available espera caràcters, major a 0 és que hi ha algún caràcter
     float volts = Serial.parseFloat(); // parseFloat és una funció o mètode que s'aplica a l'objecte serial i la seva funció és parsejar o analitzar el contingut de caràcters que arriba pel port serial i si és de tipus decimal o floating point number (número amb coma flotant) o variable tipus float. Les variables tipus float inclouen les variable int o integer -> números sencers. També existeix parseInt que només acceptaria números enters. El float volts crea un espai a la memória de l'ordinador anomenat volts que haurà de ser del tipus floating point number que emmagatzemarà el que li arribi del port serial escrit per l'usuari. la variable volts emmagatzema el número decimal que escriu l'usuari
-    int pwmValue = volts * 255.0 / 5.0; // Els volts no ens serveixen perquè volem PWM perquè no velem valors entre 0 i 5, sinó entre 0 i 255. Perquè entre 0 i 255? per que és el número de bits (2^8 -> 256). Faig una regla de tres i multiplico el valor per 255 i divideixo entre 5. Per exemple si l'usuari inserta 2.5 tindras 2.5 * 255 / 5 = 127.5. Aquet valor es transformara en 127 perque ha de ser integer i es guardara en pwmValue.
+    int pwmValue = volts * 255.0 / 5.0; // Els volts no ens serveixen perquè volem PWM perquè no velem valors entre 0 i 5, sinó entre 0 i 255. Perquè entre 0 i 255? per que és el número de bits (2<sub>8</sub> -> 256). Faig una regla de tres i multiplico el valor per 255 i divideixo entre 5. Per exemple si l'usuari inserta 2.5 tindras 2.5 * 255 / 5 = 127.5. Aquet valor es transformara en 127 perque ha de ser integer i es guardara en pwmValue.
     analogWrite(outputPin, pwmValue); // analogWrite és una funció predefinida al llengutge Arduino, derivada de C++ i 
     és també una biblioteca de processing. Té dos arguments o paràmetres, el pin al que està connectat i el valor que
     volem escriure en el pin led (0-255), que farà que el led s'encengui de forma proporcional als volts que l'usuari ha
@@ -1220,10 +1271,10 @@ void loop() { // codi rincipal que no s'atura mai, es repeteix fins que desconec
 
 <p> El "const int outputPin" defineix el pin de sortida constant que no es pot canviar. Després de defiir el pin de sortida 3 i en output (sortida) i la velocitat bauds (9600), el codi demana que escriguim a la consola del programa Arduino IDE: Entre volts 0 - 5.</p>
 <p> El loop principal comprova que hi hagi caràcters escrits a la consola, després agafa el valor que hem donat i el guarda en la variable volts. El valor por ser en decimal perquè posa float ('Floating point number'). El mètode parseFloat l'apliquem amb la sintaxi del punt a l'objecte Serial (Que es posa en  majúscula, normalment seria una classe en majúscula) i agafa el valor de la consola en sèrie. </p>
-<p> La variable pwmValue és entra (int o 'integer') i el que fa és convertir el valor volts (0-5) a valors de 0 - 255, que és el número de bits (2^14) tal i com indica el data sheet o fulla de característiques del ESP32S3. Si fos un ESP32S3 la línea de codi seria 
+<p> La variable pwmValue és entra (int o 'integer') i el que fa és convertir el valor volts (0-5) a valors de 0 - 255, que és el número de bits (2<sub>14</sub>) tal i com indica el data sheet o fulla de característiques del ESP32S3. Si fos un ESP32S3 la línea de codi seria 
     "Serial.println("enter volts 0 - 3.3")"
     "int pmwValue = volts * 16384.0 / 3.3"</p>
-<p> El ESP32S3 té l'avantatge de tenir més resolució, és a dir, pot donar 16384 valors diferents entre 0 i 3.3 volts. Aixó potser no es noti per un led, però es nota en un motor, on l'ESP32S3 permet accedir a més velocitats diferents. Els motors poden arribar a 16 bits, que és 2^16 o 25536 valors diferents, que depenent del tipus de motor, pot ser observat o no.</p>
+<p> El ESP32S3 té l'avantatge de tenir més resolució, és a dir, pot donar 16384 valors diferents entre 0 i 3.3 volts. Aixó potser no es noti per un led, però es nota en un motor, on l'ESP32S3 permet accedir a més velocitats diferents. Els motors poden arribar a 16 bits, que és 2<sub>16</sub> o 25536 valors diferents, que depenent del tipus de motor, pot ser observat o no.</p>
 </code></pre>
 
 
@@ -1237,7 +1288,7 @@ void setup() {
 
 void loop() {
   int reading = analogRead(analogPin); // analogRead llegeix els valors analogics del analogPin de 0 a 1023
-  float voltage = reading / 204.6; // 1023 / 5 = 204,6 Dividim 1023 (2^10 - 1 per a Arduino) entre 5 (volts d'Arduino)
+  float voltage = reading / 204.6; // 1023 / 5 = 204,6 Dividim 1023 (2<sub>10</sub> - 1 per a Arduino) entre 5 (volts d'Arduino)
                         // Ara ens interesa els volts perquè jo connecto un sensor por esemple de temperatura ( de 0 a 100
     graus, d'humitat 0% - 100%) i els valor de 0 a 1023 no tenen sentit, perquè si fos un altre ESP32 seria de 0 a 4095
     i el valor 500 en el primer cas estaria per la meitat i en el segon cas seria menys. Si utilitzem voltatge tenim una mesura
@@ -1517,7 +1568,7 @@ void loop() {
      <ul> 
      <p> Per exemple: map(200,0,1023,0,100); seria un exemple d'ua lectura analògica de 200 en un rang de 0 a 1023 d'un lector analògic A0 d'Arduino que es converteix en 20 graus aproximadament de temperatura e un rang de 0 a 100 graus. t=map(200,0,1023,0,100) = 20 </p>
      <p> La funció màs i min ens donarà el valor màxim i valor mínim de 2 números, per exemple max(3,4) = 4 i min (3,4) = 3. </p>
-     <p> La funció pow és la poténcia, té dos arguments, el primer argument és la base i el segon argument és l'exponent, per exemple pow(2,5) = 32, ja que és 2^5 </p>
+     <p> La funció pow és la poténcia, té dos arguments, el primer argument és la base i el segon argument és l'exponent, per exemple pow(2,5) = 32, ja que és 2<sub>5</sub> </p>
 <p> Soposem que volem calcular els nivells de CO<sub>2</sub> amb Arduino avui dia 12/5/25, estem a 425,76ppm mesurat a Manua Loa (Hawaii) i volem saber no la concentració exterior de CO<sub>2</sub> perquè sempre es igual, sinó la concentració interior, que com a màxim és  1000 ppm (partícules per mil·lió) segons el codi tècnic d'edificació (CTE).org
 <a href = "https://www.codigotecnico.org/"></p>
      </ul>        
