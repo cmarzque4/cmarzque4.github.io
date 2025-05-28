@@ -1,277 +1,415 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ca">
+<link rel="icon" type="image/png" href="roboticlogo.png">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" async
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="icon" href="logo.ico" type="image/x-icon">
-    <title>Arduino</title>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to right, #f8f9fa, #ffe4b5);
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web de Carla</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --blue-dark: #023e8a;
+      --blue-mid: #0077b6;
+      --blue-light: #90e0ef;
+      --blue-extra-light: #e0f7fa;
+      --white: #ffffff;
+      --shadow: rgba(0, 119, 182, 0.15);
+    }
 
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: linear-gradient(45deg, #ff6b6b, #ff3d3d);
-            padding: 10px 20px;
-            border-bottom: 4px solid #ffdd40;
-            z-index: 10;
-        }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, var(--blue-extra-light), var(--white));
+      color: var(--blue-dark);
+    }
 
-        .navbar-brand {
-            display: flex;
-            align-items: center;
-            color: #fff !important;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            transition: color 0.2s ease-in-out;
-        }
+    header {
+      background: linear-gradient(to right, var(--blue-dark), var(--blue-mid));
+      color: var(--white);
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 3px 10px var(--shadow);
+    }
 
-        .navbar-brand:hover {
-            color: #000 !important;
-        }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
 
-        .navbar-brand img {
-            margin-right: 15px;
-            border-radius: 0;
-        }
+    .logo a {
+  color: white; /* o un altre color amb contrast */
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+}
 
-        .nav-link {
-            color: #ffffff !important;
-            font-weight: 600;
-            margin-right: 15px;
-            position: relative;
-            transition: color 0.3s ease;
-        }
+  .logo a {
+  opacity: 1;
+}
 
-        .nav-link:hover {
-            color: #ffdd40 !important;
-        }
+    nav a {
+      margin-left: 2rem;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
 
-        .nav-link::after {
-            content: '';
-            width: 0%;
-            height: 3px;
-            background-color: #ffdd40;
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            transition: width 0.3s ease;
-        }
+    nav a:hover {
+      color: var(--white);
+    }
 
-        .nav-link:hover::after {
-            width: 100%;
-        }
+    main {
+      max-width: 960px;
+      margin: 2.5rem auto;
+      padding: 2rem;
+      background: var(--white);
+      border-radius: 14px;
+      box-shadow: 0 8px 20px var(--shadow);
+    }
 
-        .dropdown-menu {
-            background-color: #cc3f33;
-            border: none;
-            border-radius: 10px;
-        }
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      color: var(--blue-mid);
+      margin-bottom: 1.5rem;
+    }
 
-        .dropdown-item {
-            color: #ffffff;
-            transition: background-color 0.3s ease;
-        }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
 
-        .dropdown-item:hover {
-            background-color: #ff7f50;
-            color: #ffffff;
-        }
+    a {
+      color: var(--blue-mid);
+      font-weight: bold;
+      text-decoration: none;
+    }
 
-        .content-container {
-            margin: 120px auto 50px auto;
-            padding: 40px;
-            max-width: 900px;
-            background-color: #ffffff;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            border-radius: 15px;
-            border-left: 8px solid #ffdd40;
-            border-right: 8px solid #ffdd40;
-            animation: fadeIn 1.2s ease-in-out;
-        }
+    a:hover {
+      text-decoration: underline;
+    }
 
-        h1 {
-            color: #ff4500;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            text-align: center;
-        }
+    .projectes {
+      display: grid;
+      gap: 1.2rem;
+    }
 
-        p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
+    .projecte {
+      background: var(--blue-light);
+      padding: 1rem 1.5rem;
+      border-left: 5px solid var(--blue-dark);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px var(--shadow);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
 
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
+    .projecte:hover {
+      transform: translateY(-5px);
+      background: #caf0f8;
+    }
 
-        ul li {
-            background-color: #ffe4b5;
-            margin-bottom: 10px;
-            padding: 10px 15px;
-            border-left: 5px solid #ff7f50;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-        }
+    .emoji {
+      margin-right: 0.5rem;
+    }
 
-        ul li:hover {
-            background-color: #f1f3f5;
-        }
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-        a {
-            color: #ff4500;
-            font-weight: 600;
-            transition: color 0.3s ease;
-            text-decoration: underline;
-        }
+      nav {
+        margin-top: 1rem;
+      }
 
-        a:hover {
-            color: #ff7f50;
-        }
+      nav a {
+        display: block;
+        margin: 0.4rem 0;
+      }
 
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
+      main {
+        margin: 1rem;
+      }
+    }
 
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    .dropdown {
+  position: relative;
+  display: inline-block;
+}
 
-        @media (max-width: 768px) {
-            .content-container {
-                padding: 20px;
-            }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--white);
+  min-width: 160px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+}
 
-            h1 {
-                font-size: 2rem;
-            }
+.dropdown-content a {
+  color: var(--blue-dark);
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.2s;
+}
 
-            .navbar-brand {
-                font-size: 1.25rem;
-            }
+.dropdown-content a:hover {
+  background-color: var(--blue-light);
+}
 
-            ul li {
-                font-size: 1rem;
-            }
-        }
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
-        table {
-            width: 50%;
-            /* Ocupa el 50% de la anchura de la página */
-            border-collapse: collapse;
-            /* Evita que aparezcan dobles líneas en las filas */
-            margin: 20px auto;
-            /* Margen de 20px en la parte superior y centra la tabla */
-        }
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+  position: absolute;
+  background-color: var(--white);
+  min-width: 160px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  padding: 0; /* inicialment sense padding */
+}
 
-        th,
-        td {
-            border: 1px solid #ddd;
-            /* Añade un borde fino de un píxel de color gris claro a todas las celdas (th y td) */
-            padding: 10px;
-            /* Espacio interno dentro de cada celda */
-            text-align: center;
-            /* Centra el texto dentro de cada celda */
-        }
+.dropdown-content a {
+  color: var(--blue-dark);
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.2s ease;
+}
 
-        thead {
-            background: #f4f4f4;
-            /* Cambia el color de fondo del thead a gris claro */
-            font-weight: bold;
-            /* Hace que la cabecera de la tabla esté en negrita */
-        }
+.dropdown-content a:hover {
+  background-color: var(--blue-light);
+}
 
-        tbody tr:nth-child(even) {
-            /* Aplica estilo a las filas pares */
-            background-color: #f9f9f9;
-        }
+.dropdown:hover .dropdown-content {
+  max-height: 500px; /* prou espai per mostrar tot */
+  opacity: 1;
+  padding: 0.5rem 0;
+}
 
-        tbody tr:hover {
-            /* Cambia el color de fondo al pasar el ratón por encima */
-            background-color: #e2e2e2;
-        }
-    </style>
+.dropdown-content {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease, visibility 0.4s;
+  position: absolute;
+  background-color: var(--white);
+  min-width: 160px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  padding: 0;
+}
+
+.dropdown-content a {
+  color: var(--blue-dark);
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--blue-light);
+}
+
+/* Quan el ratolí passa per sobre, desplega el menú */
+.dropdown:hover .dropdown-content {
+  max-height: 500px;
+  opacity: 1;
+  visibility: visible;
+  padding: 0.5rem 0;
+  transition-delay: 0s;
+}
+
+/* Quan surt el cursor, que trigui a desaparèixer */
+.dropdown:not(:hover) .dropdown-content {
+  transition-delay: 0.2s;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--white);
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  z-index: 1;
+  padding: 0.5rem 0;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.dropdown-content a {
+  color: var(--blue-dark); /* o directament: #023e8a, #111, etc. */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.dropdown-content a:hover {
+  background-color: #ade8f4; /* un blau clar que contrasti */
+  color: var(--blue-dark); /* manté la visibilitat en hover */
+}
+
+.dropdown-content {
+  background-color: white;
+  padding: 0; /* <- això és clau */
+  margin: 0;
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 10px 16px;
+  margin: 0;
+  display: block;
+  background-color: white;
+}
+
+.dropdown-content * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espacio entre logo y texto */
+}
+
+.logo {
+  height: 50px; /* o ajusta al tamaño deseado */
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #005fa3;
+  padding: 10px 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espacio entre logo y texto */
+}
+
+.logo {
+  height: 50px; /* ajusta según tamaño del logo */
+}
+
+.brand-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+    
+  </style>
 </head>
 
+<!-- Navbar -->
+
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="https://ecastro4.github.io">
-                <img src="https://ecastro4.github.io/logo.png" alt="Logo" width="50">
-                Web d'Eric
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul.n class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://ecastro4.github.io">Inici</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Programació
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="https://ecastro4.github.io/cara">Cara interactiva</a>
-                            <a class="dropdown-item" href="https://ecastro4.github.io/ocell">Ocell</a>
-                            <a class="dropdown-item" href="https://ecastro4.github.io/wepray">We Pray</a>
-                            <a class="dropdown-item" href="https://ecastro4.github.io/coldplay">Coldplay</a>
-                            <a class="dropdown-item" href="https://ecastro4.github.io/python">Python</a>
-                            <a class="dropdown-item" href="https://ecastro4.github.io/astronomia">Astronomia</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
-                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Robòtica
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                            <a class="dropdown-item" href="https://ecastro4.github.io/robotica/cdirecta">Cinemàtica
-                                directa</a>
-                            <a class="dropdown-item" href="https://ecastro4.github.io/robotica/cinversa">Cinemàtica
-                                inversa</a>
-                            <a class="dropdown-item" href="https://ecastro4.github.io/robotica/coldplay">Coldplay</a>
-                            <a class="dropdown-item" href="https://ecastro4.github.io/robotica/arduino">Arduino</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://ecastro4.github.io/enllaços">Enllaços</a>
-                    </li>
-                </ul.n>
-            </div>
-        </div>
+
+<script>
+  let closeTimeout;
+
+  function openDropdown(element) {
+    clearTimeout(closeTimeout);
+    const menu = element.querySelector('.dropdown-content');
+    menu.classList.add('show');
+  }
+
+  function closeDropdown(element) {
+    const menu = element.querySelector('.dropdown-content');
+    closeTimeout = setTimeout(() => {
+      menu.classList.remove('show');
+    }, 300); // Espera 300ms abans de tancar
+  }
+</script>
+
+  
+  <header>
+    
+<div class="brand">
+  <a href="https://agora.xtec.cat/ies-pompeu-fabra-martorell/" style="display: flex; align-items: center; text-decoration: none;">
+    <img src="logo.png" alt="Logo" class="logo">
+  </a>
+    <a span href="https://cmarzque4.github.io/" class="brand-text"> Web de Carla</span>
+  </a>
+</div>
+
+    <nav>
+      <a href="https://cmarzque4.github.io/">Inici</a>
+
+      
+  <div class="dropdown" onmouseenter="openDropdown(this)" onmouseleave="closeDropdown(this)">
+  <a href="#"> Braç robòtic ▾</a>
+    <div class="dropdown-content">
+      <a href="https://cmarzque4.github.io/robotica/cdirecta">Cinemàtica directa</a>
+      <a href="https://cmarzque4.github.io/robotica/cinversa">Cinemàtica inversa</a>
+      <a href="https://cmarzque4.github.io/robotica/projecte%201">Projecte</a>
+      <a href="https://www.tinkercad.com/things/4H1zJ3NW7Ea-magnificent-snaget">Projecte Tinkercard</a>
+    </div>
+  </div>
+      
+  <div class="dropdown" onmouseenter="openDropdown(this)" onmouseleave="closeDropdown(this)">
+    <a href="#"> Arduino ▾</a>
+    <div class="dropdown-content">
+      <a href="https://cmarzque4.github.io/robotica/arduino/programacio">Programació</a>
+      <a href="https://cmarzque4.github.io/robotica/arduino/configuracio">Configuració</a>
+    </div>
+  </div>
+      <a href="https://cmarzque4.github.io/robotica/arduino/musica">Música</a>
     </nav>
+  </header>
+
 
     <div class="content-container">
     <h1>Configuració</h1>
