@@ -424,55 +424,70 @@
         <p> Després de buscar la partitura i les tons de les notes en Arduino vam establir les variables de les notes i la duració d'aquestes (tot dins d'arrays)</p>
     <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
 
-void setup()
-{
-  tone(4, 500);
+// Definimos las frecuencias de las notas (en Hz)
+   double  B4 = 493.883;
+   double  E5 = 659.255;
+   double  G5 = 783.991;
+   double  XF5 = 739.989;
+   double  B5 = 987.767;
+   double  A5 = 880.000;
+   double  XD5 = 622.254;
+   double  F5 = 698.456;
+   double  D6 = 1174.66;
+   double  XC6 = 1108.73;
+   double  C6 = 1046.50;
+   double  P = 0; // pausa
+
+// Duraciones de las notas (en milisegundos)
+int bp = 300; // blanca amb punt
+int b = 200; // blanca
+int np = 150; // negra amb punt
+int n = 100;  // negra
+int c = 50;  // corchea
+int s = 25;  // semicorchea
+
+// Melodía (frecuencias)
+double potter[] = {
+ B4, E5, G5, XF5, E5, B5, A5, XF5,
+ E5, G5, XF5, XD5, F5, B4,  B4,  B4, 
+ E5, G5, XF5, E5, B5, D6, XC6,
+ C6
+};
+
+// Duración de cada nota correspondiente
+int duracioNota[] = {
+   n, np, c, n, b, n, bp, bp,
+   np, c, n, b, n, bp, b, n, 
+   np, c, n, b, n, b, n,
+   b, 
+};
+
+void setup() {
+  // Nada en setup
 }
 
-void loop() {}
-    
-         
-        #define NOTE_B4 493.883
-        #define NOTE_E5 659.255
-        #define NOTE_G5 783.991
-        #define NOTE_#F5 739.989
-        #define NOTE_B5 987.767
-        #define NOTE_A5 880.000
-        #define NOTE_#D5 622.254
-        #define NOTE_F5 698.456
-        #define NOTE_D6 1174.66
-        #define NOTE_#C6 1108.73
-        #define NOTE_C6 1046.50
-    
-    int harrypotter[]{
-        NOTE_B4, NOTE_E5, NOTE_G5, NOTE_#F5, NOTE_E5, NOTE_B5, NOTE_A5, NOTE_#F5,
-        NOTE_E5, NOTE_G5, NOTE_#F5, NOTE_#D5, NOTE_F5, NOTE_B4,  NOTE_B4,  NOTE_B4, 
-        NOTE_E5, NOTE_G5, NOTE_#F5, NOTE_E5, NOTE_B5, NOTE_D6, NOTE_#C6,
-        NOTE_C6
-        
-    }
+void loop() {
+  int numNotas = sizeof(potter) / sizeof(potter[0]);
 
-    int durades[]{
-        100, 150, 50, 100, 200, 100, 300, 300,
-        150, 50, 100, 200, 100, 300, 200, 100, 
-        150, 50, 100, 200, 100, 200, 100,
-        200, 
-    
+  for (int i = 0; i < numNotas; i++) {
+    if (potter[i] > 0) {
+      tone(8, potter[i]); //
     }
-    void setup(){
-    
-        }
+    delay(duracioNota[i]);
+    noTone(8);
+    delay(50); // pequeña pausa entre notas
+  }
 
-        void loop() {
-    int numNotes= sizeof(harrypotter)/sizeof(harrypotter[0]), 
-        }
+  delay(2000); // espera antes de repetir la melodía
+}
 
   </code></pre>
       </div>
       <div class="projecte">
         <span class="emoji">📅</span> <strong>Classe 20/05/2025</strong> Traslladem el projecte a l'Arduino IDE i treballem amb els elements de la recreació seguent per a fer sonar la cançó.
+        <br>
         <a href="https://www.tinkercad.com/things/5o8lNKxx10m-provabuzzer?sharecode=YkIvBNX_HXYYfUfOchA8a3gqzS-XMaWIhqv2HejjQGY" target="_blank">
-         <img src="buzzer.png" alt="Arduino" style="width:150px;">
+         <img src="buzzer.png" alt="Arduino" style="width:500px;">
         </a>
         <p>Llista de materials utilitzats</p>
         <ul>
