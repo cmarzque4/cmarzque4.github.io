@@ -422,10 +422,13 @@
   <li> El segon argument és 'la freqüència' i s'expressa en Herz </li>
   <li> El tercer argument és optatiu i és 'el temps de durada' </li>
 </ul>
+  <h2> Escala tone d'Arduino</h2>
   <br>
-<img src = "arduino_music.webp"> 
+<img src = "arduino_music.webp">
+  <h2> Escala de notes internacionals</h2>
   <br>
 <img src = "notas.jpg">
+  <h2> Patitura Harry Potter</h2>
   <br>
 <img src = "partitura_harry.webp"
   <br>
@@ -475,7 +478,10 @@ void loop() {}
 
         void loop() {
     int numNotes= sizeof(harrypotter)/sizeof(harrypotter[0]), 
-    //Calculem el número de notes dividint el número de bytes totals de la canço que ho calcula la funció "sizeof" entre el número de bytes de una de les notes (en aquest cas la primera). En aquest exemple tenim 5 notes i cada nota ocuparà un número enter que es igual a 2 bytes en arduino. Per tant harry potter ocupa 10 bytes que dividit entre el tamany de la primera nota que son 2 bytes dona 5 notes musicals. El número 5 el guardem a la variable numNotes 
+    //Calculem el número de notes dividint el número de bytes totals de la canço que ho calcula la funció "sizeof" entre el número 
+    de bytes de una de les notes (en aquest cas la primera). En aquest exemple tenim 5 notes i cada nota ocuparà un número enter
+    que es igual a 2 bytes en arduino. Per tant harry potter ocupa 10 bytes que dividit entre el tamany de la primera nota que son 
+    2 bytes dona 5 notes musicals. El número 5 el guardem a la variable numNotes.
     // L'avantatge que té aquest codi és que sempre contarà les notes i puc canviar quan vulgi la cançó
         }
 
