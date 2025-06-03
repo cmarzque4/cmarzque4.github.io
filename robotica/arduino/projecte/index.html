@@ -417,10 +417,7 @@
   <main>
 <div class="projectes">
       <div class="projecte">
-        <span class="emoji">📅</span> <strong>Classe 15/05/2025</strong> Primer de tot ens van encomenar fer un projecte nou que consistia en representar música amb Arduino.
-      </div>
-      <div class="projecte">
-        <span class="emoji">📅</span> <strong>Classe 19/05/2025</strong> Per començar a treballar vam escollir una cancó cadascú. Jo he triat la de Harry Potter, i el meu company de projecte, Oscar, ha triat la de Angry Birds.
+        <span class="emoji">📅</span> <strong> 1r:</strong> Per començar a treballar vam escollir una cancó cadascú. Jo he triat la de Harry Potter, i el meu company de projecte, Oscar, ha triat la de Angry Birds.
         <p> Després de buscar la partitura i les tons de les notes en Arduino vam establir les variables de les notes i la duració d'aquestes (tot dins d'arrays)</p>
     <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
 
@@ -484,21 +481,45 @@ void loop() {
   </code></pre>
       </div>
       <div class="projecte">
-        <span class="emoji">📅</span> <strong>Classe 20/05/2025</strong> Traslladem el projecte a l'Arduino IDE i treballem amb els elements de la recreació seguent per a fer sonar la cançó.
+        <span class="emoji">📅</span> <strong> 2n:</strong> Traslladem el projecte a l'Arduino IDE i treballem amb els elements de la recreació seguent per a fer sonar la cançó.
         <br><br>
-         <div style="img-align: center;">
+         <div style="src-align: center;">
         <a href="https://www.tinkercad.com/things/5o8lNKxx10m-provabuzzer?sharecode=YkIvBNX_HXYYfUfOchA8a3gqzS-XMaWIhqv2HejjQGY" target="_blank">
          <img src="buzzer.png" alt="Arduino" style="width:500px;">
         </a>
         </div>
-        <p>Llista de materials utilitzats</p>
+        <p>Llista de materials utilitzats:</p>
         <ul>
           <li> Microcontrolador ESP32-S3</li>
-          <li> </li>
+          <li> Resistència de 10 Ohms</li>
+          <li> Buzzer</li>
+          <li> Cablejat</li>
         </ul>
+        
       </div>
        <div class="projecte">
-        <span class="emoji">📅</span> <strong>Classe 22/05/2025</strong> Genera una peça musical a partir de l'escala de tonalitats Arduino.
+        <span class="emoji">📅</span> <strong> 3r:</strong> Vam començar la classe solucionant els problemes que vam trobar al final de la classe anterior.
+          <main>
+          <h2>Problemes:</h2>
+          <p> Vam temir problemes amb el microcontrolador ESP32-S3 ja que no es connectava correctament al port de l'ordinador</p>
+          <p> Vam tenir problemes en la comunicació sèrie entre l'ordinador i la placa i ens donava tota l'estona elmateix error de funcionament</p>
+          <p> Al moment de fer-lo funcionar la resistencia que teniem era massa gran per a que el buzzer pogués sonar</p>
+        </main>
+         <main>
+           <h2> Solucions :</h2>
+           <p> Vam investigar i trobar el subnom correcte de la placa, la vam canviar de port i la vam tornar a connectar</p>
+           <p> Vam instal·lar una altra llivreria extra <b>Arduino Mbed OS Nano Boards</b> que va fer que la comunicació sèrie fos possible</p>
+           <p> Incorporem un transistor per a que arribi más energia al buzzer</p>
+         </main>
+        <p> Esquema final:</p>
+        <br><br>
+         <div style="src-align: center;">
+        <a href="https://www.tinkercad.com/things/7Ex64xBsXe0-buzzerfinal?sharecode=kJu407aCo0nPn5vjMKoSCXFjDyXlTqjnMaUn79rgiPM" target="_blank">
+         <img src="final.png" alt="Arduino" style="width:500px;">
+        </a>
+        </div>
+         
+         
       </div>
     </div>
 </main>
