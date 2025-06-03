@@ -499,6 +499,70 @@ void loop() {}
 
  <div style="text-align: center;">
   <h2>Després vam transformar el codi base en un codi funcional per a Arduino IDE</h2>
+   
+ <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+
+
+
+
+   
+// Definimos las frecuencias de las notas (en Hz)
+   double  B4 = 493.883;
+   double  E5 = 659.255;
+   double  G5 = 783.991;
+   double  XF5 = 739.989;
+   double  B5 = 987.767;
+   double  A5 = 880.000;
+   double  XD5 = 622.254;
+   double  F5 = 698.456;
+   double  D6 = 1174.66;
+   double  XC6 = 1108.73;
+   double  C6 = 1046.50;
+   double  P = 0; // pausa
+
+// Duraciones de las notas (en milisegundos)
+int bp = 300; // blanca amb punt
+int b = 200; // blanca
+int np = 150; // negra amb punt
+int n = 100;  // negra
+int c = 50;  // corchea
+int s = 25;  // semicorchea
+
+// Melodía (frecuencias)
+double potter[] = {
+ B4, E5, G5, XF5, E5, B5, A5, XF5,
+ E5, G5, XF5, XD5, F5, B4,  B4,  B4, 
+ E5, G5, XF5, E5, B5, D6, XC6,
+ C6
+};
+
+// Duración de cada nota correspondiente
+int duracioNota[] = {
+   n, np, c, n, b, n, bp, bp,
+   np, c, n, b, n, bp, b, n, 
+   np, c, n, b, n, b, n,
+   b, 
+};
+
+void setup() {
+  // Nada en setup
+}
+
+void loop() {
+  int numNotas = sizeof(potter) / sizeof(potter[0]);
+
+  for (int i = 0; i < numNotas; i++) {
+    if (potter[i] > 0) {
+      tone(8, potter[i]); //
+    }
+    delay(duracioNota[i]);
+    noTone(8);
+    delay(50); // pequeña pausa entre notas
+  }
+
+  delay(2000); // espera antes de repetir la melodía
+}
+   
  </div>
 </main>
 </body>
