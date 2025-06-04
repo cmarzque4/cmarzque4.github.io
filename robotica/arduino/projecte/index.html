@@ -420,7 +420,7 @@
       <div class="projecte">
         <span class="emoji">📅</span> <strong> 1r:</strong> Per començar a treballar vam escollir una cancó cadascú. Jo he triat la de Harry Potter, i el meu company de projecte, Oscar, ha triat la de Angry Birds.
         <p> Després de buscar la partitura i les tons de les notes en Arduino vam establir les variables de les notes i la duració d'aquestes (tot dins d'arrays)</p>
-    <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+    <pre><text class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
 
 // Definimos las frecuencias de las notas (en Hz)
    double  B4 = 493.883;
@@ -535,7 +535,7 @@ void loop() {
           <p> El seu funcionament:</p>
           <ul>
             <li> Es presiona el botó 1 </li>
-            <li> Es fa una pregunta a algú mentres sosté un detector de tacte (configurat prèviamentper al botó 1)</li>
+            <li> Es fa una pregunta a algú mentres sosté un detector d'infrarojos (configurat prèviamentper al botó 1)</li>
             <li> </li>
             <li> </li>
             <li> </li>
@@ -547,11 +547,82 @@ void loop() {
           <p> El seu funcionament:</p>
           <ul>
             <li> Es presiona el botó 2 </li>
-            <li> Es fa una pregunta a algú mentres sosté un detector de tacte (no configurat per al botó 2)</li>
+            <li> Es fa una pregunta a algú mentres sosté un detector d'infrarojos (no configurat per al botó 2)</li>
             <li> ALEATORIAMENT indica si és cert a partir de coneixements adquirits a partir dels codis de Simon Monk, concretament el codi pseudoaleatori de aleatori (+ Seed).</li>
             <li> Si el resultat dona parell marcarà cert, si és senar marcarà fals</li>
             <li> Depenent si el resultat és cert o fals el led serà verd o vermell respectivament.</li>
-          </ul>
+          </ul>      
           </main>
+         <a href="https://www.tinkercad.com/things/2EUNBqcOllO-shiny-hango?sharecode=aueloPKt-0ulmuREKs4s5UD0mP_1Vtgl9JHhcKfB7Uw" target="_blank">
+         <img src="detector.png" alt="Arduino" style="width:500px;">
+          <p> Clica per veure recreació</p>
+        </a>
+       <p>Llista de materials utilitzats:</p>
+        <ul>
+          <li> Microcontrolador ESP32-S3</li>
+          <li> Led: verd i vermell </li>
+          <li> Resistència de 220 Ohms (x2)</li>
+          <li> Resistència de 10 Ohms (x2)</li>
+          <li> Botó polsador (x2) </li>
+          <li> Detector d'infrarojos PIR</li>
+          <li> Cablejat</li>
+        </ul>
         </div>
-</main>
+   <div class="projecte">
+        <span class="emoji">📅</span> <strong> 5è:</strong> Creació del codi relatiu al esquema ja fet + proves a l'Arduino IDE
+     
+     <pre><text class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+
+from microbit import *
+import random
+
+# Pins
+boto1 = pin0         
+boto2 = pin 1
+pir = pin4           # Sensor PIR (moviment infraroig)
+led_verd = pin2       # LED Verd = Cert
+led_vermell = pin3    # LED Vermell = Fals
+
+def mostra_resultat(cert):
+    if cert:
+        led_verd.write_digital(1)
+        led_vermell.write_digital(0)
+    else:
+        led_verd.write_digital(0)
+        led_vermell.write_digital(1)
+
+# Apaga LEDs inicialment
+led_verd.write_digital(0)
+led_vermell.write_digital(0)
+
+while True:
+    if boto.read_digital() == 1:
+        display.scroll("Pregunta!")
+
+        # Espera moviment detectat pel PIR
+        while pir.read_digital() == 0:
+            sleep(10)
+        
+        # Usa la lectura de temps actual com a llavor
+        random.seed(running_time())
+        nombre = random.randint(0, 100)
+
+        if nombre % 2 == 0:
+            cert = True
+            display.show("C")
+        else:
+            cert = False
+            display.show("F")
+        
+        mostra_resultat(cert)
+        sleep(2000)
+
+        # Reset
+        led_verd.write_digital(0)
+        led_vermell.write_digital(0)
+        display.clear()
+
+
+     </code></text>
+
+    </main>
