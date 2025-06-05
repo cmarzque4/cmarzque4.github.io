@@ -484,8 +484,7 @@
         <p> Es necessiten 2 pins més d'alimentació que són el VCC de 5v o el GND que és el terra, que tanca el circuit. </p>
         <p> A continuació veurem un codi per comprovar si la targeta SD està connectada correctament. </p>
 
-        <pre>
-            <code>
+        <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
                 #include <SPI.h> // Afegim la biblioteca C++ Arduino que controla el protocol de comunicació SPI.
                 #include <SD.h> // Afegim o importem la biblioteca que controlen els arxius per "Read Write Rewrite Delate" és a dir,
                 per llegir arxius, escriuse'ls, borrar-los
@@ -598,7 +597,7 @@
                 srcset="https://blocs.xtec.cat/tecno/files/2022/07/esp32-2-1024x640.png 1024w, https://blocs.xtec.cat/tecno/files/2022/07/esp32-2-300x188.png 300w, https://blocs.xtec.cat/tecno/files/2022/07/esp32-2-768x480.png 768w"
                 sizes="(max-width: 474px) 100vw, 474px" /></a></p>
     <p><strong>Hello word example</strong></p>
-    <pre><code>
+    <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
     void setup() {
     Serial.begin(115200); // Initialize serial communications with the PC
     while (!Serial);
@@ -619,7 +618,8 @@
         What would happen if you change the delay instruction argument or parameter from 1000 to 10000?</p>
     <p><strong style="text-align: right;">Testing the connection with a counter variable</strong><span
             style="text-align: right;">:</span></p>
-    <pre><code>int Counter = 0;
+    <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+    int Counter = 0;
     void setup(){
     Serial.begin(115200);
     }
@@ -633,7 +633,7 @@
                 srcset="https://blocs.xtec.cat/tecno/files/2022/07/counter2-1024x640.png 1024w, https://blocs.xtec.cat/tecno/files/2022/07/counter2-300x188.png 300w, https://blocs.xtec.cat/tecno/files/2022/07/counter2-768x480.png 768w"
                 sizes="(max-width: 474px) 100vw, 474px" /></a></p>
     <p><strong>Testing serial plotter</strong></p>
-    <pre><code>
+    <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
     int Sine_LUT[32] = {128,152,176,198,218,234,245,253,255,253,245,234,218,198,176,152,128,103,79,57,37,21,10,2,0,2,10,21,37,57,79,103};
     int i = 0;
     void setup(){
@@ -653,7 +653,8 @@
                 srcset="https://blocs.xtec.cat/tecno/files/2022/07/sinus-1024x640.png 1024w, https://blocs.xtec.cat/tecno/files/2022/07/sinus-300x188.png 300w, https://blocs.xtec.cat/tecno/files/2022/07/sinus-768x480.png 768w"
                 sizes="(max-width: 474px) 100vw, 474px" /></a></p>
     <p><strong>Testing the built-in RGB</strong></p>
-    <pre><code>/* Simple Arduino LED blink example sketch for built-in  RGB 5050 LED on the ESP-S3*/
+    <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+    /* Simple Arduino LED blink example sketch for built-in  RGB 5050 LED on the ESP-S3*/
     
     #define led_r_pin 5
     #define led_g_pin 6
