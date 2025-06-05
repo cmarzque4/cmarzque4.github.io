@@ -416,11 +416,16 @@
   <!-- Contingut principal -->
   <main>
     <h1> Projecte final</h1>
-<div class="projectes">
+    <br>
+    <p> Vam aforntar l'últim període del curs amb un últim projecte, durant 3 setmanes hem estat treballant amb un conjunt d'elements de robotica per aconseguir fer música, detectors, alarmes, jocs...</p>
+    <p> En concret el meu projecte està orientat a fer servir tot el coneixement adquirit previament a classe (aleatorietat, condicionals, variables) per a poder possar-ho en pràctica amb aquest projecte físic</p>
+<br>
+    <div class="projectes">
       <div class="projecte">
         <span class="emoji">📅</span> <strong> 1r:</strong> Per començar a treballar vam escollir una cancó cadascú. Jo he triat la de Harry Potter, i el meu company de projecte, Oscar, ha triat la de Angry Birds.
         <p> Després de buscar la partitura i les tons de les notes en Arduino vam establir les variables de les notes i la duració d'aquestes (tot dins d'arrays)</p>
-    <pre><text class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+        
+    <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
 
 // Definimos las frecuencias de las notas (en Hz)
    double  B4 = 493.883;
@@ -448,16 +453,14 @@ int s = 25;  // semicorchea
 double potter[] = {
  B4, E5, G5, XF5, E5, B5, A5, XF5,
  E5, G5, XF5, XD5, F5, B4,  B4,  B4, 
- E5, G5, XF5, E5, B5, D6, XC6,
- C6
+ E5, G5, XF5, E5, B5, D6, XC6
 };
 
 // Duración de cada nota correspondiente
 int duracioNota[] = {
    n, np, c, n, b, n, bp, bp,
    np, c, n, b, n, bp, b, n, 
-   np, c, n, b, n, b, n,
-   b, 
+   np, c, n, b, n, b, n
 };
 
 void setup() {
@@ -493,9 +496,9 @@ void loop() {
         <p>Llista de materials utilitzats:</p>
         <ul>
           <li><a href="https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf"> Microcontrolador ESP32-S3</a></li>
-          <li> Resistència de 10 Ohms</li>
-          <li> Buzzer</li>
-          <li> Cablejat</li>
+          <li> <a href="https://www.electrocomponentes.es/fijas/28-22-resistencia-100-ohm-025w.html#/38-lotes-lote_1_unidad"> Resistència de 100 Ohms </a></li>
+          <li> <a hrtf="https://tienda.bricogeek.com/varios/590-altavoz-5cm-8-ohm-05w.html?srsltid=AfmBOoo8H2XVdwsKExSGaahqmLTqh3zTVw0sSkEeNXtei2AKOF0Qr65j"> Altaveu</a></li>
+          <li> <a href="https://tienda.bricogeek.com/cables/1361-cables-dupont-macho-macho-20-cm-40-unidades.html"> Cablejat</a></li>
         </ul>
       </div>
        <div class="projecte">
@@ -559,19 +562,19 @@ void loop() {
        <p>Llista de materials utilitzats:</p>
         <ul>
           <li><a href="https://arduino-board.readthedocs.io/en/latest/KS0001.html"> Microcontrolador Arduino UNO R3</a></li>
-          <li> Led RGB: verd i vermell </li>
-          <li> Resistència de 220 Ohms (x2)</li>
-          <li> Resistència de 10 Ohms (x2)</li>
-          <li> Botó polsador (x2) </li>
+          <li> <a href="https://tienda.bricogeek.com/componentes/62-diodo-led-tricolor-rgb-5mm.html"> Led RGB: verd i vermell </a></li>
+          <li> <a href="https://www.electrocomponentes.es/fijas/32-resistencia-220-ohm-025w.html">Resistència de 220 Ohms (x2)</a></li>
+          <li> <a href="https://www.electrocomponentes.es/fijas/28-22-resistencia-100-ohm-025w.html#/38-lotes-lote_1_unidad"> Resistència de 100 Ohms (x2)</a></li>
+          <li> <a href="https://tienda.bricogeek.com/componentes/298-pulsador-switch-12mm.html">Botó polsador (x2) </li>
           <li> <a href="https://blog.uelectronics.com/tarjetas-desarrollo/detecta-tu-ritmo-cardiaco-a-traves-del-ky-039/"> Sensor ky-039 heartbeat</a></li>
-          <li> Cablejat</li>
+          <li> <a href="https://tienda.bricogeek.com/cables/1361-cables-dupont-macho-macho-20-cm-40-unidades.html"> Cablejat</a></li>
         </ul>
         </div>
     <br>
    <div class="projecte">
         <span class="emoji">📅</span> <strong> 5è:</strong> Creació del codi relatiu al esquema ja fet + proves a l'Arduino IDE amb el projecte físic
      
-     <pre><text class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+     <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
 
 // Pins LEDs
 const int LED_VERD = A2;
@@ -644,6 +647,6 @@ void mostraResultat(bool cert) {
     digitalWrite(LED_VERMELL, HIGH);
   }
 }
-     </code></text>
+     </code></pre>
 
     </main>
