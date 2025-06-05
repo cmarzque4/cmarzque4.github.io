@@ -546,7 +546,7 @@ void loop() {
           <p> El seu funcionament:</p>
           <ul>
             <li> Es presiona el botó 2 </li>
-            <li> Es fa una pregunta a algú mentres sosté un detector d'infrarojos (no configurat per al botó 2)</li>
+            <li> Es fa una pregunta a algú mentres sosté un detector de polse (no configurat per al botó 2)</li>
             <li> ALEATORIAMENT indica si és cert a partir de coneixements adquirits a partir dels codis de Simon Monk, concretament el codi pseudoaleatori de aleatori (+ Seed).</li>
             <li> Si el resultat dona parell marcarà cert, si és senar marcarà fals</li>
             <li> Depenent si el resultat és cert o fals el led serà verd o vermell respectivament.</li>
@@ -559,7 +559,7 @@ void loop() {
        <p>Llista de materials utilitzats:</p>
         <ul>
           <li><a href="https://arduino-board.readthedocs.io/en/latest/KS0001.html"> Microcontrolador Arduino UNO R3</a></li>
-          <li> Led: verd i vermell </li>
+          <li> Led RGB: verd i vermell </li>
           <li> Resistència de 220 Ohms (x2)</li>
           <li> Resistència de 10 Ohms (x2)</li>
           <li> Botó polsador (x2) </li>
@@ -573,74 +573,76 @@ void loop() {
      
      <pre><text class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
 
-// Pines
-const int boto_mode1 = A0;       // Botó Mode Aleatori
-const int boto_mode2 = A1;       // Botó Mode Sensor cardíac
-const int sensor_heart = 13;    // Sensor de pols cardíac (entrada analògica)
+// Pins LEDs
+const int LED_VERD = A2;
+const int LED_VERMELL = A3;
 
-const int led_verd = A2;         // LED verd per a "Cert"
-const int led_vermell = A3;     // LED vermell per a "Fals"
+// Pins botons
+const int BOTO1 = A0;
+const int BOTO2 = A1;
+
+// Sensor de pols (KY-039)
+const int SENSOR_HEART = 13;
+
+// PIR només com a suport físic (no es llegeix en aquest codi)
+
+// Variables
+int valorHeart = 0;
+bool cert = false;
 
 void setup() {
-  pinMode(boto_mode1, INPUT);
-  pinMode(boto_mode2, INPUT);
-  pinMode(led_verd, OUTPUT);
-  pinMode(led_vermell, OUTPUT);
-
-  Serial.begin(9600);           // Per mostrar valors en el monitor sèrie
-}
-
-void engega_led(bool cert) {
-  digitalWrite(led_verd, cert ? HIGH : LOW);
-  digitalWrite(led_vermell, cert ? LOW : HIGH);
-}
-
-void apaga_leds() {
-  digitalWrite(led_verd, LOW);
-  digitalWrite(led_vermell, LOW);
-}
-
-void mode_aleatori() {
-  Serial.println("Pregunta?");
-  delay(500);
-
-  int nombre = random(0, 101);  // De 0 a 100
-  bool cert = (nombre % 2 == 0);
-
-  Serial.println(cert ? "C" : "F");
-
-  engega_led(cert);
-  delay(2000);
-  apaga_leds();
-}
-
-void mode_heart() {
-  Serial.println("Heart");
-  delay(500);
-
-  int valor = analogRead(sensor_heart);
-  Serial.println(valor);
-
-  bool cert = (valor > 600);
-
-  Serial.println(cert ? "C" : "F");
-
-  engega_led(cert);
-  delay(2000);
-  apaga_leds();
+  pinMode(LED_VERD, OUTPUT);
+  pinMode(LED_VERMELL, OUTPUT);
+  
+  pinMode(BOTO1, INPUT);
+  pinMode(BOTO2, INPUT);
+  
+  Serial.begin(9600); // Opcional, per depuració
+  randomSeed(analogRead(A5)); // Per evitar números iguals
 }
 
 void loop() {
-  if (digitalRead(boto_mode1) == HIGH) {
-    mode_aleatori();
-    delay(300);
-  }
-  else if (digitalRead(boto_mode2) == HIGH) {
-    mode_heart();
-    delay(300);
+  // Mode sensor cardíac (botó 1)
+  if (digitalRead(BOTO1) == HIGH) {
+    Serial.println("Mode 1: Sensor cardíac");
+    valorHeart = analogRead(SENSOR_HEART);
+    Serial.print("Valor pols: ");
+    Serial.println(valorHeart);
+
+    if (valorHeart > 600) {
+      cert = true;
+    } else {
+      cert = false;
+    }
+
+    mostraResultat(cert);
+    delay(2000);
   }
 
-  delay(100);
+  // Mode aleatori (botó 2)
+  if (digitalRead(BOTO2) == HIGH) {
+    Serial.println("Mode 2: Aleatori");
+    int aleatori = random(100);
+    Serial.print("Valor aleatori: ");
+    Serial.println(aleatori);
+
+    cert = (aleatori % 2 == 0);
+    mostraResultat(cert);
+    delay(2000);
+  }
+
+  delay(100); // Petita pausa
+}
+
+// Funció per mostrar resultat amb LEDs
+void mostraResultat(bool cert) {
+  if (cert) {
+    digitalWrite(LED_VERD, HIGH);
+    digitalWrite(LED_VERMELL, LOW);
+  } else {
+    digitalWrite(LED_VERD, LOW);
+    digitalWrite(LED_VERMELL, HIGH);
+  }
 }
      </code></text>
 
