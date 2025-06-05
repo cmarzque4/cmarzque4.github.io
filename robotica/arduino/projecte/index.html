@@ -553,7 +553,7 @@ void loop() {
           </ul>      
           </main>
          <a href="https://www.tinkercad.com/things/2EUNBqcOllO-shiny-hango?sharecode=aueloPKt-0ulmuREKs4s5UD0mP_1Vtgl9JHhcKfB7Uw" target="_blank">
-         <img src="detector.png" alt="Arduino" style="width:500px;">
+         <img src="sisisi.png" alt="Arduino" style="width:500px;">
           <p> Clica per veure recreació</p>
         </a>
        <p>Llista de materials utilitzats:</p>
@@ -569,60 +569,79 @@ void loop() {
         </div>
     <br>
    <div class="projecte">
-        <span class="emoji">📅</span> <strong> 5è:</strong> Creació del codi relatiu al esquema ja fet + proves a l'Arduino IDE
+        <span class="emoji">📅</span> <strong> 5è:</strong> Creació del codi relatiu al esquema ja fet + proves a l'Arduino IDE amb el projecte físic
      
      <pre><text class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
 
-from microbit import *
-import random
+// Pines
+const int boto_mode1 = A0;       // Botó Mode Aleatori
+const int boto_mode2 = A1;       // Botó Mode Sensor cardíac
+const int sensor_heart = 13;    // Sensor de pols cardíac (entrada analògica)
 
-# Pins
-boto1 = pin0         
-boto2 = pin 1
-pir = pin4           # Sensor PIR (moviment infraroig)
-led_verd = pin2       # LED Verd = Cert
-led_vermell = pin3    # LED Vermell = Fals
+const int led_verd = A2;         // LED verd per a "Cert"
+const int led_vermell = A3;     // LED vermell per a "Fals"
 
-def mostra_resultat(cert):
-    if cert:
-        led_verd.write_digital(1)
-        led_vermell.write_digital(0)
-    else:
-        led_verd.write_digital(0)
-        led_vermell.write_digital(1)
+void setup() {
+  pinMode(boto_mode1, INPUT);
+  pinMode(boto_mode2, INPUT);
+  pinMode(led_verd, OUTPUT);
+  pinMode(led_vermell, OUTPUT);
 
-# Apaga LEDs inicialment
-led_verd.write_digital(0)
-led_vermell.write_digital(0)
+  Serial.begin(9600);           // Per mostrar valors en el monitor sèrie
+}
 
-while True:
-    if boto.read_digital() == 1:
-        display.scroll("Pregunta!")
+void engega_led(bool cert) {
+  digitalWrite(led_verd, cert ? HIGH : LOW);
+  digitalWrite(led_vermell, cert ? LOW : HIGH);
+}
 
-        # Espera moviment detectat pel PIR
-        while pir.read_digital() == 0:
-            sleep(10)
-        
-        # Usa la lectura de temps actual com a llavor
-        random.seed(running_time())
-        nombre = random.randint(0, 100)
+void apaga_leds() {
+  digitalWrite(led_verd, LOW);
+  digitalWrite(led_vermell, LOW);
+}
 
-        if nombre % 2 == 0:
-            cert = True
-            display.show("C")
-        else:
-            cert = False
-            display.show("F")
-        
-        mostra_resultat(cert)
-        sleep(2000)
+void mode_aleatori() {
+  Serial.println("Pregunta?");
+  delay(500);
 
-        # Reset
-        led_verd.write_digital(0)
-        led_vermell.write_digital(0)
-        display.clear()
+  int nombre = random(0, 101);  // De 0 a 100
+  bool cert = (nombre % 2 == 0);
 
+  Serial.println(cert ? "C" : "F");
 
+  engega_led(cert);
+  delay(2000);
+  apaga_leds();
+}
+
+void mode_heart() {
+  Serial.println("Heart");
+  delay(500);
+
+  int valor = analogRead(sensor_heart);
+  Serial.println(valor);
+
+  bool cert = (valor > 600);
+
+  Serial.println(cert ? "C" : "F");
+
+  engega_led(cert);
+  delay(2000);
+  apaga_leds();
+}
+
+void loop() {
+  if (digitalRead(boto_mode1) == HIGH) {
+    mode_aleatori();
+    delay(300);
+  }
+  else if (digitalRead(boto_mode2) == HIGH) {
+    mode_heart();
+    delay(300);
+  }
+
+  delay(100);
+}
      </code></text>
 
     </main>
