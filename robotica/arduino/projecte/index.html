@@ -506,7 +506,7 @@ void loop() {
         <ul>
           <li><a href="https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf"> Microcontrolador ESP32-S3</a></li>
           <li> <a href="https://www.electrocomponentes.es/fijas/28-22-resistencia-100-ohm-025w.html#/38-lotes-lote_1_unidad"> Resistència de 100 Ohms </a></li>
-          <li> <a hrtf="https://tienda.bricogeek.com/varios/590-altavoz-5cm-8-ohm-05w.html?srsltid=AfmBOoo8H2XVdwsKExSGaahqmLTqh3zTVw0sSkEeNXtei2AKOF0Qr65j"> Altaveu</a></li>
+          <li> <a hrtf="https://tienda.bricogeek.com/varios/590-altavoz-5cm-8-ohm-05w.html?srsltid=AfmBOoo8H2XVdwsKExSGaahqmLTqh3zTVw0sSkEeNXtei2AKOF0Qr65j"> Altaveu </a></li>
           <li> <a href="https://tienda.bricogeek.com/cables/1361-cables-dupont-macho-macho-20-cm-40-unidades.html"> Cablejat</a></li>
         </ul>
       </div>
@@ -570,7 +570,7 @@ void loop() {
           <li> <a href="https://tienda.bricogeek.com/componentes/62-diodo-led-tricolor-rgb-5mm.html"> Led RGB: verd i vermell </a></li>
           <li> <a href="https://www.electrocomponentes.es/fijas/32-resistencia-220-ohm-025w.html">Resistència de 220 Ohms (x2)</a></li>
           <li> <a href="https://www.electrocomponentes.es/fijas/28-22-resistencia-100-ohm-025w.html#/38-lotes-lote_1_unidad"> Resistència de 100 Ohms (x2)</a></li>
-          <li> <a href="https://tienda.bricogeek.com/componentes/298-pulsador-switch-12mm.html">Botó polsador (x2) </li>
+          <li> <a href="https://tienda.bricogeek.com/componentes/298-pulsador-switch-12mm.html">Botó polsador (x2) </a></li>
           <li> <a href="https://blog.uelectronics.com/tarjetas-desarrollo/detecta-tu-ritmo-cardiaco-a-traves-del-ky-039/"> Sensor ky-039 heartbeat</a></li>
           <li> <a href="https://tienda.bricogeek.com/cables/1361-cables-dupont-macho-macho-20-cm-40-unidades.html"> Cablejat</a></li>
         </ul>
@@ -590,8 +590,6 @@ const int BOTO2 = A1;
 
 // Sensor de pols (KY-039)
 const int SENSOR_HEART = 13;
-
-// PIR només com a suport físic (no es llegeix en aquest codi)
 
 // Variables
 int valorHeart = 0;
@@ -655,26 +653,36 @@ void mostraResultat(bool cert) {
   <h2> Montatge físic</h2>
      <div class="imatge-final">
       <img src ="tot.jpg">
-       <p></p>
+       <p>Esquema final de projecte (físic)</p>
      </div>
       <div class="imatge-final">
       <img src ="entrades.jpg">
+      <p> Conjunt d'entrades utilitzades per al projecte</p>
       </div>
       <div class="imatge-final">
       <img src ="boto.jpg">
+        <p> <a href="https://tienda.bricogeek.com/componentes/298-pulsador-switch-12mm.html">Botó polsador (x2)</a> i les seves <a href="https://www.electrocomponentes.es/fijas/28-22-resistencia-100-ohm-025w.html#/38-lotes-lote_1_unidad"> resistències de 100 Ohms (x2)</a>.</p>
       </div>
       <div class="imatge-final">
       <img src ="le.jpg">
+        <p><a href="https://tienda.bricogeek.com/componentes/62-diodo-led-tricolor-rgb-5mm.html"> Led RGB: verd i vermell </a> i les seves <a href="https://www.electrocomponentes.es/fijas/32-resistencia-220-ohm-025w.html">resistències de 220 Ohms (x2)</a>.</p>
       </div>
       <div class="imatge-final">
       <img src ="si.jpg">
+      <p><a href="https://blog.uelectronics.com/tarjetas-desarrollo/detecta-tu-ritmo-cardiaco-a-traves-del-ky-039/">Detecta tu Ritmo Cardiaco a través del KY-039.</a></p>
       </div>
       <div class="imatge-final">
       <img src ="funcionament.jpg">
+      <h3>Funcionament</h3>
+        <ul>
+          <li>Posicionem el dit al sensor cardíac</li>
+          <li>Iniciem el microcontrolador</li>
+          <li>Polsem el botó (1: segons el sensor de polse / 2: aleatoriament)</li>
+        </ul>
      </div>
    </div>
     <br>
     <div class="projecte">
-        <span class="emoji">📅</span> <strong> 6è:</strong> Proves amb el projecte físic
+        <span class="emoji">📅</span> <strong> 6è:</strong> Funcionament final
       
     </main>
