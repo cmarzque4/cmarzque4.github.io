@@ -11,6 +11,123 @@
 
     .main-header {
   background-color: #ffe4b5;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #d2a679;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: background 0.3s ease;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 55px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: rotate(-5deg) scale(1.05);
+}
+
+.brand-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #5c3317;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.brand-name:hover {
+  color: #d36421;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #5c3317;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #d36421;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #d36421;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background-color: #fff8ef;
+  border-radius: 0.5rem;
+  border: 1px solid #d2a679;
+  padding: 10px;
+  box-shadow: 2px 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  min-width: 180px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 8px 12px;
+  margin: 5px 0;
+  color: #5c3317;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #ffe4b5;
+}
+
+
+    .main-header {
+  background-color: #ffe4b5;
   padding: 10px 20px;
   display: flex;
   flex-wrap: wrap;
@@ -146,7 +263,7 @@
 
     
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   background: #fff8ef;
   color: #4a3b2c;
   overflow-x: hidden;
@@ -327,7 +444,7 @@ footer {
      <header>
 <header class="main-header">
   <div class="header-left">
-    <a href="https://agora.xtec.cat/ies-pompeu-fabra-martorell/">
+    <a href="https://cmarzque4.github.io/tr/principal/index.html#">
       <img src="ca.png" alt="Logo" class="logo">
     </a>
     <a href="https://cmarzque4.github.io/tr/principal/index.html#" class="brand-name">😊 Peluche Amigo</a>
