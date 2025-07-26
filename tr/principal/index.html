@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+  
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff8ef;
+  color: #4a3b2c;
+  overflow-x: hidden;
+}
+
+h1, h2 {
+  font-weight: 700;
+}
+
+header {
+  text-align: center;
+  padding: 2rem;
+  background: transparent;
+  color: #362d25;
+  text-shadow: 1px 1px #fff3e0;
+}
+
+header h1 span {
+  color: #b66f33;
+  font-size: 2.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #6a4c3a;
+}
+
+.hero-bg {
+  background: linear-gradient(#fff2d9, #ffe0b2);
+  padding-bottom: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Main content */
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.left img.bear {
+  width: 220px;
+  animation: bounce 3s infinite ease-in-out;
+}
+
+.kite {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  width: 100px;
+  animation: float 5s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+.right {
+  max-width: 400px;
+}
+
+.right h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #d36421;
+}
+
+.right p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta {
+  background-color: #f59e0b;
+  color: white;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.cta:hover {
+  background: #ec820d;
+  transform: scale(1.05);
+}
+
+/* Features */
+.features {
+  background: #fcefd9;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.features h2 {
+  color: #a0522d;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+}
+
+.features ul {
+  list-style: none;
+  font-size: 1.1rem;
+}
+
+.features li {
+  margin: 1rem 0;
+}
+
+/* Footer */
+footer {
+  background: #fde9ca;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+.slide-up {
+  animation: slideUp 1.5s ease-out forwards;
+}
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Peluche Amigo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="hero-bg">
+    <header>
+      <h1>😊 <span>Peluche Amigo</span></h1>
+      <p>Tu compañero para una mejor comunicación</p>
+    </header>
+
+    <section class="main-content fade-in">
+      <div class="left">
+        <img src="peluche.png" alt="Peluche Amigo" class="bear bounce" />
+        <img src="kite.png" class="kite float" alt="Cometa colorida" />
+      </div>
+      <div class="right">
+        <h2>Un amigo que entiende</h2>
+        <p>
+          Nuestro peluche está diseñado para ayudar a niños con dificultades del habla o del desarrollo a comunicarse de forma más fácil y divertida.
+        </p>
+        <button class="cta">Conoce más</button>
+      </div>
+    </section>
+  </div>
+
+  <section class="features slide-up">
+    <h2>¿Qué hace especial a Peluche Amigo?</h2>
+    <ul>
+      <li>🎤 Reproduce frases clave para expresarse</li>
+      <li>🧠 Estimula el aprendizaje emocional</li>
+      <li>💡 Fácil de usar por niños y adultos</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 Peluche Amigo – Conectando corazones 💛</p>
+  </footer>
+</body>
+</html>
