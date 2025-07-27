@@ -1,484 +1,301 @@
 <!DOCTYPE html>
 <html lang="es">
 <link rel="icon" type="image/png" href="ca.png">
-  <style>
-/* General Reset */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-    .main-header {
-  background-color: #ffe4b5;
-  padding: 1rem 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 2px solid #d2a679;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  transition: background 0.3s ease;
-}
-
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo {
-  height: 55px;
-  transition: transform 0.3s ease;
-}
-
-.logo:hover {
-  transform: rotate(-5deg) scale(1.05);
-}
-
-.brand-name {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #5c3317;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.brand-name:hover {
-  color: #d36421;
-}
-
-.nav-menu {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.nav-menu a {
-  text-decoration: none;
-  color: #5c3317;
-  font-weight: 500;
-  font-size: 1rem;
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-.nav-menu a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background: #d36421;
-  left: 0;
-  bottom: -4px;
-  transition: width 0.3s ease;
-}
-
-.nav-menu a:hover {
-  color: #d36421;
-}
-
-.nav-menu a:hover::after {
-  width: 100%;
-}
-
-/* Dropdown styles */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 110%;
-  left: 0;
-  background-color: #fff8ef;
-  border-radius: 0.5rem;
-  border: 1px solid #d2a679;
-  padding: 10px;
-  box-shadow: 2px 8px 16px rgba(0, 0, 0, 0.1);
-  z-index: 100;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  min-width: 180px;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.dropdown-content a {
-  display: block;
-  padding: 8px 12px;
-  margin: 5px 0;
-  color: #5c3317;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.dropdown-content a:hover {
-  background-color: #ffe4b5;
-}
-
-
-    .main-header {
-  background-color: #ffe4b5;
-  padding: 10px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 2px solid #d2a679;
-}
-
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo {
-  height: 50px;
-}
-
-.brand-name {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #5c3317;
-  text-decoration: none;
-}
-
-.nav-menu {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.nav-menu a {
-  text-decoration: none;
-  color: #5c3317;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.nav-menu a:hover {
-  text-decoration: underline;
-}
-
-/* Dropdown styles */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff8ef;
-  border: 1px solid #d2a679;
-  padding: 10px;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-  z-index: 100;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown-content a {
-  display: block;
-  margin: 5px 0;
-  color: #5c3317;
-  text-decoration: none;
-}
-
-.dropdown-content a:hover {
-  text-decoration: underline;
-}
-
-
-.header {
-  background-color: #ffe4b5;
-  padding: 10px 0;
-  border-bottom: 2px solid #d2a679;
-}
-
-.header-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.logo {
-  height: 60px;
-  margin-right: 20px;
-}
-
-.nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-}
-
-.nav a {
-  color: #5c3317;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.nav a:hover {
-  text-decoration: underline;
-}
-
-.logo img {
-  height: 50px;
-}
-
-.menu {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: flex-end;
-}
-
-.menu a {
-  text-decoration: none;
-  color: #5c3317;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-    
-body {
-  font-family: 'Quicksand', sans-serif;
-  background: #fff8ef;
-  color: #4a3b2c;
-  overflow-x: hidden;
-}
-
-h1, h2 {
-  font-weight: 700;
-}
-
-header {
-  text-align: center;
-  padding: 2rem;
-  background: transparent;
-  color: #362d25;
-  text-shadow: 1px 1px #fff3e0;
-}
-
-header h1 span {
-  color: #b66f33;
-  font-size: 2.5rem;
-}
-
-header p {
-  font-size: 1.2rem;
-  color: #6a4c3a;
-}
-
-.hero-bg {
-  background: linear-gradient(#fff2d9, #ffe0b2);
-  padding-bottom: 4rem;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Main content */
-.main-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  gap: 2rem;
-}
-
-.left img.bear {
-  width: 220px;
-  animation: bounce 3s infinite ease-in-out;
-}
-
-.kite {
-  position: absolute;
-  top: 40px;
-  left: 20px;
-  width: 100px;
-  animation: float 5s ease-in-out infinite;
-  opacity: 0.8;
-}
-
-.right {
-  max-width: 400px;
-}
-
-.right h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #d36421;
-}
-
-.right p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-}
-
-.cta {
-  background-color: #f59e0b;
-  color: white;
-  padding: 1rem 1.5rem;
-  border: none;
-  border-radius: 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s;
-}
-
-.cta:hover {
-  background: #ec820d;
-  transform: scale(1.05);
-}
-
-/* Features */
-.features {
-  background: #fcefd9;
-  padding: 3rem 2rem;
-  text-align: center;
-}
-
-.features h2 {
-  color: #a0522d;
-  margin-bottom: 2rem;
-  font-size: 1.6rem;
-}
-
-.features ul {
-  list-style: none;
-  font-size: 1.1rem;
-}
-
-.features li {
-  margin: 1rem 0;
-}
-
-/* Footer */
-footer {
-  background: #fde9ca;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
-
-/* Animations */
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-12px);
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0) rotate(-2deg);
-  }
-  50% {
-    transform: translateY(-15px) rotate(2deg);
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideUp {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in {
-  animation: fadeIn 1.5s ease-out forwards;
-}
-
-.slide-up {
-  animation: slideUp 1.5s ease-out forwards;
-}
-</style>
 <head>
-  <link rel="stylesheet" href="estilos.css">
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Peluche Amigo</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="ca.png">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: #fff8ef;
+      color: #4a3b2c;
+      overflow-x: hidden;
+    }
+
+    h1, h2 {
+      font-weight: 700;
+    }
+
+    header.main-header {
+      background-color: #ffe4b5;
+      padding: 1.7rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid #d2a679;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      height: 50px;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: rotate(-5deg) scale(1.05);
+    }
+
+    .brand-name {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #5c3317;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .brand-name:hover {
+      color: #d36421;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: #5c3317;
+      font-weight: 500;
+      font-size: 1rem;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .nav-menu a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #d36421;
+      left: 0;
+      bottom: -4px;
+      transition: width 0.3s ease;
+    }
+
+    .nav-menu a:hover {
+      color: #d36421;
+    }
+
+    .nav-menu a:hover::after {
+      width: 100%;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 110%;
+      left: 0;
+      background-color: #fff8ef;
+      border-radius: 0.5rem;
+      border: 1px solid #d2a679;
+      padding: 10px;
+      box-shadow: 2px 8px 16px rgba(0, 0, 0, 0.1);
+      z-index: 100;
+      min-width: 180px;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 8px 12px;
+      margin: 5px 0;
+      color: #5c3317;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ffe4b5;
+    }
+
+    .hero-bg {
+      background: linear-gradient(#fff2d9, #ffe0b2);
+      padding-bottom: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .main-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      gap: 2rem;
+    }
+
+    .left img.bear {
+      width: 220px;
+      animation: bounce 3s infinite ease-in-out;
+    }
+
+    .kite {
+      position: absolute;
+      top: 40px;
+      left: 20px;
+      width: 100px;
+      animation: float 5s ease-in-out infinite;
+      opacity: 0.8;
+    }
+
+    .right {
+      max-width: 400px;
+    }
+
+    .right h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #d36421;
+    }
+
+    .right p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .cta {
+      background-color: #f59e0b;
+      color: white;
+      padding: 1rem 1.5rem;
+      border: none;
+      border-radius: 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s;
+    }
+
+    .cta:hover {
+      background: #ec820d;
+      transform: scale(1.05);
+    }
+
+    .features {
+      background: #fcefd9;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .features h2 {
+      color: #a0522d;
+      margin-bottom: 2rem;
+      font-size: 1.6rem;
+    }
+
+    .features ul {
+      list-style: none;
+      font-size: 1.1rem;
+      padding-left: 0;
+    }
+
+    .features li {
+      margin: 1rem 0;
+    }
+
+    footer {
+      background: #fde9ca;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(-2deg); }
+      50% { transform: translateY(-15px) rotate(2deg); }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      0% { opacity: 0; transform: translateY(50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+      animation: fadeIn 1.5s ease-out forwards;
+    }
+
+    .slide-up {
+      animation: slideUp 1.5s ease-out forwards;
+    }
+  </style>
 </head>
+
 <body>
   <div class="hero-bg">
-     <header>
-<header class="main-header">
-  <div class="header-left">
-    <a href="https://cmarzque4.github.io/tr/principal/index.html#">
-      <img src="ca.png" alt="Logo" class="logo">
-    </a>
-    <a href="https://cmarzque4.github.io/tr/principal/index.html#" class="brand-name">Peluche Amigo</a>
-  </div>
-
-  <nav class="nav-menu">
-    <a href="https://cmarzque4.github.io/tr/principal/index.html#">Inici</a>
-
-    <div class="dropdown">
-      <a href="#">Característiques ▾</a>
-      <div class="dropdown-content">
-        <a href="#">Descripció</a>
-        <a href="#">Com funciona?</a>
-        <a href="#">Desenvolupament</a>
+    <header class="main-header">
+      <div class="header-left">
+        <a href="#">
+          <img src="ca.png" alt="Logo" class="logo">
+        </a>
+        <a href="#" class="brand-name">Peluche Amigo</a>
       </div>
-    </div>
 
-    <div class="dropdown">
-      <a href="#">Estudi ▾</a>
-      <div class="dropdown-content">
-        <a href="#">Centre Arc de Sant Martí</a>
-      </div>
-    </div>
-    
-    <a href="#">Representants</a>
-  </nav>
-</header>
+      <nav class="nav-menu">
+        <a href="#">Inici</a>
 
-  </header>
+        <div class="dropdown">
+          <a href="#">Característiques ▾</a>
+          <div class="dropdown-content">
+            <a href="#">Descripció</a>
+            <a href="#">Com funciona?</a>
+            <a href="#">Desenvolupament</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#">Estudi ▾</a>
+          <div class="dropdown-content">
+            <a href="#">Centre Arc de Sant Martí</a>
+          </div>
+        </div>
+
+        <a href="#">Representants</a>
+      </nav>
+    </header>
 
     <section class="main-content fade-in">
       <div class="left">
-        <img src="peluche.png" alt="Peluche Amigo" class="bear bounce" />
-        <img src="kite.png" class="kite float" alt="Cometa colorida" />
+        <img src="peluche.png" alt="Peluche Amigo" class="bear" />
+        <img src="kite.png" class="kite" alt="Cometa colorida" />
       </div>
       <div class="right">
         <h2>Un amigo que entiende</h2>
@@ -503,4 +320,5 @@ footer {
     <p>© 2025 Peluche Amigo – Conectando corazones 💛</p>
   </footer>
 </body>
+
 </html>
