@@ -210,6 +210,30 @@
       transition: opacity 1s ease-out, transform 1s ease-out;
     }
 
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 1rem;
+      padding: 2rem;
+      background: #fff7ea;
+    }
+
+    .carousel div {
+      min-width: 300px;
+      background: #fff3e0;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      scroll-snap-align: start;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+
+    .carousel div:hover {
+      transform: scale(1.05);
+    }
+
     footer {
       background: #fde9ca;
       text-align: center;
@@ -278,6 +302,21 @@
       <li>🧠 Estimula el aprendizaje emocional</li>
       <li>💡 Fácil de usar por niños y adultos</li>
     </ul>
+  </section>
+
+  <section class="carousel">
+    <div>
+      <h3>❤️ Conexión Emocional</h3>
+      <p>El peluche ayuda a expresar sentimientos a través del juego.</p>
+    </div>
+    <div>
+      <h3>🎓 Herramienta Educativa</h3>
+      <p>Ideal para escuelas y terapeutas del lenguaje.</p>
+    </div>
+    <div>
+      <h3>🧸 Diseño Amigable</h3>
+      <p>Seguro, lavable y suave al tacto.</p>
+    </div>
   </section>
 
   <footer>
