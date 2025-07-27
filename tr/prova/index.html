@@ -21,19 +21,34 @@
     }
 
     .main-header {
-      background-color: #d2a679;
-      padding: 1rem 3rem;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 2px solid #d2a679;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      transition: background 0.3s ease;
-    }
+  background-color: #d2a679; /* canela más definido */
+  padding: 2rem 3rem; /* más alto y ancho */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px solid #a86e3c;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: background 0.3s ease;
+}
+
+.logo {
+  height: 70px; /* más grande */
+  transition: transform 0.5s ease;
+}
+
+.brand-name {
+  font-size: 2.2rem; /* más grande */
+  font-weight: 700;
+  color: #fffdf8;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
 
     .header-left {
       display: flex;
@@ -41,22 +56,8 @@
       gap: 10px;
     }
 
-    .logo {
-      height: 55px;
-      transition: transform 0.5s ease;
-    }
-
     .logo:hover {
       transform: rotate(-5deg) scale(1.2) rotateY(15deg);
-    }
-
-    .brand-name {
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: #5c3317;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      position: relative;
     }
 
     @keyframes sparkle {
