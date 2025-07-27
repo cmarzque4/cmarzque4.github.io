@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="icon" type="image/png" href="ca.png">
+
+<!-- Fuente moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: #fffaf1;
+      color: #3d2e1e;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: linear-gradient(to bottom, #ffedd5, #fff3e0);
+      padding: 3rem 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      color: #c2572d;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    .parallax {
+      background-image: url('https://i.imgur.com/mzqV2uK.png'); /* imagen oso */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 300px;
+      height: 300px;
+      margin-top: 2rem;
+      opacity: 0.4;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .intro h2 {
+      font-size: 2rem;
+      color: #e0662f;
+      margin-bottom: 1rem;
+    }
+
+    .intro p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .intro button {
+      background-color: #f59e0b;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border-radius: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .intro button:hover {
+      background-color: #ec820d;
+      transform: scale(1.05);
+    }
+
+    .features {
+      background-color: #fef3dc;
+      border-radius: 1rem;
+      padding: 3rem;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+
+    .features h2 {
+      color: #a34d1e;
+      margin-bottom: 2rem;
+      font-size: 1.6rem;
+    }
+
+    .features ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1rem;
+    }
+
+    .features li {
+      margin: 1rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #fdeacc;
+      font-size: 0.9rem;
+    }
+
+    .illustration {
+      width: 80px;
+      vertical-align: middle;
+    }
+  </style>
+  <head>
+  <link rel="stylesheet" href="estilos.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Peluche Amigo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="hero-bg">
+     <header>
+<header class="main-header">
+  <div class="header-left">
+    <a href="https://cmarzque4.github.io/tr/principal/index.html#">
+      <img src="ca.png" alt="Logo" class="logo">
+    </a>
+    <a href="https://cmarzque4.github.io/tr/principal/index.html#" class="brand-name">Peluche Amigo</a>
+  </div>
+
+  <nav class="nav-menu">
+    <a href="https://cmarzque4.github.io/tr/principal/index.html#">Inici</a>
+
+    <div class="dropdown">
+      <a href="#">Característiques ▾</a>
+      <div class="dropdown-content">
+        <a href="#">Descripció</a>
+        <a href="#">Com funciona?</a>
+        <a href="#">Desenvolupament</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#">Estudi ▾</a>
+      <div class="dropdown-content">
+        <a href="#">Centre Arc de Sant Martí</a>
+      </div>
+    </div>
+    
+    <a href="#">Representants</a>
+  </nav>
+</header>
+
+  </header>
+
+    <section class="main-content fade-in">
+      <div class="left">
+        <img src="peluche.png" alt="Peluche Amigo" class="bear bounce" />
+        <img src="kite.png" class="kite float" alt="Cometa colorida" />
+      </div>
+      <div class="right">
+        <h2>Un amigo que entiende</h2>
+        <p>
+          Nuestro peluche está diseñado para ayudar a niños con dificultades del habla o del desarrollo a comunicarse de forma más fácil y divertida.
+        </p>
+        <button class="cta">Conoce más</button>
+      </div>
+    </section>
+  </div>
+
+  <section class="features slide-up">
+    <h2>¿Qué hace especial a Peluche Amigo?</h2>
+    <ul>
+      <li>🎤 Reproduce frases clave para expresarse</li>
+      <li>🧠 Estimula el aprendizaje emocional</li>
+      <li>💡 Fácil de usar por niños y adultos</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 Peluche Amigo – Conectando corazones 💛</p>
+  </footer>
+</body>
+</html>
