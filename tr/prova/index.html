@@ -395,9 +395,46 @@ img {
   overflow-x: hidden;
 }
 
+
+  .menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle div {
+  width: 25px;
+  height: 3px;
+  background-color: #5c3317;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+}
+
     
   </style>
 </head>
+  
+<script>
+  document.getElementById('menu-toggle').addEventListener('click', () => {
+    document.getElementById('nav-menu').classList.toggle('active');
+  });
+</script>
 
 <body>
   <div class="hero-bg">
@@ -408,6 +445,12 @@ img {
         </a>
         <a href="#" class="brand-name">Peluche Amigo</a>
       </div>
+
+      <div class="menu-toggle" id="menu-toggle">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
 
       <nav class="nav-menu">
         <a href="#">Inici</a>
