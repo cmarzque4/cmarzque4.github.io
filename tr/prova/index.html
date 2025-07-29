@@ -279,69 +279,76 @@
     }
 
     /* Responsive */
-    @media (max-width: 768px) {
-      .main-header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1.2rem 1rem;
-      }
+   @media (max-width: 768px) {
+  .main-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+  }
 
-      .menu-toggle {
-        display: flex;
-        position: absolute;
-        top: 1.5rem;
-        right: 1.5rem;
-      }
+  .menu-toggle {
+    display: flex;
+    position: relative;
+    z-index: 200;
+  }
 
-      .nav-menu {
-        flex-direction: column;
-        width: 100%;
-        background-color: #fff8ef;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        padding: 1rem;
-        display: none;
-        opacity: 0;
-        transform: translateY(-10px);
-        transition: all 0.3s ease;
-      }
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff8ef;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 1.5rem 2rem;
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    border-top: 1px solid #e0c8aa;
+  }
 
-      .nav-menu.active {
-        display: flex;
-        opacity: 1;
-        transform: translateY(0);
-        z-index: 100;
-      }
+  .nav-menu.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-      .dropdown-content {
-        position: static;
-        background: none;
-        border: none;
-        box-shadow: none;
-        opacity: 1;
-        transform: none;
-        padding: 0;
-        display: block;
-      }
+  .nav-menu a {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+  }
 
-      .dropdown-content a {
-        padding: 6px 0;
-      }
+  .dropdown-content {
+    position: static;
+    background: none;
+    border: none;
+    box-shadow: none;
+    opacity: 1;
+    transform: none;
+    padding-left: 1rem;
+    display: block;
+  }
 
-      .right {
-        max-width: 100%;
-        padding: 1rem;
-      }
+  .dropdown-content a {
+    font-size: 1.05rem;
+    padding: 0.3rem 0;
+  }
 
-      .logo {
-        height: 45px;
-      }
+  .right {
+    max-width: 100%;
+    padding: 1rem;
+  }
 
-      .brand-name {
-        font-size: 1.5rem;
-      }
-    }
+  .logo {
+    height: 45px;
+  }
+
+  .brand-name {
+    font-size: 1.5rem;
+  }
+}
+
 
     img {
       max-width: 100%;
