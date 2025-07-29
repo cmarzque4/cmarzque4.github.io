@@ -1,324 +1,269 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Peluche Amigo</title>
-  <link rel="icon" type="image/png" href="ca.png">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    /* RESET Y FUENTES */
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-      font-family: 'Quicksand', sans-serif;
-      background: #fff8ef;
-      color: #4a3b2c;
-      overflow-x: hidden;
+      font-family: 'Poppins', sans-serif;
+      background: #fff6ea;
+      color: #4e2c14;
     }
 
-    h1, h2 {
-      font-weight: 700;
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
-    header.main-header {
-      background-color: #ffe4b5;
-      padding: 1.7rem 3rem;
+    ul {
+      list-style: none;
+    }
+
+    /* HEADER */
+    header {
+      background-color: #f4c892;
+      padding: 1rem 1.5rem;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      border-bottom: 2px solid #d2a679;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    }
-
-    .header-left {
-      display: flex;
       align-items: center;
-      gap: 12px;
+      position: relative;
     }
 
     .logo {
-      height: 50px;
-      transition: transform 0.3s ease;
-    }
-
-    .logo:hover {
-      transform: rotate(-5deg) scale(1.05);
-    }
-
-    .brand-name {
-      font-size: 1.6rem;
-      font-weight: 600;
-      color: #5c3317;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .brand-name:hover {
-      color: #d36421;
-    }
-
-    .nav-menu {
       display: flex;
       align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 1.5rem;
+      font-weight: 600;
     }
 
-    .nav-menu a {
-      text-decoration: none;
-      color: #5c3317;
-      font-weight: 500;
-      font-size: 1rem;
-      position: relative;
-      transition: color 0.3s ease;
+    .menu-toggle {
+      font-size: 2rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #4e2c14;
+      z-index: 1001;
     }
 
-    .nav-menu a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      background: #d36421;
-      left: 0;
-      bottom: -4px;
-      transition: width 0.3s ease;
-    }
-
-    .nav-menu a:hover {
-      color: #d36421;
-    }
-
-    .nav-menu a:hover::after {
+    /* NAV MOBILE */
+    nav {
+      position: fixed;
+      top: 0;
+      left: -100%;
       width: 100%;
+      height: 100vh;
+      background-color: #fffaf3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 6rem;
+      transition: left 0.3s ease;
+      z-index: 1000;
     }
 
-    .dropdown {
-      position: relative;
+    nav.open {
+      left: 0;
+    }
+
+    nav ul {
+      width: 80%;
+    }
+
+    nav li {
+      margin-bottom: 1.2rem;
+      font-size: 1.3rem;
+      text-align: left;
+    }
+
+    .dropdown-toggle {
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #4e2c14;
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
     }
 
     .dropdown-content {
-      display: none;
-      position: absolute;
-      top: 110%;
-      left: 0;
-      background-color: #fff8ef;
-      border-radius: 0.5rem;
-      border: 1px solid #d2a679;
-      padding: 10px;
-      box-shadow: 2px 8px 16px rgba(0, 0, 0, 0.1);
-      z-index: 100;
-      min-width: 180px;
+      max-height: 0;
+      overflow: hidden;
       opacity: 0;
-      transform: translateY(10px);
-      transition: opacity 0.3s ease, transform 0.3s ease;
+      transform: translateY(-5px);
+      transition: all 0.3s ease;
+      padding-left: 1rem;
     }
 
-    .dropdown:hover .dropdown-content {
-      display: block;
+    .dropdown.open .dropdown-content {
+      max-height: 500px;
       opacity: 1;
       transform: translateY(0);
     }
 
     .dropdown-content a {
       display: block;
-      padding: 8px 12px;
-      margin: 5px 0;
-      color: #5c3317;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
+      font-size: 1rem;
+      padding: 0.3rem 0;
     }
 
-    .dropdown-content a:hover {
-      background-color: #ffe4b5;
+    /* FLECHITA GIRATORIA */
+    .dropdown-toggle::after {
+      content: '▼';
+      float: right;
+      transition: transform 0.3s ease;
     }
 
-    .hero-bg {
-      background: linear-gradient(#fff2d9, #ffe0b2);
-      padding-bottom: 4rem;
-      position: relative;
-      overflow: hidden;
+    .dropdown.open .dropdown-toggle::after {
+      transform: rotate(180deg);
     }
 
-    .main-content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
-      gap: 2rem;
+    /* CONTENIDO PRINCIPAL (EJEMPLO) */
+    .main {
+      padding: 2rem 1rem;
+      text-align: center;
     }
 
-    .left img.bear {
-      width: 220px;
-      animation: bounce 3s infinite ease-in-out;
-    }
-
-    .kite {
-      position: absolute;
-      top: 40px;
-      left: 20px;
-      width: 100px;
-      animation: float 5s ease-in-out infinite;
-      opacity: 0.8;
-    }
-
-    .right {
-      max-width: 400px;
-    }
-
-    .right h2 {
-      font-size: 1.8rem;
+    .main h1 {
+      font-size: 2rem;
       margin-bottom: 1rem;
-      color: #d36421;
+      color: #c75c1f;
     }
 
-    .right p {
+    .main p {
       font-size: 1.1rem;
-      margin-bottom: 1.5rem;
       line-height: 1.6;
     }
 
-    .cta {
+    .btn {
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
       background-color: #f59e0b;
       color: white;
-      padding: 1rem 1.5rem;
       border: none;
-      border-radius: 1rem;
+      border-radius: 8px;
       font-size: 1rem;
       cursor: pointer;
-      transition: background 0.3s ease, transform 0.2s;
+      transition: background 0.3s ease;
     }
 
-    .cta:hover {
-      background: #ec820d;
-      transform: scale(1.05);
+    .btn:hover {
+      background-color: #e58c00;
     }
 
-    .features {
-      background: #fcefd9;
-      padding: 3rem 2rem;
-      text-align: center;
-    }
+    /* RESPONSIVE DESKTOP (puedes añadir más después) */
+    @media(min-width: 768px) {
+      nav {
+        position: static;
+        height: auto;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding-top: 0;
+        background: transparent;
+      }
 
-    .features h2 {
-      color: #a0522d;
-      margin-bottom: 2rem;
-      font-size: 1.6rem;
-    }
+      .menu-toggle {
+        display: none;
+      }
 
-    .features ul {
-      list-style: none;
-      font-size: 1.1rem;
-      padding-left: 0;
-    }
+      nav ul {
+        display: flex;
+        gap: 1rem;
+        width: auto;
+      }
 
-    .features li {
-      margin: 1rem 0;
-    }
+      .dropdown-content {
+        position: absolute;
+        background: #fffaf3;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        margin-top: 0.5rem;
+        display: none;
+        left: auto;
+      }
 
-    footer {
-      background: #fde9ca;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
+      .dropdown:hover .dropdown-content {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+      }
 
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-12px); }
-    }
+      .dropdown-toggle::after {
+        display: none;
+      }
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0) rotate(-2deg); }
-      50% { transform: translateY(-15px) rotate(2deg); }
-    }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(30px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes slideUp {
-      0% { opacity: 0; transform: translateY(50px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    .fade-in {
-      animation: fadeIn 1.5s ease-out forwards;
-    }
-
-    .slide-up {
-      animation: slideUp 1.5s ease-out forwards;
+      .dropdown-content a {
+        white-space: nowrap;
+      }
     }
   </style>
 </head>
-
 <body>
-  <div class="hero-bg">
-    <header class="main-header">
-      <div class="header-left">
-        <a href="#">
-          <img src="ca.png" alt="Logo" class="logo">
-        </a>
-        <a href="#" class="brand-name">Peluche Amigo</a>
-      </div>
 
-      <nav class="nav-menu">
-        <a href="#">Inici</a>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo" width="40" />
+      <span>Peluche Amigo</span>
+    </div>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+  </header>
 
-        <div class="dropdown">
-          <a href="#">Característiques ▾</a>
-          <div class="dropdown-content">
-            <a href="#">Descripció</a>
-            <a href="#">Com funciona?</a>
-            <a href="#">Desenvolupament</a>
-          </div>
-        </div>
-
-        <div class="dropdown">
-          <a href="#">Estudi ▾</a>
-          <div class="dropdown-content">
-            <a href="#">Centre Arc de Sant Martí</a>
-          </div>
-        </div>
-
-        <a href="#">Representants</a>
-      </nav>
-    </header>
-
-    <section class="main-content fade-in">
-      <div class="left">
-        <img src="peluche.png" alt="Peluche Amigo" class="bear" />
-        <img src="kite.png" class="kite" alt="Cometa colorida" />
-      </div>
-      <div class="right">
-        <h2>Un amigo que entiende</h2>
-        <p>
-          Nuestro peluche está diseñado para ayudar a niños con dificultades del habla o del desarrollo a comunicarse de forma más fácil y divertida.
-        </p>
-        <button class="cta">Conoce más</button>
-      </div>
-    </section>
-  </div>
-
-  <section class="features slide-up">
-    <h2>¿Qué hace especial a Peluche Amigo?</h2>
+  <nav id="mobileMenu">
     <ul>
-      <li>🎤 Reproduce frases clave para expresarse</li>
-      <li>🧠 Estimula el aprendizaje emocional</li>
-      <li>💡 Fácil de usar por niños y adultos</li>
+      <li><a href="#">Inici</a></li>
+
+      <li class="dropdown">
+        <button class="dropdown-toggle">Característiques</button>
+        <ul class="dropdown-content">
+          <li><a href="#">Descripció</a></li>
+          <li><a href="#">Com funciona?</a></li>
+          <li><a href="#">Desenvolupament</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <button class="dropdown-toggle">Estudi</button>
+        <ul class="dropdown-content">
+          <li><a href="#">Centre Arc de Sant Martí</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#">Representants</a></li>
     </ul>
-  </section>
+  </nav>
 
-  <footer>
-    <p>© 2025 Peluche Amigo – Conectando corazones 💛</p>
-  </footer>
+  <main class="main">
+    <h1>Un amigo que entiende</h1>
+    <p>
+      Nuestro peluche está diseñado para ayudar a niños con dificultades del habla o del desarrollo a comunicarse de forma más fácil y divertida.
+    </p>
+    <button class="btn">Conoce más</button>
+  </main>
+
+  <script>
+    const toggleBtn = document.getElementById("menuToggle");
+    const nav = document.getElementById("mobileMenu");
+
+    toggleBtn.addEventListener("click", () => {
+      nav.classList.toggle("open");
+    });
+
+    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const parent = toggle.closest('.dropdown');
+        parent.classList.toggle('open');
+      });
+    });
+  </script>
 </body>
-
 </html>
