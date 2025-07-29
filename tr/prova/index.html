@@ -353,6 +353,41 @@
       max-width: 100%;
       height: auto;
     }
+
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+  padding-left: 1rem;
+}
+
+.dropdown.open .dropdown-content {
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #4e2c14;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  width: 100%;
+  text-align: left;
+}
+
+.dropdown-content a {
+  display: block;
+  font-size: 1rem;
+  color: #4e2c14;
+  padding: 0.3rem 0;
+}
+
+    
   </style>
 </head>
 
@@ -367,9 +402,23 @@
       </div>
 
       <div class="menu-toggle" id="menu-toggle" aria-label="Menú móvil" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+<li class="dropdown">
+  <button class="dropdown-toggle">Característiques ▼</button>
+  <ul class="dropdown-content">
+    <li><a href="#">Descripció</a></li>
+    <li><a href="#">Com funciona?</a></li>
+    <li><a href="#">Desenvolupament</a></li>
+  </ul>
+</li>
+             <li class="dropdown"> 
+           <button class="dropdown-toggle">Estudi ▾</button>
+          <ul class="dropdown-content">
+            <li><a href="#">Centre Arc de Sant Martí</a></li>
+          </ul>
+             </li>
+          <button class="dropdown-toggle">Representants</button>
+      </nav>
+
       </div>
 
       <nav class="nav-menu" id="nav-menu">
