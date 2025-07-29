@@ -118,7 +118,7 @@
       transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
-    .dropdown:hover .dropdown-content {
+    .dropdown-content.active {
       display: block;
       opacity: 1;
       transform: translateY(0);
@@ -250,7 +250,7 @@
 
     /* Botón Hamburguesa */
     .menu-toggle {
-      display: none;
+      display: block;
       flex-direction: column;
       cursor: pointer;
       justify-content: center;
@@ -430,6 +430,15 @@
         menu.classList.toggle('active');
         toggle.classList.toggle('open');
         toggle.setAttribute('aria-expanded', menu.classList.contains('active'));
+      });
+    });
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(dropdown => {
+      const link = dropdown.querySelector('a');
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        const content = dropdown.querySelector('.dropdown-content');
+        content.classList.toggle('active');
       });
     });
   </script>
