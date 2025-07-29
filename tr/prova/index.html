@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+<link rel="icon" type="image/png" href="ca.png">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Peluche Amigo</title>
   <link rel="icon" type="image/png" href="ca.png">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -14,103 +16,67 @@
 
     body {
       font-family: 'Quicksand', sans-serif;
-      background: linear-gradient(to right, #f6d365, #fda085); /* degradado cálido */
+      background: #fff8ef;
       color: #4a3b2c;
       overflow-x: hidden;
-      scroll-behavior: smooth;
     }
 
-    .main-header {
-  background-color: #d2a679; /* canela más definido */
-  padding: 2rem 3rem; /* más alto y ancho */
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 3px solid #a86e3c;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  transition: background 0.3s ease;
-}
+    h1, h2 {
+      font-weight: 700;
+    }
 
-    .right {
-  padding: 1rem;
-  max-width: 420px;
-  line-height: 1.6;
-}
-    
-.logo {
-  height: 70px; /* más grande */
-  transition: transform 0.5s ease;
-}
-
-.brand-name {
-  font-size: 2.2rem; /* más grande */
-  font-weight: 700;
-  color: #fffdf8;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
+    header.main-header {
+      background-color: #ffe4b5;
+      padding: 1.2rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid #d2a679;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
 
     .header-left {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
+    }
+
+    .logo {
+      height: 60px;
+      transition: transform 0.3s ease;
     }
 
     .logo:hover {
-      transform: rotate(-5deg) scale(1.2) rotateY(15deg);
+      transform: rotate(-5deg) scale(1.05);
     }
 
-    @keyframes sparkle {
-      from { opacity: 0.2; transform: scale(1); }
-      to { opacity: 1; transform: scale(1.4); }
+    .brand-name {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #5c3317;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .brand-name:hover {
+      color: #d36421;
     }
 
     .nav-menu {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-.nav-menu a {
-  color: #6a4c3a;
-  font-weight: 500;
-  padding: 8px 12px;
-  border-radius: 8px;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-.nav-menu a:hover {
-  background-color: #ffd8a8;
-  color: #b44b00;
-}
-
-    .features ul li {
-  margin: 1rem 0;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1.1rem;
-}
-
-    .fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s ease forwards;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+    .nav-menu a {
+      text-decoration: none;
+      color: #5c3317;
+      font-weight: 500;
+      font-size: 1rem;
+      position: relative;
+      transition: color 0.3s ease;
+    }
 
     .nav-menu a::after {
       content: '';
@@ -123,10 +89,13 @@
       transition: width 0.3s ease;
     }
 
+    .nav-menu a:hover {
+      color: #d36421;
+    }
+
     .nav-menu a:hover::after {
       width: 100%;
     }
-    
 
     .dropdown {
       position: relative;
@@ -143,15 +112,11 @@
       padding: 10px;
       box-shadow: 2px 8px 16px rgba(0, 0, 0, 0.1);
       z-index: 100;
+      min-width: 180px;
       opacity: 0;
       transform: translateY(10px);
       transition: opacity 0.3s ease, transform 0.3s ease;
-      min-width: 180px;
     }
-
-    .dropdown-content a {
-  font-size: 1.1rem; /* Añade o ajusta esta línea */
-}
 
     .dropdown:hover .dropdown-content {
       display: block;
@@ -205,9 +170,18 @@
 
     .right {
       max-width: 400px;
-      opacity: 0;
-      transform: translateY(50px);
-      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    .right h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #d36421;
+    }
+
+    .right p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
     }
 
     .cta {
@@ -230,33 +204,22 @@
       background: #fcefd9;
       padding: 3rem 2rem;
       text-align: center;
-      transform: translateY(50px);
-      opacity: 0;
-      transition: opacity 1s ease-out, transform 1s ease-out;
     }
 
-    .carousel {
-      display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      gap: 1rem;
-      padding: 2rem;
-      background: #fff7ea;
+    .features h2 {
+      color: #a0522d;
+      margin-bottom: 2rem;
+      font-size: 1.6rem;
     }
 
-    .carousel div {
-      min-width: 300px;
-      background: #fff3e0;
-      border-radius: 1rem;
-      padding: 1.5rem;
-      scroll-snap-align: start;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      flex-shrink: 0;
-      transition: transform 0.3s ease;
+    .features ul {
+      list-style: none;
+      font-size: 1.1rem;
+      padding-left: 0;
     }
 
-    .carousel div:hover {
-      transform: scale(1.05);
+    .features li {
+      margin: 1rem 0;
     }
 
     footer {
@@ -275,52 +238,216 @@
       0%, 100% { transform: translateY(0) rotate(-2deg); }
       50% { transform: translateY(-15px) rotate(2deg); }
     }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      0% { opacity: 0; transform: translateY(50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+      animation: fadeIn 1.5s ease-out forwards;
+    }
+
+    .slide-up {
+      animation: slideUp 1.5s ease-out forwards;
+    }
+
+!// telefono
+ @media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem 1rem;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .main-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .right {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .carousel {
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+
+  .carousel div {
+    min-width: 260px;
+  }
+
+  .brand-name {
+    font-size: 1.5rem;
+  }
+
+  .logo {
+    height: 45px;
+  }
+
+  .dropdown-content {
+    position: static;
+    transform: none;
+    opacity: 1;
+    box-shadow: none;
+    padding: 5px 0;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .features ul {
+    padding-left: 0;
+    list-style: none;
+  }
+}
+
+
+
+
+
+
+    @media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 1rem;
+  }
+
+  .main-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .right {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .carousel {
+    padding: 1rem;
+  }
+
+  .carousel div {
+    min-width: 90%;
+  }
+
+  .header-left {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .logo {
+    height: 45px;
+  }
+
+  .brand-name {
+    font-size: 1.5rem;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    padding: 0;
+    transform: none;
+    opacity: 1;
+    display: block;
+  }
+
+  .dropdown-content a {
+    padding: 6px 0;
+    background: none;
+  }
+}
+    
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+    body {
+  overflow-x: hidden;
+}
+
+    
   </style>
 </head>
+
 <body>
-  <header class="main-header">
-    <div class="header-left">
-      <a href="#">
-        <img src="ca.png" alt="Logo" class="logo">
-      </a>
-      <a href="#" class="brand-name">Peluche Amigo</a>
-    </div>
-
-    <nav class="nav-menu">
-      <a href="#">Inici</a>
-      <div class="dropdown">
-        <a href="#">Característiques ▾</a>
-        <div class="dropdown-content">
-          <a href="#">Descripció</a>
-          <a href="#">Com funciona?</a>
-          <a href="#">Desenvolupament</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <a href="#">Estudi ▾</a>
-        <div class="dropdown-content">
-          <a href="#">Centre Arc de Sant Martí</a>
-        </div>
-      </div>
-      <a href="#">Representants</a>
-    </nav>
-  </header>
-
   <div class="hero-bg">
-    <section class="main-content">
+    <header class="main-header">
+      <div class="header-left">
+        <a href="#">
+          <img src="ca.png" alt="Logo" class="logo">
+        </a>
+        <a href="#" class="brand-name">Peluche Amigo</a>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="#">Inici</a>
+
+        <div class="dropdown">
+          <a href="#">Característiques ▾</a>
+          <div class="dropdown-content">
+            <a href="#">Descripció</a>
+            <a href="#">Com funciona?</a>
+            <a href="#">Desenvolupament</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#">Estudi ▾</a>
+          <div class="dropdown-content">
+            <a href="#">Centre Arc de Sant Martí</a>
+          </div>
+        </div>
+
+        <a href="#">Representants</a>
+      </nav>
+    </header>
+
+    <section class="main-content fade-in">
       <div class="left">
         <img src="peluche.png" alt="Peluche Amigo" class="bear" />
         <img src="kite.png" class="kite" alt="Cometa colorida" />
       </div>
-      <div class="right" id="intro-text">
+      <div class="right">
         <h2>Un amigo que entiende</h2>
-        <p> Nuestro peluche está diseñado para ayudar a niños con dificultades del habla o del desarrollo a comunicarse de forma más fácil y divertida. </p>
+        <p>
+          Nuestro peluche está diseñado para ayudar a niños con dificultades del habla o del desarrollo a comunicarse de forma más fácil y divertida.
+        </p>
         <button class="cta">Conoce más</button>
       </div>
     </section>
   </div>
 
-  <section class="features" id="features">
+  <section class="features slide-up">
     <h2>¿Qué hace especial a Peluche Amigo?</h2>
     <ul>
       <li>🎤 Reproduce frases clave para expresarse</li>
@@ -329,36 +456,9 @@
     </ul>
   </section>
 
-  <section class="carousel">
-    <div>
-      <h3>❤️ Conexión Emocional</h3>
-      <p>El peluche ayuda a expresar sentimientos a través del juego.</p>
-    </div>
-    <div>
-      <h3>🎓 Herramienta Educativa</h3>
-      <p>Ideal para escuelas y terapeutas del lenguaje.</p>
-    </div>
-    <div>
-      <h3>🧸 Diseño Amigable</h3>
-      <p>Seguro, lavable y suave al tacto.</p>
-    </div>
-  </section>
-
   <footer>
     <p>© 2025 Peluche Amigo – Conectando corazones 💛</p>
   </footer>
-
-  <script>
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.right, .features').forEach(el => observer.observe(el));
-  </script>
 </body>
+
 </html>
