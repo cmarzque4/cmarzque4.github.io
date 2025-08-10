@@ -319,4 +319,78 @@
         <a href="#">Desenvolupament</a>
         <div class="dropdown">
           <a href="#">Característiques ▾</a>
-          <div class="dro
+          <div class="dropdown-content">
+            <a href="#">Descripció</a>
+            <a href="#">Com funciona?</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#">Estudi ▾</a>
+          <div class="dropdown-content">
+            <a href="#">Centre Arc de Sant Martí</a>
+          </div>
+        </div>
+        <a href="#">Representants</a>
+      </nav>
+    </header>
+
+    <section class="main-content fade-in">
+      <div class="left">
+        <img src="nacho.png" alt="Peluche Amigo" class="bear" />
+      </div>
+      <div class="right">
+        <h2>Descripció</h2>
+        <p>
+         El ninot és una figura amb forma de cavall, dissenyada específicament per a activitats educatives i terapèutiques. Està fabricat amb materials resistents però suaus al tacte, per garantir seguretat i comoditat.
+        </p>
+        <p>
+          Disposa de:
+        </p>
+        <ul>
+          <li><b>Cap i cua articulats</b> que permeten moviments suaus per simular accions reals</li>
+          <li><b>Sensors tàctils </b>col·locats a punts clau (esquena i potes) per reaccionar a les interaccions</li>
+          <li><b>Llum o pantalles LED </b>en zones determinades per indicar respostes o senyals</li>
+          <li><b>Altaveu integrat</b> amb sons de relinxs, passos i missatges educatius</li>
+          <li><b>Altres tipus de sensors</b> (d'estabilitat, cercania) per a convertir el ninot en un ser intel·ligent </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <section class="features slide-up">
+    <h2>¿Qué hace especial a Peluche Amigo?</h2>
+    <ul>
+      <li>🎤 Reproduce frases clave para expresarse</li>
+      <li>🧠 Estimula el aprendizaje emocional</li>
+      <li>💡 Fácil de usar por niños y adultos</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 Nacho & Kids – Conectando emociones 💛</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('nav-menu');
+
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+        toggle.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', menu.classList.contains('active'));
+      });
+    });
+
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(dropdown => {
+      const link = dropdown.querySelector('a');
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        const content = dropdown.querySelector('.dropdown-content');
+        content.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
