@@ -7,23 +7,14 @@
   <link rel="icon" type="image/png" href="ca.png" />
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Quicksand', sans-serif;
       background: #fff8ef;
       color: #4a3b2c;
       overflow-x: hidden;
     }
-
-    h1, h2 {
-      font-weight: 700;
-    }
-
+    h1,h2 { font-weight: 700; }
     header.main-header {
       background-color: #ffe4b5;
       padding: 1.5rem 2rem;
@@ -31,272 +22,101 @@
       align-items: center;
       justify-content: space-between;
       border-bottom: 2px solid #d2a679;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
       position: relative;
       z-index: 100;
     }
-
-    .header-left {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo {
-      height: 60px;
-      transition: transform 0.3s ease;
-    }
-
-    .logo:hover {
-      transform: rotate(-5deg) scale(1.05);
-    }
-
-    .brand-name {
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: #5c3317;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .brand-name:hover {
-      color: #d36421;
-    }
-
-    .nav-menu {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .nav-menu a {
-      text-decoration: none;
-      color: #5c3317;
-      font-weight: 500;
-      font-size: 1.1rem;
-      position: relative;
-      transition: color 0.3s ease;
-    }
-
-    .nav-menu a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      background: #d36421;
-      left: 0;
-      bottom: -4px;
-      transition: width 0.3s ease;
-    }
-
-    .nav-menu a:hover {
-      color: #d36421;
-    }
-
-    .nav-menu a:hover::after {
-      width: 100%;
-    }
-
-    .dropdown {
-      position: relative;
-    }
-
+    .header-left { display:flex; align-items:center; gap:12px; }
+    .logo { height:60px; transition: transform 0.3s ease; }
+    .logo:hover { transform: rotate(-5deg) scale(1.05); }
+    .brand-name { font-size:1.8rem; font-weight:600; color:#5c3317; text-decoration:none; }
+    .nav-menu { display:flex; align-items:center; gap:20px; }
+    .nav-menu a { text-decoration:none; color:#5c3317; font-weight:500; font-size:1.1rem; position:relative; }
+    .nav-menu a::after { content:''; position:absolute; width:0; height:2px; background:#d36421; left:0; bottom:-4px; transition: width .3s; }
+    .nav-menu a:hover { color:#d36421; } .nav-menu a:hover::after { width:100%; }
+    .dropdown { position:relative; }
     .dropdown-content {
-      display: none;
-      position: absolute;
-      top: 110%;
-      left: 0;
-      background-color: #fff8ef;
-      border-radius: 0.5rem;
-      border: 1px solid #d2a679;
-      padding: 10px;
-      box-shadow: 2px 8px 16px rgba(0, 0, 0, 0.1);
-      z-index: 100;
-      min-width: 180px;
-      opacity: 0;
-      transform: translateY(10px);
-      transition: opacity 0.3s ease, transform 0.3s ease;
+      display:none; position:absolute; top:110%; left:0; background:#fff8ef;
+      border-radius:.5rem; border:1px solid #d2a679; padding:10px;
+      box-shadow:2px 8px 16px rgba(0,0,0,.1); min-width:180px; opacity:0;
+      transform:translateY(10px); transition: opacity .3s, transform .3s;
     }
+    .dropdown-content.active { display:block; opacity:1; transform:translateY(0); }
+    .dropdown-content a { display:block; padding:10px 14px; margin:4px 0; color:#5c3317; text-decoration:none; border-radius:5px; }
+    .dropdown-content a:hover { background:#ffe4b5; }
 
-    .dropdown-content.active {
-      display: block;
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .hero-bg { background: linear-gradient(#fff2d9, #ffe0b2); padding-bottom:4rem; position:relative; overflow:hidden; }
 
-    .dropdown-content a {
-      display: block;
-      padding: 10px 14px;
-      margin: 4px 0;
-      color: #5c3317;
-      text-decoration: none;
-      font-size: 1.05rem;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #ffe4b5;
-    }
-
-    .hero-bg {
-      background: linear-gradient(#fff2d9, #ffe0b2);
-      padding-bottom: 4rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* ----------- ESTILO MEJORADO PARA LA SECCIÓN DE DESCRIPCIÓN ----------- */
+    /* ------ Layout principal ajustat per alinear la imatge a l'esquerra ----- */
     .main-content {
       display: flex;
-      justify-content: center;
+      align-items: center;        /* centra verticalment imatge i text */
+      justify-content: flex-start;/* fa que el conjunt quedi cap a l'esquerra dins del bloc */
+      gap: 2rem;
+      padding: 3rem 2rem;
+      max-width: 1100px;         /* limita l'amplada i centra tot el bloc a la pàgina */
+      margin: 0 auto;
+      background: transparent;
+    }
+
+    .left {
+      flex: 0 0 45%;             /* la columna esquerra ocupa el 45% del bloc */
+      display: flex;
+      justify-content: flex-start; /* imatge pegada a l'esquerra de la columna */
       align-items: center;
-      gap: 3rem;
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-      background-color: #fff3e6;
-      border-radius: 20px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
 
     .left img.bear {
-      width: 250px;
-      height: auto;
-      animation: bounce 3s infinite ease-in-out;
+      width: 320px;              /* una mida més gran per la imatge */
+      max-width: 100%;
+      display: block;
     }
 
     .right {
       flex: 1;
-      max-width: 500px;
+      padding-left: 2rem;        /* separació text - imatge */
+      max-width: 55%;
     }
 
     .right h2 {
-      font-size: 2rem;
-      color: #d36421;
+      font-size: 1.8rem;
       margin-bottom: 1rem;
+      color: #d36421;
     }
 
-    .right p,
-    .right ul {
-      font-size: 1.1rem;
+    .right p {
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
       line-height: 1.6;
     }
 
-    .right ul li {
-      margin-bottom: 0.8rem;
-    }
-    /* --------------------------------------------------------------------- */
+    /* petites millores visuals */
+    .right p + p { margin-top: 0.6rem; }
+    .features { background:#fcefd9; padding:3rem 2rem; text-align:center; }
+    .features h2 { color:#a0522d; margin-bottom:2rem; font-size:1.6rem; }
+    .features ul { list-style:none; font-size:1.1rem; padding-left:0; }
+    footer { background:#fde9ca; text-align:center; padding:1rem; font-size:0.9rem; }
 
-    .features {
-      background: #fcefd9;
-      padding: 3rem 2rem;
-      text-align: center;
-    }
-
-    .features h2 {
-      color: #a0522d;
-      margin-bottom: 2rem;
-      font-size: 1.6rem;
-    }
-
-    .features ul {
-      list-style: none;
-      font-size: 1.1rem;
-      padding-left: 0;
-    }
-
-    .features li {
-      margin: 1rem 0;
-    }
-
-    footer {
-      background: #fde9ca;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-12px); }
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .main-header {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 1rem;
-      }
-
-      .menu-toggle {
-        display: flex;
-        position: relative;
-        z-index: 200;
-      }
-
-      .nav-menu {
-        flex-direction: column;
-        width: 100%;
-        background-color: #fff8ef;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        padding: 1.5rem 2rem;
-        display: none;
-        opacity: 0;
-        transform: translateY(-10px);
-        transition: all 0.3s ease;
-        border-top: 1px solid #e0c8aa;
-      }
-
-      .nav-menu.active {
-        display: flex;
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .nav-menu a {
-        font-size: 1.2rem;
-        padding: 0.5rem 0;
-      }
-
-      .dropdown-content {
-        position: static;
-        background: none;
-        border: none;
-        box-shadow: none;
-        opacity: 1;
-        transform: none;
-        padding-left: 1rem;
-        display: none;
-      }
-
-      .right {
-        max-width: 100%;
-        padding: 1rem;
-      }
-
+    @media (max-width: 900px) {
+      /* En pantalles mitjanes/ mòbils, apilem i centrem */
       .main-content {
         flex-direction: column;
+        align-items: center;
         text-align: center;
+        padding: 2rem 1rem;
       }
-
-      .logo {
-        height: 45px;
-      }
-
-      .brand-name {
-        font-size: 1.5rem;
-      }
+      .left { flex: 0 0 auto; justify-content: center; margin-bottom: 1rem; }
+      .left img.bear { width: 220px; }
+      .right { padding-left: 0; max-width: 100%; }
+      .nav-menu { display:none; } /* opcional: mostra menú mobil amb hamburguesa si vols */
     }
 
-    img {
-      max-width: 100%;
-      height: auto;
+    @media (max-width: 480px) {
+      .left img.bear { width: 180px; }
+      .right h2 { font-size: 1.4rem; }
     }
+
+    img { max-width:100%; height:auto; }
   </style>
 </head>
 
@@ -304,19 +124,17 @@
   <div class="hero-bg">
     <header class="main-header">
       <div class="header-left">
-          <img src="ca.png" alt="Logo" class="logo" />
+        <img src="ca.png" alt="Logo" class="logo" />
         <a href="#" class="brand-name">Nacho & Kids</a>
       </div>
 
       <div class="menu-toggle" id="menu-toggle" aria-label="Menú móvil" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </div>
 
       <nav class="nav-menu" id="nav-menu">
         <a href="https://cmarzque4.github.io/tr/principal/index.html#">Inici</a>
-         <a href="https://cmarzque4.github.io/tr/desenvolupament/index.html#">Desenvolupament</a>
+        <a href="https://cmarzque4.github.io/tr/desenvolupament/index.html#">Desenvolupament</a>
         <div class="dropdown">
           <a href="https://cmarzque4.github.io/tr/caracteristic/index.html#">Característiques ▾</a>
           <div class="dropdown-content">
@@ -329,7 +147,65 @@
           <div class="dropdown-content">
             <a href="https://cmarzque4.github.io/tr/centre/index.html#">Centre Arc de Sant Martí</a>
           </div>
+        </div>
         <a href="https://cmarzque4.github.io/tr/representants/index.html#">Representants</a>
       </nav>
-
     </header>
+
+    <section class="main-content fade-in">
+      <div class="left">
+        <!-- posa aquí el nom correcte de la imatge (arcs.png) a la mateixa carpeta -->
+        <img src="arcs.png" alt="Fundació Arc de Sant Martí" class="bear" />
+      </div>
+
+      <div class="right">
+        <h2>Per què hem triat treballar amb aquest centre?</h2>
+        <p>
+          Arc de Sant Martí és una entitat educativa i de suport que treballa amb infants amb necessitats diverses,
+          afavorint la inclusió, l’aprenentatge emocional i el desenvolupament integral.
+        </p>
+        <p>
+          El ninot interactiu, amb la seva combinació de moviment, sensors i estímuls audiovisuals, encaixa perfectament
+          amb l’enfocament pedagògic del centre: facilitar l’aprenentatge a través de la sensorialitat, el joc i la
+          comunicació no verbal.
+        </p>
+        <p>
+          A través de la col·laboració, l’any 2025 l’equip d’Arc de Sant Martí ha impactat més de 50 infants en
+          activitats terapèutiques i educatives, cosa que reforça el valor de provar nous recursos adaptats i significatius.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <!-- la resta del document (Propostes, taula, footer) -->
+  <section class="features slide-up">
+    <h2>Propostes</h2>
+    <!-- contingut... -->
+  </section>
+
+  <footer>
+    <p>© 2025 Nacho & Kids – Conectant 💛</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('nav-menu');
+      toggle && toggle.addEventListener('click', () => {
+        menu && menu.classList.toggle('active');
+        toggle.classList.toggle('open');
+      });
+
+      const dropdowns = document.querySelectorAll('.dropdown');
+      dropdowns.forEach(dropdown => {
+        const link = dropdown.querySelector('a');
+        link.addEventListener('click', (event) => {
+          event.preventDefault();
+          const content = dropdown.querySelector('.dropdown-content');
+          content.classList.toggle('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
