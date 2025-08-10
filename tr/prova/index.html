@@ -176,6 +176,7 @@
   background-color: #ffe4b5;
 }
 
+ 
     /* Botón Hamburguesa */
     .menu-toggle {
       display: block;
@@ -221,7 +222,67 @@
     z-index: 200;
   }
 
-  
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff8ef;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 1.5rem 2rem;
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    border-top: 1px solid #e0c8aa;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-menu a {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+  }
+
+  .dropdown-content {
+    position: static;
+    background: none;
+    border: none;
+    box-shadow: none;
+    opacity: 1;
+    transform: none;
+    padding-left: 1rem;
+    display: none;
+  }
+
+  .dropdown-content a {
+    font-size: 1.05rem;
+    padding: 0.3rem 0;
+  }
+
+  .right {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .logo {
+    height: 45px;
+  }
+
+  .brand-name {
+    font-size: 1.5rem;
+  }
+}
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
   </style>
 </head>
 
@@ -229,7 +290,7 @@
   <div class="hero-bg">
     <header class="main-header">
       <div class="header-left">
-        <img src="ca.png" alt="Logo" class="logo" />
+          <img src="ca.png" alt="Logo" class="logo" />
         <a href="#" class="brand-name">Nacho & Kids</a>
       </div>
 
@@ -241,7 +302,7 @@
 
       <nav class="nav-menu" id="nav-menu">
         <a href="https://cmarzque4.github.io/tr/principal/index.html#">Inici</a>
-        <a href="https://cmarzque4.github.io/tr/desenvolupament/index.html#">Desenvolupament</a>
+         <a href="https://cmarzque4.github.io/tr/desenvolupament/index.html#">Desenvolupament</a>
         <div class="dropdown">
           <a href="https://cmarzque4.github.io/tr/caracteristic/index.html#">Característiques ▾</a>
           <div class="dropdown-content">
@@ -257,6 +318,7 @@
         </div>
         <a href="https://cmarzque4.github.io/tr/representants/index.html#">Representants</a>
       </nav>
+
     </header>
 
     <section class="main-content fade-in">
