@@ -146,61 +146,47 @@
       overflow: hidden;
     }
 
+    /* ----------- ESTILO MEJORADO PARA LA SECCIÓN DE DESCRIPCIÓN ----------- */
     .main-content {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
       align-items: center;
+      gap: 3rem;
       padding: 2rem;
-      gap: 2rem;
-      wight: 700px;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #fff3e6;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
 
     .left img.bear {
-      width: 220px;
+      width: 250px;
+      height: auto;
       animation: bounce 3s infinite ease-in-out;
     }
 
-    .kite {
-      position: absolute;
-      top: 40px;
-      left: 20px;
-      width: 100px;
-      animation: float 5s ease-in-out infinite;
-      opacity: 0.8;
-    }
-
     .right {
-      max-width: 400px;
+      flex: 1;
+      max-width: 500px;
     }
 
     .right h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
+      font-size: 2rem;
       color: #d36421;
+      margin-bottom: 1rem;
     }
 
-    .right p {
+    .right p,
+    .right ul {
       font-size: 1.1rem;
-      margin-bottom: 1.5rem;
       line-height: 1.6;
     }
 
-    .cta {
-      background-color: #f59e0b;
-      color: white;
-      padding: 1rem 1.5rem;
-      border: none;
-      border-radius: 1rem;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s ease, transform 0.2s;
+    .right ul li {
+      margin-bottom: 0.8rem;
     }
-
-    .cta:hover {
-      background: #ec820d;
-      transform: scale(1.05);
-    }
+    /* --------------------------------------------------------------------- */
 
     .features {
       background: #fcefd9;
@@ -236,120 +222,76 @@
       50% { transform: translateY(-12px); }
     }
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0) rotate(-2deg); }
-      50% { transform: translateY(-15px) rotate(2deg); }
-    }
-
-    .fade-in {
-      animation: fadeIn 1.5s ease-out forwards;
-    }
-
-    .slide-up {
-      animation: slideUp 1.5s ease-out forwards;
-    }
-
-    /* Botón Hamburguesa */
-    .menu-toggle {
-      display: block;
-      flex-direction: column;
-      cursor: pointer;
-      justify-content: center;
-      gap: 5px;
-      z-index: 200;
-    }
-
-    .menu-toggle span {
-      height: 3px;
-      width: 25px;
-      background-color: #5c3317;
-      border-radius: 2px;
-      transition: all 0.3s ease;
-    }
-
-    .menu-toggle.open span:nth-child(1) {
-      transform: rotate(45deg) translateY(11px);
-    }
-
-    .menu-toggle.open span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .menu-toggle.open span:nth-child(3) {
-      transform: rotate(-45deg) translateY(-11px);
-    }
-
     /* Responsive */
-   @media (max-width: 768px) {
-  .main-header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1rem;
-  }
+    @media (max-width: 768px) {
+      .main-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1rem;
+      }
 
-  .menu-toggle {
-    display: flex;
-    position: relative;
-    z-index: 200;
-  }
+      .menu-toggle {
+        display: flex;
+        position: relative;
+        z-index: 200;
+      }
 
-  .nav-menu {
-    flex-direction: column;
-    width: 100%;
-    background-color: #fff8ef;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    padding: 1.5rem 2rem;
-    display: none;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-    border-top: 1px solid #e0c8aa;
-  }
+      .nav-menu {
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff8ef;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 1.5rem 2rem;
+        display: none;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        border-top: 1px solid #e0c8aa;
+      }
 
-  .nav-menu.active {
-    display: flex;
-    opacity: 1;
-    transform: translateY(0);
-  }
+      .nav-menu.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+      }
 
-  .nav-menu a {
-    font-size: 1.2rem;
-    padding: 0.5rem 0;
-  }
+      .nav-menu a {
+        font-size: 1.2rem;
+        padding: 0.5rem 0;
+      }
 
-  .dropdown-content {
-    position: static;
-    background: none;
-    border: none;
-    box-shadow: none;
-    opacity: 1;
-    transform: none;
-    padding-left: 1rem;
-    display: none;
-  }
+      .dropdown-content {
+        position: static;
+        background: none;
+        border: none;
+        box-shadow: none;
+        opacity: 1;
+        transform: none;
+        padding-left: 1rem;
+        display: none;
+      }
 
-  .dropdown-content a {
-    font-size: 1.05rem;
-    padding: 0.3rem 0;
-  }
+      .right {
+        max-width: 100%;
+        padding: 1rem;
+      }
 
-  .right {
-    max-width: 100%;
-    padding: 1rem;
-  }
+      .main-content {
+        flex-direction: column;
+        text-align: center;
+      }
 
-  .logo {
-    height: 45px;
-  }
+      .logo {
+        height: 45px;
+      }
 
-  .brand-name {
-    font-size: 1.5rem;
-  }
-}
-
+      .brand-name {
+        font-size: 1.5rem;
+      }
+    }
 
     img {
       max-width: 100%;
@@ -387,60 +329,7 @@
           <div class="dropdown-content">
             <a href="https://cmarzque4.github.io/tr/centre/index.html#">Centre Arc de Sant Martí</a>
           </div>
-        </div>
         <a href="https://cmarzque4.github.io/tr/representants/index.html#">Representants</a>
       </nav>
+
     </header>
-
-<section class="main-content fade-in" style="text-align:center;">
-  <div class="center" style="background:#fff3e6; padding:2rem; border-radius:1rem; box-shadow:0 4px 12px rgba(0,0,0,0.08); max-width:700px; margin:auto;">
-    <h2 style="color:#d36421; font-size:2rem; margin-bottom:1rem;"> Com funciona?</h2>
-    <p style="font-size:1.2rem; color:#5c3317; margin-bottom:1.5rem;">
-      El nostre ninot combina <b>elements visuals</b> i <b>electrònics</b> per crear una experiència interactiva única:
-    </p>
-    <ul style="list-style:none; padding:0; text-align:left; font-size:1.1rem; line-height:1.6;">
-      <li>🔍 <b>Exploració:</b> Quan el nen toca una zona amb sensors, el ninot respon amb <span style="color:#ec820d;">llums</span>, <span style="color:#f59e0b;">sons</span> o <span style="color:#FCC458;">moviments</span>.</li>
-     <br>
-      <li>🤖 <b>Intel·ligent</b> El sistema intern processa aquestes interaccions i adapta la resposta segons el programa configurat.</li>
-      <br>
-      <li>🎯 <b>Aprenentatge personalitzat:</b> Els programes treballen habilitats com la coordinació motriu, l’atenció, el llenguatge o el reconeixement de colors i formes.</li>   
-    </ul>
-  </div>
-</section>
-
-      <section class="features slide-up">
-    <h2>Com els ajuda?</h2>
-    <ul>
-      <li><b>Estimulació sensorial: </b>Els colors, llums i sons desperten la curiositat i mantenen l’atenció</li>
-      <li><b>Motricitat: </b>Manipular les parts del ninot ajuda a millorar el control de moviments i la coordinació </li>
-      <li><b>Aprenentatge actiu: </b>Les respostes interactives del ninot reforcen el concepte de causa-efecte</li>
-      <li><b>Confiança i expressió emocional: </b>El cavall actua com a element amigable i segur, afavorint la comunicació i l’expressió de sentiments</li>
-    </ul>
-  </section>
-  
-  <footer>
-    <p>© 2025 Nacho & Kids – Conectant 💛</p>
-  </footer>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const toggle = document.getElementById('menu-toggle');
-      const menu = document.getElementById('nav-menu');
-
-      toggle.addEventListener('click', () => {
-        menu.classList.toggle('active');
-        toggle.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', menu.classList.contains('active'));
-      });
-    });
-    const dropdowns = document.querySelectorAll('.dropdown');
-    dropdowns.forEach(dropdown => {
-      const link = dropdown.querySelector('a');
-      link.addEventListener('click', (event) => {
-        event.preventDefault();
-        const content = dropdown.querySelector('.dropdown-content');
-        content.classList.toggle('active');
-      });
-    });
-  </script>
-</body>
-</html>
