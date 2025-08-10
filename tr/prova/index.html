@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Peluche Amigo</title>
+  <title>N&K</title>
   <link rel="icon" type="image/png" href="ca.png" />
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
@@ -146,60 +146,47 @@
       overflow: hidden;
     }
 
+    /* ----------- ESTILO MEJORADO PARA LA SECCIÓN DE DESCRIPCIÓN ----------- */
     .main-content {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
       align-items: center;
+      gap: 3rem;
       padding: 2rem;
-      gap: 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #fff3e6;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
 
     .left img.bear {
-      width: 220px;
+      width: 250px;
+      height: auto;
       animation: bounce 3s infinite ease-in-out;
     }
 
-    .kite {
-      position: absolute;
-      top: 40px;
-      left: 20px;
-      width: 100px;
-      animation: float 5s ease-in-out infinite;
-      opacity: 0.8;
-    }
-
     .right {
-      max-width: 400px;
+      flex: 1;
+      max-width: 500px;
     }
 
     .right h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
+      font-size: 2rem;
       color: #d36421;
+      margin-bottom: 1rem;
     }
 
-    .right p {
+    .right p,
+    .right ul {
       font-size: 1.1rem;
-      margin-bottom: 1.5rem;
       line-height: 1.6;
     }
 
-    .cta {
-      background-color: #f59e0b;
-      color: white;
-      padding: 1rem 1.5rem;
-      border: none;
-      border-radius: 1rem;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s ease, transform 0.2s;
+    .right ul li {
+      margin-bottom: 0.8rem;
     }
-
-    .cta:hover {
-      background: #ec820d;
-      transform: scale(1.05);
-    }
+    /* --------------------------------------------------------------------- */
 
     .features {
       background: #fcefd9;
@@ -235,120 +222,76 @@
       50% { transform: translateY(-12px); }
     }
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0) rotate(-2deg); }
-      50% { transform: translateY(-15px) rotate(2deg); }
-    }
-
-    .fade-in {
-      animation: fadeIn 1.5s ease-out forwards;
-    }
-
-    .slide-up {
-      animation: slideUp 1.5s ease-out forwards;
-    }
-
-    /* Botón Hamburguesa */
-    .menu-toggle {
-      display: block;
-      flex-direction: column;
-      cursor: pointer;
-      justify-content: center;
-      gap: 5px;
-      z-index: 200;
-    }
-
-    .menu-toggle span {
-      height: 3px;
-      width: 25px;
-      background-color: #5c3317;
-      border-radius: 2px;
-      transition: all 0.3s ease;
-    }
-
-    .menu-toggle.open span:nth-child(1) {
-      transform: rotate(45deg) translateY(8px);
-    }
-
-    .menu-toggle.open span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .menu-toggle.open span:nth-child(3) {
-      transform: rotate(-45deg) translateY(-8px);
-    }
-
     /* Responsive */
-   @media (max-width: 768px) {
-  .main-header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1rem;
-  }
+    @media (max-width: 768px) {
+      .main-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1rem;
+      }
 
-  .menu-toggle {
-    display: flex;
-    position: relative;
-    z-index: 200;
-  }
+      .menu-toggle {
+        display: flex;
+        position: relative;
+        z-index: 200;
+      }
 
-  .nav-menu {
-    flex-direction: column;
-    width: 100%;
-    background-color: #fff8ef;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    padding: 1.5rem 2rem;
-    display: none;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-    border-top: 1px solid #e0c8aa;
-  }
+      .nav-menu {
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff8ef;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 1.5rem 2rem;
+        display: none;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        border-top: 1px solid #e0c8aa;
+      }
 
-  .nav-menu.active {
-    display: flex;
-    opacity: 1;
-    transform: translateY(0);
-  }
+      .nav-menu.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+      }
 
-  .nav-menu a {
-    font-size: 1.2rem;
-    padding: 0.5rem 0;
-  }
+      .nav-menu a {
+        font-size: 1.2rem;
+        padding: 0.5rem 0;
+      }
 
-  .dropdown-content {
-    position: static;
-    background: none;
-    border: none;
-    box-shadow: none;
-    opacity: 1;
-    transform: none;
-    padding-left: 1rem;
-    display: none;
-  }
+      .dropdown-content {
+        position: static;
+        background: none;
+        border: none;
+        box-shadow: none;
+        opacity: 1;
+        transform: none;
+        padding-left: 1rem;
+        display: none;
+      }
 
-  .dropdown-content a {
-    font-size: 1.05rem;
-    padding: 0.3rem 0;
-  }
+      .right {
+        max-width: 100%;
+        padding: 1rem;
+      }
 
-  .right {
-    max-width: 100%;
-    padding: 1rem;
-  }
+      .main-content {
+        flex-direction: column;
+        text-align: center;
+      }
 
-  .logo {
-    height: 45px;
-  }
+      .logo {
+        height: 45px;
+      }
 
-  .brand-name {
-    font-size: 1.5rem;
-  }
-}
-
+      .brand-name {
+        font-size: 1.5rem;
+      }
+    }
 
     img {
       max-width: 100%;
@@ -361,10 +304,8 @@
   <div class="hero-bg">
     <header class="main-header">
       <div class="header-left">
-        <a href="#">
           <img src="ca.png" alt="Logo" class="logo" />
-        </a>
-        <a href="#" class="brand-name">Peluche Amigo</a>
+        <a href="#" class="brand-name">Nacho & Kids</a>
       </div>
 
       <div class="menu-toggle" id="menu-toggle" aria-label="Menú móvil" aria-expanded="false">
@@ -375,72 +316,7 @@
 
       <nav class="nav-menu" id="nav-menu">
         <a href="#">Inici</a>
+        <a href="#">Desenvolupament</a>
         <div class="dropdown">
           <a href="#">Característiques ▾</a>
-          <div class="dropdown-content">
-            <a href="#">Descripció</a>
-            <a href="#">Com funciona?</a>
-            <a href="#">Desenvolupament</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <a href="#">    Estudi ▾    </a>
-          <div class="dropdown-content">
-            <a href="#">Centre Arc de Sant Martí</a>
-          </div>
-        </div>
-        <a href="#">Representants</a>
-      </nav>
-    </header>
-
-    <section class="main-content fade-in">
-      <div class="left">
-        <img src="peluche.png" alt="Peluche Amigo" class="bear" />
-        <img src="kite.png" class="kite" alt="Cometa colorida" />
-      </div>
-      <div class="right">
-        <h2>Un amigo que entiende</h2>
-        <p>
-          Nuestro peluche está diseñado para ayudar a niños con dificultades del habla o del desarrollo a comunicarse de forma más fácil y divertida.
-        </p>
-        <button class="cta">Conoce más</button>
-      </div>
-    </section>
-  </div>
-
-  <section class="features slide-up">
-    <h2>¿Qué hace especial a Peluche Amigo?</h2>
-    <ul>
-      <li>🎤 Reproduce frases clave para expresarse</li>
-      <li>🧠 Estimula el aprendizaje emocional</li>
-      <li>💡 Fácil de usar por niños y adultos</li>
-    </ul>
-  </section>
-
-  <footer>
-    <p>© 2025 Peluche Amigo – Conectando corazones 💛</p>
-  </footer>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const toggle = document.getElementById('menu-toggle');
-      const menu = document.getElementById('nav-menu');
-
-      toggle.addEventListener('click', () => {
-        menu.classList.toggle('active');
-        toggle.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', menu.classList.contains('active'));
-      });
-    });
-    const dropdowns = document.querySelectorAll('.dropdown');
-    dropdowns.forEach(dropdown => {
-      const link = dropdown.querySelector('a');
-      link.addEventListener('click', (event) => {
-        event.preventDefault();
-        const content = dropdown.querySelector('.dropdown-content');
-        content.classList.toggle('active');
-      });
-    });
-  </script>
-</body>
-</html>
+          <div class="dro
