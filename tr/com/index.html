@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>N&K</title>
-<link rel="icon" type="image/png" href="ca.png" />
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>N&K</title>
+  <link rel="icon" type="image/png" href="ca.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     * {
       box-sizing: border-box;
@@ -154,12 +155,6 @@
       gap: 2rem;
     }
 
-     .main-content ul{
-      list-style: none;
-      font-size: 1.1rem;
-      padding-left: 0;
-     }
-       
     .left img.bear {
       width: 220px;
       animation: bounce 3s infinite ease-in-out;
@@ -174,17 +169,17 @@
       opacity: 0.8;
     }
 
-    .center {
-      max-width: 500px;
+    .right {
+      max-width: 400px;
     }
 
-    .center h2 {
+    .right h2 {
       font-size: 1.8rem;
       margin-bottom: 1rem;
       color: #d36421;
     }
 
-    .center p {
+    .right p {
       font-size: 1.1rem;
       margin-bottom: 1.5rem;
       line-height: 1.6;
@@ -340,7 +335,7 @@
     padding: 0.3rem 0;
   }
 
-  .center{
+  .right {
     max-width: 100%;
     padding: 1rem;
   }
@@ -360,7 +355,8 @@
       height: auto;
     }
   </style>
-  <header>
+</head>
+
 <body>
   <div class="hero-bg">
     <header class="main-header">
@@ -368,7 +364,6 @@
           <img src="ca.png" alt="Logo" class="logo" />
         <a href="#" class="brand-name">Nacho & Kids</a>
       </div>
-  </div>
 
       <div class="menu-toggle" id="menu-toggle" aria-label="Menú móvil" aria-expanded="false">
         <span></span>
@@ -391,9 +386,9 @@
           <div class="dropdown-content">
             <a href="https://cmarzque4.github.io/tr/centre/index.html#">Centre Arc de Sant Martí</a>
           </div>
+        </div>
         <a href="https://cmarzque4.github.io/tr/representants/index.html#">Representants</a>
       </nav>
-
     </header>
 
     <section class="main-content fade-in">
