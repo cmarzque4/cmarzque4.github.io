@@ -146,47 +146,57 @@
       overflow: hidden;
     }
 
-    /* ----------- ESTILO MEJORADO PARA LA SECCIÓN DE DESCRIPCIÓN ----------- */
     .main-content {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 3rem;
       padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-      background-color: #fff3e6;
-      border-radius: 20px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      gap: 2rem;
     }
 
-    .left img.bear {
-      width: 250px;
-      height: auto;
-      animation: bounce 3s infinite ease-in-out;
+    .main-content h2{
+    color: #a0522d;      
     }
+
+    .main-content ul {
+      list-style: none;
+      font-size: 1.1rem;
+      padding-left: 0;
+    }
+
 
     .right {
-      flex: 1;
-      max-width: 500px;
+      max-width: 400px;
     }
 
     .right h2 {
-      font-size: 2rem;
-      color: #d36421;
+      font-size: 1.8rem;
       margin-bottom: 1rem;
+      color: #d36421;
     }
 
-    .right p,
-    .right ul {
+    .right p {
       font-size: 1.1rem;
+      margin-bottom: 1.5rem;
       line-height: 1.6;
     }
 
-    .right ul li {
-      margin-bottom: 0.8rem;
+    .cta {
+      background-color: #f59e0b;
+      color: white;
+      padding: 1rem 1.5rem;
+      border: none;
+      border-radius: 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s;
     }
-    /* --------------------------------------------------------------------- */
+
+    .cta:hover {
+      background: #ec820d;
+      transform: scale(1.05);
+    }
 
     .features {
       background: #fcefd9;
@@ -222,76 +232,120 @@
       50% { transform: translateY(-12px); }
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      .main-header {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 1rem;
-      }
-
-      .menu-toggle {
-        display: flex;
-        position: relative;
-        z-index: 200;
-      }
-
-      .nav-menu {
-        flex-direction: column;
-        width: 100%;
-        background-color: #fff8ef;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        padding: 1.5rem 2rem;
-        display: none;
-        opacity: 0;
-        transform: translateY(-10px);
-        transition: all 0.3s ease;
-        border-top: 1px solid #e0c8aa;
-      }
-
-      .nav-menu.active {
-        display: flex;
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .nav-menu a {
-        font-size: 1.2rem;
-        padding: 0.5rem 0;
-      }
-
-      .dropdown-content {
-        position: static;
-        background: none;
-        border: none;
-        box-shadow: none;
-        opacity: 1;
-        transform: none;
-        padding-left: 1rem;
-        display: none;
-      }
-
-      .right {
-        max-width: 100%;
-        padding: 1rem;
-      }
-
-      .main-content {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .logo {
-        height: 45px;
-      }
-
-      .brand-name {
-        font-size: 1.5rem;
-      }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(-2deg); }
+      50% { transform: translateY(-15px) rotate(2deg); }
     }
+
+    .fade-in {
+      animation: fadeIn 1.5s ease-out forwards;
+    }
+
+    .slide-up {
+      animation: slideUp 1.5s ease-out forwards;
+    }
+
+    /* Botón Hamburguesa */
+    .menu-toggle {
+      display: block;
+      flex-direction: column;
+      cursor: pointer;
+      justify-content: center;
+      gap: 5px;
+      z-index: 200;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background-color: #5c3317;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .menu-toggle.open span:nth-child(1) {
+      transform: rotate(45deg) translateY(11px);
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+      transform: rotate(-45deg) translateY(-11px);
+    }
+
+    /* Responsive */
+   @media (max-width: 768px) {
+  .main-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+    position: relative;
+    z-index: 200;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff8ef;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 1.5rem 2rem;
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    border-top: 1px solid #e0c8aa;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-menu a {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+  }
+
+  .dropdown-content {
+    position: static;
+    background: none;
+    border: none;
+    box-shadow: none;
+    opacity: 1;
+    transform: none;
+    padding-left: 1rem;
+    display: none;
+  }
+
+  .dropdown-content a {
+    font-size: 1.05rem;
+    padding: 0.3rem 0;
+  }
+
+  .right {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .logo {
+    height: 45px;
+  }
+
+  .brand-name {
+    font-size: 1.5rem;
+  }
+}
+
 
     img {
       max-width: 100%;
@@ -329,6 +383,7 @@
           <div class="dropdown-content">
             <a href="https://cmarzque4.github.io/tr/centre/index.html#">Centre Arc de Sant Martí</a>
           </div>
+        </div>
         <a href="https://cmarzque4.github.io/tr/representants/index.html#">Representants</a>
       </nav>
 
