@@ -354,6 +354,54 @@
       max-width: 100%;
       height: auto;
     }
+
+
+/* 📌 CSS: Estilos del cuadro flotante */
+.floating-box {
+  position: fixed;
+  right: 25px;   /* distancia desde el borde derecho */
+  bottom: 25px;  /* distancia desde el borde inferior */
+  width: 300px;
+  padding: 15px;
+  background: #FFE9CC;
+  border: 2px solid #ffa726;
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+  font-family: 'Quicksand', sans-serif;
+  z-index: 1000; /* para que quede por encima */
+}
+
+.floating-box h3 {
+  margin-top: 0;
+  font-size: 25px;
+  color: #e65100;
+}
+
+.floating-box p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.floating-box button {
+  background: #ffa726;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.floating-box button:hover {
+  background: #fb8c00;
+}
+
+    button a {
+  color: white;
+  text-decoration: none; /* 👈 quita el subrayado */
+}
+
+
+    
   </style>
 </head>
 
@@ -402,10 +450,17 @@
         <p>
           Lolo & Kids està disenyat per ajudar a persones amb dificultats de comunicació o aprenentatge d'una forma més fàcil i divertida.
         </p>
-        <a href="https://cmarzque4.github.io/tr/descrip/index.html#" button class="cta">Coneix més</button></a>
+         <a href="https://cmarzque4.github.io/tr/descrip/index.html#" button class="cta">Coneix més</a></button>
       </div>
     </section>
   </div>
+  
+<!-- 📌 HTML: Cuadro flotante -->
+<div class="floating-box">
+  <h3>¿Qui som?</h3>
+  <p>Lolo & Kids no és només una marca, som persones.</p>
+  <button><a href="https://cmarzque4.github.io/tr/representants/index.html#">Coneix-nos!</a></button>
+</div>
 
   <section class="features slide-up">
     <h2>Què el fa especial?</h2>
@@ -415,7 +470,9 @@
       <li>💡 Fàcil d'utilitzar per a nens i grans</li>
     </ul>
     <br>
-   <a href="https://cmarzque4.github.io/tr/com/index.html#" button class="cta">Més característiques</button></a>
+    <br>
+   <a href="https://cmarzque4.github.io/tr/com/index.html#" button class="cta">Més característiques</a></button>
+    <br>
   </section>
 
   <footer>
