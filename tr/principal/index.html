@@ -396,10 +396,85 @@
 }
 
     button a {
+  backgraund-color: #ff8C00;
   color: white;
   text-decoration: none; /* 👈 quita el subrayado */
 }
 
+/* 🔽 Estilos solo para móviles */
+@media (max-width: 768px) {
+  .floating-box {
+    display: none !important; /* Ocultar cuadro original en móvil */
+  }
+
+  .floating-tab,
+  .floating-content {
+    display: block;
+    padding-bottom:2px;
+  }
+
+  .floating-tab {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    background: #ffa726;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 25px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+    cursor: pointer;
+    z-index: 1001;
+    font-size: 16px;
+  }
+
+  .floating-content {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    right: 15px;
+    bottom: 60px;
+    width: 280px;
+    background: #FFE9CC;
+    border: 2px solid #ffa726;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+    z-index: 1000;
+  }
+
+  .floating-content.active {
+    display: block;
+  }
+}
+
+/* Botón dentro del cuadro flotante móvil */
+@media (max-width: 768px) {
+  .floating-content button {
+    background: #ffa726;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .floating-content button a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .floating-content button:hover {
+    background: #fb8c00; /* tono más oscuro al pasar el dedo */
+  }
+}
+
+    
+/* 🔽 En escritorio, ocultamos la pestaña */
+@media (min-width: 769px) {
+  .floating-tab,
+  .floating-content {
+    display: none !important;
+  }
+}
 
     
   </style>
@@ -462,6 +537,16 @@
   <button><a href="https://cmarzque4.github.io/tr/representants/index.html#">Coneix-nos!</a></button>
 </div>
 
+  <!-- 🔽 Pestaña flotante solo para móviles -->
+<div class="floating-tab" id="floating-tab">¿Qui som?</div>
+
+<div class="floating-content" id="floating-content">
+  <h3>¿Qui som?</h3>
+  <p>Lolo & Kids no és només una marca, som persones.</p>
+  <button><a href="https://cmarzque4.github.io/tr/representants/index.html#">Coneix-nos!</a></button>
+</div>
+
+
   <section class="features slide-up">
     <h2>Què el fa especial?</h2>
     <ul>
@@ -499,6 +584,18 @@
         content.classList.toggle('active');
       });
     });
+
+// ✅ Lógica para la pestaña flotante en móviles
+const tab = document.getElementById('floating-tab');
+const content = document.getElementById('floating-content');
+
+if (tab) {
+  tab.addEventListener('click', () => {
+    content.classList.toggle('active');
+  });
+}
+
+    
   </script>
 </body>
 </html>
