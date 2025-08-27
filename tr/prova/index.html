@@ -403,7 +403,12 @@
 /* 🔽 Estilos solo para móviles */
 @media (max-width: 768px) {
   .floating-box {
-    display: none; /* Oculta el cuadro en móviles */
+    display: none !important; /* Ocultar cuadro original en móvil */
+  }
+
+  .floating-tab,
+  .floating-content {
+    display: block;
   }
 
   .floating-tab {
@@ -421,7 +426,7 @@
   }
 
   .floating-content {
-    display: none;
+    display: none; /* Oculto por defecto */
     position: fixed;
     right: 15px;
     bottom: 60px;
@@ -436,6 +441,14 @@
 
   .floating-content.active {
     display: block;
+  }
+}
+
+/* 🔽 En escritorio, ocultamos la pestaña */
+@media (min-width: 769px) {
+  .floating-tab,
+  .floating-content {
+    display: none !important;
   }
 }
 
