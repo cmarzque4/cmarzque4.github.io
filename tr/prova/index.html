@@ -446,6 +446,28 @@
   }
 }
 
+/* Botón dentro del cuadro flotante móvil */
+@media (max-width: 768px) {
+  .floating-content button {
+    background: #ffa726;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .floating-content button a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .floating-content button:hover {
+    background: #fb8c00; /* tono más oscuro al pasar el dedo */
+  }
+}
+
+    
 /* 🔽 En escritorio, ocultamos la pestaña */
 @media (min-width: 769px) {
   .floating-tab,
