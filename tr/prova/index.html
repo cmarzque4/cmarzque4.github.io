@@ -183,4 +183,188 @@
 
     .cta:hover {
       background: #ec820d;
-      t
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: #fde9ca;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    /* Caja de texto explicativa */
+    .man {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: left;
+    }
+
+    /* Botón Hamburguesa */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      justify-content: center;
+      gap: 5px;
+      z-index: 200;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background-color: #5c3317;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .menu-toggle.open span:nth-child(1) {
+      transform: rotate(45deg) translateY(8px);
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+      transform: rotate(-45deg) translateY(-8px);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+
+      .nav-menu {
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff8ef;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 1rem 1.5rem;
+        display: none;
+        border-top: 1px solid #e0c8aa;
+      }
+
+      .nav-menu.active {
+        display: flex;
+      }
+
+      .nav-menu a {
+        font-size: 1.1rem;
+        padding: 0.5rem 0;
+      }
+
+      .dropdown-content {
+        position: static;
+        background: none;
+        border: none;
+        box-shadow: none;
+        padding-left: 1rem;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero-bg">
+    <header class="main-header">
+      <div class="header-left">
+        <img src="lo.png" alt="Logo" class="logo" />
+        <a href="#" class="brand-name">Lolo & Kids</a>
+      </div>
+
+      <div class="menu-toggle" id="menu-toggle" aria-label="Menú móvil" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </div>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#">Inici</a>
+        <a href="#">Desenvolupament</a>
+        <div class="dropdown">
+          <a href="#">Característiques ▾</a>
+          <div class="dropdown-content">
+            <a href="#">Descripció</a>
+            <a href="#">Com funciona?</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#">Estudi ▾</a>
+          <div class="dropdown-content">
+            <a href="#">Centre Arc de Sant Martí</a>
+          </div>
+        </div>
+        <a href="#">Representants</a>
+      </nav>
+    </header>
+
+    <section class="features container">
+      <h2>Selecció del projecte</h2>
+      <p>
+        Amb l'ajuda de l'Institut Pompeu Fabra i el nostre tutor de TR <i>Cristobal Peralbo</i> vam ser coneixedors de les mascotes intel·ligents...
+      </p>
+    </section>
+
+    <section class="main-content container">
+      <h2>Plantejament del Treball</h2>
+      <ul>
+        <li><b>Es va fer un plantejament del treball a través de:</b>
+          <ul>
+            <li>Croquis inicials del ninot</li>
+            <li>Creació de diagrames de flux</li>
+            <li>Cerca dels materials necessaris</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section class="features container">
+      <h2>Inici del Treball</h2>
+      <p>Inici del treball de programació...</p>
+      <div class="man">
+        <p><b><u>MIT App Inventor:</u></b> Plataforma de programació visual per crear apps Android/iOS.</p>
+      </div>
+      <div class="man">
+        <p><b><u>STEAMakersBlocks:</u></b> Plataforma educativa de programació visual en línia.</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 Lolo & Kids – Connectant 💛</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('nav-menu');
+
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+        toggle.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', menu.classList.contains('active'));
+      });
+
+      const dropdowns = document.querySelectorAll('.dropdown > a');
+      dropdowns.forEach(link => {
+        link.addEventListener('click', (e) => {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            link.nextElementSibling.classList.toggle('active');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
