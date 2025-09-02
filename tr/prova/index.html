@@ -18,15 +18,22 @@
       background: #fff8ef;
       color: #4a3b2c;
       overflow-x: hidden;
+      line-height: 1.6;
     }
 
     h1, h2 {
       font-weight: 700;
     }
 
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
     header.main-header {
       background-color: #ffe4b5;
-      padding: 1.5rem 2rem;
+      padding: 1rem 1.5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -43,7 +50,7 @@
     }
 
     .logo {
-      height: 60px;
+      height: 55px;
       transition: transform 0.3s ease;
     }
 
@@ -52,7 +59,7 @@
     }
 
     .brand-name {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       font-weight: 600;
       color: #5c3317;
       text-decoration: none;
@@ -63,17 +70,17 @@
       color: #d36421;
     }
 
-    .nav-menu {
+    nav.nav-menu {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 1.5rem;
     }
 
     .nav-menu a {
       text-decoration: none;
       color: #5c3317;
       font-weight: 500;
-      font-size: 1.1rem;
+      font-size: 1rem;
       position: relative;
       transition: color 0.3s ease;
     }
@@ -113,24 +120,19 @@
       box-shadow: 2px 8px 16px rgba(0, 0, 0, 0.1);
       z-index: 100;
       min-width: 180px;
-      opacity: 0;
-      transform: translateY(10px);
-      transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
     .dropdown-content.active {
       display: block;
-      opacity: 1;
-      transform: translateY(0);
     }
 
     .dropdown-content a {
       display: block;
-      padding: 10px 14px;
+      padding: 8px 12px;
       margin: 4px 0;
       color: #5c3317;
       text-decoration: none;
-      font-size: 1.05rem;
+      font-size: 1rem;
       border-radius: 5px;
       transition: background-color 0.3s ease;
     }
@@ -141,56 +143,39 @@
 
     .hero-bg {
       background: linear-gradient(#fff2d9, #ffe0b2);
-      padding-bottom: 4rem;
-      position: relative;
-      overflow: hidden;
+      padding-bottom: 3rem;
     }
 
-    .main-content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
-      gap: 2rem;
+    section {
+      padding: 3rem 0;
     }
 
-    .left img.bear {
-      width: 220px;
-      animation: bounce 3s infinite ease-in-out;
+    .main-content, .features {
+      text-align: center;
     }
 
-    .kite {
-      position: absolute;
-      top: 40px;
-      left: 20px;
-      width: 100px;
-      animation: float 5s ease-in-out infinite;
-      opacity: 0.8;
-    }
-
-    .right {
-      max-width: 400px;
-    }
-
-    .right h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      color: #d36421;
-    }
-
-    .right p {
-      font-size: 1.1rem;
+    .main-content h2, .features h2 {
+      color: #a0522d;
       margin-bottom: 1.5rem;
-      line-height: 1.6;
+      font-size: 1.6rem;
+    }
+
+    .main-content ul, .features ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .main-content li, .features li {
+      margin: 0.8rem 0;
+      font-size: 1.05rem;
     }
 
     .cta {
       background-color: #f59e0b;
       color: white;
-      padding: 1rem 1.5rem;
+      padding: 0.8rem 1.2rem;
       border: none;
-      border-radius: 1rem;
+      border-radius: 0.8rem;
       font-size: 1rem;
       cursor: pointer;
       transition: background 0.3s ease, transform 0.2s;
@@ -198,404 +183,4 @@
 
     .cta:hover {
       background: #ec820d;
-      transform: scale(1.05);
-    }
-
-    .features {
-      background: #fcefd9;
-      padding: 3rem 2rem;
-      text-align: center;
-    }
-
-    .features h2 {
-      color: #a0522d;
-      margin-bottom: 2rem;
-      font-size: 1.6rem;
-    }
-
-    .features ul {
-      list-style: none;
-      font-size: 1.1rem;
-      padding-left: 0;
-    }
-
-    .features li {
-      margin: 1rem 0;
-    }
-
-    footer {
-      background: #fde9ca;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-12px); }
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0) rotate(-2deg); }
-      50% { transform: translateY(-15px) rotate(2deg); }
-    }
-
-    .fade-in {
-      animation: fadeIn 1.5s ease-out forwards;
-    }
-
-    .slide-up {
-      animation: slideUp 1.5s ease-out forwards;
-    }
-
-    /* Botón Hamburguesa */
-    .menu-toggle {
-      display: block;
-      flex-direction: column;
-      cursor: pointer;
-      justify-content: center;
-      gap: 5px;
-      z-index: 200;
-    }
-
-    .menu-toggle span {
-      height: 3px;
-      width: 25px;
-      background-color: #5c3317;
-      border-radius: 2px;
-      transition: all 0.3s ease;
-    }
-
-    .menu-toggle.open span:nth-child(1) {
-      transform: rotate(45deg) translateY(11px);
-    }
-
-    .menu-toggle.open span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .menu-toggle.open span:nth-child(3) {
-      transform: rotate(-45deg) translateY(-11px);
-    }
-
-    /* Responsive */
-   @media (max-width: 768px) {
-  .main-header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1rem;
-  }
-
-  .menu-toggle {
-    display: flex;
-    position: relative;
-    z-index: 200;
-  }
-
-  .nav-menu {
-    flex-direction: column;
-    width: 100%;
-    background-color: #fff8ef;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    padding: 1.5rem 2rem;
-    display: none;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-    border-top: 1px solid #e0c8aa;
-  }
-
-  .nav-menu.active {
-    display: flex;
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .nav-menu a {
-    font-size: 1.2rem;
-    padding: 0.5rem 0;
-  }
-
-  .dropdown-content {
-    position: static;
-    background: none;
-    border: none;
-    box-shadow: none;
-    opacity: 1;
-    transform: none;
-    padding-left: 1rem;
-    display: none;
-  }
-
-  .dropdown-content a {
-    font-size: 1.05rem;
-    padding: 0.3rem 0;
-  }
-
-  .right {
-    max-width: 100%;
-    padding: 1rem;
-  }
-
-  .logo {
-    height: 45px;
-  }
-
-  .brand-name {
-    font-size: 1.5rem;
-  }
-}
-
-
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-
-
-/* 📌 CSS: Estilos del cuadro flotante */
-.floating-box {
-  position: fixed;
-  right: 25px;   /* distancia desde el borde derecho */
-  bottom: 25px;  /* distancia desde el borde inferior */
-  width: 300px;
-  padding: 15px;
-  background: #FFE9CC;
-  border: 2px solid #ffa726;
-  border-radius: 15px;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
-  font-family: 'Quicksand', sans-serif;
-  z-index: 1000; /* para que quede por encima */
-}
-
-.floating-box h3 {
-  margin-top: 0;
-  font-size: 25px;
-  color: #e65100;
-}
-
-.floating-box p {
-  font-size: 16px;
-  margin: 10px 0;
-}
-
-.floating-box button {
-  background: #ffa726;
-  border: none;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.floating-box button:hover {
-  background: #fb8c00;
-}
-
-    button a {
-  backgraund-color: #ff8C00;
-  color: white;
-  text-decoration: none; /* 👈 quita el subrayado */
-}
-
-/* 🔽 Estilos solo para móviles */
-@media (max-width: 768px) {
-  .floating-box {
-    display: none !important; /* Ocultar cuadro original en móvil */
-  }
-
-  .floating-tab,
-  .floating-content {
-    display: block;
-    padding-bottom:2px;
-  }
-
-  .floating-tab {
-    position: fixed;
-    right: 15px;
-    bottom: 15px;
-    background: #ffa726;
-    color: white;
-    padding: 12px 18px;
-    border-radius: 25px;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
-    cursor: pointer;
-    z-index: 1001;
-    font-size: 16px;
-  }
-
-  .floating-content {
-    display: none; /* Oculto por defecto */
-    position: fixed;
-    right: 15px;
-    bottom: 60px;
-    width: 280px;
-    background: #FFE9CC;
-    border: 2px solid #ffa726;
-    border-radius: 15px;
-    padding: 15px;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
-    z-index: 1000;
-  }
-
-  .floating-content.active {
-    display: block;
-  }
-}
-
-/* Botón dentro del cuadro flotante móvil */
-@media (max-width: 768px) {
-  .floating-content button {
-    background: #ffa726;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-
-  .floating-content button a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-  }
-
-  .floating-content button:hover {
-    background: #fb8c00; /* tono más oscuro al pasar el dedo */
-  }
-}
-
-    
-/* 🔽 En escritorio, ocultamos la pestaña */
-@media (min-width: 769px) {
-  .floating-tab,
-  .floating-content {
-    display: none !important;
-  }
-}
-
-    
-  </style>
-</head>
-
-<body>
-  <div class="hero-bg">
-    <header class="main-header">
-      <div class="header-left">
-          <img src="lo.png" alt="Logo" class="logo" />
-        <a href="#" class="brand-name">Lolo & Kids</a>
-      </div>
-
-      <div class="menu-toggle" id="menu-toggle" aria-label="Menú móvil" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <nav class="nav-menu" id="nav-menu">
-        <a href="https://cmarzque4.github.io/tr/principal/index.html#">Inici</a>
-         <a href="https://cmarzque4.github.io/tr/desenvolupament/index.html#">Desenvolupament</a>
-        <div class="dropdown">
-          <a href="https://cmarzque4.github.io/tr/caracteristic/index.html#">Característiques ▾</a>
-          <div class="dropdown-content">
-            <a href="https://cmarzque4.github.io/tr/descrip/index.html#">Descripció</a>
-            <a href="https://cmarzque4.github.io/tr/com/index.html#">Com funciona?</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <a href="https://cmarzque4.github.io/tr/estudi/index.html#">Estudi ▾</a>
-          <div class="dropdown-content">
-            <a href="https://cmarzque4.github.io/tr/centre/index.html#">Centre Arc de Sant Martí</a>
-          </div>
-        </div>
-        <a href="https://cmarzque4.github.io/tr/representants/index.html#">Representants</a>
-      </nav>
-
-    </header>
-
-    <section class="main-content fade-in">
-      <div class="left">
-        <img src="peluche.png" alt="Peluche Amigo" class="bear" />
-        <img src="kite.png" class="kite" alt="Cometa colorida" />
-      </div>
-      <div class="right">
-        <h2>Un amic que compren</h2>
-        <p>
-          Lolo & Kids està disenyat per ajudar a persones amb dificultats de comunicació o aprenentatge d'una forma més fàcil i divertida.
-        </p>
-         <a href="https://cmarzque4.github.io/tr/descrip/index.html#" button class="cta">Coneix més</a></button>
-      </div>
-    </section>
-  </div>
-  
-<!-- 📌 HTML: Cuadro flotante -->
-<div class="floating-box">
-  <h3>¿Qui som?</h3>
-  <p>Lolo & Kids no és només una marca, som persones.</p>
-  <button><a href="https://cmarzque4.github.io/tr/representants/index.html#">Coneix-nos!</a></button>
-</div>
-
-  <!-- 🔽 Pestaña flotante solo para móviles -->
-<div class="floating-tab" id="floating-tab">¿Qui som?</div>
-
-<div class="floating-content" id="floating-content">
-  <h3>¿Qui som?</h3>
-  <p>Lolo & Kids no és només una marca, som persones.</p>
-  <button><a href="https://cmarzque4.github.io/tr/representants/index.html#">Coneix-nos!</a></button>
-</div>
-
-
-  <section class="features slide-up">
-    <h2>Què el fa especial?</h2>
-    <ul>
-      <li>🎤 Reprodeix frases clau per a la bona comunicació</li>
-      <li>🧠 Estimula l'aprenentatge emocional</li>
-      <li>💡 Fàcil d'utilitzar per a nens i grans</li>
-    </ul>
-    <br>
-    <br>
-   <a href="https://cmarzque4.github.io/tr/com/index.html#" button class="cta">Més característiques</a></button>
-    <br>
-  </section>
-
-  <footer>
-    <p>© 2025 Lolo & Kids – Conectant 💛</p>
-  </footer>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const toggle = document.getElementById('menu-toggle');
-      const menu = document.getElementById('nav-menu');
-
-      toggle.addEventListener('click', () => {
-        menu.classList.toggle('active');
-        toggle.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', menu.classList.contains('active'));
-      });
-    });
-    const dropdowns = document.querySelectorAll('.dropdown');
-    dropdowns.forEach(dropdown => {
-      const link = dropdown.querySelector('a');
-      link.addEventListener('click', (event) => {
-        event.preventDefault();
-        const content = dropdown.querySelector('.dropdown-content');
-        content.classList.toggle('active');
-      });
-    });
-
-// ✅ Lógica para la pestaña flotante en móviles
-const tab = document.getElementById('floating-tab');
-const content = document.getElementById('floating-content');
-
-if (tab) {
-  tab.addEventListener('click', () => {
-    content.classList.toggle('active');
-  });
-}
-
-    
-  </script>
-</body>
-</html>
+      t
