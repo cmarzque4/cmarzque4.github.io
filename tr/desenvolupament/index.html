@@ -149,33 +149,43 @@
     .main-content {
       display: flex;
       flex-wrap: wrap;
+      background: #ffe2b5;
       justify-content: center;
       align-items: center;
+      align-text:center;
       padding: 2rem;
       gap: 2rem;
     }
 
-    .main-content p{
-    font-size: 1.2rem;
-    }
-
-    .main-content h2 {
+    .main-content h2{
       color: #a0522d;
       margin-bottom: 2rem;
       font-size: 1.6rem;
-      text-align: center;
+      align-text:center;
     }
 
-    .main-content ul {
-      list-style: none;
+    .left img.bear {
+      width: 220px;
+      animation: bounce 3s infinite ease-in-out;
+    }
+
+  
+
+    .right {
+      max-width: 400px;
+    }
+
+    .right h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #d36421;
+    }
+
+    .right p {
       font-size: 1.1rem;
-      padding-left: 0;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
     }
-
-    .main-content li {
-      margin: 1rem 0;
-    }
-
 
     .cta {
       background-color: #f59e0b;
@@ -195,12 +205,8 @@
 
     .features {
       background: #fcefd9;
-      padding: 3rem 6rem;
+      padding: 3rem 2rem;
       text-align: center;
-    }
-
-    .features p{
-      font-size: 1.1rem;
     }
 
     .features h2 {
@@ -225,19 +231,6 @@
       padding: 1rem;
       font-size: 0.9rem;
     }
-
-        man {
-      max-width: 960px;
-      margin: 2.5rem auto;
-      padding: 2rem;
-      background: var(--white);
-      border-radius: 14px;
-      box-shadow: 0 8px 20px var(--shadow);
-
-          man p, ul, li{
-           text-align: left; 
-           padding-left: 2rem;
-          }
 
     @keyframes bounce {
       0%, 100% { transform: translateY(0px); }
@@ -323,7 +316,6 @@
     transform: translateY(0);
   }
 
-
   .nav-menu a {
     font-size: 1.2rem;
     padding: 0.5rem 0;
@@ -364,6 +356,137 @@
       max-width: 100%;
       height: auto;
     }
+
+
+/* 📌 CSS: Estilos del cuadro flotante */
+.floating-box {
+  position: fixed;
+  right: 25px;   /* distancia desde el borde derecho */
+  bottom: 25px;  /* distancia desde el borde inferior */
+  width: 300px;
+  padding: 15px;
+  background: #FFE9CC;
+  border: 2px solid #ffa726;
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+  font-family: 'Quicksand', sans-serif;
+  z-index: 1000; /* para que quede por encima */
+}
+
+.floating-box h3 {
+  margin-top: 0;
+  font-size: 25px;
+  color: #e65100;
+}
+
+.floating-box p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.floating-box button {
+  background: #ffa726;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.floating-box button:hover {
+  background: #fb8c00;
+}
+
+    button a {
+  backgraund-color: #ff8C00;
+  color: white;
+  text-decoration: none; /* 👈 quita el subrayado */
+}
+
+/* 🔽 Estilos solo para móviles */
+@media (max-width: 768px) {
+  .floating-box {
+    display: none !important; /* Ocultar cuadro original en móvil */
+  }
+
+  .floating-tab,
+  .floating-content {
+    display: block;
+    padding-bottom:2px;
+  }
+
+  .floating-tab {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    background: #ffa726;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 25px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+    cursor: pointer;
+    z-index: 1001;
+    font-size: 16px;
+  }
+
+  .floating-content {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    right: 15px;
+    bottom: 60px;
+    width: 280px;
+    background: #FFE9CC;
+    border: 2px solid #ffa726;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+    z-index: 1000;
+  }
+
+  .floating-content.active {
+    display: block;
+  }
+}
+
+/* Botón dentro del cuadro flotante móvil */
+@media (max-width: 768px) {
+  .floating-content button {
+    background: #ffa726;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .floating-content button a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .floating-content button:hover {
+    background: #fb8c00; /* tono más oscuro al pasar el dedo */
+  }
+}
+
+    
+/* 🔽 En escritorio, ocultamos la pestaña */
+@media (min-width: 769px) {
+  .floating-tab,
+  .floating-content {
+    display: none !important;
+  }
+}
+
+/* Caja de texto explicativa */
+    .man {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: left;
+    }
   </style>
 </head>
 
@@ -371,81 +494,80 @@
   <div class="hero-bg">
     <header class="main-header">
       <div class="header-left">
-          <img src="lo.png" alt="Logo" class="logo" />
+        <img src="lo.png" alt="Logo" class="logo" />
         <a href="#" class="brand-name">Lolo & Kids</a>
       </div>
 
       <div class="menu-toggle" id="menu-toggle" aria-label="Menú móvil" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </div>
 
       <nav class="nav-menu" id="nav-menu">
-        <a href="https://cmarzque4.github.io/tr/principal/index.html#">Inici</a>
-         <a href="https://cmarzque4.github.io/tr/desenvolupament/index.html#">Desenvolupament</a>
+        <a href="#">Inici</a>
+        <a href="#">Desenvolupament</a>
         <div class="dropdown">
-          <a href="https://cmarzque4.github.io/tr/caracteristic/index.html#">Característiques ▾</a>
+          <a href="#">Característiques ▾</a>
           <div class="dropdown-content">
-            <a href="https://cmarzque4.github.io/tr/descrip/index.html#">Descripció</a>
-            <a href="https://cmarzque4.github.io/tr/com/index.html#">Com funciona?</a>
+            <a href="#">Descripció</a>
+            <a href="#">Com funciona?</a>
           </div>
         </div>
         <div class="dropdown">
-          <a href="https://cmarzque4.github.io/tr/estudi/index.html#">Estudi ▾</a>
+          <a href="#">Estudi ▾</a>
           <div class="dropdown-content">
-            <a href="https://cmarzque4.github.io/tr/centre/index.html#">Centre Arc de Sant Martí</a>
+            <a href="#">Centre Arc de Sant Martí</a>
           </div>
         </div>
-        <a href="https://cmarzque4.github.io/tr/representants/index.html#">Representants</a>
+        <a href="#">Representants</a>
       </nav>
-
     </header>
 
-    <section class="features slide-up">
-        <h2>Selecció del projecte</h2>
-        <p>
+    <section class="features container">
+      <h2>Selecció del projecte</h2>
+       &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+         <p>
          Amb l'ajuda de l'Institut Pompeu Fabra i el nostre tutor de TR <i>Cristobal Peralbo</i> vam ser coneixedors de les mascotes intel·ligents, aquestes que fan més fàcil l'aprenentatge. A partir de la idea proposada vam presentar el primer esborrany del treball buscant la major funcionalitat.
         </p>
-      <br>
+       &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
     </section>
-   <section class="main-content fade-in">
+
+    <section class="main-content container">
+       &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
       <h2>Plantejament del Treball</h2>
-     <br>
-        <ul>
-         <li><b>Es va fer un plantejament del treball a través de:</b>
-           <ul>
-             <ul>Croquis inicials del ninot</ul>
-             <ul>Creació de diagrames de flux (explicació tècnica de les funcions utilitzades)</ul>
-             <ul>Cerca dels materials necessaris:
-                <li> - Elements ninot-eines</li>
-                <li> - Elements electrònics</li>
-             </ul>
-             </li>
-           </ul> 
-        </ul>
-     <br>
+      &nbsp; &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+      <ul>
+        <li><b>Es va fer un plantejament del treball a través de:</b>
+          <ul>
+            <li>Croquis inicials del ninot</li>
+            <li>Creació de diagrames de flux</li>
+            <li>Cerca dels materials necessaris</li>
+                <p> - Elements ninot-eines</p>
+                <p> - Elements electrònics</pi>
+          </ul>
+        </li>
+      </ul>
+      <br/>
       <img src="#">
-    </section>
-     <section class="features slide-up">
-       <h2>Inici del Treball</h2>
-        <p>
-         Inici del treball de programació (amb programes com MIT App Inventor i STEAMakersBlocks). Creació de la sincronizació de tots dos programes per a la millor funcionalitat. 
-        </p>
-       <man>
-       <p><b><u>MIT App Inventor:</u></b> Plataforma de programació visual per crear apps Android/iOS de manera senzilla.</p>
-         <br>
-       <ul>
+     </section>
+
+    <section class="features container">
+      <h2>Inici del Treball</h2>
+ &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+      <p>Inici del treball de programació (amb programes com MIT App Inventor i STEAMakersBlocks). Creació de la sincronizació de tots dos programes per a la millor funcionalitat.</p>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+     <div class="man">
+        <p><b><u>MIT App Inventor:</u></b> Plataforma de programació visual per crear apps Android/iOS de manera senzilla.</p>
+     <ul>
          <li><u> Designer:</u> Arrossegar i deixar components (botons, imatges, textos…) per dissenyar la interfície.</li>
          <li><u> Blocks Editor:</u> Connectar blocs gràfics per programar el comportament de l’app.</li>
          <li><u> Components:</u> Visibles (botons, etiquetes), no visibles (GPS, sensors), mediàtics (so, vídeo) i de connectivitat (web, Bluetooth).</li>
-         <br>
-       <p><b> → Utilitat final:</b> Ens permet interactuar directament amb la persona que utilitzi el ninot, recrear sons, parlar...</p>
-       </man>
-       <man>
-        <p><b><u>STEAMakersBlocks:</u></b> Plataforma educativa de programació visual en línia orientada a l’aprenentatge de les àrees STEAM (Ciència, Tecnologia, Enginyeria, Arts i Matemàtiques). Permet crear projectes interactius amb programació per blocs, compatible amb hardware educatiu com Arduino, ESP32 i robots educatius:</p>
-         <br>
-         <ul>
+     </ul>
+      <p><b> → Utilitat final:</b> Ens permet interactuar directament amb la persona que utilitzi el ninot, recrear sons, parlar...</p>
+      </div>
+      <br/>
+      <div class="man">
+       <p><b><u>STEAMakersBlocks:</u></b> Plataforma educativa de programació visual en línia orientada a l’aprenentatge de les àrees STEAM (Ciència, Tecnologia, Enginyeria, Arts i Matemàtiques). Permet crear projectes interactius amb programació per blocs, compatible amb hardware educatiu com Arduino, ESP32 i robots educatius:</p>
+      <ul>
          <ul><u>Treball amb plaques</u>
            <li>Compatible amb Arduino, ESP32, micro: STEAMakers i altres.</li>
            <li>Control d’entrades i sortides digitals i analògiques.</li>
@@ -466,39 +588,46 @@
            <li>Guia visual per connectar correctament els components</li>
        </ul>
      </ul>
-         <br>
-         <p><b> → Utilitat final:</b> Configuració dels elements electrònics (placa, sensors, actuadors) perquè el ninot reconeixi les accions que succeeixen al seu voltant.</p>
-       </man>
-       <br>
+      <p><b> → Utilitat final:</b> Configuració dels elements electrònics (placa, sensors, actuadors) perquè el ninot reconeixi les accions que succeeixen al seu voltant.</p>
+      </div>
+       &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
     </section>
+
    <section class="main-content fade-in">
+     &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
        <h2>Nus del Treball - fase actual</h2>
-     <br>
-     <p>- Montatge dels elements electrònics + proves de funcionament</p>
-     <br>
-     <p>- Implementació de millores de programació</p>
-     <br>
-     <p>- Proves finals de la funcionalitat i calitat del programa</p>
-     <br>
-     <p>- Inserció dels elements electrònics en el ninot</p>
-     <br>
-    </section>
+     &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+     <ul>
+       <li> Montatge dels elements electrònics + proves de funcionament</li>
+       <br>
+       <li> Implementació de millores de programació</li>
+       <br>
+       <li> Proves finals de la funcionalitat i calitat del programa</li>
+       <br>
+       <li> Inserció dels elements electrònics en el ninot</li>
+     </ul>
+     <br/>
+   </section>
+  
    <section class="features slide-up">
      <h2>Posada a prova</h2>
-     <br>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
      <p>1. Proves inicials del funcionament final</p>
      <br>
      <p>2. Proves amb professors i monitors</p>
      <br>
      <p>3. Prova final amb els nois del centre</p>
-     <br>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
    </section>
+  
    <section class="main-content fade-in">
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
      <h2>Implementació de millores</h2>
-     <p>Amb aquests resultats podem fer del ninot una eina millorada i molt més especialitzada</p>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+      <p>Amb aquests resultats podem fer del ninot una eina millorada i molt més especialitzada</p>
+     <br/>
    </section>
-  </div>
-
+  
   <footer>
     <p>© 2025 Lolo & Kids – Connectant 💛</p>
   </footer>
@@ -513,14 +642,15 @@
         toggle.classList.toggle('open');
         toggle.setAttribute('aria-expanded', menu.classList.contains('active'));
       });
-    });
-    const dropdowns = document.querySelectorAll('.dropdown');
-    dropdowns.forEach(dropdown => {
-      const link = dropdown.querySelector('a');
-      link.addEventListener('click', (event) => {
-        event.preventDefault();
-        const content = dropdown.querySelector('.dropdown-content');
-        content.classList.toggle('active');
+
+      const dropdowns = document.querySelectorAll('.dropdown > a');
+      dropdowns.forEach(link => {
+        link.addEventListener('click', (e) => {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            link.nextElementSibling.classList.toggle('active');
+          }
+        });
       });
     });
   </script>
