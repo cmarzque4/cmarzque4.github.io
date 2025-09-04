@@ -24,11 +24,12 @@
     
     h1, h2 {
       font-weight: 700;
+       text-align: center;
     }
 
-    h2, p {
-  text-align: center;   /* centra el texto */
-  margin: 1rem auto;    /* agrega márgenes automáticos */
+  p {
+  text-align: left;   /* centra el texto */
+  margin: 0.5rem auto;    /* agrega márgenes automáticos */
   max-width: 800px;     /* para que no se estire demasiado en pantallas grandes */
 }
 
@@ -155,7 +156,7 @@
     }
 
     .main-content {
-      display: inline-block;
+      display: block;
       flex-wrap: wrap;
       background: #ffe2b5;
       justify-content: center;
@@ -172,9 +173,9 @@
     }
 
     .main-content ul{
-     display: inline-block;   /* centra la lista como bloque */
+     display: block;   /* centra la lista como bloque */
      text-align: left;        /* pero mantiene las viñetas a la izquierda */
-     margin: 0 auto;
+     margin: 0.5rem auto;
      padding-left: 1.5rem;
     }
 
