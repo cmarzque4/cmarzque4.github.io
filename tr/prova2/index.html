@@ -1,453 +1,548 @@
+   
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Peluche Amigo</title>
- <style>
-  /* =========================
-     RESET I BOX-SIZING
-  ========================= */
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  /* =========================
-     ESTILS BÀSICS DEL BODY I TIPOGRAFIA
-  ========================= */
-  body {
-    font-family: 'Quicksand', sans-serif;
-    background: #fff8ef;
-    color: #4a3b2c;
-    overflow-x: hidden;
-  }
-
-  h1, h2 {
-    font-weight: 700;
-  }
-
-  /* =========================
-     CAPÇALERA PRINCIPAL
-  ========================= */
-  header.main-header {
-    background-color: #ffe4b5;
-    padding: 1.5rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 2px solid #d2a679;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    position: relative;
-    z-index: 100;
-  }
-
-  /* Contenidor logo i nom */
-  .header-left {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  /* Logo */
-  .logo {
-    height: 60px;
-    transition: transform 0.3s ease;
-  }
-
-  .logo:hover {
-    transform: rotate(-5deg) scale(1.05);
-  }
-
-  /* Nom de la marca */
-  .brand-name {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #5c3317;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  .brand-name:hover {
-    color: #d36421;
-  }
-
-  /* =========================
-     MENÚ DE NAVEGACIÓ
-  ========================= */
-  .nav-menu {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-
-  /* Enllaços del menú */
-  .nav-menu a {
-    text-decoration: none;
-    color: #5c3317;
-    font-weight: 500;
-    font-size: 1.1rem;
-    position: relative;
-    transition: color 0.3s ease;
-  }
-
-  /* Efecte línia sota dels enllaços */
-  .nav-menu a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background: #d36421;
-    left: 0;
-    bottom: -4px;
-    transition: width 0.3s ease;
-  }
-
-  .nav-menu a:hover {
-    color: #d36421;
-  }
-
-  .nav-menu a:hover::after {
-    width: 100%;
-  }
-
-  /* =========================
-     DESPLEGABLES (DROPDOWNS)
-  ========================= */
-  .dropdown {
-    position: relative;
-  }
-
-  /* Contingut dels dropdowns */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 110%;
-    left: 0;
-    background-color: #fff8ef;
-    border-radius: 0.5rem;
-    border: 1px solid #d2a679;
-    padding: 10px;
-    box-shadow: 2px 8px 16px rgba(0, 0, 0, 0.1);
-    z-index: 100;
-    min-width: 180px;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-
-  /* Dropdown actiu visible */
-  .dropdown-content.active {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* Enllaços dins dropdown */
-  .dropdown-content a {
-    display: block;
-    padding: 10px 14px;
-    margin: 4px 0;
-    color: #5c3317;
-    text-decoration: none;
-    font-size: 1.05rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-
-  .dropdown-content a:hover {
-    background-color: #ffe4b5;
-  }
-
-  /* =========================
-     SECCIÓ HERO / CONTINGUT PRINCIPAL
-  ========================= */
-  .hero-bg {
-    background: linear-gradient(#fff2d9, #ffe0b2);
-    padding-bottom: 4rem;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .main-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    gap: 2rem;
-  }
-
-  /* Paràgrafs dins main-content */
-  .main-content p {
-    padding: 1rem 2rem;
-    font-size: 1.05rem;
-  }
-
-  /* Enllaços dins main-content */
-  .main-content a {
-    color: #D17600;
-  }
-
-  /* Imatges dels ossets (classe bear) */
-  .left img.bear {
-    width: 112px;
-  }
-
-  .right img.bear {
-    width: 120px;
-  }
-
-  /* Contenidor dret */
-  .right {
-    max-width: 400px;
-  }
-
-  .right h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #d36421;
-  }
-
-  .right p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-  }
-
-  /* Contenidor central */
-  .center {
-    max-width: 800px;
-  }
-
-  .center h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #d36421;
-  }
-
-  .center p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-  }
-
-  /* =========================
-     BOTÓ CTA
-  ========================= */
-  .cta {
-    background-color: #f59e0b;
-    color: white;
-    padding: 1rem 1.5rem;
-    border: none;
-    border-radius: 1rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s;
-  }
-
-  .cta:hover {
-    background: #ec820d;
-    transform: scale(1.05);
-  }
-
-  /* =========================
-     SECCIÓ FEATURES
-  ========================= */
-  .features {
-    background: #fcefd9;
-    padding: 3rem 2rem;
-    text-align: center;
-  }
-
-  .features h2 {
-    color: #a0522d;
-    margin-bottom: 2rem;
-    font-size: 1.6rem;
-  }
-
-  .features p {
-    padding: 1rem 2rem;
-    text-align: center;
-    font-size: 18px;
-  }
-
-  .features ul {
-    list-style: none;
-    font-size: 1.1rem;
-    padding-left: 0;
-  }
-
-  .features li {
-    margin: 1rem 0;
-  }
-
-  /* =========================
-     PEU DE PÀGINA
-  ========================= */
-  footer {
-    background: #fde9ca;
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-  }
-
-  /* =========================
-     ANIMACIONS
-  ========================= */
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-12px);
-    }
-  }
-
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0) rotate(-2deg);
-    }
-    50% {
-      transform: translateY(-15px) rotate(2deg);
-    }
-  }
-
-  .fade-in {
-    animation: fadeIn 1.5s ease-out forwards;
-  }
-
-  .slide-up {
-    animation: slideUp 1.5s ease-out forwards;
-  }
-
-  /* =========================
-     BOTÓ HAMBURGUESA (MENU MÒBIL)
-  ========================= */
-  .menu-toggle {
-    display: block;
-    flex-direction: column;
-    cursor: pointer;
-    justify-content: center;
-    gap: 5px;
-    z-index: 200;
-  }
-
-  .menu-toggle span {
-    height: 3px;
-    width: 25px;
-    background-color: #5c3317;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-  }
-
-  .menu-toggle.open span:nth-child(1) {
-    transform: rotate(45deg) translateY(11px);
-  }
-
-  .menu-toggle.open span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-toggle.open span:nth-child(3) {
-    transform: rotate(-45deg) translateY(-11px);
-  }
-
-  /* =========================
-     RESPONSIVE (MÒBIL I TABLETS)
-  ========================= */
-  @media (max-width: 768px) {
-    /* Capçalera */
-    .main-header {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 1rem;
+  <title>L&K</title>
+  <link rel="icon" type="image/png" href="lo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+<style>
+     
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    /* Mostrar menú hamburguesa */
-    .menu-toggle {
-      display: flex;
-      position: relative;
-      z-index: 200;
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: #fff8ef;
+      color: #4a3b2c;
+      overflow-x: hidden;
     }
 
-    /* Menú principal en columna i amagat per defecte */
-    .nav-menu {
-      flex-direction: column;
+      h1, h2 {
+      font-weight: 700;
+    }
+
+    p {
+      text-align: center;   /* centra el texto */
+      margin: 1rem auto;    /* agrega márgenes automáticos */
+      max-width: 800px;     /* para que no se estire demasiado en pantallas grandes */
+    }
+
+      .right {
+      max-width: 400px;
+      padding: 1rem;
+    }
+
+    .right h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #d36421;
+    }
+
+    .right p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .right ul, li {
+      margin-bottom: 0.8rem;
+    }
+
+     .center {
+      max-width: 800px;
+    }
+  
+/*taula*/
+    table {
       width: 100%;
-      background-color: #fff8ef;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      padding: 1.5rem 2rem;
-      display: none;
-      opacity: 0;
-      transform: translateY(-10px);
-      transition: all 0.3s ease;
-      border-top: 1px solid #e0c8aa;
+      border-collapse: collapse;
+      margin: 1.5rem auto;
+      max-width: 1000px;
+      background-color: #fff6e0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
-    /* Menú actiu (visible) */
-    .nav-menu.active {
+    th, td {
+      border: 1px solid #e0c8aa;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1rem;
+      color: #4a3b2c;
+    }
+
+    th {
+      background-color: #ffe9cc;
+      font-weight: bold;
+      color: #a0522d;
+    }
+
+     .table, th, td {
+      align-items: center;  
+      align-text: center;  
+    }
+
+  header.main-header {
+      background-color: #ffe4b5;
+      padding: 1.5rem 2rem;
       display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid #d2a679;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      position: relative;
+      z-index: 100;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      height: 60px;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: rotate(-5deg) scale(1.05);
+    }
+  
+    .brand-name {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #5c3317;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .brand-name:hover {
+      color: #d36421;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: #5c3317;
+      font-weight: 500;
+      font-size: 1.1rem;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .nav-menu a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #d36421;
+      left: 0;
+      bottom: -4px;
+      transition: width 0.3s ease;
+    }
+
+    .nav-menu a:hover {
+      color: #d36421;
+    }
+
+    .nav-menu a:hover::after {
+      width: 100%;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 110%;
+      left: 0;
+      background-color: #fff8ef;
+      border-radius: 0.5rem;
+      border: 1px solid #d2a679;
+      padding: 10px;
+      box-shadow: 2px 8px 16px rgba(0, 0, 0, 0.1);
+      z-index: 100;
+      min-width: 180px;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .dropdown-content.active {
+      display: block;
       opacity: 1;
       transform: translateY(0);
     }
 
-    /* Enllaços del menú més grans i espaiats */
-    .nav-menu a {
-      font-size: 1.2rem;
-      padding: 0.5rem 0;
-    }
-
-    /* Dropdowns sense posicionament absolut i sense fons */
-    .dropdown-content {
-      position: static;
-      background: none;
-      border: none;
-      box-shadow: none;
-      opacity: 1;
-      transform: none;
-      padding-left: 1rem;
-      display: none; /* mantenim ocult fins a que es faci click */
-    }
-
-    /* Dropdown links estil més petit i padding més ajustat */
     .dropdown-content a {
+      display: block;
+      padding: 10px 14px;
+      margin: 4px 0;
+      color: #5c3317;
+      text-decoration: none;
       font-size: 1.05rem;
-      padding: 0.3rem 0;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
     }
 
-    /* Ajust contenedor dret */
-    .right {
-      max-width: 100%;
+    .dropdown-content a:hover {
+      background-color: #ffe4b5;
+    }
+
+    .cta {
+      background-color: #f59e0b;
+      color: white;
+      padding: 1rem 1.5rem;
+      border: none;
+      border-radius: 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s;
+    }
+
+    .cta:hover {
+      background: #ec820d;
+      transform: scale(1.05);
+    }
+    
+    .hero-bg {
+      background: linear-gradient(#fff2d9, #ffe0b2);
+      padding-bottom: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+.main-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      padding: 2rem;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #fff3e6;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+.main-content h2{
+      color: #a0522d;
+      margin-bottom: 2rem;
+      font-size: 1.6rem;
+      align-text:center;
+      max-width: 800px;
+    }
+
+
+    .main-content ul{
+     display: block;   /* centra la lista como bloque */
+     list-style:none;
+     padding-left: 1.5rem;
+     text-align: center;   /* centra el texto */
+     margin: 1rem auto;    /* agrega márgenes automáticos */
+     max-width: 800px;
+    }  
+
+    .features {
+      background: #fcefd9;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .features p {
+      padding:1rem;
+      padding-left: 2rem;     /* espacio interior a la izquierda */
+      padding-right: 2rem;    /* espacio interior a la derecha */
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .features h2 {
+      color: #a0522d;
+      margin-bottom: 2rem;
+      font-size: 1.6rem;
+    }
+
+    .features ul {
+      list-style: none;
+      font-size: 1.1rem;
+      padding-left: 0;
+    }
+
+    .features li {
+      margin: 1rem 0;
+    }
+
+    footer {
+      background: #fde9ca;
+      text-align: center;
       padding: 1rem;
+      font-size: 0.9rem;
     }
 
-    /* Ajust del logo i marca per mòbil */
-    .logo {
-      height: 45px;
+    img {
+      max-width: 100%;
+      height: auto;
     }
 
-    .brand-name {
-      font-size: 1.5rem;
+      .left img.bear {
+      width: 220px;
+      animation: bounce 3s infinite ease-in-out;
     }
+
+/* 📌 CSS: Estilos del cuadro flotante */
+.floating-box {
+  position: fixed;
+  right: 25px;   /* distancia desde el borde derecho */
+  bottom: 25px;  /* distancia desde el borde inferior */
+  width: 300px;
+  padding: 15px;
+  background: #FFE9CC;
+  border: 2px solid #ffa726;
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+  font-family: 'Quicksand', sans-serif;
+  z-index: 1000; /* para que quede por encima */
+}
+
+.floating-box h3 {
+  margin-top: 0;
+  font-size: 25px;
+  color: #e65100;
+}
+
+.floating-box p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.floating-box button {
+  background: #ffa726;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.floating-box button:hover {
+  background: #fb8c00;
+}
+
+    button a {
+  backgraund-color: #ff8C00;
+  color: white;
+  text-decoration: none; /* 👈 quita el subrayado */
+}
+
+/* 🔽 Estilos solo para móviles */
+@media (max-width: 768px) {
+  .floating-box {
+    display: none !important; /* Ocultar cuadro original en móvil */
   }
 
-  /* =========================
-     IMATGES
-  ========================= */
-  img {
-    max-width: 100%;
-    height: auto;
+  .floating-tab,
+  .floating-content {
+    display: block;
+    padding-bottom:2px;
   }
+
+  .floating-tab {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    background: #ffa726;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 25px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+    cursor: pointer;
+    z-index: 1001;
+    font-size: 16px;
+  }
+
+  .floating-content {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    right: 15px;
+    bottom: 60px;
+    width: 280px;
+    background: #FFE9CC;
+    border: 2px solid #ffa726;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+    z-index: 1000;
+  }
+
+  .floating-content.active {
+    display: block;
+  }
+}
+
+/* Botón dentro del cuadro flotante móvil */
+@media (max-width: 768px) {
+  .floating-content button {
+    background: #ffa726;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .floating-content button a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .floating-content button:hover {
+    background: #fb8c00; /* tono más oscuro al pasar el dedo */
+  }
+}
+
+    
+/* 🔽 En escritorio, ocultamos la pestaña */
+@media (min-width: 769px) {
+  .floating-tab,
+  .floating-content {
+    display: none !important;
+  }
+}
+
+/* Caja de texto explicativa */
+    .man {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: left;
+    }
+  
+ @keyframes bounce {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(-2deg); }
+      50% { transform: translateY(-15px) rotate(2deg); }
+    }
+
+    .fade-in {
+      animation: fadeIn 1.5s ease-out forwards;
+    }
+
+    .slide-up {
+      animation: slideUp 1.5s ease-out forwards;
+    }
+
+    /* Botón Hamburguesa */
+    .menu-toggle {
+      display: block;
+      flex-direction: column;
+      cursor: pointer;
+      justify-content: center;
+      gap: 5px;
+      z-index: 200;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background-color: #5c3317;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .menu-toggle.open span:nth-child(1) {
+      transform: rotate(45deg) translateY(11px);
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+      transform: rotate(-45deg) translateY(-11px);
+    }
+
+    /* Responsive */
+   @media (max-width: 768px) {
+  .main-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+    position: relative;
+    z-index: 200;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff8ef;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 1.5rem 2rem;
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    border-top: 1px solid #e0c8aa;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-menu a {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+  }
+
+  .dropdown-content {
+    position: static;
+    background: none;
+    border: none;
+    box-shadow: none;
+    opacity: 1;
+    transform: none;
+    padding-left: 1rem;
+    display: none;
+  }
+
+  .dropdown-content a {
+    font-size: 1.05rem;
+    padding: 0.3rem 0;
+  }
+
 </style>
 </head>
 
 <body>
-
   <div class="hero-bg">
     <header class="main-header">
       <div class="header-left">
@@ -465,148 +560,67 @@
         <a href="https://cmarzque4.github.io/tr/principal/index.html#">Inici</a>
          <a href="https://cmarzque4.github.io/tr/desenvolupament/index.html#">Desenvolupament</a>
         <div class="dropdown">
-          <a href="#">Característiques ▾</a>
+          <a href="https://cmarzque4.github.io/tr/caracteristic/index.html#">Característiques ▾</a>
           <div class="dropdown-content">
             <a href="https://cmarzque4.github.io/tr/descrip/index.html#">Descripció</a>
             <a href="https://cmarzque4.github.io/tr/com/index.html#">Com funciona?</a>
           </div>
         </div>
         <div class="dropdown">
-          <a href="#">Estudi ▾</a>
+          <a href="https://cmarzque4.github.io/tr/estudi/index.html#">Estudi ▾</a>
           <div class="dropdown-content">
             <a href="https://cmarzque4.github.io/tr/centre/index.html#">Centre Arc de Sant Martí</a>
           </div>
         </div>
         <a href="https://cmarzque4.github.io/tr/representants/index.html#">Representants</a>
       </nav>
+
     </header>
 
-    <section class="features container">
-      <h2>Selecció del projecte</h2>
-          <p>
-         Amb l'ajuda de l'Institut Pompeu Fabra i el nostre tutor de TR <i>Cristobal Peralbo</i> vam ser coneixedors de les mascotes intel·ligents, aquestes que fan més fàcil l'aprenentatge. A partir de la idea proposada vam presentar el primer esborrany del treball buscant la major funcionalitat.
+    <section class="main-content fade-in">
+      <div class="left">
+        <img src="lolo_frente-removebg-preview.png" alt="Peluche Amigo" class="bear" />
+      </div>
+      <div class="right">
+        <h2>Un amic que comprèn</h2>
+        <p>
+          Lolo & Kids està dissenyat per ajudar a persones amb dificultats de comunicació o aprenentatge d'una forma més fàcil i divertida.
         </p>
-       </section>
-
-    <section class="main-content container">
-       <h2>Plantejament del Treball</h2>
-      <ul>
-        <li><b>Es va fer un plantejament del treball a través de:</b>
-          <ul>
-            <li>Croquis inicials del ninot &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</li>
-            <li>Creació de diagrames de flux &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</li>
-            <li>Cerca dels materials necessaris &nbsp; &nbsp; &nbsp; &nbsp;</li>
-                <p> - Elements ninot-eines</p>
-                <p> - Elements electrònics</pi>
-          </ul>
-        </li>
-      </ul>
-      <br/>
-    <div class="imatge-plantejament">
-      <img src="dia.png" alt="Diagrama de flux">
-    </div>
-     </section>
-
-    <section class="features container">
-      <h2>Inici del Treball</h2>
-      <p>Inici del treball de programació (amb programes com MIT App Inventor i STEAMakersBlocks). Creació de la sincronització de tots dos programes per a la millor funcionalitat.</p>
-     <div class="man">
-        <p><b><u>MIT App Inventor:</u></b> Plataforma de programació visual per crear apps Android/iOS de manera senzilla.</p>
-     <ul>
-         <li><u> Designer:</u> Arrossegar i deixar components (botons, imatges, textos…) per dissenyar la interfície.</li>
-         <li><u> Blocks Editor:</u> Connectar blocs gràfics per programar el comportament de l’app.</li>
-         <li><u> Components:</u> Visibles (botons, etiquetes), no visibles (GPS, sensors), mediàtics (so, vídeo) i de connectivitat (web, Bluetooth).</li>
-     </ul>
-      <p><b> → Utilitat final:</b> Ens permet interactuar directament amb la persona que utilitzi el ninot, recrear sons, parlar...</p>
+         <a href="https://cmarzque4.github.io/tr/descrip/index.html#" button class="cta">Coneix més</a></button>
       </div>
-      <br/>
-      <div class="man">
-       <p><b><u>STEAMakersBlocks:</u></b> Plataforma educativa de programació visual en línia orientada a l’aprenentatge de les àrees STEAM (Ciència, Tecnologia, Enginyeria, Arts i Matemàtiques). Permet crear projectes interactius amb programació per blocs, compatible amb hardware educatiu com Arduino, ESP32 i robots educatius:</p>
-      <ul>
-         <ul><u>Treball amb plaques</u>
-           <li>Compatible amb Arduino, ESP32, micro: STEAMakers i altres.</li>
-           <li>Control d’entrades i sortides digitals i analògiques.</li>
-         </ul>
-           <br>
-         <ul><u>Sensors</u>
-           <li>Lectura de dades de sensors de temperatura, humitat, llum, distància, etc.</li>
-           <li>Configuració de triggers i condicions segons els valors dels sensors.</li>
-         </ul>
-           <br>
-         <ul><u>Actuadors i receptors</u>
-           <li>Control de motors, LEDs, servomotors, pantalles i altres actuadors.</li>
-           <li>Definició de respostes automàtiques segons senyals dels sensors.</li>
-         </ul>
-           <br>
-         <ul><u>Cables i connexions</u>
-           <li>Blocs dissenyats segons els pins de la placa</li>
-           <li>Guia visual per connectar correctament els components</li>
-       </ul>
-     </ul>
-      <p><b> → Utilitat final:</b> Configuració dels elements electrònics (placa, sensors, actuadors) perquè el ninot reconeixi les accions que succeeixen al seu voltant.</p>
-      </div>
-     </section>
+    </section>
+  </div>
+  
+<!-- 📌 HTML: Cuadro flotante -->
+<div class="floating-box">
+  <h3>Qui som?</h3>
+  <p>Lolo & Kids no és només una marca, som persones.</p>
+  <button><a href="https://cmarzque4.github.io/tr/representants/index.html#">Coneix-nos!</a></button>
+</div>
 
-   <section class="main-content fade-in">
-     <h2 class="title-center">Nus del Treball - fase actual</h2>
-     <ul>
-       <h1> Montatge dels elements electrònics + proves de funcionament</h1>
-       <br>
-       <video width="600" controls>
-       <source src="Copilació.mp4" type="video/mp4">
-       </video>
-       <br>
-       <h1> Implementació de millores de programació + Proves finals de la funcionalitat i calitat del programa</h1>
-       <br>
-        <video width="600" controls>
-        <source src="fun_final.mp4" type="video/mp4">
-        </video>
-       <br>
-       <h1> Inserció dels elements electrònics en el ninot</h1>
-       <br>
-       <img src="8x8.jpg">
-       <img src="8x82.jpg">
-       <img src="lolo_frente-removebg-preview.png">
-       <img src="pit.jpg">
-       <img src="porfi.png">
-     </ul>
-     <br/>
-     <h1>Estat final del ninot</h1>
-        <video width="600" controls>
-        <source src="nin_final.mp4" type="video/mp4">
-        </video>
-   </section>
-  
-   <section class="features slide-up">
-     <h2>Posada a prova</h2>
-     <p>1. Proves inicials del funcionament final</p>
-     <p>2. Proves amb professors i monitors</p>
-     <p>3. Prova final amb els nois del centre</p>
-   </section>
-  
-   <section class="main-content fade-in">
-     <h2>Implementació de millores</h2>
-      <p>Amb aquests resultats podem fer del ninot una eina millorada i molt més especialitzada</p>
-     <br>
-<table>
-    <thead>
-      <tr>
-        <th>Implementació d’una IA personalitzada</th>
-        <th>Millora de la ventilació del circuit</th>
-        <th>Servei de reparació o substitució del ninot</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Un amic que sempre t'ajuda</td>
-        <td>Per a poder parlar hores</td>
-        <td>Per a que no es perdi l'amic de cap nen</td>
-      </tr>
-    </tbody>
-  </table>
-     </table>
-   </section>
-  
+  <!-- 🔽 Pestaña flotante solo para móviles -->
+<div class="floating-tab" id="floating-tab">¿Qui som?</div>
+
+<div class="floating-content" id="floating-content">
+  <h3>¿Qui som?</h3>
+  <p>Lolo & Kids no és només una marca, som persones.</p>
+  <button><a href="https://cmarzque4.github.io/tr/representants/index.html#">Coneix-nos!</a></button>
+</div>
+
+
+  <section class="features slide-up">
+    <h2>Què el fa especial?</h2>
+    <ul>
+      <li>🎤 Reprodueix frases clau per a la bona comunicació</li>
+      <li>🧠 Estimula l'aprenentatge emocional</li>
+      <li>💡 Fàcil d'utilitzar per a nens i grans</li>
+    </ul>
+    <br>
+    <br>
+   <a href="https://cmarzque4.github.io/tr/com/index.html#" button class="cta">Més característiques</a></button>
+    <br>
+  </section>
+
   <footer>
     <p>© 2025 Lolo & Kids – Connectant 💛</p>
   </footer>
@@ -640,7 +654,7 @@ if (tab) {
   tab.addEventListener('click', () => {
     content.classList.toggle('active');
   });
-}
+}  
   </script>
 </body>
 </html>
