@@ -7,14 +7,56 @@
   <link rel="icon" type="image/png" href="lo.png" />
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
 <style>
-  /* Fonts i colors globals */
-body {
-  font-family: 'Quicksand', sans-serif;
-  color: #6d4c41;
-  background: #fff8e1;
+/* Estils globals i resets */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: #fff8ef;
+  color: #4a3b2c;
+  overflow-x: hidden;
+}
+
+/* Titulars */
+h1, h2, h3 {
+  font-weight: 700;
+  color: #d36421;
+  margin-bottom: 1rem;
+}
+
+/* Enllaços */
+a {
+  color: #d17600;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ec820d;
+  text-decoration: none;
+}
+
+/* Botons generals */
+button, .cta {
+  background-color: #f59e0b;
+  color: white;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+button:hover, .cta:hover {
+  background: #ec820d;
+  transform: scale(1.05);
 }
 
 /* Hero background */
@@ -25,122 +67,356 @@ body {
   overflow: hidden;
 }
 
-/* Títols */
-h2, h3 {
-  color: #bf6b04;
-  font-weight: 700;
-  margin: 0 0 1rem 0;
+/* Contingut principal */
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+  color: #4a3b2c;
 }
 
-/* Textos generals */
-p {
-  color: #6d4c41;
-  font-size: 16px;
+.main-content p {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 1.05rem;
   line-height: 1.5;
-  margin: 0 0 1rem 0;
 }
 
-/* Enllaços */
-a {
-  color: #e65100;
-  text-decoration: underline;
-  cursor: pointer;
+/* Zones específiques */
+.left img.bear,
+.right img.bear {
+  width: 112px;
 }
 
-a:hover {
-  color: #fb8c00;
-  text-decoration: none;
+.right {
+  max-width: 400px;
 }
 
-/* Botons generals */
-button, .btn-primary {
-  background: #ffa726;
-  border: none;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
+.right h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #d36421;
 }
 
-button:hover, .btn-primary:hover {
-  background: #fb8c00;
+.right p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
 }
 
-/* Imatges */
-img, .peluche-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto; /* per a .peluche-img */
-  max-width: 350px; /* per a .peluche-img */
+.center {
+  max-width: 800px;
 }
 
-/* 📌 CSS: Estilos del cuadro flotante */
-.floating-box {
-  position: fixed;
-  right: 25px;   /* distancia desde el borde derecho */
-  bottom: 25px;  /* distancia desde el borde inferior */
-  width: 300px;
-  padding: 15px;
-  background: #FFE9CC;
-  border: 2px solid #ffa726;
-  border-radius: 15px;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
-  font-family: 'Quicksand', sans-serif;
-  z-index: 1000; /* para que quede por encima */
+.center h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #d36421;
 }
 
-.floating-box h3 {
-  margin-top: 0;
-  font-size: 25px;
-  color: #e65100;
+.center p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
 }
 
-.floating-box p {
-  font-size: 16px;
-  margin: 10px 0;
-}
-
-.floating-box button {
-  background: #ffa726;
-  border: none;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.floating-box button:hover {
-  background: #fb8c00;
-}
-
-/* Estils per a textos destacats */
-.text-bold {
-  font-weight: 700;
-  color: #bf6b04;
-}
-
-/* Ajustos adicionales para cajas, botones y textos */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.text-center {
+/* Secció característiques */
+.features {
+  background: #fcefd9;
+  padding: 3rem 2rem;
   text-align: center;
 }
 
-.mt-2 {
-  margin-top: 1rem;
+.features h2 {
+  color: #a0522d;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
 }
 
-.mb-2 {
-  margin-bottom: 1rem;
+.features p {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 18px;
+  text-align: center;
 }
+
+.features ul {
+  list-style: none;
+  font-size: 1.1rem;
+  padding-left: 0;
+}
+
+.features li {
+  margin: 1rem 0;
+}
+
+/* Footer */
+footer {
+  background: #fde9ca;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Header principal */
+header.main-header {
+  background-color: #ffe4b5;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #d2a679;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 100;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  height: 60px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: rotate(-5deg) scale(1.05);
+}
+
+.brand-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #5c3317;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.brand-name:hover {
+  color: #d36421;
+}
+
+/* Menú de navegació */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #5c3317;
+  font-weight: 500;
+  font-size: 1.1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #d36421;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #d36421;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background-color: #fff8ef;
+  border-radius: 0.5rem;
+  border: 1px solid #d2a679;
+  padding: 10px;
+  box-shadow: 2px 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  min-width: 180px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-content.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 14px;
+  margin: 4px 0;
+  color: #5c3317;
+  text-decoration: none;
+  font-size: 1.05rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #ffe4b5;
+}
+
+/* Botó hamburguesa */
+.menu-toggle {
+  display: block;
+  flex-direction: column;
+  cursor: pointer;
+  justify-content: center;
+  gap: 5px;
+  z-index: 200;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background-color: #5c3317;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(11px);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-11px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+    position: relative;
+    z-index: 200;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff8ef;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 1.5rem 2rem;
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    border-top: 1px solid #e0c8aa;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-menu a {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+  }
+
+  .dropdown-content {
+    position: static;
+    background: none;
+    border: none;
+    box-shadow: none;
+    opacity: 1;
+    transform: none;
+    padding-left: 1rem;
+    display: none;
+  }
+
+  .dropdown-content a {
+    font-size: 1.05rem;
+    padding: 0.3rem 0;
+  }
+
+  .right {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .logo {
+    height: 45px;
+  }
+
+  .brand-name {
+    font-size: 1.5rem;
+  }
+}
+
+/* Animacions */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+.slide-up {
+  animation: slideUp 1.5s ease-out forwards;
+}
+
+/* 📌 CSS: Estils del quadre flotant */
+.floating-box {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  width: 300px;
+  padding: 15px;
+  background: #FFE9CC;
+  border:
+
 </style>
 </head>
 <body>
