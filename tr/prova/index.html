@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
 <style>
      
-     * {
+    * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -21,40 +21,71 @@
       overflow-x: hidden;
     }
 
-    h1, h2 {
+      h1, h2 {
       font-weight: 700;
     }
 
+    p {
+      text-align: center;   /* centra el texto */
+      margin: 1rem auto;    /* agrega márgenes automáticos */
+      max-width: 800px;     /* para que no se estire demasiado en pantallas grandes */
+    }
+
+      .right {
+      max-width: 400px;
+      padding: 1rem;
+    }
+
+    .right h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #d36421;
+    }
+
+    .right p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .right ul, li {
+      margin-bottom: 0.8rem;
+    }
+
+     .center {
+      max-width: 800px;
+    }
+  
+/*taula*/
     table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.5rem auto;
-  max-width: 1000px;
-  background-color: #fff6e0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem auto;
+      max-width: 1000px;
+      background-color: #fff6e0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
 
-th, td {
-  border: 1px solid #e0c8aa;
-  padding: 1rem;
-  text-align: center;
-  font-size: 1rem;
-  color: #4a3b2c;
-}
+    th, td {
+      border: 1px solid #e0c8aa;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1rem;
+      color: #4a3b2c;
+    }
 
-th {
-  background-color: #ffe9cc;
-  font-weight: bold;
-  color: #a0522d;
-}
+    th {
+      background-color: #ffe9cc;
+      font-weight: bold;
+      color: #a0522d;
+    }
 
- p {
-  text-align: center;   /* centra el texto */
-  margin: 1rem auto;    /* agrega márgenes automáticos */
-  max-width: 800px;     /* para que no se estire demasiado en pantallas grandes */
-}
+     .table, th, td {
+      align-items: center;  
+      align-text: center;  
+    }
 
-    header.main-header {
+  header.main-header {
       background-color: #ffe4b5;
       padding: 1.5rem 2rem;
       display: flex;
@@ -80,7 +111,7 @@ th {
     .logo:hover {
       transform: rotate(-5deg) scale(1.05);
     }
-
+  
     .brand-name {
       font-size: 1.8rem;
       font-weight: 600;
@@ -169,154 +200,8 @@ th {
       background-color: #ffe4b5;
     }
 
-    .hero-bg {
-      background: linear-gradient(#fff2d9, #ffe0b2);
-      padding-bottom: 4rem;
-      position: relative;
-      overflow: hidden;
-    }
 
-.main-content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 3rem;
-      padding: 2rem;
-      gap: 2rem;
-      max-width: 1000px;
-      margin: auto;
-      background-color: #fff3e6;
-      border-radius: 20px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    }
-
-.main-content h2{
-      color: #a0522d;
-      margin-bottom: 2rem;
-      font-size: 1.6rem;
-      align-text:center;
-      max-width: 800px;
-    }
-
-
-    .main-content ul{
-     display: block;   /* centra la lista como bloque */
-     list-style:none;
-     padding-left: 1.5rem;
-     text-align: center;   /* centra el texto */
-     margin: 1rem auto;    /* agrega márgenes automáticos */
-     max-width: 800px;
-    }
-
-    .left img.bear {
-      width: 220px;
-      animation: bounce 3s infinite ease-in-out;
-    }
-
-  
-
-    .right {
-      max-width: 400px;
-    }
-
-    .right h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      color: #d36421;
-    }
-
-    .right p {
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
-      line-height: 1.6;
-    }
-
-    .right ul, li {
-      margin-bottom: 0.8rem;
-    }
-
-     .center {
-      max-width: 800px;
-    }
-
-    .cta {
-      background-color: #f59e0b;
-      color: white;
-      padding: 1rem 1.5rem;
-      border: none;
-      border-radius: 1rem;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s ease, transform 0.2s;
-    }
-
-    .cta:hover {
-      background: #ec820d;
-      transform: scale(1.05);
-    }
-
-    .features {
-      background: #fcefd9;
-      padding: 3rem 2rem;
-      text-align: center;
-    }
-
-    .features p {
-      padding:1rem;
-      padding-left: 2rem;     /* espacio interior a la izquierda */
-      padding-right: 2rem;    /* espacio interior a la derecha */
-      text-align: center;
-      font-size: 18px;
-    }
-
-    .features h2 {
-      color: #a0522d;
-      margin-bottom: 2rem;
-      font-size: 1.6rem;
-    }
-
-    .features ul {
-      list-style: none;
-      font-size: 1.1rem;
-      padding-left: 0;
-    }
-
-    .features li {
-      margin: 1rem 0;
-    }
-
-    footer {
-      background: #fde9ca;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-12px); }
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0) rotate(-2deg); }
-      50% { transform: translateY(-15px) rotate(2deg); }
-    }
-
-    .fade-in {
-      animation: fadeIn 1.5s ease-out forwards;
-    }
-
-    .slide-up {
-      animation: slideUp 1.5s ease-out forwards;
-    }
-
-   .table, th, td {
-      align-items: center;  
-      align-text: center;  
-    }
-
-    /* Botón Hamburguesa */
+      /* Botón Hamburguesa */
     .menu-toggle {
       display: block;
       flex-direction: column;
@@ -353,8 +238,9 @@ th {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1rem;
+    }
   }
-
+  
   .menu-toggle {
     display: flex;
     position: relative;
@@ -403,26 +289,108 @@ th {
     padding: 0.3rem 0;
   }
 
-  .right {
-    max-width: 100%;
-    padding: 1rem;
-  }
+    .cta {
+      background-color: #f59e0b;
+      color: white;
+      padding: 1rem 1.5rem;
+      border: none;
+      border-radius: 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s;
+    }
 
-  .logo {
-    height: 45px;
-  }
+    .cta:hover {
+      background: #ec820d;
+      transform: scale(1.05);
+    }
+    
+    .hero-bg {
+      background: linear-gradient(#fff2d9, #ffe0b2);
+      padding-bottom: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
 
-  .brand-name {
-    font-size: 1.5rem;
-  }
-}
+.main-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      padding: 2rem;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #fff3e6;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
 
+.main-content h2{
+      color: #a0522d;
+      margin-bottom: 2rem;
+      font-size: 1.6rem;
+      align-text:center;
+      max-width: 800px;
+    }
+
+
+    .main-content ul{
+     display: block;   /* centra la lista como bloque */
+     list-style:none;
+     padding-left: 1.5rem;
+     text-align: center;   /* centra el texto */
+     margin: 1rem auto;    /* agrega márgenes automáticos */
+     max-width: 800px;
+    }  
+
+    .features {
+      background: #fcefd9;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .features p {
+      padding:1rem;
+      padding-left: 2rem;     /* espacio interior a la izquierda */
+      padding-right: 2rem;    /* espacio interior a la derecha */
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .features h2 {
+      color: #a0522d;
+      margin-bottom: 2rem;
+      font-size: 1.6rem;
+    }
+
+    .features ul {
+      list-style: none;
+      font-size: 1.1rem;
+      padding-left: 0;
+    }
+
+    .features li {
+      margin: 1rem 0;
+    }
+
+    footer {
+      background: #fde9ca;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
 
     img {
       max-width: 100%;
       height: auto;
     }
 
+      .left img.bear {
+      width: 220px;
+      animation: bounce 3s infinite ease-in-out;
+    }
 
 /* 📌 CSS: Estilos del cuadro flotante */
 .floating-box {
@@ -552,6 +520,24 @@ th {
       margin: 1.5rem 1rem;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       text-align: left;
+    }
+  
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(-2deg); }
+      50% { transform: translateY(-15px) rotate(2deg); }
+    }
+
+    .fade-in {
+      animation: fadeIn 1.5s ease-out forwards;
+    }
+
+    .slide-up {
+      animation: slideUp 1.5s ease-out forwards;
     }
 </style>
 </head>
