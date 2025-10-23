@@ -6,7 +6,7 @@
   <title>L&K</title>
   <link rel="icon" type="image/png" href="lo.png" />
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
- <style>
+<style>
   /* =========================
      RESET I BOX-SIZING
   ========================= */
@@ -45,14 +45,12 @@
     z-index: 100;
   }
 
-  /* Contenidor logo i nom */
   .header-left {
     display: flex;
     align-items: center;
     gap: 12px;
   }
 
-  /* Logo */
   .logo {
     height: 60px;
     transition: transform 0.3s ease;
@@ -62,7 +60,6 @@
     transform: rotate(-5deg) scale(1.05);
   }
 
-  /* Nom de la marca */
   .brand-name {
     font-size: 1.8rem;
     font-weight: 600;
@@ -84,7 +81,6 @@
     gap: 20px;
   }
 
-  /* Enllaços del menú */
   .nav-menu a {
     text-decoration: none;
     color: #5c3317;
@@ -94,7 +90,6 @@
     transition: color 0.3s ease;
   }
 
-  /* Efecte línia sota dels enllaços */
   .nav-menu a::after {
     content: '';
     position: absolute;
@@ -121,7 +116,6 @@
     position: relative;
   }
 
-  /* Contingut dels dropdowns */
   .dropdown-content {
     display: none;
     position: absolute;
@@ -139,14 +133,12 @@
     transition: opacity 0.3s ease, transform 0.3s ease;
   }
 
-  /* Dropdown actiu visible */
   .dropdown-content.active {
     display: block;
     opacity: 1;
     transform: translateY(0);
   }
 
-  /* Enllaços dins dropdown */
   .dropdown-content a {
     display: block;
     padding: 10px 14px;
@@ -181,18 +173,15 @@
     gap: 2rem;
   }
 
-  /* Paràgrafs dins main-content */
   .main-content p {
     padding: 1rem 2rem;
     font-size: 1.05rem;
   }
 
-  /* Enllaços dins main-content */
   .main-content a {
     color: #D17600;
   }
 
-  /* Imatges dels ossets (classe bear) */
   .left img.bear {
     width: 112px;
   }
@@ -201,7 +190,6 @@
     width: 120px;
   }
 
-  /* Contenidor dret */
   .right {
     max-width: 400px;
   }
@@ -218,7 +206,6 @@
     line-height: 1.6;
   }
 
-  /* Contenidor central */
   .center {
     max-width: 800px;
   }
@@ -235,46 +222,6 @@
     line-height: 1.6;
   }
 
-/* 📌 CSS: Estilos del cuadro flotante */
-.floating-box {
-  position: fixed;
-  right: 25px;   /* distancia desde el borde derecho */
-  bottom: 25px;  /* distancia desde el borde inferior */
-  width: 300px;
-  padding: 15px;
-  background: #FFE9CC;
-  border: 2px solid #ffa726;
-  border-radius: 15px;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
-  font-family: 'Quicksand', sans-serif;
-  z-index: 1000; /* para que quede por encima */
-}
-
-.floating-box h3 {
-  margin-top: 0;
-  font-size: 25px;
-  color: #e65100;
-}
-
-.floating-box p {
-  font-size: 16px;
-  margin: 10px 0;
-}
-
-.floating-box button {
-  background: #ffa726;
-  border: none;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.floating-box button:hover {
-  background: #fb8c00;
-}
-
-   
   /* =========================
      BOTÓ CTA
   ========================= */
@@ -400,7 +347,6 @@
      RESPONSIVE (MÒBIL I TABLETS)
   ========================= */
   @media (max-width: 768px) {
-    /* Capçalera */
     .main-header {
       flex-direction: row;
       justify-content: space-between;
@@ -408,14 +354,12 @@
       padding: 1rem 1rem;
     }
 
-    /* Mostrar menú hamburguesa */
     .menu-toggle {
       display: flex;
       position: relative;
       z-index: 200;
     }
 
-    /* Menú principal en columna i amagat per defecte */
     .nav-menu {
       flex-direction: column;
       width: 100%;
@@ -431,20 +375,17 @@
       border-top: 1px solid #e0c8aa;
     }
 
-    /* Menú actiu (visible) */
     .nav-menu.active {
       display: flex;
       opacity: 1;
       transform: translateY(0);
     }
 
-    /* Enllaços del menú més grans i espaiats */
     .nav-menu a {
       font-size: 1.2rem;
       padding: 0.5rem 0;
     }
 
-    /* Dropdowns sense posicionament absolut i sense fons */
     .dropdown-content {
       position: static;
       background: none;
@@ -453,22 +394,19 @@
       opacity: 1;
       transform: none;
       padding-left: 1rem;
-      display: none; /* mantenim ocult fins a que es faci click */
+      display: none;
     }
 
-    /* Dropdown links estil més petit i padding més ajustat */
     .dropdown-content a {
       font-size: 1.05rem;
       padding: 0.3rem 0;
     }
 
-    /* Ajust contenedor dret */
     .right {
       max-width: 100%;
       padding: 1rem;
     }
 
-    /* Ajust del logo i marca per mòbil */
     .logo {
       height: 45px;
     }
@@ -485,7 +423,49 @@
     max-width: 100%;
     height: auto;
   }
+
+  /* =========================
+     📌 CSS: Estils del quadre flotant (botó)
+  ========================= */
+  .floating-box {
+    position: fixed;
+    right: 25px;   /* distància des del borde dret */
+    bottom: 25px;  /* distància des del borde inferior */
+    width: 300px;
+    padding: 15px;
+    background: #FFE9CC;
+    border: 2px solid #ffa726;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+    font-family: 'Quicksand', sans-serif;
+    z-index: 1000; /* perquè quedi per sobre */
+  }
+
+  .floating-box h3 {
+    margin-top: 0;
+    font-size: 25px;
+    color: #e65100;
+  }
+
+  .floating-box p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  .floating-box button {
+    background: #ffa726;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .floating-box button:hover {
+    background: #fb8c00;
+  }
 </style>
+
 </head>
 <body>
   <div class="hero-bg">
