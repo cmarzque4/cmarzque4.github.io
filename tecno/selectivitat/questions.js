@@ -1,7 +1,7 @@
 const questions = [
     {
         type: "exercicis",
-        category: "energia",
+        category: "control_logic",
         text: `Una cadira de rodes elèctrica disposa de dos sistemes per a controlar la marxa endavant. El
         primer sistema és una palanca de control (o joystick). Si es fa servir aquest sistema, la cadira es
         desplaça endavant quan l’usuari mou la palanca en la direcció corresponent. El segon sistema
