@@ -8,11 +8,10 @@ const questions = [
         permet a l’usuari controlar el moviment de la cadira inclinant el tronc cap endavant. Si es fa
         servir aquest sistema, la cadira avança quan un sensor detecta que l’usuari s’inclina cap endavant.
         La cadira disposa d’un botó que permet seleccionar un d’aquests dos sistemes de control.
-        Responeu a les qüestions que hi ha a continuació utilitzant les variables d’estat següents:            <br>
-            <br>Velocitat del cotxe: \\(v = \\{ 1 : \\text{superior a } 20\\,\\text{km/h} ;\\; 0 : \\text{igual o inferior a } 20\\,\\text{km/h} \\)
-            <br>Cinturó de seguretat: \\(c = \\{ 1 : \\text{cordat} ;\\; 0 : \\text{descordat} \\)
-            <br>Llums quan és fosc: \\(l = \\{ 1 : \\text{encesos} ;\\; 0 : \\text{apagats} \\)
-            <br>Alarma: \\(a = \\{ 1 : \\text{sona} ;\\; 0 : \\text{no sona} \\)
+        Responeu a les qüestions que hi ha a continuació utilitzant les variables d’estat següents:            
+        <br>
+            <br><img src="Variables.png">
+        <br>
             <br><br><strong>a)</strong> Escriviu la taula de veritat del sistema. [1 punt]
             <br><strong>b)</strong> Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la. [1 punt]
             <br><strong>c)</strong> Dibuixeu l’esquema de contactes equivalent. [0,5 punts]
