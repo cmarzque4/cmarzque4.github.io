@@ -8,7 +8,7 @@ const questions = [
         permet a l’usuari controlar el moviment de la cadira inclinant el tronc cap endavant. Si es fa
         servir aquest sistema, la cadira avança quan un sensor detecta que l’usuari s’inclina cap endavant.
         La cadira disposa d’un botó que permet seleccionar un d’aquests dos sistemes de control.
-        Responeu a les qüestions que hi ha a continuació utilitzant les variables d’estat següents:
+        Responeu a les qüestions que hi ha a continuació utilitzant les variables d’estat següents:`,
         
             <img src="Variables.png" alt="Imatge relacionada amb la pregunta">    
 
