@@ -98,12 +98,12 @@ const questions = [
     {
         type: "exercicis",
         category: "energia",
-        text: `Volem utilitzar captadors solars de superfície \(S = 2{,}1\\,\\text{m<sup>2</sup>}\\) per a produir aigua calenta en un
+        text: `Volem utilitzar captadors solars de superfície \\(S = 2{,}1\\,\\text{m<sup>2</sup>}\\) per a produir aigua calenta en un
         habitatge familiar. Els captadors es complementen amb un escalfador elèctric per als dies en
         què no hi ha prou radiació solar. El rendiment energètic d’un captador solar s’obté mitjançant
-        l’equació  \eta = \eta_{0} - k_{1} \dfrac{T_{m} - T_{a}}{I}, en què \(η_i) és el rendiment òptic, \(k_1) 
-        és el coeficient de pèrdues, \(T_m) és la temperatura de treball del captador, \(T_a) és la temperatura 
-        ambient i \(I) és la radiació solar en \\(\\text{W/m<sup>2</sup>}\\). Disposem de dos models de captador solar amb les 
+        l’equació  \\(\eta = \eta_{0} - k_{1} \dfrac{T_{m} - T_{a}}{I}), en què \\(η_i) és el rendiment òptic, \\(k_1) 
+        és el coeficient de pèrdues, \\(T_m\\) és la temperatura de treball del captador, \\(T_a\\) és la temperatura 
+        ambient i \\(I\\) és la radiació solar en \\(\\text{W/m<sup>2</sup>}\\). Disposem de dos models de captador solar amb les 
         característiques següents:
 
                <img src="Taula_ex3.png" alt="Imatge relacionada amb la pregunta">
@@ -111,7 +111,7 @@ const questions = [
             <br>
             Si les condicions de treball del captador són \\(T_m = 50\\,\\text{ºC}\\), \\(T_a = 18\\,\\text{ºC}\\) i \\(I = 800\\,\\text{W/m^2}\\), determineu:
             <br>
-            <br><strong>a)</strong> El rendiment\\(\\η_a) i \\(\\η_b) dels captadors A i B en aquestes condicions de treball. Quina és l’opció més eficient?. [0,5 punts]
+            <br><strong>a)</strong> El rendiment \\(η_a\\) i \\(η_b\\) dels captadors A i B en aquestes condicions de treball. Quina és l’opció més eficient?. [0,5 punts]
             <br><br>
             Escollim el model de captador més eficient de l’apartat anterior i l’utilitzem durant un temps \\(t = 8\\,\\text{h}\\) al dia. Sabent que el consum diari 
             d’aigua és \\(c = 390\\,\\text{L}\\),  que s’escalfa \\(∆T = 35\\,\\text{ºC}\\) i que la calor específica de l’aigua és \\(Ce = 4{,}18\\,\\text{J/(g ºC)}\\) determineu:
