@@ -117,7 +117,7 @@ const questions = [
             d’aigua és \\(c = 390\\,\\text{L}\\),  que s’escalfa \\(∆T = 35\\,\\text{ºC}\\) i que la calor específica de l’aigua és \\(Ce = 4{,}18\\,\\text{J/(g ºC)}\\) determineu:
             <br>
             <br><strong>b)</strong> El nombre de captadors \\(n) que caldria instaŀlar per a escalfar tota l’aigua consumida mitjançant energia solar. [1 punts]
-            <br><strong>c)</strong> L’energia elèctrica consumida \\(E_{\\text{elèct}}\\), en \\(kW h) en un dia en el qual la radiació solar
+            <br><strong>c)</strong> L’energia elèctrica consumida \\(E_{\\text{elèct}}\\), en \\(kW h\\) en un dia en el qual la radiació solar
             disminueix a la meitat, tenint en compte que el nombre de captadors és l’obtingut en l’apartat anterior. [1 punts]
             <br><br>`, 
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
