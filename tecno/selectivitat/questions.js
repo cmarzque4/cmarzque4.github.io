@@ -108,15 +108,14 @@ const questions = [
 
                <img src="Taula_ex3.png" alt="Imatge relacionada amb la pregunta">
 
+            <br>
             Si les condicions de treball del captador són \\(T_m = 50\\,\\text{ºC}\\), \\(T_a = 18\\,\\text{ºC}\\) i \\(I = 800\\,\\text{W/m^2}\\), determineu:
             <br>
             <br><strong>a)</strong> El rendiment\\(\\η_a) i \\(\\η_b) dels captadors A i B en aquestes condicions de treball. Quina és l’opció més eficient?. [0,5 punts]
-          
             <br><br>
             Escollim el model de captador més eficient de l’apartat anterior i l’utilitzem durant un temps \\(t = 8\\,\\text{h}\\) al dia. Sabent que el consum diari 
             d’aigua és \\(c = 390\\,\\text{L}\\),  que s’escalfa \\(∆T = 35\\,\\text{ºC}\\) i que la calor específica de l’aigua és \\(Ce = 4{,}18\\,\\text{J/(g ºC)}\\) determineu:
             <br>
-
             <br><strong>b)</strong> El nombre de captadors \\(n) que caldria instaŀlar per a escalfar tota l’aigua consumida mitjançant energia solar. [1 punts]
             <br><strong>c)</strong> L’energia elèctrica consumida \\(E_{\\text{elèct}}\\), en kW hh, en un dia en el qual la radiació solar
             disminueix a la meitat, tenint en compte que el nombre de captadors és l’obtingut en l’apartat anterior. [1 punts]
