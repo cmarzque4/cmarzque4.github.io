@@ -98,15 +98,28 @@ const questions = [
     {
         type: "exercicis",
         category: "energia",
-        text: `S’instaŀla en una cadira de rodes manual un sistema electromecànic dissenyat per a ajudar l’assistent que empeny la cadira. El sistema d’accionament està format per una bateria ideal d’ió liti de tensió \\(U_{bat} = 12\\,\\text{V}\\) i energia \\(E_{bat} = 240\\,\\text{Wh}\\), un motor de rendiment \\(\\eta_{mot} = 0{,}87\\), un reductor de rendiment \\(\\eta_{red} = 0{,}95\\) i dues rodes auxiliars de diàmetre \\(d = 200\\,\\text{mm}\\) que toquen a terra. La relació de transmissió entre la velocitat de rotació de les rodes \\(n_r\\) i la velocitat de rotació del motor \\(n_{mot}\\) és \\(\\tau = \\dfrac{n_r}{n_{mot}} = 0{,}08\\).
-            En les condicions d’estudi, es fa avançar la cadira en línia recta a una velocitat constant \\(v = 3{,}7\\,\\text{km/h}\\) per un terreny horitzontal i sense que les rodes llisquin. El motor consumeix una potència \\(P_{cons} = 75\\,\\text{W}\\). Determineu, per a aquestes condicions:
+        text: `Volem utilitzar captadors solars de superfície \\(S = 2{,}1\\,\\text{m^2}\\) per a produir aigua calenta en un
+        habitatge familiar. Els captadors es complementen amb un escalfador elèctric per als dies en
+        què no hi ha prou radiació solar. El rendiment energètic d’un captador solar s’obté mitjançant
+        l’equació  \\(\\η = η_i - k_1 \\dfrac{T_m - T_a}{I}}), en què \\(η_i) és el rendiment òptic, \\(k_1) 
+        és el coeficient de pèrdues, \\(T_m) és la temperatura de treball del captador, \\(T_a) és la temperatura 
+        ambient i \\(I) és la radiació solar en \\(\\text{W/m^2}\\). Disposem de dos models de captador solar amb les 
+        característiques següents:
+
+               <img src="Taula_ex3.png" alt="Imatge relacionada amb la pregunta">
+
+            Si les condicions de treball del captador són \\(T_m = 50\\,\\text{ºC}\\), \\(T_a = 18\\,\\text{ºC}\\) i \\(I = 800\\,\\text{W/m^2}\\), determineu:
             <br>
-            <br><strong>a)</strong> La velocitat angular de les rodes auxiliars \\(\\omega_r\\) i la velocitat angular a l’eix del motor \\(\\omega_{mot}\\). [0,5 punts]
-            <br><strong>b)</strong> La potència a l’eix de les rodes \\(P_{subm}\\). [0,5 punts]
+            <br><strong>a)</strong> El rendiment\\(η_a) i \\(η_b) dels captadors A i B en aquestes condicions de treball. Quina és l’opció més eficient?. [0,5 punts]
+          <br><br>
+            Escollim el model de captador més eficient de l’apartat anterior i l’utilitzem durant un temps \\(t = 8\\,\\text{h}\\) al dia. Sabent que el consum diari 
+            d’aigua és \\(c = 390\\,\\text{L}\\),  que s’escalfa \\(∆T = 35\\,\\text{ºC}\\) i que la calor específica de l’aigua és \\(Ce = 4{,}18\\,\\text{J/(g ºC)}\\) determineu:
+          <br>
+            
+            <br><strong>b)</strong> El nombre de captadors \\(n) que caldria instaŀlar per a escalfar tota l’aigua consumida mitjançant energia solar. [1 punts]
             <br><strong>c)</strong> El parell \\(\\Gamma\\) a l’eix del motor. [0,5 punts]
             <br><strong>d)</strong> El temps màxim de funcionament \\(t\\) del conjunt i la distància màxima recorreguda \\(s_{rec}\\). [1 punt]
-            <br><br>
-               <img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">`,  // Imatge opcional al final de la pregunta
+            <br><br>`, 
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
         steps: `
             <strong>a) Velocitat angular de les rodes i del motor:</strong>
