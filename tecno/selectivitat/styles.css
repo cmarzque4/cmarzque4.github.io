@@ -24,6 +24,10 @@ h2 {
     transition: color 0.4s;
 }
 
+img {
+   max-width: 800px; 
+}
+
 /* ===== QUIZ CONTAINER ===== */
 #quiz-container {
     max-width: 800px;
