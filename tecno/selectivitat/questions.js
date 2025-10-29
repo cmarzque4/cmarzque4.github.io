@@ -10,13 +10,13 @@ const questions = [
         La cadira disposa d’un botó que permet seleccionar un d’aquests dos sistemes de control.
         Responeu a les qüestions que hi ha a continuació utilitzant les variables d’estat següents:            
         <br>
-            <br><img src="Variables.png" alt="Imatge relacionada amb la pregunta">
+            <br><img src="Variables.png" alt="Variables d'estat">
         <br>
             <br><br><strong>a)</strong> Escriviu la taula de veritat del sistema. [1 punt]
             <br><strong>b)</strong> Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la. [1 punt]
             <br><strong>c)</strong> Dibuixeu l’esquema de contactes equivalent. [0,5 punts]
             <br><br>`, 
-        correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
+        correctAnswer: "",  
         steps: `
             <strong>a) Càlcul de la potència mitjana del vent \\(P_{\\text{vent}}\\) per a un aerogenerador:</strong>
             <br>
@@ -106,7 +106,7 @@ const questions = [
         ambient i \\(I\\) és la radiació solar en \\(W/m<sup>2</sup>\\). Disposem de dos models de captador solar amb les 
         característiques següents:
 
-               <img src="Taula_ex3.png" alt="Imatge relacionada amb la pregunta">
+               <img src="Taula_ex3.png" alt="Taula \\(η_0\\) i \\(k_1\\) segons Captador A i B">
 
             <br>
             Si les condicions de treball del captador són \\(T_m = 50\\,\\text{ºC}\\), \\(T_a = 18\\,\\text{ºC}\\) i \\(I = 800\\,\\text{W/m<sup>2</sup>}\\), determineu:
