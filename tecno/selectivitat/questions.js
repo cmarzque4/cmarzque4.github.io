@@ -10,13 +10,12 @@ const questions = [
         La cadira disposa d’un botó que permet seleccionar un d’aquests dos sistemes de control.
         Responeu a les qüestions que hi ha a continuació utilitzant les variables d’estat següents:            
         <br>
-            <br><img src="Variables.png">
+            <br><img src="Variables.png" alt="Imatge relacionada amb la pregunta">
         <br>
             <br><br><strong>a)</strong> Escriviu la taula de veritat del sistema. [1 punt]
             <br><strong>b)</strong> Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la. [1 punt]
             <br><strong>c)</strong> Dibuixeu l’esquema de contactes equivalent. [0,5 punts]
-            <br><br>
-               <img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">`,  // Imatge opcional al final de la pregunta
+            <br><br>`, 
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
         steps: `
             <strong>a) Càlcul de la potència mitjana del vent \\(P_{\\text{vent}}\\) per a un aerogenerador:</strong>
