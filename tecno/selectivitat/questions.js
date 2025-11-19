@@ -183,7 +183,7 @@ const questions = [
             <strong>c)</strong> La potència mecànica \\(P_roda\\) a l’eix de la roda i l’angle α que forma el perfil de la carretera amb l’horitzontal. [1 punt]
             <br><br>
             <br><strong>d)</strong> El parell \\(Γ_roda\\)Γroda a l’eix de la roda. [0,5 punts]
-            <br><br>, `
+            <br><br>`,
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
         steps: `
             <strong>a) Velocitat angular de les rodes i del motor:</strong>
