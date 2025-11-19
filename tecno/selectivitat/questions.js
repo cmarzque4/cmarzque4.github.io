@@ -168,20 +168,22 @@ const questions = [
     {
         type: "exercicis",
         category: "energia",
-        text: `Una estufa d’exterior alimentada amb gas butà té un consum regulable d’entre 
-            \\(c_{m\\text{ín}} = 450\\,\\text{g/h}\\) i \\(c_{m\\text{àx}} = 800\\,\\text{g/h}\\) de butà. El poder calorífic del butà és \\(p_b = 49,61\\,\\text{MJ/kg}\\) i es distribueix en bombones que contenen una massa de butà de \\(m_b = 12,5\\,\\text{kg}\\). Determineu:
+        text: `Una motorista puja un pendent a una velocitat constant \\(v = 50\\,\\text{km/h}\\) sense fer lliscar la
+        roda del darrere. La marxa que té posada fa que la relació de transmissió entre l’eix de sortida del motor i l’eix de la roda del darrere sigui \\(τ = ω<sub>roda</sub>/ω<sub>motor</sub> = 0,044\\). Aquesta reducció de
+        velocitat s’aconsegueix mitjançant una transmissió d’engranatges de rendiment \\(η_eng = 0,90\\) i
+        una transmissió per cadena de rendiment \\(η_cad = 0,85\\). La roda té un diàmetre \\(d = 620\\,\\text{mm}\\) i la
+        massa total de la motorista més la moto és \\(m = 150\\,\\text{kg}\\). Si el parell a l’eix de sortida del motor
+        és \\(Γ_motor = 6\\,\\text{N m}\\) i la fricció amb l’aire es considera negligible, determineu: 
+        <img src="ex.moto.png" alt="Imatge moto">
             <br><br>
-            <strong>a)</strong> La potència mínima \\(P_{\\text{mín}}\\) i màxima \\(P_{\\text{màx}}\\) de l’estufa. [0,5 punts]
+            <strong>a)</strong> Les velocitats de gir de la roda \\(ω_roda\\) i de l’eix del motor \\(ω_motor\\), en rad/s. [0,5 punts]
             <br>
-            <strong>b)</strong> La durada de funcionament màxima d’una bombona \\(t_{\\text{màx}}\\). [0,5 punts]
+            <strong>b)</strong> La potència \\(P_motor\\) a l’eix de sortida del motor. [0,5 punts]
             <br>
-            <strong>c)</strong> El gràfic de la durada \\(t\\) d’una bombona en hores, en funció del consum \\(c\\) de butà, i indiqueu-ne les escales. [1 punt]
+            <strong>c)</strong> La potència mecànica \\(P_roda\\) a l’eix de la roda i l’angle α que forma el perfil de la carretera amb l’horitzontal. [1 punt]
             <br><br>
-            Una terrassa de bar té instal·lades \\(n = 3\\) d’aquestes estufes que funcionen durant \\(t_{\\text{bar}} = 10\\,\\text{h/dia}\\) a potència màxima. L’Oficina Catalana del Canvi Climàtic estima un factor d’emissió \\(FE = 2,96\\,\\text{kg CO2/kg butà}\\). Determineu:
-            <br>
-            <br><strong>d)</strong> La massa de CO2 emesa en un dia de funcionament \\(m_{CO2}\\).
-            <br><br>
-               <img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">`,  // Imatge opcional al final de la pregunta
+            <br><strong>d)</strong> El parell \\(Γ_roda\\)Γroda a l’eix de la roda. [0,5 punts]
+            <br><br>, `
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
         steps: `
             <strong>a) Velocitat angular de les rodes i del motor:</strong>
