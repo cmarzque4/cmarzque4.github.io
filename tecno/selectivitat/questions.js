@@ -181,7 +181,7 @@ const questions = [
             <strong>b)</strong> La potència \\(P<sub>motor</sub>\\) a l’eix de sortida del motor. [0,5 punts]
             <br>
             <strong>c)</strong> La potència mecànica \\(P<sub>roda</sub>\\) a l’eix de la roda i l’angle α que forma el perfil de la carretera amb l’horitzontal. [1 punt]
-            <br><br>
+            <br>
             <br><strong>d)</strong> El parell \\(Γ<sub>roda</sub>\\)Γroda a l’eix de la roda. [0,5 punts]
             <br><br>`,
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
