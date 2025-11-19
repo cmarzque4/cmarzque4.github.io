@@ -165,70 +165,7 @@ const questions = [
             <br><br>
             <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
     },
-    {
-        type: "exercicis",
-        category: "energia",
-        text: `Una motorista puja un pendent a una velocitat constant \\(v = 50\\,\\text{km/h}\\) sense fer lliscar la
-        roda del darrere. La marxa que té posada fa que la relació de transmissió entre l’eix de sortida del motor i l’eix de la roda del darrere sigui \\(τ = ω<sub>roda</sub>/ω<sub>motor</sub> = 0,044\\). Aquesta reducció de
-        velocitat s’aconsegueix mitjançant una transmissió d’engranatges de rendiment \\(η_eng = 0,90\\) i
-        una transmissió per cadena de rendiment \\(η_cad = 0,85\\). La roda té un diàmetre \\(d = 620\\,\\text{mm}\\) i la
-        massa total de la motorista més la moto és \\(m = 150\\,\\text{kg}\\). Si el parell a l’eix de sortida del motor
-        és \\(Γ_motor = 6\\,\\text{N m}\\) i la fricció amb l’aire es considera negligible, determineu: 
-        <img src="ex.moto.png" alt="Imatge moto">
-            <br><br>
-            <strong>a)</strong> Les velocitats de gir de la roda \\(ω_roda\\) i de l’eix del motor \\(ω_motor\\), en rad/s. [0,5 punts]
-            <br>
-            <strong>b)</strong> La potència \\(P_motor\\) a l’eix de sortida del motor. [0,5 punts]
-            <br>
-            <strong>c)</strong> La potència mecànica \\(P_roda\\) a l’eix de la roda i l’angle α que forma el perfil de la carretera amb l’horitzontal. [1 punt]
-            <br><br>
-            <br><strong>d)</strong> El parell \\(Γ_roda\\)Γroda a l’eix de la roda. [0,5 punts]
-            <br><br>`,
-        correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
-        steps: `
-            <strong>a) Velocitat angular de les rodes i del motor:</strong>
-            <br>
-            - Velocitat angular de les rodes auxiliars:
-            \\[
-            \\omega_r = \\frac{v}{r} = \\frac{1,028\\,\\text{m/s}}{0,1\\,\\text{m}} = 10,28\\,\\text{rad/s}
-            \\]
-            - Velocitat angular del motor:
-            \\[
-            \\omega_{mot} = \\frac{\\omega_r}{\\tau} = \\frac{10,28\\,\\text{rad/s}}{0,08} = 128,5\\,\\text{rad/s}
-            \\]
-            <br><strong>b) Potència a l’eix de les rodes:</strong>
-            <br>
-            - Aplicant rendiment del motor i del reductor:
-            \\[
-            P_{subm} = P_{cons} \\times \\eta_{mot} \\times \\eta_{red} = 75\\,\\text{W} \\times 0,87 \\times 0,95 = 62,06\\,\\text{W}
-            \\]
-            <br><strong>c) Parell a l’eix del motor:</strong>
-            <br>
-            - Potència útil a l’eix del motor:
-            \\[
-            P_{mot} = P_{cons} \\times \\eta_{mot} = 75\\,\\text{W} \\times 0,87 = 65,25\\,\\text{W}
-            \\]
-            - Parell:
-            \\[
-            \\Gamma_{mot} = \\frac{P_{mot}}{\\omega_{mot}} = \\frac{65,25\\,\\text{W}}{128,5\\,\\text{rad/s}} = 0,5077\\,\\text{N·m}
-            \\]
-            <br><strong>d) Temps màxim de funcionament i distància recorreguda:</strong>
-            <br>
-            - Energia de la bateria:
-            \\[
-            E_{bat} = 240\\,\\text{Wh} = 240 \\times 3600\\,\\text{W·s} = 864000\\,\\text{J}
-            \\]
-            - Temps de funcionament:
-            \\[
-            t = \\frac{E_{bat}}{P_{cons}} = \\frac{864000\\,\\text{J}}{75\\,\\text{W}} = 11520\\,\\text{s} = 3,2\\,\\text{h}
-            \\]
-            - Distància màxima recorreguda:
-            \\[
-            s_{rec} = v \\times t = 1,028\\,\\text{m/s} \\times 11520\\,\\text{s} = 11830\\,\\text{m} = 11,83\\,\\text{km}
-            \\]
-            <br><br>
-            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
-    },
+  
     {
         type: "questions", // Tipus de pregunta
         category: "materials",
