@@ -2,7 +2,7 @@ const questions = [
     {
         type: "exercicis",
         category: "control_logic",
-        text: `Una cadira de rodes elèctrica disposa de dos sistemes per a controlar la marxa endavant. El
+        text: `<br>Una cadira de rodes elèctrica disposa de dos sistemes per a controlar la marxa endavant. El
         primer sistema és una palanca de control (o <i>joystick</i>). Si es fa servir aquest sistema, la cadira es
         desplaça endavant quan l’usuari mou la palanca en la direcció corresponent. El segon sistema
         permet a l’usuari controlar el moviment de la cadira inclinant el tronc cap endavant. Si es fa
@@ -98,7 +98,7 @@ const questions = [
     {
         type: "exercicis",
         category: "energia",
-        text: `Volem utilitzar captadors solars de superfície \\(S = 2{,}1\\,\\text{m<sup>2</sup>}\\) per a produir aigua calenta en un
+        text: `<br>Volem utilitzar captadors solars de superfície \\(S = 2{,}1\\,\\text{m<sup>2</sup>}\\) per a produir aigua calenta en un
         habitatge familiar. Els captadors es complementen amb un escalfador elèctric per als dies en
         què no hi ha prou radiació solar. El rendiment energètic d’un captador solar s’obté mitjançant
         l’equació  \\(η = η_0\\) - \\(k_1\\) \\(dfrac{\\(T_m - T_a\\)}{I}\\), en què \\(η_0\\) és el rendiment òptic, \\(k_1\\) 
@@ -168,7 +168,7 @@ const questions = [
     {
         type: "exercicis",
         category: "energia",
-        text: `Una motorista puja un pendent a una velocitat constant \\(v = 50\\,\\text{km/h}\\) sense fer lliscar la
+        text: `<br>Una motorista puja un pendent a una velocitat constant \\(v = 50\\,\\text{km/h}\\) sense fer lliscar la
         roda del darrere. La marxa que té posada fa que la relació de transmissió entre l’eix de sortida del motor i l’eix de la roda del darrere sigui \\(τ = ω<sub>roda</sub>/ω<sub>motor</sub> = 0,044\\). Aquesta reducció de
         velocitat s’aconsegueix mitjançant una transmissió d’engranatges de rendiment \\(η<sub>eng</sub> = 0,90\\) i
         una transmissió per cadena de rendiment \\(η<sub>cad</sub> = 0,85\\). La roda té un diàmetre \\(d = 620\\,\\text{mm}\\) i la
