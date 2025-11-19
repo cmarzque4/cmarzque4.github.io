@@ -98,7 +98,7 @@ const questions = [
     {
         type: "exercicis",
         category: "energia",
-        text: `Volem utilitzar captadors solars de superfície \\(S = 2,1\\,\\text{m<sup>2</sup>}\\) per a produir aigua calenta en un
+        text: `Volem utilitzar captadors solars de superfície \\(S = 2{,}1\\,\\text{m<sup>2</sup>}\\) per a produir aigua calenta en un
         habitatge familiar. Els captadors es complementen amb un escalfador elèctric per als dies en
         què no hi ha prou radiació solar. El rendiment energètic d’un captador solar s’obté mitjançant
         l’equació  \\(η = η_0\\) - \\(k_1\\) \\(dfrac{\\(T_m - T_a\\)}{I}\\), en què \\(η_0\\) és el rendiment òptic, \\(k_1\\) 
