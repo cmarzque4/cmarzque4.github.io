@@ -230,6 +230,72 @@ const questions = [
             <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
     },
     {
+        type: "exercicis",
+        category: "energia",
+        text: `
+        <img src="ex.corrent.png" alt="Imatge cirquit">
+        <br>Els dos llums d’encreuament d’un vehicle es connecten en paraŀlel a una bateria de tensió
+        \\(U = 12\\,\\text{V}\\). La bateria i els llums es connecten mitjançant un cable bipolar de coure de diàmetre
+        \\(d = 2{,}5\\,\\text{mm}\\). El coure té una resistivitat \\(ρ = 1{,}7 x 10{<sup>–8</sup>}\\,\text{Ω m}\\). La resistència \\(R{<sub>cable<sub>}\\) de l’esquema de
+        la figura correspon als dos conductors del cable bipolar. Si cada llum té una potència nominal
+        \\(P{<sub>llum</sub>} = 55\\,\\text{W}\\) quan s’alimenta directament amb una tensió \\(U = 12\\,\\text{V}\\), determineu:
+         
+            <br><br>
+            <strong>a)</strong> Les velocitats de gir de la roda \\(ω{<sub>roda</sub>}\\) i de l’eix del motor \\(ω{<sub>motor</sub>}\\), en rad/s. [0,5 punts]
+            <br>
+            <strong>b)</strong> La potència \\(P{<sub>motor</sub>}\\) a l’eix de sortida del motor. [0,5 punts]
+            <br>
+            <strong>c)</strong> La potència mecànica \\(P{<sub>roda</sub>}\\) a l’eix de la roda i l’angle α que forma el perfil de la carretera amb l’horitzontal. [1 punt]
+            <br>
+            <br><strong>d)</strong> El parell \\(Γ{<sub>roda</sub>}\\)Γroda a l’eix de la roda. [0,5 punts]
+            <br><br>`,
+        correctAnswer: "",  
+        steps: `
+            <strong>a) Velocitat angular de les rodes i del motor:</strong>
+            <br>
+            - Velocitat angular de les rodes auxiliars:
+            \\[
+            \\omega_r = \\frac{v}{r} = \\frac{1,028\\,\\text{m/s}}{0,1\\,\\text{m}} = 10,28\\,\\text{rad/s}
+            \\]
+            - Velocitat angular del motor:
+            \\[
+            \\omega_{mot} = \\frac{\\omega_r}{\\tau} = \\frac{10,28\\,\\text{rad/s}}{0,08} = 128,5\\,\\text{rad/s}
+            \\]
+            <br><strong>b) Potència a l’eix de les rodes:</strong>
+            <br>
+            - Aplicant rendiment del motor i del reductor:
+            \\[
+            P_{subm} = P_{cons} \\times \\eta_{mot} \\times \\eta_{red} = 75\\,\\text{W} \\times 0,87 \\times 0,95 = 62,06\\,\\text{W}
+            \\]
+            <br><strong>c) Parell a l’eix del motor:</strong>
+            <br>
+            - Potència útil a l’eix del motor:
+            \\[
+            P_{mot} = P_{cons} \\times \\eta_{mot} = 75\\,\\text{W} \\times 0,87 = 65,25\\,\\text{W}
+            \\]
+            - Parell:
+            \\[
+            \\Gamma_{mot} = \\frac{P_{mot}}{\\omega_{mot}} = \\frac{65,25\\,\\text{W}}{128,5\\,\\text{rad/s}} = 0,5077\\,\\text{N·m}
+            \\]
+            <br><strong>d) Temps màxim de funcionament i distància recorreguda:</strong>
+            <br>
+            - Energia de la bateria:
+            \\[
+            E_{bat} = 240\\,\\text{Wh} = 240 \\times 3600\\,\\text{W·s} = 864000\\,\\text{J}
+            \\]
+            - Temps de funcionament:
+            \\[
+            t = \\frac{E_{bat}}{P_{cons}} = \\frac{864000\\,\\text{J}}{75\\,\\text{W}} = 11520\\,\\text{s} = 3,2\\,\\text{h}
+            \\]
+            - Distància màxima recorreguda:
+            \\[
+            s_{rec} = v \\times t = 1,028\\,\\text{m/s} \\times 11520\\,\\text{s} = 11830\\,\\text{m} = 11,83\\,\\text{km}
+            \\]
+            <br><br>
+            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+    },
+    
+    {
         type: "questions", // Tipus de pregunta
         category: "materials",
         text: `La figura mostra la corba tensió-deformació obtinguda en un assaig de tracció. Quin valor aproximat té el mòdul elàstic del material?`,
