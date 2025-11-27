@@ -169,22 +169,22 @@ const questions = [
         type: "exercicis",
         category: "energia",
         text: `<br>Una motorista puja un pendent a una velocitat constant \\(v = 50\\,\\text{km/h}\\) sense fer lliscar la
-        roda del darrere. La marxa que té posada fa que la relació de transmissió entre l’eix de sortida del motor i l’eix de la roda del darrere sigui \\(τ = ω<sub>roda</sub>/ω<sub>motor</sub> = 0{,}044\\). Aquesta reducció de
-        velocitat s’aconsegueix mitjançant una transmissió d’engranatges de rendiment \\(η<sub>eng</sub> = 0{,}90\\) i
+        roda del darrere. La marxa que té posada fa que la relació de transmissió entre l’eix de sortida del motor i l’eix de la roda del darrere sigui \\(τ = ω{<sub>roda</sub>}/ω{<sub>motor</sub>} = 0{,}044\\). Aquesta reducció de
+        velocitat s’aconsegueix mitjançant una transmissió d’engranatges de rendiment \\(η{<sub>eng</sub>} = 0{,}90\\) i
         una transmissió per cadena de rendiment \\(η<sub>cad</sub> = 0,85\\). La roda té un diàmetre \\(d = 620\\,\\text{mm}\\) i la
         massa total de la motorista més la moto és \\(m = 150\\,\\text{kg}\\). Si el parell a l’eix de sortida del motor
-        és \\(Γ<sub>motor</sub> = 6\\,\\text{N m}\\) i la fricció amb l’aire es considera negligible, determineu: 
+        és \\(Γ{<sub>motor</sub>} = 6\\,\\text{N m}\\) i la fricció amb l’aire es considera negligible, determineu: 
         <img src="ex.moto.png" alt="Imatge moto">
             <br><br>
-            <strong>a)</strong> Les velocitats de gir de la roda \\(ω<sub>roda</sub>\\) i de l’eix del motor \\(ω<sub>motor</sub>\\), en rad/s. [0,5 punts]
+            <strong>a)</strong> Les velocitats de gir de la roda \\(ω{<sub>roda</sub>}\\) i de l’eix del motor \\(ω{<sub>motor</sub>}\\), en rad/s. [0,5 punts]
             <br>
-            <strong>b)</strong> La potència \\(P<sub>motor</sub>\\) a l’eix de sortida del motor. [0,5 punts]
+            <strong>b)</strong> La potència \\(P{<sub>motor</sub>}\\) a l’eix de sortida del motor. [0,5 punts]
             <br>
-            <strong>c)</strong> La potència mecànica \\(P<sub>roda</sub>\\) a l’eix de la roda i l’angle α que forma el perfil de la carretera amb l’horitzontal. [1 punt]
+            <strong>c)</strong> La potència mecànica \\(P{<sub>roda</sub>}\\) a l’eix de la roda i l’angle α que forma el perfil de la carretera amb l’horitzontal. [1 punt]
             <br>
-            <br><strong>d)</strong> El parell \\(Γ<sub>roda</sub>\\)Γroda a l’eix de la roda. [0,5 punts]
+            <br><strong>d)</strong> El parell \\(Γ{<sub>roda</sub>}\\)Γroda a l’eix de la roda. [0,5 punts]
             <br><br>`,
-        correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
+        correctAnswer: "",  
         steps: `
             <strong>a) Velocitat angular de les rodes i del motor:</strong>
             <br>
