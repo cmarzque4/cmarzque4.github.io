@@ -169,20 +169,20 @@ const questions = [
         type: "exercicis",
         category: "energia",
         text: `<br>Una motorista puja un pendent a una velocitat constant \\(v = 50\\,\\text{km/h}\\) sense fer lliscar la
-        roda del darrere. La marxa que té posada fa que la relació de transmissió entre l’eix de sortida del motor i l’eix de la roda del darrere sigui \\(τ = ω{<sub>roda</sub>}/ω{<sub>motor</sub>} = 0{,}044\\). Aquesta reducció de
-        velocitat s’aconsegueix mitjançant una transmissió d’engranatges de rendiment \\(η{<sub>eng</sub>} = 0{,}90\\) i
-        una transmissió per cadena de rendiment \\(η<sub>cad</sub> = 0,85\\). La roda té un diàmetre \\(d = 620\\,\\text{mm}\\) i la
+        roda del darrere. La marxa que té posada fa que la relació de transmissió entre l’eix de sortida del motor i l’eix de la roda del darrere sigui \\(τ = ω_{roda}/ω_{motor} = 0{,}044\\). Aquesta reducció de
+        velocitat s’aconsegueix mitjançant una transmissió d’engranatges de rendiment \\(η_{eng} = 0{,}90\\) i
+        una transmissió per cadena de rendiment \\(η_{cad} = 0,85\\). La roda té un diàmetre \\(d = 620\\,\\text{mm}\\) i la
         massa total de la motorista més la moto és \\(m = 150\\,\\text{kg}\\). Si el parell a l’eix de sortida del motor
-        és \\(Γ{<sub>motor</sub>} = 6\\,\\text{N m}\\) i la fricció amb l’aire es considera negligible, determineu: 
+        és \\(Γ_{motor} = 6\\,\\text{N m}\\) i la fricció amb l’aire es considera negligible, determineu: 
         <img src="ex.moto.png" alt="Imatge moto">
             <br><br>
-            <strong>a)</strong> Les velocitats de gir de la roda \\(ω{<sub>roda</sub>}\\) i de l’eix del motor \\(ω{<sub>motor</sub>}\\), en rad/s. [0,5 punts]
+            <strong>a)</strong> Les velocitats de gir de la roda \\(ω_{roda}\\) i de l’eix del motor \\(ω_{motor}\\), en rad/s. [0,5 punts]
             <br>
-            <strong>b)</strong> La potència \\(P{<sub>motor</sub>}\\) a l’eix de sortida del motor. [0,5 punts]
+            <strong>b)</strong> La potència \\(P_{motor}\\) a l’eix de sortida del motor. [0,5 punts]
             <br>
-            <strong>c)</strong> La potència mecànica \\(P{<sub>roda</sub>}\\) a l’eix de la roda i l’angle α que forma el perfil de la carretera amb l’horitzontal. [1 punt]
+            <strong>c)</strong> La potència mecànica \\(P_{roda}\\) a l’eix de la roda i l’angle α que forma el perfil de la carretera amb l’horitzontal. [1 punt]
             <br>
-            <br><strong>d)</strong> El parell \\(Γ{<sub>roda</sub>}\\)Γroda a l’eix de la roda. [0,5 punts]
+            <br><strong>d)</strong> El parell \\(Γ_{roda}\\)Γroda a l’eix de la roda. [0,5 punts]
             <br><br>`,
         correctAnswer: "",  
         steps: `
@@ -236,7 +236,7 @@ const questions = [
         <img src="ex.corrent.png" alt="Imatge cirquit">
         <br>Els dos llums d’encreuament d’un vehicle es connecten en paraŀlel a una bateria de tensió
         \\(U = 12\\,\\text{V}\\). La bateria i els llums es connecten mitjançant un cable bipolar de coure de diàmetre
-        \\(d = 2{,}5\\,\\text{mm}\\). El coure té una resistivitat \\(ρ = 1{,}7 x 10{<sup>–8</sup>}\\,\text{Ω m}\\). La resistència \\(R{<sub>cable<sub>}\\) de l’esquema de
+        \\(d = 2{,}5\\,\\text{mm}\\). El coure té una resistivitat \\(ρ = 1{,}7 x 10{<sup>–8</sup>}\\,\text{Ω m}\\). La resistència \\(R_{cable}\\) de l’esquema de
         la figura correspon als dos conductors del cable bipolar. Si cada llum té una potència nominal
         \\(P{<sub>llum</sub>} = 55\\,\\text{W}\\) quan s’alimenta directament amb una tensió \\(U = 12\\,\\text{V}\\), determineu:
          
