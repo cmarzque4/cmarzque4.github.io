@@ -180,7 +180,7 @@ const questions = [
             <br>
             <strong>b)</strong> La potència \\(P_{motor}\\) a l’eix de sortida del motor. [0,5 punts]
             <br>
-            <strong>c)</strong> La potència mecànica \\(P_{roda}\\) a l’eix de la roda i l’angle α que forma el perfil de la carretera amb l’horitzontal. [1 punt]
+            <strong>c)</strong> La potència mecànica \\(P_{roda}\\) a l’eix de la roda i l’angle α que forma el perfil de la carretera amb l’horitzontal. <nbsp> [1 punt]
             <br>
             <br><strong>d)</strong> El parell \\(Γ_{roda}\\)Γroda a l’eix de la roda. [0,5 punts]
             <br><br>`,
@@ -245,7 +245,7 @@ const questions = [
             <br>
             <strong>b)</strong> La longitud màxima \\(L_{màx}\\) que pot tenir el cable si es vol que la caiguda de tensió del cable no sigui superior al 5 %. [1 punts]
             <br><br>
-            Si s’utilitza un cable amb una longitud \\(L = 4\\,\text{m}\\), determineu:
+            Si s’utilitza un cable amb una longitud \\(L = 4\\,\\text{m}\\), determineu:
             <br><br>
             <strong>c)</strong> La resistència del cable \\(R_{cable}\\). [0,5 punt]
             <br>
