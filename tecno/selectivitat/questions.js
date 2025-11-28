@@ -236,20 +236,20 @@ const questions = [
         <img src="ex.corrent.png" alt="Imatge cirquit">
         <br>Els dos llums d’encreuament d’un vehicle es connecten en paraŀlel a una bateria de tensió
         \\(U = 12\\,\\text{V}\\). La bateria i els llums es connecten mitjançant un cable bipolar de coure de diàmetre
-        \\(d = 2{,}5\\,\\text{mm}\\). El coure té una resistivitat \\(ρ = 1{,}7 x 10<sup>–8</sup>\\,\text{Ω m}\\). La resistència \\(R_{cable}\\) de l’esquema de
+        \\(d = 2{,}5\\,\\text{mm}\\). El coure té una resistivitat \\(ρ = 1{,}7 x 10<sup>–8</sup>\\,\\text{Ω m}\\). La resistència \\(R_{cable}\\) de l’esquema de
         la figura correspon als dos conductors del cable bipolar. Si cada llum té una potència nominal
         \\(P_{llum} = 55\\,\\text{W}\\) quan s’alimenta directament amb una tensió \\(U = 12\\,\\text{V}\\), determineu:
          
             <br><br>
             <strong>a)</strong> La resistència equivalent \\(R_{eq}\\) dels dos llums connectats en paraŀlel. [0,5 punts]
             <br>
-            <strong>b)</strong> La longitud màxima \\(L_{màx}\\) que pot tenir el cable si es vol que la caiguda de tensió del cable no sigui superior al 5 %. [0,5 punts]
+            <strong>b)</strong> La longitud màxima \\(L_{màx}\\) que pot tenir el cable si es vol que la caiguda de tensió del cable no sigui superior al 5 %. [1 punts]
             <br><br>
-            Si s’utilitza un cable amb una longitud \\(L = 4 m, determineu:
+            Si s’utilitza un cable amb una longitud \\(L = 4\\,\text{m}\\), determineu:
+            <br><br>
+            <strong>c)</strong> La resistència del cable \\(R_{cable}\\). [0,5 punt]
             <br>
-            <strong>c)</strong> La potència mecànica \\(P{<sub>roda</sub>}\\) a l’eix de la roda i l’angle α que forma el perfil de la carretera amb l’horitzontal. [1 punt]
-            <br>
-            <br><strong>d)</strong> El parell \\(Γ{<sub>roda</sub>}\\)Γroda a l’eix de la roda. [0,5 punts]
+            <br><strong>d)</strong> La potència total \\(P_{total}\\) consumida conjuntament pel cable i els dos llums. [0,5 punts]
             <br><br>`,
         correctAnswer: "",  
         steps: `
