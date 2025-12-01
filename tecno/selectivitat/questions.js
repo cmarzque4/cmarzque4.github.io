@@ -98,7 +98,7 @@ const questions = [
     {
         type: "exercicis",
         category: "energia",
-        text: `<br>Volem utilitzar captadors solars de superfície \\(S = 2{,}1\\,\\text{m^2}\\) per a produir aigua calenta en un
+        text: `<br>Volem utilitzar captadors solars de superfície \\(S = 2{,}1\\,\\text{m^2\\}\\) per a produir aigua calenta en un
         habitatge familiar. Els captadors es complementen amb un escalfador elèctric per als dies en
         què no hi ha prou radiació solar. El rendiment energètic d’un captador solar s’obté mitjançant
         l’equació  \\(η = η_0\\) - \\(k_1\\) \\(dfrac{\\(T_m - T_a\\)}{I}\\), en què \\(η_0\\) és el rendiment òptic, \\(k_1\\) 
@@ -182,7 +182,7 @@ const questions = [
             <br>
             <strong>c)</strong> La potència mecànica \\(P_{roda}\\) a l’eix de la roda i l’angle α que forma el perfil de la carretera amb l’horitzontal. <nbsp> [1 punt]
             <br>
-            <br><strong>d)</strong> El parell \\(Γ_{roda}\\)Γroda a l’eix de la roda. [0,5 punts]
+            <br><strong>d)</strong> El parell \\(Γ_{roda}\\) a l’eix de la roda. [0,5 punts]
             <br><br>`,
         correctAnswer: "",  
         steps: `
@@ -236,7 +236,7 @@ const questions = [
         <img src="ex.corrent.png" alt="Imatge cirquit">
         <br>Els dos llums d’encreuament d’un vehicle es connecten en paraŀlel a una bateria de tensió
         \\(U = 12\\,\\text{V}\\). La bateria i els llums es connecten mitjançant un cable bipolar de coure de diàmetre
-        \\(d = 2{,}5\\,\\text{mm}\\). El coure té una resistivitat \\(ρ = 1{,}7 x 10^–8\\,\\text{Ω m}\\). La resistència \\(R_{cable}\\) de l’esquema de
+        \\(d = 2{,}5\\,\\text{mm}\\). El coure té una resistivitat \\(ρ = 1{,}7 x 10^{–8}\\,\\text{Ω m}\\). La resistència \\(R_{cable}\\) de l’esquema de
         la figura correspon als dos conductors del cable bipolar. Si cada llum té una potència nominal
         \\(P_{llum} = 55\\,\\text{W}\\) quan s’alimenta directament amb una tensió \\(U = 12\\,\\text{V}\\), determineu:
          
@@ -248,7 +248,6 @@ const questions = [
             Si s’utilitza un cable amb una longitud \\(L = 4\\,\\text{m}\\), determineu:
             <br><br>
             <strong>c)</strong> La resistència del cable \\(R_{cable}\\). [0,5 punt]
-            <br>
             <br><strong>d)</strong> La potència total \\(P_{total}\\) consumida conjuntament pel cable i els dos llums. [0,5 punts]
             <br><br>`,
         correctAnswer: "",  
