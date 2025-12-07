@@ -98,10 +98,10 @@ const questions = [
     {
         type: "exercicis",
         category: "energia",
-        text: `<br>Volem utilitzar captadors solars de superfície \\(S = 2{,}1\\,\\text{m^2\\}\\) per a produir aigua calenta en un
+        text: `<br>Volem utilitzar captadors solars de superfície \\(S = 2{,}1\\,\\text{m^2}\\) per a produir aigua calenta en un
         habitatge familiar. Els captadors es complementen amb un escalfador elèctric per als dies en
         què no hi ha prou radiació solar. El rendiment energètic d’un captador solar s’obté mitjançant
-        l’equació  \\(η = η_0\\) - \\(k_1\\) \\(dfrac{\\(T_m - T_a\\)}{I}\\), en què \\(η_0\\) és el rendiment òptic, \\(k_1\\) 
+        l’equació  \\(η = η_0\\) - \\(k_1\\) \\(dfrac{{T_m - T_a}}{I}\\), en què \\(η_0\\) és el rendiment òptic, \\(k_1\\) 
         és el coeficient de pèrdues, \\(T_m\\) és la temperatura de treball del captador, \\(T_a\\) és la temperatura 
         ambient i \\(I\\) és la radiació solar en \\(W/m^2\\). Disposem de dos models de captador solar amb les 
         característiques següents:
@@ -116,9 +116,9 @@ const questions = [
             Escollim el model de captador més eficient de l’apartat anterior i l’utilitzem durant un temps \\(t = 8\\,\\text{h}\\) al dia. Sabent que el consum diari 
             d’aigua és \\(c = 390\\,\\text{L}\\),  que s’escalfa \\(∆T = 35\\,\\text{ºC}\\) i que la calor específica de l’aigua és \\(Ce = 4{,}18\\,\\text{J/(g ºC)}\\) determineu:
             <br>
-            <br><strong>b)</strong> El nombre de captadors \\(n\\) que caldria instaŀlar per a escalfar tota l’aigua consumida mitjançant energia solar. [1 punts]
+            <br><strong>b)</strong> El nombre de captadors \\(n\\) que caldria instaŀlar per a escalfar tota l’aigua consumida mitjançant energia solar. [1 punt]
             <br><strong>c)</strong> L’energia elèctrica consumida \\(E_{\\text{elèct}}\\), en \\(kW h\\) en un dia en el qual la radiació solar
-            disminueix a la meitat, tenint en compte que el nombre de captadors és l’obtingut en l’apartat anterior. [1 punts]
+            disminueix a la meitat, tenint en compte que el nombre de captadors és l’obtingut en l’apartat anterior. [1 punt]
             <br><br>`, 
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
         steps: `
@@ -243,7 +243,7 @@ const questions = [
             <br><br>
             <strong>a)</strong> La resistència equivalent \\(R_{eq}\\) dels dos llums connectats en paraŀlel. [0,5 punts]
             <br>
-            <strong>b)</strong> La longitud màxima \\(L_{màx}\\) que pot tenir el cable si es vol que la caiguda de tensió del cable no sigui superior al 5 %. [1 punts]
+            <strong>b)</strong> La longitud màxima \\(L_{màx}\\) que pot tenir el cable si es vol que la caiguda de tensió del cable no sigui superior al 5 %. [1 punt]
             <br><br>
             Si s’utilitza un cable amb una longitud \\(L = 4\\,\\text{m}\\), determineu:
             <br><br>
@@ -295,6 +295,389 @@ const questions = [
             <br><br>
             <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
     },
+
+        {
+        type: "exercicis",
+        category: "energia",
+        text: `Una central elèctrica de cicle combinat produeix electricitat mitjançant dos cicles termodinàmics: un primer cicle de combustió de gas natural, de poder calorífic \\(p = 32,5\\,\\text{MJ/kg}\\), i un
+segon cicle en què s’aprofita la calor residual del primer per a moure una turbina de vapor.
+El gas natural es distribueix liquat, amb una densitat \\(ρ = 0,423\\,\\text{kg/L}\\). La potència elèctrica que
+proporciona la central és \\(P_{elèctr} = 500\\,\\text{MW}\\) i el rendiment total és \\(η = 0,575\\). El rendiment del
+cicle de gas és \\(η_g = 0,32\\). Determineu:
+         
+            <br><br>
+            <strong>a)</strong> La potència consumida \\(P_{cons}\\) per la central. [0,5 punts]
+            <br>
+            <strong>b)</strong> El volum \\(V\\) de gas natural liquat que es crema a la central durant 24 hores de funcionament. [0,5 punts]
+            <br>
+            <strong>c)</strong> La potència dissipada en el cicle de gas \\(P_{diss,cg}\\). [0,5 punt]
+            <br>
+            <br><strong>d)</strong> El rendiment del cicle de vapor \\(η_v\\). [1 punt]
+            <br><br>`,
+        correctAnswer: "",  
+        steps: `
+            <strong>a) Velocitat angular de les rodes i del motor:</strong>
+            <br>
+            - Velocitat angular de les rodes auxiliars:
+            \\[
+            \\omega_r = \\frac{v}{r} = \\frac{1,028\\,\\text{m/s}}{0,1\\,\\text{m}} = 10,28\\,\\text{rad/s}
+            \\]
+            - Velocitat angular del motor:
+            \\[
+            \\omega_{mot} = \\frac{\\omega_r}{\\tau} = \\frac{10,28\\,\\text{rad/s}}{0,08} = 128,5\\,\\text{rad/s}
+            \\]
+            <br><strong>b) Potència a l’eix de les rodes:</strong>
+            <br>
+            - Aplicant rendiment del motor i del reductor:
+            \\[
+            P_{subm} = P_{cons} \\times \\eta_{mot} \\times \\eta_{red} = 75\\,\\text{W} \\times 0,87 \\times 0,95 = 62,06\\,\\text{W}
+            \\]
+            <br><strong>c) Parell a l’eix del motor:</strong>
+            <br>
+            - Potència útil a l’eix del motor:
+            \\[
+            P_{mot} = P_{cons} \\times \\eta_{mot} = 75\\,\\text{W} \\times 0,87 = 65,25\\,\\text{W}
+            \\]
+            - Parell:
+            \\[
+            \\Gamma_{mot} = \\frac{P_{mot}}{\\omega_{mot}} = \\frac{65,25\\,\\text{W}}{128,5\\,\\text{rad/s}} = 0,5077\\,\\text{N·m}
+            \\]
+            <br><strong>d) Temps màxim de funcionament i distància recorreguda:</strong>
+            <br>
+            - Energia de la bateria:
+            \\[
+            E_{bat} = 240\\,\\text{Wh} = 240 \\times 3600\\,\\text{W·s} = 864000\\,\\text{J}
+            \\]
+            - Temps de funcionament:
+            \\[
+            t = \\frac{E_{bat}}{P_{cons}} = \\frac{864000\\,\\text{J}}{75\\,\\text{W}} = 11520\\,\\text{s} = 3,2\\,\\text{h}
+            \\]
+            - Distància màxima recorreguda:
+            \\[
+            s_{rec} = v \\times t = 1,028\\,\\text{m/s} \\times 11520\\,\\text{s} = 11830\\,\\text{m} = 11,83\\,\\text{km}
+            \\]
+            <br><br>
+            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+    },
+        {
+        type: "exercicis",
+        category: "energia",
+        text: `Els senyals lluminosos de limitació de velocitat en una via d’accés a una ciutat es controlen automàticament. Redueixen la velocitat màxima permesa quan la contaminació és alta o
+quan la mesura de la velocitat mitjana dels vehicles en dos punts de mesurament determinats
+és inferior al 80 % de la limitació indicada pel senyal lluminós. Responeu a les qüestions que
+hi ha a continuació utilitzant les variables d’estat següents:
+
+  <img src="Variables.ex.png" alt="Imatge variables exercici">
+  
+            <br><br>
+            <strong>a)</strong> Elaboreu la taula de veritat del sistema. [1 punt]
+            <br>
+            <strong>b)</strong> Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la. [1 punt]
+            <br><br>
+            Si s’utilitza un cable amb una longitud \\(L = 4\\,\\text{m}\\), determineu:
+            <br><br>
+            <strong>c)</strong> Dibuixeu l’esquema de portes lògiques equivalent. [0,5 punt]
+            <br><br>`,
+        correctAnswer: "",  
+        steps: `
+            <strong>a) Velocitat angular de les rodes i del motor:</strong>
+            <br>
+            - Velocitat angular de les rodes auxiliars:
+            \\[
+            \\omega_r = \\frac{v}{r} = \\frac{1,028\\,\\text{m/s}}{0,1\\,\\text{m}} = 10,28\\,\\text{rad/s}
+            \\]
+            - Velocitat angular del motor:
+            \\[
+            \\omega_{mot} = \\frac{\\omega_r}{\\tau} = \\frac{10,28\\,\\text{rad/s}}{0,08} = 128,5\\,\\text{rad/s}
+            \\]
+            <br><strong>b) Potència a l’eix de les rodes:</strong>
+            <br>
+            - Aplicant rendiment del motor i del reductor:
+            \\[
+            P_{subm} = P_{cons} \\times \\eta_{mot} \\times \\eta_{red} = 75\\,\\text{W} \\times 0,87 \\times 0,95 = 62,06\\,\\text{W}
+            \\]
+            <br><strong>c) Parell a l’eix del motor:</strong>
+            <br>
+            - Potència útil a l’eix del motor:
+            \\[
+            P_{mot} = P_{cons} \\times \\eta_{mot} = 75\\,\\text{W} \\times 0,87 = 65,25\\,\\text{W}
+            \\]
+            - Parell:
+            \\[
+            \\Gamma_{mot} = \\frac{P_{mot}}{\\omega_{mot}} = \\frac{65,25\\,\\text{W}}{128,5\\,\\text{rad/s}} = 0,5077\\,\\text{N·m}
+            \\]
+            <br><strong>d) Temps màxim de funcionament i distància recorreguda:</strong>
+            <br>
+            - Energia de la bateria:
+            \\[
+            E_{bat} = 240\\,\\text{Wh} = 240 \\times 3600\\,\\text{W·s} = 864000\\,\\text{J}
+            \\]
+            - Temps de funcionament:
+            \\[
+            t = \\frac{E_{bat}}{P_{cons}} = \\frac{864000\\,\\text{J}}{75\\,\\text{W}} = 11520\\,\\text{s} = 3,2\\,\\text{h}
+            \\]
+            - Distància màxima recorreguda:
+            \\[
+            s_{rec} = v \\times t = 1,028\\,\\text{m/s} \\times 11520\\,\\text{s} = 11830\\,\\text{m} = 11,83\\,\\text{km}
+            \\]
+            <br><br>
+            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+    },
+        {
+        type: "exercicis",
+        category: "energia",
+        text: `La suma de la resistència aerodinàmica i la resistència al rodolament constitueix la
+demanda bàsica de potència d’un automòbil. La força resistent, expressada com una força
+que s’oposa a l’avanç del vehicle, és donada per l’expressió \\(F_r = (230 + 0,13v^2)\\,\\text{N}\\), en què \\(v\\) és la
+velocitat del vehicle en km/h. 
+         
+            <br><br>
+            <strong>a)</strong> Determineu la força resistent quan el vehicle avança a una velocitat \\(v = 60\\,\\text{km/h}\\). [0,5 punts]
+            <br>
+            <strong>b)</strong> Dibuixeu, d’una manera aproximada i indicant les escales, la corba característica
+potència-velocitat quan el vehicle circula a velocitats compreses entre \\(v = 0\\) i
+\\(v = 120\\,\\text{km/h}\\). [1 punt]
+            <br><br>
+            El rendiment mecànic de la transmissió (de la sortida del motor a les rodes) és \\(η = 0,8\\).
+Si quan el vehicle avança a una velocitat constant \\(v = 60\\,\\text{km/h}\\) el motor gira a \\(n = 2 500 min^{–1}\\):
+            <br><br>
+            <strong>c)</strong> Determineu el parell \\(Γ\\) que desenvolupa el motor. [1 punt]
+            <br><br>`,
+        correctAnswer: "",  
+        steps: `
+            <strong>a) Velocitat angular de les rodes i del motor:</strong>
+            <br>
+            - Velocitat angular de les rodes auxiliars:
+            \\[
+            \\omega_r = \\frac{v}{r} = \\frac{1,028\\,\\text{m/s}}{0,1\\,\\text{m}} = 10,28\\,\\text{rad/s}
+            \\]
+            - Velocitat angular del motor:
+            \\[
+            \\omega_{mot} = \\frac{\\omega_r}{\\tau} = \\frac{10,28\\,\\text{rad/s}}{0,08} = 128,5\\,\\text{rad/s}
+            \\]
+            <br><strong>b) Potència a l’eix de les rodes:</strong>
+            <br>
+            - Aplicant rendiment del motor i del reductor:
+            \\[
+            P_{subm} = P_{cons} \\times \\eta_{mot} \\times \\eta_{red} = 75\\,\\text{W} \\times 0,87 \\times 0,95 = 62,06\\,\\text{W}
+            \\]
+            <br><strong>c) Parell a l’eix del motor:</strong>
+            <br>
+            - Potència útil a l’eix del motor:
+            \\[
+            P_{mot} = P_{cons} \\times \\eta_{mot} = 75\\,\\text{W} \\times 0,87 = 65,25\\,\\text{W}
+            \\]
+            - Parell:
+            \\[
+            \\Gamma_{mot} = \\frac{P_{mot}}{\\omega_{mot}} = \\frac{65,25\\,\\text{W}}{128,5\\,\\text{rad/s}} = 0,5077\\,\\text{N·m}
+            \\]
+            <br><strong>d) Temps màxim de funcionament i distància recorreguda:</strong>
+            <br>
+            - Energia de la bateria:
+            \\[
+            E_{bat} = 240\\,\\text{Wh} = 240 \\times 3600\\,\\text{W·s} = 864000\\,\\text{J}
+            \\]
+            - Temps de funcionament:
+            \\[
+            t = \\frac{E_{bat}}{P_{cons}} = \\frac{864000\\,\\text{J}}{75\\,\\text{W}} = 11520\\,\\text{s} = 3,2\\,\\text{h}
+            \\]
+            - Distància màxima recorreguda:
+            \\[
+            s_{rec} = v \\times t = 1,028\\,\\text{m/s} \\times 11520\\,\\text{s} = 11830\\,\\text{m} = 11,83\\,\\text{km}
+            \\]
+            <br><br>
+            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+    },
+        {
+        type: "exercicis",
+        category: "energia",
+        text: `
+       <img src="ex.cirquit_planxa.png" alt="Imatge cirquit"> 
+        Una planxa de viatge pot funcionar connectada a la xarxa de tensió \\(U_1 = 120\\,\\text{V}\\) i a la xarxa
+de tensió \\(U_2 = 230\\,\\text{V}\\). L’esquema elèctric de la planxa és el que es mostra en la figura. Quan
+funciona a \\(230\\,\\text{V}\\), l’interruptor A està obert, i quan funciona a \\(120\\,\\text{V}\\), l’interruptor A està
+tancat. La potència de la planxa és, en tots dos casos, \\(P = 1 000\\,\\text{W}\\). Determineu:
+         
+            <br><br>
+            <strong>a)</strong> El valor de les resistències \\(R_1\\) i \\(R_2\\). [1 punt]
+            <br>
+            <strong>b)</strong>El valor de les intensitats \\(I_1\\) i \\(I_2\\) que circulen pel circuit en cada cas. [0,5 punts]
+            <br><br>
+           Si s’espatlla l’interruptor, de manera que quan està tancat equival a una resistència \\(R_A = 3\\,\\text{Ω}\\), determineu:
+            <br><br>
+            <strong>c)</strong> La potència \\(P_e\\) de la planxa quan s’alimenta amb \\(120\\,\\text{V}\\). [1 punt]
+            <br><br>`,
+        correctAnswer: "",  
+        steps: `
+            <strong>a) Velocitat angular de les rodes i del motor:</strong>
+            <br>
+            - Velocitat angular de les rodes auxiliars:
+            \\[
+            \\omega_r = \\frac{v}{r} = \\frac{1,028\\,\\text{m/s}}{0,1\\,\\text{m}} = 10,28\\,\\text{rad/s}
+            \\]
+            - Velocitat angular del motor:
+            \\[
+            \\omega_{mot} = \\frac{\\omega_r}{\\tau} = \\frac{10,28\\,\\text{rad/s}}{0,08} = 128,5\\,\\text{rad/s}
+            \\]
+            <br><strong>b) Potència a l’eix de les rodes:</strong>
+            <br>
+            - Aplicant rendiment del motor i del reductor:
+            \\[
+            P_{subm} = P_{cons} \\times \\eta_{mot} \\times \\eta_{red} = 75\\,\\text{W} \\times 0,87 \\times 0,95 = 62,06\\,\\text{W}
+            \\]
+            <br><strong>c) Parell a l’eix del motor:</strong>
+            <br>
+            - Potència útil a l’eix del motor:
+            \\[
+            P_{mot} = P_{cons} \\times \\eta_{mot} = 75\\,\\text{W} \\times 0,87 = 65,25\\,\\text{W}
+            \\]
+            - Parell:
+            \\[
+            \\Gamma_{mot} = \\frac{P_{mot}}{\\omega_{mot}} = \\frac{65,25\\,\\text{W}}{128,5\\,\\text{rad/s}} = 0,5077\\,\\text{N·m}
+            \\]
+            <br><strong>d) Temps màxim de funcionament i distància recorreguda:</strong>
+            <br>
+            - Energia de la bateria:
+            \\[
+            E_{bat} = 240\\,\\text{Wh} = 240 \\times 3600\\,\\text{W·s} = 864000\\,\\text{J}
+            \\]
+            - Temps de funcionament:
+            \\[
+            t = \\frac{E_{bat}}{P_{cons}} = \\frac{864000\\,\\text{J}}{75\\,\\text{W}} = 11520\\,\\text{s} = 3,2\\,\\text{h}
+            \\]
+            - Distància màxima recorreguda:
+            \\[
+            s_{rec} = v \\times t = 1,028\\,\\text{m/s} \\times 11520\\,\\text{s} = 11830\\,\\text{m} = 11,83\\,\\text{km}
+            \\]
+            <br><br>
+            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+    },
+        {
+        type: "exercicis",
+        category: "energia",
+        text: `
+        <img src="ex.cartell.png" alt="Imatge cartell">
+        <br>El cartell publicitari d’un bar de menús està format per dos taulers homogenis de fusta
+de dimensions \\(h × b = 900 × 600\\,\\text{mm^2}\\) i un gruix \\(e = 11\\,\\text{mm}\\). Els dos taulers estan articulats
+en el punt \\(C\\) i hi ha dos cables de secció \\(s = 1,8\\,\\text{mm^2}\\) que els uneixen pel punt mitjà dels seus
+costats, tal com es mostra en la figura. Els cables mantenen una obertura \\(α = 40\\,\\text{°}\\) entre els
+taulers. Quan el cartell recolza sobre el terra, la força \\(N\\) que rep en els punts \\(A\\) i \\(B\\) és vertical
+i del mateix valor. Determineu:
+         
+            <br><br>
+            <strong>a)</strong> La massa \\(m\\) de cada tauler, si \\(ρ_{fusta} = 530\\,\\text{kg/m^3}\\). [0,5 punts]
+            <br>
+            <strong>b)</strong> La força \\(N\\) que el cartell rep del terra en els punts \\(A\\) i \\(B\\). [0,5 punts]
+            <br>
+            <strong>c)</strong> La força \\(F\\) que fa cadascun dels cables [1 punt]
+            <br><strong>d)</strong> La tensió normal \\(σ\\) dels cables causada per la força que fan. [0,5 punts]
+            <br><br>`,
+        correctAnswer: "",  
+        steps: `
+            <strong>a) Velocitat angular de les rodes i del motor:</strong>
+            <br>
+            - Velocitat angular de les rodes auxiliars:
+            \\[
+            \\omega_r = \\frac{v}{r} = \\frac{1,028\\,\\text{m/s}}{0,1\\,\\text{m}} = 10,28\\,\\text{rad/s}
+            \\]
+            - Velocitat angular del motor:
+            \\[
+            \\omega_{mot} = \\frac{\\omega_r}{\\tau} = \\frac{10,28\\,\\text{rad/s}}{0,08} = 128,5\\,\\text{rad/s}
+            \\]
+            <br><strong>b) Potència a l’eix de les rodes:</strong>
+            <br>
+            - Aplicant rendiment del motor i del reductor:
+            \\[
+            P_{subm} = P_{cons} \\times \\eta_{mot} \\times \\eta_{red} = 75\\,\\text{W} \\times 0,87 \\times 0,95 = 62,06\\,\\text{W}
+            \\]
+            <br><strong>c) Parell a l’eix del motor:</strong>
+            <br>
+            - Potència útil a l’eix del motor:
+            \\[
+            P_{mot} = P_{cons} \\times \\eta_{mot} = 75\\,\\text{W} \\times 0,87 = 65,25\\,\\text{W}
+            \\]
+            - Parell:
+            \\[
+            \\Gamma_{mot} = \\frac{P_{mot}}{\\omega_{mot}} = \\frac{65,25\\,\\text{W}}{128,5\\,\\text{rad/s}} = 0,5077\\,\\text{N·m}
+            \\]
+            <br><strong>d) Temps màxim de funcionament i distància recorreguda:</strong>
+            <br>
+            - Energia de la bateria:
+            \\[
+            E_{bat} = 240\\,\\text{Wh} = 240 \\times 3600\\,\\text{W·s} = 864000\\,\\text{J}
+            \\]
+            - Temps de funcionament:
+            \\[
+            t = \\frac{E_{bat}}{P_{cons}} = \\frac{864000\\,\\text{J}}{75\\,\\text{W}} = 11520\\,\\text{s} = 3,2\\,\\text{h}
+            \\]
+            - Distància màxima recorreguda:
+            \\[
+            s_{rec} = v \\times t = 1,028\\,\\text{m/s} \\times 11520\\,\\text{s} = 11830\\,\\text{m} = 11,83\\,\\text{km}
+            \\]
+            <br><br>
+            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+    },
+        {
+        type: "exercicis",
+        category: "energia",
+        text: `
+        Un avió comercial utilitza un combustible de poder calorífic \\(p_c = 42,42\\,\\text{MJ/kg}\\) i densitat
+\\(ρ = 0,8075\\,\\text{kg/L}\\). L’avió té una capacitat de \\(N = 144\\) seients i disposa d’un dipòsit per al combustible de \\(V= 24 000\\,\\text{L}\\). Quan l’avió viatja a una velocitat \\(v = 850\\,\\text{km/h}\\) els motors consumeixen, entre tots dos, \\(c = 2 700\\,\\text{kg/h}\\) i proporcionen a l’avió una força d’empenyiment \\(F_E = 43\\,\\text{kN}\\)
+(força en el sentit d’avanç de l’avió). Determineu, en aquestes condicions:
+         
+            <br><br>
+            <strong>a)</strong> La distància màxima \\(d_{màx}\\), en km, que pot recórrer l’avió. [0,5 punts]
+            <br>
+            <strong>b)</strong> El consum mínim de combustible per passatger \\(c_p\\), en litres per cada \\(100\\,\\text{km}\\). [1 punt]
+            <br>
+            <strong>c)</strong> El rendiment \\(η\\) dels motors. [1 punt]
+            <br><br>`,
+        correctAnswer: "",  
+        steps: `
+            <strong>a) Velocitat angular de les rodes i del motor:</strong>
+            <br>
+            - Velocitat angular de les rodes auxiliars:
+            \\[
+            \\omega_r = \\frac{v}{r} = \\frac{1,028\\,\\text{m/s}}{0,1\\,\\text{m}} = 10,28\\,\\text{rad/s}
+            \\]
+            - Velocitat angular del motor:
+            \\[
+            \\omega_{mot} = \\frac{\\omega_r}{\\tau} = \\frac{10,28\\,\\text{rad/s}}{0,08} = 128,5\\,\\text{rad/s}
+            \\]
+            <br><strong>b) Potència a l’eix de les rodes:</strong>
+            <br>
+            - Aplicant rendiment del motor i del reductor:
+            \\[
+            P_{subm} = P_{cons} \\times \\eta_{mot} \\times \\eta_{red} = 75\\,\\text{W} \\times 0,87 \\times 0,95 = 62,06\\,\\text{W}
+            \\]
+            <br><strong>c) Parell a l’eix del motor:</strong>
+            <br>
+            - Potència útil a l’eix del motor:
+            \\[
+            P_{mot} = P_{cons} \\times \\eta_{mot} = 75\\,\\text{W} \\times 0,87 = 65,25\\,\\text{W}
+            \\]
+            - Parell:
+            \\[
+            \\Gamma_{mot} = \\frac{P_{mot}}{\\omega_{mot}} = \\frac{65,25\\,\\text{W}}{128,5\\,\\text{rad/s}} = 0,5077\\,\\text{N·m}
+            \\]
+            <br><strong>d) Temps màxim de funcionament i distància recorreguda:</strong>
+            <br>
+            - Energia de la bateria:
+            \\[
+            E_{bat} = 240\\,\\text{Wh} = 240 \\times 3600\\,\\text{W·s} = 864000\\,\\text{J}
+            \\]
+            - Temps de funcionament:
+            \\[
+            t = \\frac{E_{bat}}{P_{cons}} = \\frac{864000\\,\\text{J}}{75\\,\\text{W}} = 11520\\,\\text{s} = 3,2\\,\\text{h}
+            \\]
+            - Distància màxima recorreguda:
+            \\[
+            s_{rec} = v \\times t = 1,028\\,\\text{m/s} \\times 11520\\,\\text{s} = 11830\\,\\text{m} = 11,83\\,\\text{km}
+            \\]
+            <br><br>
+            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+    },
+    
     
     {
         type: "questions", // Tipus de pregunta
