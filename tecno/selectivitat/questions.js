@@ -1359,7 +1359,7 @@ aliar-lo amb 350 kg de magnesi?`,
     {
         type: "questions", // Tipus de pregunta
         category: "motors_reductors",
-        text: `La cilindrada d’un motor de combustió és de \\(1 998\\,\\text{cm^3}. Tant el diàmetre com la cursa
+        text: `La cilindrada d’un motor de combustió és de \\(1 998\\,\\text{cm^3}\\). Tant el diàmetre com la cursa
 dels cilindres del motor són de \\(86\\,\\text{mm}\\). Quants cilindres té el motor?`,
         options: [
             { text: "4", value: "a" },
