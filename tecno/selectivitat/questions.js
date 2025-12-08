@@ -682,12 +682,16 @@ i del mateix valor. Determineu:
     {
         type: "questions", // Tipus de pregunta
         category: "materials",
-        text: `La figura mostra la corba tensió-deformació obtinguda en un assaig de tracció. Quin valor aproximat té el mòdul elàstic del material?`,
+        text: `Una companyia aèria té programats quatre vols diaris entre dues ciutats: dos al matí,
+un a la tarda i un altre a la nit. Els vols del matí registren una ocupació mitjana del 84,3 %,
+el vol de la tarda del 77,3 % i el de la nit del 82,3 %. Si la capacitat de l’avió que s’utilitza en
+aquests vols és de 200 persones, quants passatgers s’han transportat en un any i quina ha
+estat l’ocupació mitjana global?`,
         options: [
-            { text: "250 GPa", value: "a" },
-            { text: "110 GPa", value: "b" },
-            { text: "265 GPa", value: "c" },
-            { text: "62,5 GPa", value: "d" }
+            { text: "292 000 passatgers, amb una ocupació mitjana del 82,05 %.", value: "a" },
+            { text: "239 586 passatgers, amb una ocupació mitjana del 82,05 %.", value: "b" },
+            { text: "239 586 passatgers, amb una ocupació mitjana del 81,3 %.", value: "c" },
+            { text: "292 000 passatgers, amb una ocupació mitjana del 81,3 %.", value: "d" }
         ],
         correctAnswer: "b",
         steps: `
@@ -723,18 +727,19 @@ i del mateix valor. Determineu:
             E \\approx 110\\ \\text{GPa}
             \\]
             <br><br>
-            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
-        images: `<img src="https://mcoronil4.github.io/images/2020junyserie1q1.jpg" alt="Imatge relacionada amb la pregunta">`  // Imatge opcional al final de la pregunta
+   `
     },
     {
         type: "questions", // Tipus de pregunta
         category: "pneumatics_hydraulics",
-        text: `Un cotxe està equipat amb un motor de combustió interna de quatre cilindres en línia de diàmetre \\(\\mathbf{79,5\\,mm}\\) i cursa \\(\\mathbf{80,5\\,mm}\\). Quina és la cilindrada del motor?`,
+        text: `Una barra cilíndrica té un diàmetre de 3 mm, una tensió de ruptura \\(σr = 800\\,\\text{MPa}\\) i un
+límit elàstic \\(σe = 640\\,\\text{MPa}\\). Quina és la força de tracció màxima a la qual es pot sotmetre la
+barra sense que es trenqui?`,
         options: [
-            { text: "399,6 cm³", value: "a" },
-            { text: "3 196 cm³", value: "b" },
-            { text: "1 598 cm³", value: "c" },
-            { text: "8 042 cm³", value: "d" }
+            { text: "800 N", value: "a" },
+            { text: "22 619 N", value: "b" },
+            { text: "5 655 N", value: "c" },
+            { text: "4 524 N", value: "d" }
         ],
         correctAnswer: "c",
         steps: `
@@ -766,20 +771,19 @@ i del mateix valor. Determineu:
             V_{total} \\approx 1,598 \\, \\text{cm}^3
             \\]
             <br><br>
-            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
-        images: `<img src="ruta/a/imatgePregunta.jpg" alt="Imatge relacionada amb la pregunta">`  // Imatge opcional al final de la pregunta
+`
     },
     {
         type: "questions", // Tipus de pregunta
         category: "motors_reductors",
-        text: `Una porta corredissa automàtica és accionada mitjançant un motor que gira a \\(n_{\\text{mot}} = 1\,500\\,\\text{min}^{-1}\\) i un reductor. L’eix de sortida del reductor és un pinyó de radi primitiu \\(r = 30\\,\\text{mm}\\) que acciona una cremallera fixa a la porta. En règim nominal, la porta es trasllada a una velocitat constant \\(v_{\\text{nom}} = 0,12\\,\\text{m/s}\\). Determineu la relació de transmissió entre la velocitat angular de l’eix de sortida del reductor i la velocitat angular de l’eix del motor: \\(\\tau = \\frac{\\omega_{\\text{red}}}{\\omega_{\\text{mot}}}\\).`,
+        text: `Una resistència de \\(5\\,\\text{Ω}\\) està feta amb fil de constantà de \\(4{,}508\\,\\text{m}\\) de longitud i una resistivitat de \\(0{,}49\\,\\text{μΩ m}\\). Quin és el diàmetre del fil utilitzat?`,
         options: [
-            { text: "39,27", value: "a" },
-            { text: "0,7639 × 10^{-3}", value: "b" },
-            { text: "25,46 × 10^{-3}", value: "c" },
-            { text: "infinit", value: "d" }
+            { text: "0,75 mm", value: "a" },
+            { text: "0,375 mm", value: "b" },
+            { text: "0,4418 mm", value: "c" },
+            { text: "0,8319 mm", value: "d" }
         ],
-        correctAnswer: "c",
+        correctAnswer: "a",
         steps: `
             <strong>Càlcul de la relació de transmissió:</strong><br>
             \\[
@@ -815,14 +819,16 @@ i del mateix valor. Determineu:
     {
         type: "questions", // Tipus de pregunta
         category: "pneumatics_hydraulics",
-        text: `Es vol aixecar una massa \\(m = 1\,200\\,\\text{kg}\\) utilitzant una premsa hidràulica. La secció transversal de l’èmbol gran és \\(A_{gran} = 30\,000\\,\\text{mm}^2\\) i la del petit és \\(A_{petit} = 1\,000\\,\\text{mm}^2\\). Preneu \\(g = 9,807\\,\\text{m/s}^2\\). Determineu la força \\(F\\) que cal exercir sobre l’èmbol petit:`,
+        text: `Un aerogenerador està format per un rotor amb tres pales, un multiplicador d’engranatges i un generador elèctric. En unes condicions determinades, la potència elèctrica generada
+és \\(P_{elèctr} = 1,2\\,\\text{MW}\\). Si el rendiment del multiplicador és \\(η_{mult} = 0,70\\) i la potència mecànica a
+l’eix d’entrada del multiplicador és \\(P_{entrada} = 1,966\\,\\text{MW}\\), quin és el rendiment \\(η_{gen}\\) del generador i la potència \\(P_{diss}\\) que s’hi dissipa?`,
         options: [
-            { text: "353,1 kN", value: "a" },
-            { text: "392,3 N", value: "b" },
-            { text: "40 N", value: "c" },
-            { text: "36 kN", value: "d" }
+            { text: "\\(η_{gen}\\) = 0,8550 i \\(P_{diss}\\) = 203,5 kW", value: "a" },
+            { text: "\\(η_{gen}\\) = 0,8720 i \\(P_{diss}\\) = 766 kW", value: "b" },
+            { text: "\\(η_{gen}\\) = 0,8720 i \\(P_{diss}\\) = 176,2 kW", value: "c" },
+            { text: "\\(η_{gen}\\) = 0,6104 i \\(P_{diss}\\) = 766 kW", value: "d" }
         ],
-        correctAnswer: "b",
+        correctAnswer: "c",
         steps: `
             <strong>Càlcul de la força sobre l'èmbol petit:</strong><br>
             Pressió hidràulica:<br>
@@ -863,7 +869,9 @@ i del mateix valor. Determineu:
     {
         type: "questions", // Tipus de pregunta
         category: "materials_i_assaigs",
-        text: `El Ti-6Al-7Nb és un aliatge biocompatible de titani àmpliament utilitzat en aplicacions quirúrgiques. Conté un \\(\\mathbf{5,5\\%}\\) d’alumini (Al), un \\(\\mathbf{6,5\\%}\\) de niobi (Nb), \\(\\mathbf{0,25\\%}\\) de ferro (Fe), un \\(\\mathbf{0,08\\%}\\) de carboni (C) i la resta és titani (Ti). En l’obtenció d’aquest aliatge, quina quantitat de niobi cal per a aliar-lo amb \\(\\mathbf{250\\,kg}\\) de titani?`,
+        text: `La velocitat de sincronisme d’un motor asíncron que està connectat a la xarxa de tensió
+U = 230 V i freqüència f = 50 Hz és de 1 000 min–1. A quina freqüència està connectat aquest
+motor si passa a tenir una velocitat de sincronisme de 1 200 min–1?`,
         options: [
             { text: "18,54 kg", value: "a" },
             { text: "15,68 kg", value: "b" },
