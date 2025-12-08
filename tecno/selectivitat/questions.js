@@ -777,29 +777,22 @@ les qüestions que hi ha a continuació utilitzant les variables d’estat segü
     {
         type: "exercicis",
         category: "energia",
-        text: `<br>Volem utilitzar captadors solars de superfície \\(S = 2{,}1\\,\\text{m^2}\\) per a produir aigua calenta en un
-        habitatge familiar. Els captadors es complementen amb un escalfador elèctric per als dies en
-        què no hi ha prou radiació solar. El rendiment energètic d’un captador solar s’obté mitjançant
-        l’equació  \\(η = η_0\\) - \\(k_1\\) \\(dfrac{{T_m - T_a}}{I}\\), en què \\(η_0\\) és el rendiment òptic, \\(k_1\\) 
-        és el coeficient de pèrdues, \\(T_m\\) és la temperatura de treball del captador, \\(T_a\\) és la temperatura 
-        ambient i \\(I\\) és la radiació solar en \\(W/m^2\\). Disposem de dos models de captador solar amb les 
-        característiques següents:
+        text: `<br>S’ha dissenyat un puzle per a infants format per set peces. L’objectiu del joc és construir amb totes les peces
+el quadrat de costat \\(b = 0,25\\,\\text{m}\\) que es mostra en la figura. Una empresa es planteja produir el puzle o comprar les peces ja elaborades directament a un proveïdor.
+Si l’empresa produeix el puzle, el cost de producció es calcula amb l’expressió \\(c = c_1s + c_2p\\), en què \\(s\\) és la
+superfície de fusta utilitzada i \\(p\\) és el perímetre de les peces tallades per a construir el puzle. En aquest cas, el
+primer coeficient de cost és \\(c_1 = 13{,}5\\,\\text{€/m^2}\\)  i el segon és \\(c_2 = 0{,}85\\,\\text{€/m}\\). En canvi, si l’empresa compra les peces ja
+elaborades directament a un proveïdor, el cost de cada peça és de \\(0{,}65\\,\\text{€}\\) si la peça fa menys de \\(100\\,\\text{cm^2}\\), i de \\(0{,}95\\,\\text{€}\\) si la peça fa més de \\(100\\,\\text{cm^2}\\). Determineu:
 
-               <img src="Taula_ex3.png" alt="Taula \\(η_0\\) i \\(k_1\\) segons Captador A i B">
+               <img src="ex.puzle.png" alt="imatge puzle">
 
             <br>
-            Si les condicions de treball del captador són \\(T_m = 50\\,\\text{ºC}\\), \\(T_a = 18\\,\\text{ºC}\\) i \\(I = 800\\,\\text{m^2}\\), determineu:
+            <br><strong>a)</strong> La superfície de cadascuna de les set peces. Comproveu que la suma de la superfície de totes les peces equival a la superfície \\(s\\) del quadrat de la figura. [1 punt]
             <br>
-            <br><strong>a)</strong> El rendiment \\(η_a\\) i \\(η_b\\) dels captadors A i B en aquestes condicions de treball. Quina és l’opció més eficient?. [0,5 punts]
-            <br><br>
-            Escollim el model de captador més eficient de l’apartat anterior i l’utilitzem durant un temps \\(t = 8\\,\\text{h}\\) al dia. Sabent que el consum diari 
-            d’aigua és \\(c = 390\\,\\text{L}\\),  que s’escalfa \\(∆T = 35\\,\\text{ºC}\\) i que la calor específica de l’aigua és \\(Ce = 4{,}18\\,\\text{J/(g ºC)}\\) determineu:
-            <br>
-            <br><strong>b)</strong> El nombre de captadors \\(n\\) que caldria instaŀlar per a escalfar tota l’aigua consumida mitjançant energia solar. [1 punt]
-            <br><strong>c)</strong> L’energia elèctrica consumida \\(E_{\\text{elèct}}\\), en \\(kW h\\) en un dia en el qual la radiació solar
-            disminueix a la meitat, tenint en compte que el nombre de captadors és l’obtingut en l’apartat anterior. [1 punt]
+            <br><strong>b)</strong> El perímetre p de les peces tallades per a construir el puzle. [1 punt]
+            <br><strong>c)</strong> El cost de producció del puzle, d’una banda, i el cost de comprar les peces ja elaborades a un proveïdor, de l’altra. Quina és l’opció més econòmica per a l’empresa? [0,5 punts]
             <br><br>`, 
-        correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
+        correctAnswer: "", 
         steps: `
             <strong>a) Velocitat angular de les rodes i del motor:</strong>
             <br>
@@ -847,21 +840,20 @@ les qüestions que hi ha a continuació utilitzant les variables d’estat segü
     {
         type: "exercicis",
         category: "energia",
-        text: `<br>Una motorista puja un pendent a una velocitat constant \\(v = 50\\,\\text{km/h}\\) sense fer lliscar la
-        roda del darrere. La marxa que té posada fa que la relació de transmissió entre l’eix de sortida del motor i l’eix de la roda del darrere sigui \\(τ = ω_{roda}/ω_{motor} = 0{,}044\\). Aquesta reducció de
-        velocitat s’aconsegueix mitjançant una transmissió d’engranatges de rendiment \\(η_{eng} = 0{,}90\\) i
-        una transmissió per cadena de rendiment \\(η_{cad} = 0,85\\). La roda té un diàmetre \\(d = 620\\,\\text{mm}\\) i la
-        massa total de la motorista més la moto és \\(m = 150\\,\\text{kg}\\). Si el parell a l’eix de sortida del motor
-        és \\(Γ_{motor} = 6\\,\\text{N m}\\) i la fricció amb l’aire es considera negligible, determineu: 
-        <img src="ex.moto.png" alt="Imatge moto">
+        text: `<br>Una plataforma elevadora puja amb una velocitat constant una càrrega fins a una altura
+\\(Δh = 4{,}5\\,\\text{m}\\) en un temps \\(t = 50\\,\\text{s}\\). La plataforma s’acciona amb un motor elèctric de corrent
+continu en sèrie amb un reductor d’engranatges. Segons el catàleg del fabricant, el rendiment
+del reductor d’engranatges és \\(η_{red} = 0,72\\). El motor s’alimenta amb una tensió \\(U = 220\\,\\text{V}\\), consumeix un corrent \\(I = 17,5\\,\\text{A}\\) i gira a una velocitat \\(n = 1 500\\,\\text{min^{–1}}\\). El parell a l’eix de sortida
+del motor és \\(Γ_m = 19{,}5\\,\\text{N m}\\). Si les resistències passives a la plataforma elevadora es consideren negligibles, determineu: 
             <br><br>
-            <strong>a)</strong> Les velocitats de gir de la roda \\(ω_{roda}\\) i de l’eix del motor \\(ω_{motor}\\), en rad/s. [0,5 punts]
+            <strong>a)</strong> La potència elèctrica \\(P_{elèctr}\\) que consumeix el motor i el rendiment electromecànic \\(η_{mot}\\) d’aquest motor. [1 punt]
             <br>
-            <strong>b)</strong> La potència \\(P_{motor}\\) a l’eix de sortida del motor. [0,5 punts]
+            <strong>b)</strong> La potència total dissipada \\(P_{diss}\\) pel conjunt motor-reductor. [0,5 punts]
             <br>
-            <strong>c)</strong> La potència mecànica \\(P_{roda}\\) a l’eix de la roda i l’angle α que forma el perfil de la carretera amb l’horitzontal. <nbsp> [1 punt]
+            <strong>c)</strong> La potència mecànica \\(P_{càrrega}\\) requerida per a elevar la càrrega i la massa \\(m\\) d’aquesta càrrega. [0,5 punts]
             <br>
-            <br><strong>d)</strong> El parell \\(Γ_{roda}\\) a l’eix de la roda. [0,5 punts]
+            <br><strong>d)</strong> El corrent \\(I′\\) que consumiria el motor si la massa de la càrrega fos la meitat, \\(m′ = m/2\\),
+i es mantingués la velocitat (considereu que els rendiments i la tensió d’alimentació del motor es mantenen constants). [0,5 punts]
             <br><br>`,
         correctAnswer: "",  
         steps: `
@@ -912,22 +904,23 @@ les qüestions que hi ha a continuació utilitzant les variables d’estat segü
         type: "exercicis",
         category: "energia",
         text: `
-        <img src="ex.corrent.png" alt="Imatge cirquit">
-        <br>Els dos llums d’encreuament d’un vehicle es connecten en paraŀlel a una bateria de tensió
-        \\(U = 12\\,\\text{V}\\). La bateria i els llums es connecten mitjançant un cable bipolar de coure de diàmetre
-        \\(d = 2{,}5\\,\\text{mm}\\). El coure té una resistivitat \\(ρ = 1{,}7 x 10^{–8}\\,\\text{Ω m}\\). La resistència \\(R_{cable}\\) de l’esquema de
-        la figura correspon als dos conductors del cable bipolar. Si cada llum té una potència nominal
-        \\(P_{llum} = 55\\,\\text{W}\\) quan s’alimenta directament amb una tensió \\(U = 12\\,\\text{V}\\), determineu:
+        <br>La placa quadrada d’acer de la figura, de costat \\(L = 1 000\\,\\text{mm}\\) i gruix \\(e = 100\\,\\text{mm}\\), està articulada a la
+paret en el punt \\(O\\). Per a controlar la inclinació \\(φ\\) de la placa, s’utilitza un cilindre hidràulic de doble efecte.
+Un dels extrems del cilindre està articulat a la paret en el punt \\(A\\), i l’altre extrem està articulat a la placa en el
+punt \\(B\\). El diàmetre interior del cilindre és \\(d_{int} = 70\\,\\text{mm}\\) i el diàmetre de la tija és \\(d_{tija} = 40\\,\\text{mm}\\). La densitat de l’acer
+és \\(ρ_{acer} = 7 850\\,\\text{kg/m^3}\\). 
+
+<img src="ex.placa.png" alt="Imatge placa d'acer">
          
             <br><br>
-            <strong>a)</strong> La resistència equivalent \\(R_{eq}\\) dels dos llums connectats en paraŀlel. [0,5 punts]
+            <strong>a)</strong> Dibuixeu el diagrama de cos lliure de la placa per a \\(φ = 0\\,\\text{°}\\). [0,5 punts]
             <br>
-            <strong>b)</strong> La longitud màxima \\(L_{màx}\\) que pot tenir el cable si es vol que la caiguda de tensió del cable no sigui superior al 5 %. [1 punt]
-            <br><br>
-            Si s’utilitza un cable amb una longitud \\(L = 4\\,\\text{m}\\), determineu:
-            <br><br>
-            <strong>c)</strong> La resistència del cable \\(R_{cable}\\). [0,5 punts]
-            <br><strong>d)</strong> La potència total \\(P_{total}\\) consumida conjuntament pel cable i els dos llums. [0,5 punts]
+            Determineu:
+            <br>
+            <strong>b)</strong> La massa \\(m\\) de la placa. [0,5 punts]
+            <br>
+            <strong>c)</strong> La força \\(F_c\\) que fa el cilindre hidràulic si la placa està en repòs amb una inclinació \\(φ = 0\\,\\text{°}\\). [0,5 punts]
+            <br><strong>d)</strong> La tensió normal a tracció σ de la tija del cilindre en la situació anterior. Quina és la pressió relativa \\(p_{int}\\) a l’interior del cilindre? [1 punt]
             <br><br>`,
         correctAnswer: "",  
         steps: `
