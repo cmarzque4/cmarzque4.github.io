@@ -247,7 +247,7 @@ const questions = [
             <br><br>
             Si s’utilitza un cable amb una longitud \\(L = 4\\,\\text{m}\\), determineu:
             <br><br>
-            <strong>c)</strong> La resistència del cable \\(R_{cable}\\). [0,5 punt]
+            <strong>c)</strong> La resistència del cable \\(R_{cable}\\). [0,5 punts]
             <br><strong>d)</strong> La potència total \\(P_{total}\\) consumida conjuntament pel cable i els dos llums. [0,5 punts]
             <br><br>`,
         correctAnswer: "",  
@@ -299,7 +299,7 @@ const questions = [
         {
         type: "exercicis",
         category: "energia",
-        text: `Una central elèctrica de cicle combinat produeix electricitat mitjançant dos cicles termodinàmics: un primer cicle de combustió de gas natural, de poder calorífic \\(p = 32,5\\,\\text{MJ/kg}\\), i un
+        text: `<br>Una central elèctrica de cicle combinat produeix electricitat mitjançant dos cicles termodinàmics: un primer cicle de combustió de gas natural, de poder calorífic \\(p = 32,5\\,\\text{MJ/kg}\\), i un
 segon cicle en què s’aprofita la calor residual del primer per a moure una turbina de vapor.
 El gas natural es distribueix liquat, amb una densitat \\(ρ = 0,423\\,\\text{kg/L}\\). La potència elèctrica que
 proporciona la central és \\(P_{elèctr} = 500\\,\\text{MW}\\) i el rendiment total és \\(η = 0,575\\). El rendiment del
@@ -310,7 +310,7 @@ cicle de gas és \\(η_g = 0,32\\). Determineu:
             <br>
             <strong>b)</strong> El volum \\(V\\) de gas natural liquat que es crema a la central durant 24 hores de funcionament. [0,5 punts]
             <br>
-            <strong>c)</strong> La potència dissipada en el cicle de gas \\(P_{diss,cg}\\). [0,5 punt]
+            <strong>c)</strong> La potència dissipada en el cicle de gas \\(P_{diss,cg}\\). [0,5 punts]
             <br>
             <br><strong>d)</strong> El rendiment del cicle de vapor \\(η_v\\). [1 punt]
             <br><br>`,
@@ -362,7 +362,7 @@ cicle de gas és \\(η_g = 0,32\\). Determineu:
         {
         type: "exercicis",
         category: "energia",
-        text: `Els senyals lluminosos de limitació de velocitat en una via d’accés a una ciutat es controlen automàticament. Redueixen la velocitat màxima permesa quan la contaminació és alta o
+        text: `<br>Els senyals lluminosos de limitació de velocitat en una via d’accés a una ciutat es controlen automàticament. Redueixen la velocitat màxima permesa quan la contaminació és alta o
 quan la mesura de la velocitat mitjana dels vehicles en dos punts de mesurament determinats
 és inferior al 80 % de la limitació indicada pel senyal lluminós. Responeu a les qüestions que
 hi ha a continuació utilitzant les variables d’estat següents:
@@ -376,7 +376,7 @@ hi ha a continuació utilitzant les variables d’estat següents:
             <br><br>
             Si s’utilitza un cable amb una longitud \\(L = 4\\,\\text{m}\\), determineu:
             <br><br>
-            <strong>c)</strong> Dibuixeu l’esquema de portes lògiques equivalent. [0,5 punt]
+            <strong>c)</strong> Dibuixeu l’esquema de portes lògiques equivalent. [0,5 punts]
             <br><br>`,
         correctAnswer: "",  
         steps: `
@@ -426,7 +426,7 @@ hi ha a continuació utilitzant les variables d’estat següents:
         {
         type: "exercicis",
         category: "energia",
-        text: `La suma de la resistència aerodinàmica i la resistència al rodolament constitueix la
+        text: `<br>La suma de la resistència aerodinàmica i la resistència al rodolament constitueix la
 demanda bàsica de potència d’un automòbil. La força resistent, expressada com una força
 que s’oposa a l’avanç del vehicle, és donada per l’expressió \\(F_r = (230 + 0,13v^2)\\,\\text{N}\\), en què \\(v\\) és la
 velocitat del vehicle en km/h. 
@@ -621,7 +621,7 @@ i del mateix valor. Determineu:
         type: "exercicis",
         category: "energia",
         text: `
-        Un avió comercial utilitza un combustible de poder calorífic \\(p_c = 42,42\\,\\text{MJ/kg}\\) i densitat
+        <br>Un avió comercial utilitza un combustible de poder calorífic \\(p_c = 42,42\\,\\text{MJ/kg}\\) i densitat
 \\(ρ = 0,8075\\,\\text{kg/L}\\). L’avió té una capacitat de \\(N = 144\\) seients i disposa d’un dipòsit per al combustible de \\(V= 24 000\\,\\text{L}\\). Quan l’avió viatja a una velocitat \\(v = 850\\,\\text{km/h}\\) els motors consumeixen, entre tots dos, \\(c = 2 700\\,\\text{kg/h}\\) i proporcionen a l’avió una força d’empenyiment \\(F_E = 43\\,\\text{kN}\\)
 (força en el sentit d’avanç de l’avió). Determineu, en aquestes condicions:
          
