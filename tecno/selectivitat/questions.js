@@ -367,7 +367,7 @@ quan la mesura de la velocitat mitjana dels vehicles en dos punts de mesurament 
 és inferior al 80 % de la limitació indicada pel senyal lluminós. Responeu a les qüestions que
 hi ha a continuació utilitzant les variables d’estat següents:
 
-  <img src="Variables.ex.png" alt="Imatge variables exercici">
+  <img src="variables.ex.png" alt="Imatge variables exercici">
   
             <br><br>
             <strong>a)</strong> Elaboreu la taula de veritat del sistema. [1 punt]
