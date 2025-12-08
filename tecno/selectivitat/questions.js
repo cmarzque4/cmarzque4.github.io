@@ -732,7 +732,7 @@ estat l’ocupació mitjana global?`,
     {
         type: "questions", // Tipus de pregunta
         category: "pneumatics_hydraulics",
-        text: `Una barra cilíndrica té un diàmetre de 3 mm, una tensió de ruptura \\(σr = 800\\,\\text{MPa}\\) i un
+        text: `Una barra cilíndrica té un diàmetre de \\(3\\,\\text{mm}\\), una tensió de ruptura \\(σr = 800\\,\\text{MPa}\\) i un
 límit elàstic \\(σe = 640\\,\\text{MPa}\\). Quina és la força de tracció màxima a la qual es pot sotmetre la
 barra sense que es trenqui?`,
         options: [
@@ -868,8 +868,8 @@ l’eix d’entrada del multiplicador és \\(P_{entrada} = 1,966\\,\\text{MW}\\)
         type: "questions", // Tipus de pregunta
         category: "materials_i_assaigs",
         text: `La velocitat de sincronisme d’un motor asíncron que està connectat a la xarxa de tensió
-\\(U = 230\\,\\text{V}\\) i freqüència \\(f = 50\\,\\text{Hz}\\) és de 1 000 min^{–1}. A quina freqüència està connectat aquest
-motor si passa a tenir una velocitat de sincronisme de 1 200 min^{–1}?`,
+\\(U = 230\\,\\text{V}\\) i freqüència \\(f = 50\\,\\text{Hz}\\) és de \\(1 000\\,\\text{min^{–1}}\\). A quina freqüència està connectat aquest
+motor si passa a tenir una velocitat de sincronisme de \\(1 200\\,\\text{min^{–1}}\\)?`,
         options: [
             { text: "120 Hz", value: "a" },
             { text: "No ho podem saber, perquè depèn de la tensió de la xarxa", value: "b" },
