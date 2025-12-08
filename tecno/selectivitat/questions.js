@@ -1262,7 +1262,7 @@ motor si passa a tenir una velocitat de sincronisme de \\(1 200\\,\\text{min^{â€
             \\]
             <br><br>
          `
-    }
+    },
     {
         type: "questions", // Tipus de pregunta
         category: "materials",
