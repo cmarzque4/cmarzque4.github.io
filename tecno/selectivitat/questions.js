@@ -909,4 +909,237 @@ motor si passa a tenir una velocitat de sincronisme de 1 200 min^{–1}?`,
             <br><br>
          `
     }
+    {
+        type: "questions", // Tipus de pregunta
+        category: "materials",
+        text: `Un motor asíncron de corrent altern de dos parells de pols està connectat a la xarxa de
+tensió \\(U = 230\\,\\text{V}\\) i freqüència \\(f = 50\\,\\text{Hz}\\). Quin és el lliscament relatiu \\(s\\) del motor en tant per
+cent (%) si gira a \\(n = 1 400\\,\\text{min^{–1}\\)?`,
+        options: [
+            { text: "6,667 %", value: "a" },
+            { text: "7,143 %", value: "b" },
+            { text: "5 %", value: "c" },
+            { text: "53,33 %", value: "d" }
+        ],
+        correctAnswer: "a",
+        steps: `
+            <strong>Càlcul del mòdul elàstic:</strong>
+            <br><br>
+            Tensió aplicada:
+            \\[
+            \\sigma = 250\\ \\text{MPa}
+            \\]
+            \\[
+            250\\ \\text{MPa} = 250 \\times 10^6\\ \\text{Pa}
+            \\]
+            <br>
+            Deformació:
+            \\[
+            \\varepsilon = 0,00227
+            \\]
+            <br>
+            Mòdul elàstic:
+            \\[
+            E = \\frac{\\sigma}{\\varepsilon}
+            \\]
+            \\[
+            E = \\frac{250 \\times 10^6\\ \\text{Pa}}{0,00227}
+            \\]
+            \\[
+            E = 110132158590,30838\\ \\text{Pa}
+            \\]
+            \\[
+            E = 110,13215859030838\\ \\text{GPa}
+            \\]
+            \\[
+            E \\approx 110\\ \\text{GPa}
+            \\]
+            <br><br>
+   `
+    },
+    {
+        type: "questions", // Tipus de pregunta
+        category: "pneumatics_hydraulics",
+        text: `El magal és un aliatge resistent i lleuger que s’utilitza per a l’elaboració d’instruments
+quirúrgics. Conté un 8 % d’alumini (Al), un 1 % de zinc (Zn), un 0,2 % de manganès (Mn)
+i la resta és magnesi (Mg). En l’obtenció d’aquest aliatge, quina quantitat de zinc cal per a
+aliar-lo amb 350 kg de magnesi?`,
+        options: [
+            { text: "3,5 kg", value: "a" },
+            { text: "3,855 kg", value: "b" },
+            { text: "30,84 kg", value: "c" },
+            { text: "35 kg", value: "d" }
+        ],
+        correctAnswer: "b",
+        steps: `
+            <strong>Càlcul del volum total:</strong>
+            <br>
+            Diàmetre del cilindre: \\(D = 79,5 \\, \\text{mm} = 0,0795 \\, \\text{m}\\)  
+            <br>
+            Cursa del pistó: \\(C = 80,5 \\, \\text{mm} = 0,0805 \\, \\text{m}\\)
+            <br><br>
+            Volum d'un cilindre:  
+            \\[
+            V_{1 \\, cilindre} = \\frac{\\pi}{4} \\times D^2 \\times C
+            \\]
+            \\[
+            V_{1 \\, cilindre} = \\frac{\\pi}{4} \\times (0,0795 \\, \\text{m})^2 \\times (0,0805 \\, \\text{m})
+            \\]
+            \\[
+            V_{1 \\, cilindre} = 0,00040084 \\, \\text{m}^3
+            \\]
+            <br>
+            Volum total per 4 cilindres:  
+            \\[
+            V_{total} = 4 \\times 0,00040084 \\, \\text{m}^3 = 0,00160336 \\, \\text{m}^3
+            \\]
+            \\[
+            V_{total} \\times 10^6 = 1,603,36 \\, \\text{cm}^3
+            \\]
+            \\[
+            V_{total} \\approx 1,598 \\, \\text{cm}^3
+            \\]
+            <br><br>
+`
+    },
+    {
+        type: "questions", // Tipus de pregunta
+        category: "motors_reductors",
+        text: `La cilindrada d’un motor de combustió és de \\(1 998\\,\\text{cm^3}. Tant el diàmetre com la cursa
+dels cilindres del motor són de \\(86\\,\\text{mm}\\). Quants cilindres té el motor?`,
+        options: [
+            { text: "4", value: "a" },
+            { text: "5", value: "b" },
+            { text: "6", value: "c" },
+            { text: "8", value: "d" }
+        ],
+        correctAnswer: "a",
+        steps: `
+            <strong>Càlcul de la relació de transmissió:</strong><br>
+            \\[
+            \\tau = \\frac{\\omega_{red}}{\\omega_{mot}}
+            \\]<br>
+            Motor nominal:<br>
+            \\[
+            n_{mot} = 1500\\,\\text{min}^{-1}
+            \\]<br>
+            Velocitat angular motor:<br>
+            \\[
+            \\omega_{mot} = \\frac{2\\pi \\times n_{mot}}{60\\,\\text{s/min}} = \\frac{2\\pi \\times 1500\\,\\text{min}^{-1}}{60\\,\\text{s/min}} = 157,08\\,\\text{rad/s}
+            \\]<br>
+            Velocitat de la porta:<br>
+            \\[
+            v_{nom} = 0,12\\,\\text{m/s}
+            \\]<br>
+            Radi del pinyó:<br>
+            \\[
+            r = 30\\,\\text{mm} = 0,03\\,\\text{m}
+            \\]<br>
+            Velocitat angular reductor:<br>
+            \\[
+            \\omega_{red} = \\frac{v_{nom}}{r} = \\frac{0,12\\,\\text{m/s}}{0,03\\,\\text{m}} = 4\\,\\text{rad/s}
+            \\]<br>
+            Relació de transmissió:<br>
+            \\[
+            \\tau = \\frac{\\omega_{red}}{\\omega_{mot}} = \\frac{4\\,\\text{rad/s}}{157,08\\,\\text{rad/s}} = 0,02546 = 25,46 \\times 10^{-3}
+            \\]<br><br>
+ `
+    },
+    {
+        type: "questions", // Tipus de pregunta
+        category: "pneumatics_hydraulics",
+        text: `Un sensor de pressió atmosfèrica té una precisió de ±0,3 hPa i una estabilitat en la mesura
+al llarg del temps de \\(±0,1\\,\\text{hPa/any}\\). La mesura de la pressió atmosfèrica l’1 de març de 2017
+va ser de \\(990\\,\\text{hPa}\\) i la del mateix dia de l’any 2018, de \\(1 030\\,\\text{hPa}\\). La diferència entre la pressió
+atmosfèrica real dels dos dies està compresa entre`,
+        options: [
+            { text: "40 hPa i 40,3 hPa", value: "a" },
+            { text: "39,4 hPa i 40,6 hPa", value: "b" },
+            { text: "39,7 hPa i 40,3 hPa", value: "c" },
+            { text: "39,3 hPa i 40,7 hPa", value: "d" }
+        ],
+        correctAnswer: "d",
+        steps: `
+            <strong>Càlcul de la força sobre l'èmbol petit:</strong><br>
+            Pressió hidràulica:<br>
+            \\[
+            F_1 = F_2 \\cdot \\frac{A_1}{A_2}
+            \\]<br>
+            Massa a aixecar:<br>
+            \\[
+            m = 1200\\,\\text{kg}
+            \\]<br>
+            Gravetat:<br>
+            \\[
+            g = 9,807\\,\\text{m·s²}
+            \\]<br>
+            Força sobre l'èmbol gran:<br>
+            \\[
+            F_2 = m \\cdot g = 1200\\,\\text{kg} \\times 9,807\\,\\text{m·s²} = 11768,4\\,\\text{N}
+            \\]<br>
+            Àrea de l'èmbol petit:<br>
+            \\[
+            A_1 = 1000\\,\\text{mm²} = 1000 \\times 10⁻⁶\\,\\text{m²} = 0,001\\,\\text{m²}
+            \\]<br>
+            Àrea de l'èmbol gran:<br>
+            \\[
+            A_2 = 30000\\,\\text{mm²} = 30000 \\times 10⁻⁶\\,\\text{m²} = 0,03\\,\\text{m²}
+            \\]<br>
+            Força sobre l'èmbol petit:<br>
+            \\[
+            F_1 = F_2 \\cdot \\frac{A_1}{A_2} = 11768,4\\,\\text{N} \\cdot \\frac{0,001\\,\\text{m²}}{0,03\\,\\text{m²}}
+            \\]<br>
+            \\[
+            F_1 = 392,28\\,\\text{N}
+            \\]
+            <br><br>
+`
+    },
+    {
+        type: "questions", // Tipus de pregunta
+        category: "materials_i_assaigs",
+        text: `La fabricació d’una peça metàŀlica es duu a terme en dos processos. En primer lloc, la
+peça es mecanitza en un torn i, posteriorment, se’n milloren les propietats mecàniques mitjançant un tractament tèrmic. Després de cada procés, es controla la qualitat de les peces i
+es desestimen les que no són correctes. Si s’acaba produint correctament el 93,12 % de les
+peces inicials i la taxa de rebuig del tornejat és del 3 %, quina és la taxa de rebuig del procés
+de tractament tèrmic?`,
+        options: [
+            { text: "3,5 %", value: "a" },
+            { text: "3,88 %", value: "b" },
+            { text: "4 %", value: "c" },
+            { text: "4,82 %", value: "d" }
+        ],
+        correctAnswer: "c",
+        steps: `
+            <strong>Càlcul de la quantitat de niobi:</strong><br>
+            Percentatges components:<br>
+            \\[
+            \\%_{\\mathrm{Ti}} = 100\\% - (5{,}5\\% + 6{,}5\\% + 0{,}25\\% + 0{,}08\\%) = 87{,}67\\%
+            \\]<br>
+            Massa de titani disponible:<br>
+            \\[
+            m_{\\mathrm{Ti}} = 250\\,\\text{kg}
+            \\]<br>
+            Massa total de l'aliatge (convertint el % de Ti a fracció):<br>
+            \\[
+            m_{\\mathrm{total}} = \\frac{m_{\\mathrm{Ti}}}{0{,}8767}
+            = \\frac{250\\,\\text{kg}}{0{,}8767}
+            = 285{,}16026006615715\\,\\text{kg}
+            \\]<br>
+            Percentatge de niobi:<br>
+            \\[
+            \\%_{\\mathrm{Nb}} = 6{,}5\\% = 0{,}065
+            \\]<br>
+            Massa de niobi necessària:<br>
+            \\[
+            m_{\\mathrm{Nb}} = 0{,}065 \\times 285{,}16026006615715\\,\\text{kg}
+            = 18{,}535416904300217\\,\\text{kg}
+            \\]<br>
+            Resultat arrodonit:<br>
+            \\[
+            m_{\\mathrm{Nb}} \\approx 18{,}54\\,\\text{kg}
+            \\]
+            <br><br>
+         `
+    }
 ];
