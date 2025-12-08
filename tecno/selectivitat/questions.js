@@ -971,20 +971,22 @@ punt \\(B\\). El diàmetre interior del cilindre és \\(d_{int} = 70\\,\\text{mm
         {
         type: "exercicis",
         category: "energia",
-        text: `<br>Una central elèctrica de cicle combinat produeix electricitat mitjançant dos cicles termodinàmics: un primer cicle de combustió de gas natural, de poder calorífic \\(p = 32,5\\,\\text{MJ/kg}\\), i un
-segon cicle en què s’aprofita la calor residual del primer per a moure una turbina de vapor.
-El gas natural es distribueix liquat, amb una densitat \\(ρ = 0,423\\,\\text{kg/L}\\). La potència elèctrica que
-proporciona la central és \\(P_{elèctr} = 500\\,\\text{MW}\\) i el rendiment total és \\(η = 0,575\\). El rendiment del
-cicle de gas és \\(η_g = 0,32\\). Determineu:
-         
+        text: `<br>Per a reduir l’emissió de partícules de \\(CO^2\\)
+ d’un vehicle que funciona amb gasolina, és possible instaŀlar-hi un sistema que fa que el motor pugui funcionar també amb gas liquat del petroli (GLP). La instaŀlació d’aquest sistema té un cost de \\(2 000\\,\\text{€}\\) addicionals, que caldria sumar al
+cost del vehicle, i inclou la coŀlocació d’un dipòsit de GLP de \\(V = 40\\,\\text{L}\\) al maleter. Quan el vehicle
+circula a una velocitat \\(v = 120\\,\\text{km/h}\\), consumeix una mitjana de \\(8 L/100\\,\\text{km}\\) si funciona amb
+gasolina, o de \\(9{,}3 L/100\\,\\text{km}\\) si funciona amb GLP. La gasolina té una densitat \\(ρ_{gasol} = 0,75\\,\\text{kg/L}\\)
+i un poder calorífic \\(p_{c,gasol} = 42{,}5\\,\\text{MJ/kg}\\), i el GLP té una densitat \\(ρ_{GLP} = 0{,}56\\,\\text{kg/L}\\) i un poder
+calorífic \\(p_{c,GLP} = 46\\,\\text{MJ/kg}\\). El preu de cada combustible és el següent: \\(1{,}36\\,\\text{€/L}\\) en el cas de la
+gasolina i \\(0{,}73\\,\\text{€/L}\\) en el cas del GLP. Si el vehicle circula a una velocitat \\(v = 120\\,\\text{km/h}\\), determineu:        
             <br><br>
-            <strong>a)</strong> La potència consumida \\(P_{cons}\\) per la central. [0,5 punts]
+            <strong>a)</strong> La potència tèrmica mitjana \\(P_{gasol}\\) i \\(P_{GLP}\\) consumida amb cada combustible. [1 punt]
             <br>
-            <strong>b)</strong> El volum \\(V\\) de gas natural liquat que es crema a la central durant 24 hores de funcionament. [0,5 punts]
+            <strong>b)</strong> El cost \\(c_{gasol}\\) i \\(c_{GLP}\\), en euros per cada 100 km, d’utilitzar cadascun dels combustibles. [0,5 punts]
             <br>
-            <strong>c)</strong> La potència dissipada en el cicle de gas \\(P_{diss,cg}\\). [0,5 punts]
+            <strong>c)</strong> La distància mitjana anual \\(d_{any}\\), en km per any, que ha de recórrer el vehicle si es vol amortitzar la instaŀlació del sistema GLP en \\(t = 3 anys\\). [0,5 punts]
             <br>
-            <br><strong>d)</strong> El rendiment del cicle de vapor \\(η_v\\). [1 punt]
+            <br><strong>d)</strong> La distància estimada \\(d_{est}\\) que pot recórrer el vehicle amb GLP si el dipòsit instaŀlat es troba ple fins al 85 % de la seva capacitat.  [0,5 punts]
             <br><br>`,
         correctAnswer: "",  
         steps: `
