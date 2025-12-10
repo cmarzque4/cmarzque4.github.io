@@ -66,15 +66,22 @@ const questions = [
         steps: `
             <strong>a) Rendiment \\(η_a\\) i \\(η_b\\) dels captadors A i B en aquestes condicions de treball:</strong>
             <br>
-            - rendiment\\(η_a\\):
+            - rendiment \\(η_a\\):
             \\[
-            \\omega_r = \\frac{v}{r} = \\frac{1,028\\,\\text{m/s}}{0,1\\,\\text{m}} = 10,28\\,\\text{rad/s}
+            \\η_a\\ = \\η_0 A\\ · \\k_1 A\\ \\frac{Tm - Ta}{I} = \\0,8 - 8,9\\,\\text{W/M^2ºC}\\ \\frac{50 - 18\\,\\text{ºC}}{800\\,\\text{m^2}} = 0,444\\
             \\]
-            - Velocitat angular del motor:
             \\[
-            \\omega_{mot} = \\frac{\\omega_r}{\\tau} = \\frac{10,28\\,\\text{rad/s}}{0,08} = 128,5\\,\\text{rad/s}
+            \\η_a\\ = 44,4%
             \\]
-            <br><strong>b) Potència a l’eix de les rodes:</strong>
+            - rendiment \\(η_b\\):
+            \\[
+            \\η_b\\ = \\η_0 B\\ · \\k_1 B\\ \\frac{Tm - Ta}{I} = \\0,66 - 3,2\\,\\text{W/M^2ºC}\\ \\frac{50 - 18\\,\\text{ºC}}{800\\,\\text{m^2}} = 0,532\\
+            \\]
+            \\[
+            \\η_b\\ = 53,2%
+            \\]
+             - L’opció més eficient és triar el model de captador B.
+            <br><strong>b) El nombre de captadors \\(n\\) que caldria instaŀlar per a escalfar tota l’aigua:</strong>
             <br>
             - Aplicant rendiment del motor i del reductor:
             \\[
@@ -82,7 +89,7 @@ const questions = [
             \\]
             <br><strong>c) Parell a l’eix del motor:</strong>
             <br>
-            - Potència útil a l’eix del motor:
+            - Energia útil diaria:
             \\[
             P_{mot} = P_{cons} \\times \\eta_{mot} = 75\\,\\text{W} \\times 0,87 = 65,25\\,\\text{W}
             \\]
