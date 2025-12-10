@@ -25,6 +25,8 @@ const questions = [
             <strong>b) Determinació de la funció lògica entre les variables :</strong>
             <br>
             \\[ _   _        _                   _
+            \\]
+            \\[
             a = b · j · i +  b · j · i + b · j · i + b · j · i
             \\]
             \\[
