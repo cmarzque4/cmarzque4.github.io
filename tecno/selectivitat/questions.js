@@ -64,9 +64,9 @@ const questions = [
             <br><br>`, 
         correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
         steps: `
-            <strong>a) Velocitat angular de les rodes i del motor:</strong>
+            <strong>a) Rendiment \\(η_a\\) i \\(η_b\\) dels captadors A i B en aquestes condicions de treball:</strong>
             <br>
-            - Velocitat angular de les rodes auxiliars:
+            - rendiment\\(η_a\\):
             \\[
             \\omega_r = \\frac{v}{r} = \\frac{1,028\\,\\text{m/s}}{0,1\\,\\text{m}} = 10,28\\,\\text{rad/s}
             \\]
