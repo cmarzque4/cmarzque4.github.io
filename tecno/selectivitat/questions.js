@@ -18,24 +18,65 @@ const questions = [
             <br><br>`, 
         correctAnswer: "",  
         steps: `
-            <strong>a) Càlcul de la potència mitjana del vent \\(P_{\\text{vent}}\\) per a un aerogenerador:</strong>
+            <strong>a)Taula de la veritat del sistema</strong>
             <br>
-            - Àrea d’escombratge de les pales:
-            \\[
-            A = \\frac{\\pi d^2}{4} = \\frac{\\pi \\times (77 \\, \\text{m})^2}{4} = 4657{,}7 \\, \\text{m}^2
-            \\]
-            - Densitat de l’aire:
-            \\[
-            \\rho = \\frac{1{,}225 \\, \\text{g}}{\\text{m}^3} = 1{,}225 \\, \\frac{\\text{kg}}{\\text{m}^3}
-            \\]
-            - Velocitat del vent (en \\(\\text{m/s}\\)):
-            \\[
-            v = \\frac{25 \\, \\text{km/h}}{3{,}6} = 6{,}94 \\, \\text{m/s}
-            \\]
-            - Potència del vent:
-            \\[
-            P_{\\text{vent}} = \\frac{1}{2} \\times 1{,}225 \\, \\frac{\\text{kg}}{\\text{m}^3} \\times 4657{,}7 \\, \\text{m}^2 \\times (6{,}94 \\, \\text{m/s})^3 = 828{,}08 \\, \\text{kW}
-            \\]
+        <table>
+            <tr>
+                <th>b</th>
+                <th>j</th>
+                <th>i</th>
+                <th>a</th>
+            </tr>
+
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+        </table>
             <br>
             <strong>b) Potència elèctrica útil \\(P_{\\text{útil}}\\) generada per cada aerogenerador:</strong>
             <br>
