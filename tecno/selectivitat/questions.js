@@ -68,7 +68,7 @@ const questions = [
             <br>
             - rendiment \\(η_a\\):
             \\[
-            η_a = η_0 A \\ times \\ k_1 A \\frac{Tm - Ta}{I} = \\ 0,8 - 8,9\\,\\text{W/M^2ºC}\\ \\frac{50 - 18\\,\\text{ºC}}{800\\,\\text{m^2}} = 0,444\\
+            η_a = η_{0 A} \\ x \\ k_{1 A} \\frac{Tm - Ta}{I} = \\ 0,8 - 8,9\\,\\text{W/M^2ºC}\\ \\frac{50 - 18\\,\\text{ºC}}{800\\,\\text{m^2}} = 0,444\\
             \\]
             \\[
             \\η_a\\ = 44,4%
