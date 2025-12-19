@@ -68,25 +68,55 @@ const questions = [
             <br>
             - rendiment \\(η_a\\):
             \\[
-            η_a = η_{0 A} \\times \\ k_{1 A} \\frac{Tm - Ta}{I} = \\ 0,8 - 8,9\\,\\text{W/M^2ºC}\\times \\frac{50 - 18\\,\\text{ºC}}{800\\,\\text{m^2}} = 0,444\\
+            η_a = η_{0 A} \\times \\ k_{1 A} \\frac{Tm - Ta}{I} 
+            \\]
+            \\[
+            η_a = \\ 0,8 - 8,9\\,\\text{W/M^2ºC}\\times \\frac{50 - 18\\,\\text{ºC}}{800\\,\\text{m^2}} = 0,444\\
             \\]
             \\[
             η_a = 44,4%
             \\]
             - rendiment \\(η_b\\):
             \\[
-            \\η_b\\ = \\η_0 B\\times \\k_1 B\\ \\frac{Tm - Ta}{I} = \\0,66 - 3,2\\,\\text{W/M^2ºC}\\ \\frac{50 - 18\\,\\text{ºC}}{800\\,\\text{m^2}} = 0,532\\
+            η_b = η_0 B\\times \\k_1 B \\frac{Tm - Ta}{I} 
             \\]
             \\[
-            \\η_b\\ = 53,2%
+            η_b = 0,66 - 3,2\\,\\text{W/M^2ºC} \\frac{50 - 18\\,\\text{ºC}}{800\\,\\text{m^2}} = 0,532
+            \\]
+            \\[
+            η_b = 53,2%
             \\]
              - L’opció més eficient és triar el model de captador B.
             <br><strong>b) El nombre de captadors \\(n\\) que caldria instaŀlar per a escalfar tota l’aigua:</strong>
             <br>
-            - Aplicant rendiment del motor i del reductor:
+            - Càlcul de la densitat ρ en grams:
             \\[
-            P_{subm} = P_{cons} \\times \\eta_{mot} \\times \\eta_{red} = 75\\,\\text{W} \\times 0,87 \\times 0,95 = 62,06\\,\\text{W}
+            ρ = \\frac{1\\,\\text{kg}}{1\\,\\text{L}} \\ = \\frac{1 x 10^{3}\\,\\text{g}}{1\\,\\text{L}} = 1 x 10^{3}\\,\\text{g/L}
             \\]
+            - Càlcul de l'energia diaria del sistema:
+            \\[
+            E_{dia} = c \\times \\ ρ\\times \\C_{e}\\times \\∆T 
+            \\]
+            \\[
+             E_{dia} = 390\\,\\text{L}\\times 1 x 10^{3}\\,\\text{g/L}\\times 4,18\\,\\text{J/gºC} \\times 35\\,\\text{ºC} = 57,06\\,\\text{MJ}
+             \\]
+             \\[
+             E_{dia} =  57,06\\,\\text{MJ}\\times \\frac{1 x 10^{3}\\,\\text{J}}{3600\\,\\text{s}} = 15,85\\,\\text{kWh}
+             \\]
+              - Energia solar del sistema aplicant el rendiment:
+             \\[
+             E_{solar} =  \\frac{E_{dia}}{η_b}\\ = \\frac{57,06\\,\\text{MJ}}{0,66}\\ = 107,3\\,\\text{MJ}
+             \\] 
+             \\[
+             E_{solar} =  107,3\\,\\text{MJ}\\times \\frac{1 x 10^{3}\\,\\text{J}}{3600\\,\\text{s}} = 29,79\\,\\text{kWh}
+             \\]
+             - Superficie necessaria:
+             \\[
+             S_{necessaria} = \\frac{E_{solar}}{I\\times \\t}\\ = \\frac{29,79\\,\\text{kWh}}{800\\,\\text{m^2}\\times \\8\\,\\text{h}}\\
+             \\] 
+             \\[
+             S_{necessaria} = 4,655\\,\\text{m^2}
+             \\] 
             <br><strong>c) Parell a l’eix del motor:</strong>
             <br>
             - Energia útil diaria:
