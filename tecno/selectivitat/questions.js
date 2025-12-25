@@ -117,16 +117,51 @@ const questions = [
              \\[
              S_{necessaria} = 4,655\\,\\text{m^2}
              \\] 
-            <br><strong>c) Parell a l’eix del motor:</strong>
+             - nobre de captadors:
+             \\[
+             n = frac{S_{necessaria}}{S} = frac{4,655\\,\\text{m^2}}{2,1\\,\\text{m^2}} = 2,217
+             \\]
+            \\[
+             n = 3 captadors
+             \\]
+            <br><strong>c) L’energia elèctrica consumida:</strong>
             <br>
-            - Energia útil diaria:
+            - rendiment \\(η_b\\)':
             \\[
-            P_{mot} = P_{cons} \\times \\eta_{mot} = 75\\,\\text{W} \\times 0,87 = 65,25\\,\\text{W}
+            η_b = η_0 B\\times \\k_1 B \\frac{Tm - Ta}{I} 
             \\]
-            - Parell:
             \\[
-            \\Gamma_{mot} = \\frac{P_{mot}}{\\omega_{mot}} = \\frac{65,25\\,\\text{W}}{128,5\\,\\text{rad/s}} = 0,5077\\,\\text{N·m}
+            η_b = 0,66 - 3,2\\,\\text{W/M^2ºC} \\frac{50 - 18\\,\\text{ºC}}{400\\,\\text{m^2}} = 0,404
             \\]
+            \\[
+            η_b = 40,4%
+            \\]
+            - Energia solar:
+             \\[
+             E_{solar}' =  n \\times \\S \\times \\I' \\times \\t
+             \\] 
+             \\[
+             E_{solar} =  3\\times \\2,1\\,\\text{m^2} \\times \\400\\,\\text{W/m^2} \\times \\8\\,\\text{h}
+             \\]
+             \\[
+             E_{solar} = 20,16\\,\\text{kWh}
+             - Aplicar el rendiment:
+             \\[
+             E_{tèrmica} = η_b' \\times \\ E_{solar}
+             \\]
+             \\[
+             E_{tèrmica} = 0,404 \\times \\ 20,16\\,\\text{kWh}
+             \\]
+             \\[
+             E_{tèrmica} = 8,145\\,\\text{kWh}
+             \\]
+             - Energia electrice real:
+             \\[
+             E_{elèctr} = E_{dia} -  E_{tèrmica}
+             \\]
+             \\[
+             E_{elèctr} = 27,865\\,\\text{kWh} - 20,16\\,\\text{kWh} = 7,705\\,\\text{kWh}
+             \\]
             <br><strong>d) Temps màxim de funcionament i distància recorreguda:</strong>
             <br>
             - Energia de la bateria:
