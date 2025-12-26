@@ -78,10 +78,10 @@ const questions = [
             \\]
             - rendiment \\(η_b\\):
             \\[
-            η_b = η_0 B\\times \\k_1 B \\frac{Tm - Ta}{I} 
+            η_b = η_{0 B}\\times \\k_{1 B} \\frac{Tm - Ta}{I} 
             \\]
             \\[
-            η_b = 0,66 - 3,2\\,\\text{W/M^2ºC} \\frac{50 - 18\\,\\text{ºC}}{800\\,\\text{m^2}} = 0,532
+            η_b = 0,66 - 3,2\\,\\text{W/m^2ºC} \\frac{50 - 18\\,\\text{ºC}}{800\\,\\text{m^2}} = 0,532
             \\]
             \\[
             η_b = 53,2%
@@ -95,7 +95,7 @@ const questions = [
             \\]
             - Càlcul de l'energia diaria del sistema:
             \\[
-            E_{dia} = c \\times \\ ρ\\times \\C_{e}\\times \\∆T 
+            E_{dia} = c \\times \\ ρ\\times \\C_{e} \\times \\∆T 
             \\]
             \\[
              E_{dia} = 390\\,\\text{L}\\times 1 x 10^{3}\\,\\text{g/L}\\times 4,18\\,\\text{J/gºC} \\times 35\\,\\text{ºC} = 57,06\\,\\text{MJ}
@@ -112,14 +112,14 @@ const questions = [
              \\]
              - Superficie necessaria:
              \\[
-             S_{necessaria} = \\frac{E_{solar}}{I\\times \\t}\\ = \\frac{29,79\\,\\text{kWh}}{800\\,\\text{m^2}\\times \\8\\,\\text{h}}\\
+             S_{necessaria} = \\frac{E_{solar}}{I\\times \\ t}\\ = \\frac{29,79\\,\\text{kWh}}{800\\,\\text{m^2}\\times \\8\\,\\text{h}}\\
              \\] 
              \\[
              S_{necessaria} = 4,655\\,\\text{m^2}
              \\] 
              - nobre de captadors:
              \\[
-             n = frac{S_{necessaria}}{S} = frac{4,655\\,\\text{m^2}}{2,1\\,\\text{m^2}} = 2,217
+             n = \\frac{S_{necessaria}}{S}\\ = \\frac{4,655\\,\\text{m^2}}{2,1\\,\\text{m^2}}\\ = 2,217
              \\]
             \\[
              n = 3 captadors
@@ -128,23 +128,24 @@ const questions = [
             <br>
             - rendiment \\(η_b\\)':
             \\[
-            η_b = η_0 B\\times \\k_1 B \\frac{Tm - Ta}{I} 
+            η_b = η_{0 B}\\times \\k_{1 B} \\frac{Tm - Ta}{I}\\
             \\]
             \\[
-            η_b = 0,66 - 3,2\\,\\text{W/M^2ºC} \\frac{50 - 18\\,\\text{ºC}}{400\\,\\text{m^2}} = 0,404
+            η_b = 0,66 - 3,2\\,\\text{W/m^2ºC} \\frac{50 - 18\\,\\text{ºC}}{400\\,\\text{m^2}} = 0,404
             \\]
             \\[
             η_b = 40,4%
             \\]
             - Energia solar:
              \\[
-             E_{solar}' =  n \\times \\S \\times \\I' \\times \\t
+             E_{solar}' =  n \\times \\ S \\times \\I' \\times \\t
              \\] 
              \\[
              E_{solar} =  3\\times \\2,1\\,\\text{m^2} \\times \\400\\,\\text{W/m^2} \\times \\8\\,\\text{h}
              \\]
              \\[
              E_{solar} = 20,16\\,\\text{kWh}
+             \\]
              - Aplicar el rendiment:
              \\[
              E_{tèrmica} = η_b' \\times \\ E_{solar}
@@ -162,22 +163,7 @@ const questions = [
              \\[
              E_{elèctr} = 27,865\\,\\text{kWh} - 20,16\\,\\text{kWh} = 7,705\\,\\text{kWh}
              \\]
-            <br><strong>d) Temps màxim de funcionament i distància recorreguda:</strong>
-            <br>
-            - Energia de la bateria:
-            \\[
-            E_{bat} = 240\\,\\text{Wh} = 240 \\times 3600\\,\\text{W·s} = 864000\\,\\text{J}
-            \\]
-            - Temps de funcionament:
-            \\[
-            t = \\frac{E_{bat}}{P_{cons}} = \\frac{864000\\,\\text{J}}{75\\,\\text{W}} = 11520\\,\\text{s} = 3,2\\,\\text{h}
-            \\]
-            - Distància màxima recorreguda:
-            \\[
-            s_{rec} = v \\times t = 1,028\\,\\text{m/s} \\times 11520\\,\\text{s} = 11830\\,\\text{m} = 11,83\\,\\text{km}
-            \\]
-            <br><br>
-            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+            <br><br>`,  
     },
     {
         type: "exercicis",
