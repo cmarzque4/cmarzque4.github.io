@@ -208,7 +208,7 @@ const questions = [
             \\[
             P_{motor} = Γ_{motor} \\times \\omega_{motor} = 6\\,\\text{N m} \\times \\ 1018,247\\,\\text{rad/s} = 6,109\\,\\text{kW}
             \\]
-            <br><strong>c) Potència mecànica en un angle:</strong>
+            <br><strong>c) Potència de a roda i l'angle que forma:</strong>
             <br>
             - Potència roda aplicant el rendiment total:
             \\[
