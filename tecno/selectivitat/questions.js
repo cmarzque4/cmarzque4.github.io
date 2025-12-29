@@ -188,46 +188,55 @@ const questions = [
         steps: `
             <strong>a) Velocitat angular de les rodes i del motor:</strong>
             <br>
-            - Velocitat angular de les rodes auxiliars:
+            - Velocitat angular de les rodes:
             \\[
-            \\omega_r = \\frac{v}{r} = \\frac{1,028\\,\\text{m/s}}{0,1\\,\\text{m}} = 10,28\\,\\text{rad/s}
+            v = 50\\,\\text{km/h} \\times \\ \\frac{1000\\,\\text{m}}{3600\\,\\text{s}} = 13,889\\,\\text{m/s}
+            \\]
+            \\[
+            d = 620\\,\\text{mm} \\frac{1}{1000\\,\\text{m}} = 0,62\\,\\text{m}
+            \\]
+            \\[
+            \\omega_{roda} = \\frac{v}{d/2} = \\frac{2 \\times \\ 13,889\\,\\text{m/s}}{0,62\\,\\text{m}} = 44,80\\,\\text{rad/s}
             \\]
             - Velocitat angular del motor:
             \\[
-            \\omega_{mot} = \\frac{\\omega_r}{\\tau} = \\frac{10,28\\,\\text{rad/s}}{0,08} = 128,5\\,\\text{rad/s}
+            \\omega_{motor} = \\frac{\\omega_{roda}}{\\tau} = \\frac{44,80\\,\\text{rad/s}}{0,044} = 1018,247\\,\\text{rad/s}
             \\]
-            <br><strong>b) Potència a l’eix de les rodes:</strong>
+            <br><strong>b) Potència a l’eix de sortida del motor:</strong>
             <br>
-            - Aplicant rendiment del motor i del reductor:
+            - Aplicant el parell del motor i la seva velocitat angular:
             \\[
-            P_{subm} = P_{cons} \\times \\eta_{mot} \\times \\eta_{red} = 75\\,\\text{W} \\times 0,87 \\times 0,95 = 62,06\\,\\text{W}
+            P_{motor} = Γ_{motor} \\times \\omega_{motor} = 6\\,\\text{N m} \\times \\ 1018,247\\,\\text{rad/s} = 6,109\\,\\text{kW}
             \\]
-            <br><strong>c) Parell a l’eix del motor:</strong>
+            <br><strong>c) Potència mecànica en un angle:</strong>
             <br>
-            - Potència útil a l’eix del motor:
+            - Potència roda aplicant el rendiment total:
             \\[
-            P_{mot} = P_{cons} \\times \\eta_{mot} = 75\\,\\text{W} \\times 0,87 = 65,25\\,\\text{W}
+            η_{total} = η_{cad} \\times \\η_{eng} = \\frac{P_{roda}}{P_{motor}}
             \\]
-            - Parell:
             \\[
-            \\Gamma_{mot} = \\frac{P_{mot}}{\\omega_{mot}} = \\frac{65,25\\,\\text{W}}{128,5\\,\\text{rad/s}} = 0,5077\\,\\text{N·m}
+            P_{roda} = P_{motor} \\times \\ η_{cad} \\times \\η_{eng} = 6,109\\,\\text{kW} \\times \\ 0,85 \\times \\ 0,90
             \\]
-            <br><strong>d) Temps màxim de funcionament i distància recorreguda:</strong>
+            \\[
+            P_{roda} = 4,674\\,\\text{kW}
+            \\]
+            - Angle:
+            \\[
+            P_{roda} = P_{mec} = m \\times \\ g \\times \\ v \\times \\ sin x
+            \\]
+            \\[
+            x = arcsin ( \\frac{P_{mec}}{m \\times \\ g \\times \\ v } ) = arcsin ( \\frac{4674\\,\\text{W}}{150\\,\\text{kg} \\times \\ 9,81\\,\\text{m/s^2} \\times \\ 13,889\\,\\text{m/s}} ) = 13,22\\,\\text{º}
+            \\]
+            <br><strong>d) Parell de la roda:</strong>
             <br>
             - Energia de la bateria:
             \\[
-            E_{bat} = 240\\,\\text{Wh} = 240 \\times 3600\\,\\text{W·s} = 864000\\,\\text{J}
+            P_{roda} = Γ_{roda} \\times \\ \\omega_{roda} 
             \\]
-            - Temps de funcionament:
             \\[
-            t = \\frac{E_{bat}}{P_{cons}} = \\frac{864000\\,\\text{J}}{75\\,\\text{W}} = 11520\\,\\text{s} = 3,2\\,\\text{h}
+            Γ_{roda} = \\frac{P_{roda}}{\\omega_{roda}} = \\frac{4674\\,\\text{W}}}{44,80\\,\\text{rad/s}} = 104,33\\,\\text{N·m}
             \\]
-            - Distància màxima recorreguda:
-            \\[
-            s_{rec} = v \\times t = 1,028\\,\\text{m/s} \\times 11520\\,\\text{s} = 11830\\,\\text{m} = 11,83\\,\\text{km}
-            \\]
-            <br><br>
-            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+            <br><br>`
     },
     {
         type: "exercicis",
