@@ -78,7 +78,7 @@ const questions = [
             \\]
             - rendiment \\(η_b\\):
             \\[
-            η_b = η_{0 B}\\times \\k_{1 B} \\frac{Tm - Ta}{I} 
+            η_b = η_{0 B} \\times \\ k_{1 B} \\frac{Tm - Ta}{I} 
             \\]
             \\[
             η_b = 0,66 - 3,2\\,\\text{W/m^2ºC} \\frac{50 - 18\\,\\text{ºC}}{800\\,\\text{m^2}} = 0,532
@@ -95,7 +95,7 @@ const questions = [
             \\]
             - Càlcul de l'energia diaria del sistema:
             \\[
-            E_{dia} = c \\times \\ ρ\\times \\C_{e} \\times \\∆T 
+            E_{dia} = c \\times \\ ρ\\times \\ C_{e} \\times \\ ∆T 
             \\]
             \\[
              E_{dia} = 390\\,\\text{L}\\times 1 x 10^{3}\\,\\text{g/L}\\times 4,18\\,\\text{J/gºC} \\times 35\\,\\text{ºC} = 57,06\\,\\text{MJ}
@@ -112,7 +112,7 @@ const questions = [
              \\]
              - Superficie necessaria:
              \\[
-             S_{necessaria} = \\frac{E_{solar}}{I\\times \\ t}\\ = \\frac{29,79\\,\\text{kWh}}{800\\,\\text{m^2}\\times \\8\\,\\text{h}}\\
+             S_{necessaria} = \\frac{E_{solar}}{I\\times \\ t}\\ = \\frac{29,79\\,\\text{kWh}}{800\\,\\text{m^2}\\times \\ 8\\,\\text{h}}\\
              \\] 
              \\[
              S_{necessaria} = 4,655\\,\\text{m^2}
@@ -128,7 +128,7 @@ const questions = [
             <br>
             - rendiment \\(η_b\\)':
             \\[
-            η_b = η_{0 B}\\times \\k_{1 B} \\frac{Tm - Ta}{I}\\
+            η_b = η_{0 B}\\times \\ k_{1 B} \\frac{Tm - Ta}{I}\\
             \\]
             \\[
             η_b = 0,66 - 3,2\\,\\text{W/m^2ºC} \\frac{50 - 18\\,\\text{ºC}}{400\\,\\text{m^2}} = 0,404
@@ -138,10 +138,10 @@ const questions = [
             \\]
             - Energia solar:
              \\[
-             E_{solar}' =  n \\times \\ S \\times \\I' \\times \\t
+             E_{solar}' =  n \\times \\ S \\times \\ I' \\times \\ t
              \\] 
              \\[
-             E_{solar} =  3\\times \\2,1\\,\\text{m^2} \\times \\400\\,\\text{W/m^2} \\times \\8\\,\\text{h}
+             E_{solar} =  3\\times \\ 2,1\\,\\text{m^2} \\times \\ 400\\,\\text{W/m^2} \\times \\ 8\\,\\text{h}
              \\]
              \\[
              E_{solar} = 20,16\\,\\text{kWh}
