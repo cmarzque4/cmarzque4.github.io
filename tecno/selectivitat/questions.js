@@ -212,10 +212,10 @@ const questions = [
             <br>
             - Potència roda aplicant el rendiment total:
             \\[
-            η_{total} = η_{cad} \\times \\η_{eng} = \\frac{P_{roda}}{P_{motor}}
+            η_{total} = η_{cad} \\times \\ η_{eng} = \\frac{P_{roda}}{P_{motor}}
             \\]
             \\[
-            P_{roda} = P_{motor} \\times \\ η_{cad} \\times \\η_{eng} = 6,109\\,\\text{kW} \\times \\ 0,85 \\times \\ 0,90
+            P_{roda} = P_{motor} \\times \\ η_{cad} \\times \\ η_{eng} = 6,109\\,\\text{kW} \\times \\ 0,85 \\times \\ 0,90
             \\]
             \\[
             P_{roda} = 4,674\\,\\text{kW}
@@ -236,7 +236,7 @@ const questions = [
             \\[
             Γ_{roda} = \\frac{P_{roda}}{\\omega_{roda}} = \\frac{4674\\,\\text{W}}}{44,80\\,\\text{rad/s}} = 104,33\\,\\text{N·m}
             \\]
-            <br><br>`
+            <br><br>`,
     },
     {
         type: "exercicis",
