@@ -261,48 +261,54 @@ const questions = [
             <br><br>`,
         correctAnswer: "",  
         steps: `
-            <strong>a) Velocitat angular de les rodes i del motor:</strong>
+            <strong>a) La resistència \\(R_{eq}\\) dels llums connectats en paraŀlel.</strong>
             <br>
-            - Velocitat angular de les rodes auxiliars:
+            - Resistencia d'una llum:
             \\[
-            \\omega_r = \\frac{v}{r} = \\frac{1,028\\,\\text{m/s}}{0,1\\,\\text{m}} = 10,28\\,\\text{rad/s}
+            P_{llum} = \\frac{U^2}{R} 
             \\]
-            - Velocitat angular del motor:
             \\[
-            \\omega_{mot} = \\frac{\\omega_r}{\\tau} = \\frac{10,28\\,\\text{rad/s}}{0,08} = 128,5\\,\\text{rad/s}
+            R = \\frac{U^2}{P_{llum}} = \\frac{12^2\\,\\text{V}}{55\\,\\text{W}} = 2,618\\,\\text{Ω}
             \\]
-            <br><strong>b) Potència a l’eix de les rodes:</strong>
+            - Resistencia de les dues llums:
+            \\[
+            R_{eq} = \\frac{R}{2} = \\frac{12^2\\,\\text{V}}{2} = 1,309\\,\\text{Ω}
+            \\]
+            <br><strong>b) La longitud màxima \\(L_{màx}\\) del cable (5%):</strong>
             <br>
-            - Aplicant rendiment del motor i del reductor:
+            - Intensitat del sistema:
             \\[
-            P_{subm} = P_{cons} \\times \\eta_{mot} \\times \\eta_{red} = 75\\,\\text{W} \\times 0,87 \\times 0,95 = 62,06\\,\\text{W}
+            I \\times \\ R_{eq} = 0,95 \\times \\ U
             \\]
-            <br><strong>c) Parell a l’eix del motor:</strong>
+            \\[
+            I = \\frac{0,95 \\times \\ U}{R_{eq}} = \\frac{0,95 \\times \\ 12\\,\\text{v}}{1,309\\,\\text{Ω}} = 8,708\\,\\text{A}
+            \\]
+            - Resistència del cable:
+            \\[
+            I \\times \\ R_{cable} = 0,05 \\times \\ U
+            \\]
+            \\[
+            R_{cable} = \\frac{0,05 \\times \\ U}{I} = \\frac{0,05 \\times \\ 12\\,\\text{v}}{8,708\\,\\text{A}} = 0,0689\\,\\text{Ω}
+            \\]
+            \\[
+            R_{cable} = ρ \\frac{2L_{max}}{S} = ρ \\frac{2L_{max}}{π \\times \\ d^2/4}
+            \\]
+            \\[
+            L_{max} =  \\frac{R_{cable} \\times \\ π \\times \\ d^2}{8 \\times \\ ρ} = \\frac{0,0689\\,\\text{Ω} \\times \\ π \\times \\ (2,5 x 10^{-3})^2\\,\\text{m^2}}{8 \\times \\ 1,7 x 10^{–8}\\,\\text{Ω m}} = 9,947\\,\\text{m} 
+            \\]
+            <br><strong>c) Resistència del conjunt si L = 4\\,\\text{m}:</strong>
             <br>
-            - Potència útil a l’eix del motor:
+            - R_{cable}:
             \\[
-            P_{mot} = P_{cons} \\times \\eta_{mot} = 75\\,\\text{W} \\times 0,87 = 65,25\\,\\text{W}
+            R_{cable} = ρ \\frac{2L_{max}}{S} = ρ \\frac{2L_{max}}{π \\times \\ d^2/4} = 1,7 x 10^{–8}\\,\\text{Ω m} \\frac{8 \\times \\ 4\\,\\text{m}}{π \\times \\ 2,5 x 10^{-3})^2\\,\\text{m^2}} = 0,02771\\,\\text{Ω}
             \\]
-            - Parell:
-            \\[
-            \\Gamma_{mot} = \\frac{P_{mot}}{\\omega_{mot}} = \\frac{65,25\\,\\text{W}}{128,5\\,\\text{rad/s}} = 0,5077\\,\\text{N·m}
-            \\]
-            <br><strong>d) Temps màxim de funcionament i distància recorreguda:</strong>
+            <br><strong>d) La potència total P_{total} consumida:</strong>
             <br>
-            - Energia de la bateria:
+            - La potència total P_{total}:
             \\[
-            E_{bat} = 240\\,\\text{Wh} = 240 \\times 3600\\,\\text{W·s} = 864000\\,\\text{J}
+            P_{total} = \\frac{U^2}{R_{cable} + R_{eq}} = \\frac{U^2}{R_{cable} + R_{eq}} = \\frac{12^2\\,\\text{v}}{0,02771\\,\\text{Ω} + 1,309\\,\\text{Ω}} = 107,7\\,\\text{W}
             \\]
-            - Temps de funcionament:
-            \\[
-            t = \\frac{E_{bat}}{P_{cons}} = \\frac{864000\\,\\text{J}}{75\\,\\text{W}} = 11520\\,\\text{s} = 3,2\\,\\text{h}
-            \\]
-            - Distància màxima recorreguda:
-            \\[
-            s_{rec} = v \\times t = 1,028\\,\\text{m/s} \\times 11520\\,\\text{s} = 11830\\,\\text{m} = 11,83\\,\\text{km}
-            \\]
-            <br><br>
-            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+            <br><br>`,  
     },
 
         {
