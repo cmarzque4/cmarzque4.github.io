@@ -572,21 +572,19 @@ i del mateix valor. Determineu:
             <br><br>`,
         correctAnswer: "",  
         steps: `
-            <strong>a) Velocitat angular de les rodes i del motor:</strong>
+            <strong>a) La massa de cada tauler:</strong>
             <br>
-            - Velocitat angular de les rodes auxiliars:
+            - Aplicant la fòrmula de la massa:
             \\[
-            \\omega_r = \\frac{v}{r} = \\frac{1,028\\,\\text{m/s}}{0,1\\,\\text{m}} = 10,28\\,\\text{rad/s}
-            \\]
-            - Velocitat angular del motor:
-            \\[
-            \\omega_{mot} = \\frac{\\omega_r}{\\tau} = \\frac{10,28\\,\\text{rad/s}}{0,08} = 128,5\\,\\text{rad/s}
-            \\]
-            <br><strong>b) Potència a l’eix de les rodes:</strong>
+            m = ρ \\times \\ V = ρ_{fusta} \\times \\ h \\times \\ b \\times \\ e = 530\\,\\text{kg/m^3} \\times \\ 0,9\\,\\text{m} \\times \\ 0,6\\,\\text{m} \\times \\ 0,011\\,\\text{m} = 3,148\\,\\text{kg}
+            <br><strong>b) Força que el cartell rep als punts A i B:</strong>
             <br>
-            - Aplicant rendiment del motor i del reductor:
+            - Pel conjunt dels dos taulers, la suma de forces en direcció vertical és nul·la.
             \\[
-            P_{subm} = P_{cons} \\times \\eta_{mot} \\times \\eta_{red} = 75\\,\\text{W} \\times 0,87 \\times 0,95 = 62,06\\,\\text{W}
+            ΣF_{verticals} = 2N - 2 m \\times \\ g = 0
+            \\]
+            \\[
+            N = m \\times \\ g =  3,148\\,\\text{kg} \\times \\ 9,81\\,\\text{m/s^2} = 30,873,148\\,\\text{N}
             \\]
             <br><strong>c) Parell a l’eix del motor:</strong>
             <br>
