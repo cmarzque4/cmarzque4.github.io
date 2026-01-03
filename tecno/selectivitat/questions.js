@@ -331,37 +331,38 @@ cicle de gas és \\(η_g = 0,32\\). Determineu:
             <br><br>`,
         correctAnswer: "",  
         steps: `
-            <strong>a) Velocitat angular de les rodes i del motor:</strong>
+            <strong>a) La potència consumida:</strong>
             <br>
-            - Velocitat angular de les rodes auxiliars:
+            - Apliquem el rendiment:
             \\[
-            \\omega_r = \\frac{v}{r} = \\frac{1,028\\,\\text{m/s}}{0,1\\,\\text{m}} = 10,28\\,\\text{rad/s}
+            η = \\frac{P_{elèctr}}{P_{cons}}
             \\]
-            - Velocitat angular del motor:
             \\[
-            \\omega_{mot} = \\frac{\\omega_r}{\\tau} = \\frac{10,28\\,\\text{rad/s}}{0,08} = 128,5\\,\\text{rad/s}
+            P_{cons} = \\frac{P_{elèctr}}{η} = \\frac{500\\,\\text{MW}}{0,575} = 869,6\\,\\text{MW}
             \\]
-            <br><strong>b) Potència a l’eix de les rodes:</strong>
+            <br><strong>b) El volum  que es crema durant 24 hores:</strong>
             <br>
-            - Aplicant rendiment del motor i del reductor:
+            - Aplicant la fòrmula de la potència:
             \\[
-            P_{subm} = P_{cons} \\times \\eta_{mot} \\times \\eta_{red} = 75\\,\\text{W} \\times 0,87 \\times 0,95 = 62,06\\,\\text{W}
+            P_{cons} = \\frac{p \\times \\ ρ \\times \\ V}{t}
             \\]
-            <br><strong>c) Parell a l’eix del motor:</strong>
+            \\[
+            V = \\frac{P_{cons} \\times \\t}{p \\times \\ ρ} = \\frac{869,6\\,\\text{MW} \\times \\ 24\\,\\text{h}\\frac{3600\,\\text{s}}{1\,\\text{h}}}{32,5\,\\text{MJ/kg} \\times \\ 0,423\,\\text{kg/L}} = 5,4652 x 10^6\,\\text{L}
+            \\]
+            \\[
+            V = 5,4652 x 10^6\,\\text{L} \\frac{1\\,\\text{dm^3}}{1\\,\\text{L}} \\times \\ \\frac{1\\,\\text{m^3}}{1 x 10^3\\,\\text{dm^3}} = 5465\\,\\text{m^3}
+            \\]
+            <br><strong>c) La potència dissipada:</strong>
             <br>
-            - Potència útil a l’eix del motor:
+            - Aplicant la contraria del rendiment útil:
             \\[
-            P_{mot} = P_{cons} \\times \\eta_{mot} = 75\\,\\text{W} \\times 0,87 = 65,25\\,\\text{W}
+            P_{diss cg} = P_{cons} \\times \\ (1 - η_g) = 869,6\\,\\text{MW} \\times \\ (1 - 0,32) = 591,3\\,\\text{MW}
             \\]
-            - Parell:
-            \\[
-            \\Gamma_{mot} = \\frac{P_{mot}}{\\omega_{mot}} = \\frac{65,25\\,\\text{W}}{128,5\\,\\text{rad/s}} = 0,5077\\,\\text{N·m}
-            \\]
-            <br><strong>d) Temps màxim de funcionament i distància recorreguda:</strong>
+            <br><strong>d) Rendiment del cicle:</strong>
             <br>
-            - Energia de la bateria:
+            - Aplicant la fòrmula de rendiment:
             \\[
-            E_{bat} = 240\\,\\text{Wh} = 240 \\times 3600\\,\\text{W·s} = 864000\\,\\text{J}
+            η_v = \\frac{P_{cv}}{P_{diss cg}} = \\frac{P_{elèctr} - P_{cg}}{P_{diss cg}} = \\frac{P_{elèctr} - (P_{cons} \\times \\ η_g)}{P_{diss cg}} = \\frac{500\\,\\text{MW} - (869,6\\,\\text{MW} \\times \\ 0,32)}{591,3\\,\\text{MW}} = 0,375
             \\]
             - Temps de funcionament:
             \\[
