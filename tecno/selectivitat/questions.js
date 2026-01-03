@@ -494,27 +494,40 @@ tancat. La potència de la planxa és, en tots dos casos, \\(P = 1 000\\,\\text{
             <br><br>`,
         correctAnswer: "",  
         steps: `
-            <strong>a) Velocitat angular de les rodes i del motor:</strong>
+            <strong>a) valor de les resistències R_1 i R_2:</strong>
             <br>
-            - Velocitat angular de les rodes auxiliars:
+            - Resistència 1:
             \\[
-            \\omega_r = \\frac{v}{r} = \\frac{1,028\\,\\text{m/s}}{0,1\\,\\text{m}} = 10,28\\,\\text{rad/s}
+            P = \\frac{U_1^2}{R_1}
             \\]
-            - Velocitat angular del motor:
             \\[
-            \\omega_{mot} = \\frac{\\omega_r}{\\tau} = \\frac{10,28\\,\\text{rad/s}}{0,08} = 128,5\\,\\text{rad/s}
+            R_1 = \\frac{U_1^2}{P} = \\frac{120^2\\,\\text{V}}{1000\\,\\text{W}} = 14,4\\,\\text{Ω}
             \\]
-            <br><strong>b) Potència a l’eix de les rodes:</strong>
+            - Resistència 2:
+            \\[
+            P = \\frac{U_2^2}{R_1 + R_2}
+            \\]
+            \\[
+            R_2 = \\frac{U_2^2}{P} - R_1 = \\frac{230^2\\,\\text{V}}{1000\\,\\text{W}} - 14,4\\,\\text{Ω} = 38,5\\,\\text{Ω}
+            \\]
+            <br><strong>b) valor de les intensitats I_1 i I_2:</strong>
             <br>
-            - Aplicant rendiment del motor i del reductor:
+            - Intensitat 1:
             \\[
-            P_{subm} = P_{cons} \\times \\eta_{mot} \\times \\eta_{red} = 75\\,\\text{W} \\times 0,87 \\times 0,95 = 62,06\\,\\text{W}
+            I_1 = \\frac{U_1}{R_1} = \\frac{120\\,\\text{V}}{14,4\\,\\text{Ω}} = 8,33314,4\\,\\text{A}
             \\]
-            <br><strong>c) Parell a l’eix del motor:</strong>
-            <br>
-            - Potència útil a l’eix del motor:
+            - Intensitat 2:
             \\[
-            P_{mot} = P_{cons} \\times \\eta_{mot} = 75\\,\\text{W} \\times 0,87 = 65,25\\,\\text{W}
+            I_2 = \\frac{U_2}{R_2} = \\frac{230\\,\\text{V}}{38,5\\,\\text{Ω}} = 4,348\\,\\text{A}
+            \\]
+            <br><strong>c) Potència de la planxa amb 120V:</strong>
+            <br>
+            - R_{2eq}:
+            \\[
+            R_{2eq} = \\frac{R_2 \\times \\ R_A}{R_2 + R_A}
+            \\]
+            \\[
+            P_{e} = \\frac{U_1}{R_1 + R_2eq} = \\frac{U_1}{R_1 + \\frac{R_2 \\times \\ R_A}{R_2 + R_A}} = \\frac{120\\,\\text{V}}{14,4\\,\\text{Ω} + \\frac{38,5\\,\\text{Ω} \\times \\ 3\\,\\text{Ω}}{38,5\\,\\text{Ω} + 3\\,\\text{Ω}}} = 838\\,\\text{W}
             \\]
             - Parell:
             \\[
