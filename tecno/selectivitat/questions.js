@@ -584,34 +584,28 @@ i del mateix valor. Determineu:
             ΣF_{verticals} = 2N - 2 m \\times \\ g = 0
             \\]
             \\[
-            N = m \\times \\ g =  3,148\\,\\text{kg} \\times \\ 9,81\\,\\text{m/s^2} = 30,873,148\\,\\text{N}
+            N = m \\times \\ g =  3,148\\,\\text{kg} \\times \\ 9,81\\,\\text{m/s^2} = 30,87\\,\\text{N}
             \\]
-            <br><strong>c) Parell a l’eix del motor:</strong>
+            <br><strong>c) La força que fa cadascun dels cables:</strong>
             <br>
-            - Potència útil a l’eix del motor:
+            - Per a un dels dos taulers:
             \\[
-            P_{mot} = P_{cons} \\times \\eta_{mot} = 75\\,\\text{W} \\times 0,87 = 65,25\\,\\text{W}
+            ΣM(C) = 0
             \\]
-            - Parell:
             \\[
-            \\Gamma_{mot} = \\frac{P_{mot}}{\\omega_{mot}} = \\frac{65,25\\,\\text{W}}{128,5\\,\\text{rad/s}} = 0,5077\\,\\text{N·m}
+            ΣM(C) = N \\times \\ h \\times \\ sin (\\frac{x}{2}) - m \\times \\ g \\times \\ \\frac{h}{2} \\times \\ sin (\\frac{x}{2}) - 2 \\times \\ F \\times \\ \\frac{h}{2} \\times \\ cos (\\frac{x}{2}) = 0
             \\]
-            <br><strong>d) Temps màxim de funcionament i distància recorreguda:</strong>
+            - Força excercida:
+            \\[
+            F = \\frac{m \\times \\g}{2} \\times \\ tan (\\frac{x}{2}) = \\frac{3,148\\,\\text{kg} \\times \\9,81\\,\\text{m/s^2}}{2} \\times \\ tan (\\frac{40}{2}) = 5,619\\,\\text{N}
+            \\]
+            <br><strong>d) Tensió normal:</strong>
             <br>
-            - Energia de la bateria:
+            - Aplicant la fòrmula:
             \\[
-            E_{bat} = 240\\,\\text{Wh} = 240 \\times 3600\\,\\text{W·s} = 864000\\,\\text{J}
+            σ = \\frac{F}{s} = \\frac{5,619\\,\\text{N}}{1,8\\,\\text{mm^2}\\frac{1\\,\\text{m^2}}{10^6\\,\\text{mm^2}}} = 3,121\\,\\text{MPa}
             \\]
-            - Temps de funcionament:
-            \\[
-            t = \\frac{E_{bat}}{P_{cons}} = \\frac{864000\\,\\text{J}}{75\\,\\text{W}} = 11520\\,\\text{s} = 3,2\\,\\text{h}
-            \\]
-            - Distància màxima recorreguda:
-            \\[
-            s_{rec} = v \\times t = 1,028\\,\\text{m/s} \\times 11520\\,\\text{s} = 11830\\,\\text{m} = 11,83\\,\\text{km}
-            \\]
-            <br><br>
-            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+            <br><br>`,
     },
         {
         type: "exercicis",
@@ -630,48 +624,46 @@ i del mateix valor. Determineu:
             <br><br>`,
         correctAnswer: "",  
         steps: `
-            <strong>a) Velocitat angular de les rodes i del motor:</strong>
+            <strong>a) La distància màxima que pot recórrer:</strong>
             <br>
-            - Velocitat angular de les rodes auxiliars:
+            - Distància:
             \\[
-            \\omega_r = \\frac{v}{r} = \\frac{1,028\\,\\text{m/s}}{0,1\\,\\text{m}} = 10,28\\,\\text{rad/s}
+            d_{màx} = \\frac{v}{t_{màx}}
             \\]
-            - Velocitat angular del motor:
+            - Temps màxim:
             \\[
-            \\omega_{mot} = \\frac{\\omega_r}{\\tau} = \\frac{10,28\\,\\text{rad/s}}{0,08} = 128,5\\,\\text{rad/s}
+            t_{màx} = \\frac{V \\times \\ρ}{c} = \\frac{24 000\\,\\text{L} \\times \\ 0,8075\\,\\text{kg/L}}{2700\\,\\text{kg/h}} = 7,1778\\,\\text{h}
             \\]
-            <br><strong>b) Potència a l’eix de les rodes:</strong>
+            -Distància màxima:
+            \\[
+            d_{màx} = \\frac{850\\,\\{km/h}}{7,1778\\,\\text{h}} = 6101\\,\\text{km}
+            \\]
+            <br><strong>b) Consum mínim de combustible per passatger:</strong>
             <br>
-            - Aplicant rendiment del motor i del reductor:
+            - Consum total:
             \\[
-            P_{subm} = P_{cons} \\times \\eta_{mot} \\times \\eta_{red} = 75\\,\\text{W} \\times 0,87 \\times 0,95 = 62,06\\,\\text{W}
+            C = d_{100} \\times \\ \\frac{c}{v \\times \\ ρ} = 100\\,\\text{km} \\times \\ \\frac{2700\\,\\text{kg/h}}{850\\,\\{km/h} \\times \\ 0,8075\\,\\text{kg/L}} = 393,37\\,\\text{L}
             \\]
-            <br><strong>c) Parell a l’eix del motor:</strong>
+            - Consum per passatger:
+            C_p = \\frac{C}{N} = \\frac{393,37\\,\\text{L}}{144\\,\\text{passatgers}} = 2,732\\,\\text{L/passatger} cada 100\\,\\text{km}
+            <br><strong>c) Rendiment dels motors:</strong>
             <br>
-            - Potència útil a l’eix del motor:
+            - Potència del motor:
             \\[
-            P_{mot} = P_{cons} \\times \\eta_{mot} = 75\\,\\text{W} \\times 0,87 = 65,25\\,\\text{W}
+            P_{mot} = F \\times \\ v = F_E \\times \\ v = 43\\,\\text{kN} \\frac{10^3\\,\\text{N}}{1\\,\\text{kN}} \\times \\ 850\\,\\text{km/h} \\frac{1000\\,\\text{m}}{3600\\,\\text{s}} = 10153\\,\\text{kW}
             \\]
-            - Parell:
+            - Potència consumida:
             \\[
-            \\Gamma_{mot} = \\frac{P_{mot}}{\\omega_{mot}} = \\frac{65,25\\,\\text{W}}{128,5\\,\\text{rad/s}} = 0,5077\\,\\text{N·m}
+            P_{cons} = p_c \\times \\ c = 42,42\\,\\text{MJ/kg} \\times \\ 2700\\,\\text{kg/h} \\frac{1\\,\\text{h}}{3600\\,\\text{s}} = 31815\\,\\text{kW}
             \\]
-            <br><strong>d) Temps màxim de funcionament i distància recorreguda:</strong>
-            <br>
-            - Energia de la bateria:
+            - Rendiment del sistema:
             \\[
-            E_{bat} = 240\\,\\text{Wh} = 240 \\times 3600\\,\\text{W·s} = 864000\\,\\text{J}
+            η = \\frac{P_{mot}}{P_{cons}} = \\frac{10153\\,\\text{kW}}{31815\\,\\text{kW}} = 0,3191
             \\]
-            - Temps de funcionament:
             \\[
-            t = \\frac{E_{bat}}{P_{cons}} = \\frac{864000\\,\\text{J}}{75\\,\\text{W}} = 11520\\,\\text{s} = 3,2\\,\\text{h}
+            η = 31,91 %
             \\]
-            - Distància màxima recorreguda:
-            \\[
-            s_{rec} = v \\times t = 1,028\\,\\text{m/s} \\times 11520\\,\\text{s} = 11830\\,\\text{m} = 11,83\\,\\text{km}
-            \\]
-            <br><br>
-            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+            <br><br>`,
     },
         {
         type: "exercicis",
@@ -1213,6 +1205,86 @@ l’eix d’entrada del multiplicador és \\(P_{entrada} = 1,966\\,\\text{MW}\\)
             \\]
             <br><br>
 `
+    },
+    {
+        type: "questions", // Tipus de pregunta
+        category: "materials_i_assaigs",
+        text: `En un ajust amb joc 35 H7/f7, el joc màxim és 75 μm i el joc mínim 25 μm. Si la tolerància H7 del forat és (\\frac{+25}{0})\\,\\text{μm}, quina és la tolerància f7 de l’eix?`,
+        options: [
+            { text: "(\\frac{+25}{0})\\,\\text{μm}", value: "a" },
+            { text: "(\\frac{+50}{25})\\,\\text{μm}", value: "b" },
+            { text: "(\\frac{-25}{-50})\\,\\text{μm}", value: "c" },
+            { text: "(\\frac{0}{+75})\\,\\text{μm}", value: "d" }
+        ],
+        correctAnswer: "c",
+        steps: `
+            <strong>Càlcul de la quantitat de niobi:</strong><br>
+ `
+    },
+    {
+        type: "questions", // Tipus de pregunta
+        category: "materials_i_assaigs",
+        text: `Un cargol M16 × 2 normalitzat té un diàmetre exterior de 16 mm i un pas de 2 mm. Si
+es cargola en una femella fixa, quantes voltes ha de fer el cargol per a avançar 8 mm?`,
+        options: [
+            { text: "2 voltes", value: "a" },
+            { text: "8 voltes", value: "b" },
+            { text: "4 voltes", value: "c" },
+            { text: "16 voltes", value: "d" }
+        ],
+        correctAnswer: "c",
+        steps: `
+            <strong>Càlcul de la quantitat de niobi:</strong><br>
+ `
+    },
+     {
+        type: "questions", // Tipus de pregunta
+        category: "materials_i_assaigs",
+        text: `El cost de producció de n unitats d’un producte és c = (45 000 + 34n) €. Si es vol començar
+a obtenir beneficis quan s’han venut 2 500 unitats, quin ha de ser el preu de venda unitari?`,
+        options: [
+            { text: "52€", value: "a" },
+            { text: "34€", value: "b" },
+            { text: "35€", value: "c" },
+            { text: "53€", value: "d" }
+        ],
+        correctAnswer: "a",
+        steps: `
+            <strong>Càlcul de la quantitat de niobi:</strong><br>
+ `
+    },
+     {
+        type: "questions", // Tipus de pregunta
+        category: "materials_i_assaigs",
+        text: `Una bomba de paletes per a oli treballa a una pressió de 4 bar i proporciona un cabal de
+7\\,\\text{m^3/h} quan gira a 600\\,\\text{min^{–1}}. Quina potència proporciona la bomba?`,
+        options: [
+            { text: "777,8 W", value: "a" },
+            { text: "2400 W", value: "b" },
+            { text: "280 W", value: "c" },
+            { text: "4667 W", value: "d" }
+        ],
+        correctAnswer: "a",
+        steps: `
+            <strong>Càlcul de la quantitat de niobi:</strong><br>
+ `
+    },
+     {
+        type: "questions", // Tipus de pregunta
+        category: "materials_i_assaigs",
+        text: `En un estudi sobre la durabilitat de les bateries d’ió liti, es van analitzar 1 000 bateries
+durant tres anys. D’aquestes bateries, 94 havien deixat de funcionar un cop transcorreguts els
+dos primers anys. Tenint en compte aquesta informació, la fiabilitat (probabilitat de funcionar correctament durant un cert temps) d’aquest tipus de bateries al cap de dos anys és del`,
+        options: [
+            { text: "90,6%", value: "a" },
+            { text: "94%", value: "b" },
+            { text: "85,9%", value: "c" },
+            { text: "66,7%", value: "d" }
+        ],
+        correctAnswer: "a",
+        steps: `
+            <strong>Càlcul de la quantitat de niobi:</strong><br>
+ `
     },
     {
         type: "questions", // Tipus de pregunta
