@@ -685,82 +685,18 @@ les qüestions que hi ha a continuació utilitzant les variables d’estat segü
             <br><br>`, 
         correctAnswer: "",  
         steps: `
-            <strong>a) Càlcul de la potència mitjana del vent \\(P_{\\text{vent}}\\) per a un aerogenerador:</strong>
+            <strong>a) Taula de veritat del sistema:</strong>
             <br>
-            - Àrea d’escombratge de les pales:
-            \\[
-            A = \\frac{\\pi d^2}{4} = \\frac{\\pi \\times (77 \\, \\text{m})^2}{4} = 4657{,}7 \\, \\text{m}^2
-            \\]
-            - Densitat de l’aire:
-            \\[
-            \\rho = \\frac{1{,}225 \\, \\text{g}}{\\text{m}^3} = 1{,}225 \\, \\frac{\\text{kg}}{\\text{m}^3}
-            \\]
-            - Velocitat del vent (en \\(\\text{m/s}\\)):
-            \\[
-            v = \\frac{25 \\, \\text{km/h}}{3{,}6} = 6{,}94 \\, \\text{m/s}
-            \\]
-            - Potència del vent:
-            \\[
-            P_{\\text{vent}} = \\frac{1}{2} \\times 1{,}225 \\, \\frac{\\text{kg}}{\\text{m}^3} \\times 4657{,}7 \\, \\text{m}^2 \\times (6{,}94 \\, \\text{m/s})^3 = 828{,}08 \\, \\text{kW}
-            \\]
+            <br><img src="5a.png" alt=" Imatge relacionada amb la resposta">
             <br>
-            <strong>b) Potència elèctrica útil \\(P_{\\text{útil}}\\) generada per cada aerogenerador:</strong>
+            <strong>b) Funció lògica:</strong>
+           <br>
+            <br><img src="5b.png" alt=" Imatge relacionada amb la resposta">
             <br>
-            - Aplicant el rendiment de l’aerogenerador:
-            \\[
-            P_{\\text{útil}} = P_{\\text{vent}} \\times \\eta_{\\text{aerog}} \\times c_a = 828{,}08 \\, \\text{kW} \\times 0{,}68 \\times 0{,}42 = 236{,}62 \\, \\text{kW}
-            \\]
+            <strong>c) Esquema de contactes equivalent:</strong>
             <br>
-            <strong>c) Energia elèctrica total \\(E_{\\text{total}}\\) generada al parc durant un any:</strong>
-            <br>
-            - Nombre total d'hores operatives a l'any:
-            \\[
-            h = 300 \\, \\text{dies/any} \\times 18 \\, \\text{h/dia} = 5400 \\, \\text{h/any}
-            \\]
-            - Energia generada per un aerogenerador:
-            \\[
-            E_{\\text{útil}} = P_{\\text{útil}} \\times h = 236{,}62 \\, \\text{kW} \\times 5400 \\, \\text{h} = 1277{,}75 \\, \\text{MWh/any}
-            \\]
-            - Energia total generada per 50 aerogeneradors:
-            \\[
-            E_{\\text{total}} = 1277{,}75 \\, \\text{MWh/any} \\times 50 = 63{,}89 \\, \\text{GWh/any}
-            \\]
-            <br>
-            <strong>d) Ingressos del parc eòlic:</strong>
-            <br>
-            - Ingressos totals:
-            \\[
-            Ingressos = E_{\\text{total}} \\times p_{\\text{venda}} = 63{,}89 \\, \\text{GWh/any} \\times 7{,}624 \\, \\text{cèntims/kWh} = 4865{,}9 \\, \\text{k€}
-            \\]
-            <br>
-            <strong>e) Impacte d'una reducció del 10 % en la velocitat del vent:</strong>
-            <br>
-            - Nova velocitat del vent:
-            \\[
-            v_{nou} = 0{,}9 \\times v = 0{,}9 \\times 6{,}94 \\, \\text{m/s} = 6{,}25 \\, \\text{m/s}
-            \\]
-            - Nova potència del vent:
-            \\[
-            P_{\\text{vent, nou}} = \\frac{1}{2} \\times 1{,}225 \\, \\frac{\\text{kg}}{\\text{m}^3} \\times 4657{,}7 \\, \\text{m}^2 \\times (6{,}25 \\, \\text{m/s})^3 = 654{,}8 \\, \\text{kW}
-            \\]
-            - Nova potència útil:
-            \\[
-            P_{\\text{útil, nou}} = 654{,}8 \\, \\text{kW} \\times 0{,}68 \\times 0{,}42 = 187{,}19 \\, \\text{kW}
-            \\]
-            - Nova energia total:
-            \\[
-            E_{\\text{total, nou}} = 187{,}19 \\, \\text{kW} \\times 5400 \\, \\text{h} \\times 50 = 50{,}7 \\, \\text{GWh/any}
-            \\]
-            - Nous ingressos:
-            \\[
-            Ingressos_{nou} = 50{,}7 \\, \\text{GWh/any} \\times 7{,}624 \\, \\text{cèntims/kWh} = 3865{,}58 \\, \\text{k€}
-            \\]
-            - Percentatge de disminució:
-            \\[
-            \\frac{4865{,}9 - 3865{,}58}{4865{,}9} \\times 100 \\approx 20{,}6\\%
-            \\]
-            <br><br>
-            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+            <br><img src="5c.png" alt=" Imatge relacionada amb la resposta">
+            <br><br>`, 
     },
     {
         type: "exercicis",
@@ -784,46 +720,60 @@ elaborades directament a un proveïdor, el cost de cada peça és de \\(0{,}65\\
         steps: `
             <strong>a) Velocitat angular de les rodes i del motor:</strong>
             <br>
-            - Velocitat angular de les rodes auxiliars:
+            - Superfície d'un triangle:
             \\[
-            \\omega_r = \\frac{v}{r} = \\frac{1,028\\,\\text{m/s}}{0,1\\,\\text{m}} = 10,28\\,\\text{rad/s}
+            S = \\frac{b \\times \\ h}{2}
             \\]
-            - Velocitat angular del motor:
             \\[
-            \\omega_{mot} = \\frac{\\omega_r}{\\tau} = \\frac{10,28\\,\\text{rad/s}}{0,08} = 128,5\\,\\text{rad/s}
+            S_1 = \\frac{b/2 \\times \\ b/2}{2} = \\frac{b^2}{8} = \\frac{(0,25)^2\\,\\text{m}}{8} = 0,007813\\,\\text{m^2}
             \\]
-            <br><strong>b) Potència a l’eix de les rodes:</strong>
+            \\[
+            S_2 = S_5 = \\frac{b/2 \\times \\ b/2}{2} \\times \\ \\frac{1}{2}= \\frac{b^2}{16} = \\frac{(0,25)^2\\,\\text{m}}{16} = 0,003906\\,\\text{m^2}
+            \\]
+            \\[
+            S_6 = S_7 = \\frac{b/2 \\times \\ b/2}{2} \\times \\ 2 = \\frac{b^2}{4} = \\frac{(0,25)^2\\,\\text{m}}{4} = 0,01563\\,\\text{m^2}
+            \\]
+            - Superfície d'un quadrat:
+            \\[
+            S = b \\times \\ h
+            \\]
+            \\[
+            S_3 = S_4 = \\frac{b/2 \\times \\ b/2}{2} = \\frac{b^2}{8} = \\frac{(0,25)^2\\,\\text{m}}{8} = 0,007813\\,\\text{m^2}
+            \\]
+            - Superfície total:
+            ΣS_tot = 0,007813\\,\\text{m^2} + (2 \\times \\ 0,003906\\,\\text{m^2}) + (2 \\times \\ 0,01563\\,\\text{m^2}) + (2 \\times \\ 0,007813\\,\\text{m^2}) = 0,625\\,\\text{m^2}
+            S_tot = b^2 = (0,25\\,\\text{m^2})^2 = 0,625\\,\\text{m^2}
             <br>
-            - Aplicant rendiment del motor i del reductor:
-            \\[
-            P_{subm} = P_{cons} \\times \\eta_{mot} \\times \\eta_{red} = 75\\,\\text{W} \\times 0,87 \\times 0,95 = 62,06\\,\\text{W}
-            \\]
-            <br><strong>c) Parell a l’eix del motor:</strong>
+            <br><strong>b) Perímetre de les peces tallades:</strong>
             <br>
-            - Potència útil a l’eix del motor:
+            - Perímetres triangulats:
             \\[
-            P_{mot} = P_{cons} \\times \\eta_{mot} = 75\\,\\text{W} \\times 0,87 = 65,25\\,\\text{W}
+            p_1 = \\frac{b}{2} + \\frac{b}{2} + √(\\frac{b}{2} + \\frac{b}{2}) = 2 \\times \\ \\frac{b}{2} + √(\\frac{b^2}{2}) = 2 \\times \\ \\frac{b}{2} + \\frac{b}{√(2)} =2 \\times \\ \\frac{0,25\\,\\text{m}}{2} + \\frac{0,25\\,\\text{m}}{√(2)} = 0,4268\\,\\text{m}
             \\]
-            - Parell:
             \\[
-            \\Gamma_{mot} = \\frac{P_{mot}}{\\omega_{mot}} = \\frac{65,25\\,\\text{W}}{128,5\\,\\text{rad/s}} = 0,5077\\,\\text{N·m}
+            p_2 = p_5 = \\frac{b}{2} + 2 \\times \\ \\frac{b}{√(2)} \\times \\ \\frac{1}{2} = \\frac{b}{2} + 2 \\times \\ \\frac{b}{2 \\times \\ √(2)} = \\frac{0,25\\,\\text{m}}{2} + \\frac{0,25\\,\\text{m}}{√(2)} = 0,3018\\,\\text{m}
             \\]
-            <br><strong>d) Temps màxim de funcionament i distància recorreguda:</strong>
+            \\[
+            p_6 = p_7 = b + 2 \\times \\ \\frac{b}{√(2)} = 0,25\\,\\text{m} + 2 \\times \\ \\frac{0,25\\,\\text{m}}{√(2)} = 0,6036\\,\\text{m}
+            \\]
+            - Perímetre quadriculat:
+            \\[
+            p_3 = p_4 = 4 \\times \\ \\frac{b}{2 \\times \\ √(2)} = 4 \\times \\ \\frac{0,25\\,\\text{m}}{2 \\times \\ √(2)} = 0,3536\\,\\text{m}
+            \\]
+            - Perímetre total:
+            Σp_tot = 0,4268\\,\\text{m} + (2 \\times \\ 0,3018\\,\\text{m}) + (2 \\times \\ 0,6036\\,\\text{m}) + (2 \\times \\ 0,3536\\,\\text{m} = 2,945\\,\\text{m}
+            <br><strong>d) Cost de producció i cost de comprar les peces:</strong>
             <br>
-            - Energia de la bateria:
+            - Producció:
             \\[
-            E_{bat} = 240\\,\\text{Wh} = 240 \\times 3600\\,\\text{W·s} = 864000\\,\\text{J}
+            c_prod = c_1 \\times \\ s + c_2 \\times \\ p = 13,5\\,\\text{€/m^2} \\times \\ 0,625\\,\\text{m^2}  + 0,85\\,\\text{€/m} \\times \\ 2,945\\,\\text{m} = 3,35€
             \\]
-            - Temps de funcionament:
+            - Compra:
             \\[
-            t = \\frac{E_{bat}}{P_{cons}} = \\frac{864000\\,\\text{J}}{75\\,\\text{W}} = 11520\\,\\text{s} = 3,2\\,\\text{h}
+            c_comp = 2 \\times \\ 0,95 + 5 \\times \\ 0,65 = 5,15€
             \\]
-            - Distància màxima recorreguda:
-            \\[
-            s_{rec} = v \\times t = 1,028\\,\\text{m/s} \\times 11520\\,\\text{s} = 11830\\,\\text{m} = 11,83\\,\\text{km}
-            \\]
-            <br><br>
-            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+            - L'opció de producció en la pròpia empresa és la més econòmica:
+            <br><br>`, 
     },
     {
         type: "exercicis",
