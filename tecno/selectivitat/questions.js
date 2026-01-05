@@ -795,48 +795,58 @@ i es mantingués la velocitat (considereu que els rendiments i la tensió d’al
             <br><br>`,
         correctAnswer: "",  
         steps: `
-            <strong>a) Velocitat angular de les rodes i del motor:</strong>
+            <strong>a) Potència elèctrica i rendiment electromecànic:</strong>
             <br>
-            - Velocitat angular de les rodes auxiliars:
+            - Fòrmula de la potència utilitzant el voltatge i la intensitat:
             \\[
-            \\omega_r = \\frac{v}{r} = \\frac{1,028\\,\\text{m/s}}{0,1\\,\\text{m}} = 10,28\\,\\text{rad/s}
+            P_{elèctr} = U \\times \\ I = 220\\,\\text{v} \\times \\ 17,5\\,\\text{A} = 3850\\,\\text{W}
             \\]
-            - Velocitat angular del motor:
+            - Rendiment:
             \\[
-            \\omega_{mot} = \\frac{\\omega_r}{\\tau} = \\frac{10,28\\,\\text{rad/s}}{0,08} = 128,5\\,\\text{rad/s}
+            η_{mot} = \\frac{P_m}{P_{elèctr}} = \\frac{Γ_m \\times \\ \\omega_{m}}{P_{elèctr}} = \\frac{Γ_m \\times \\ n \\times \\ (\\frac{2 \\times \\ π}{60})}{P_{elèctr}} = \\frac{19,5\\,\\text{N m} \\times \\ 1500\\,\\text{min^{-1}} \\times \\ (\\frac{2 \\times \\ π}{60})}{3850\\,\\text{W}} = 0,7956
             \\]
-            <br><strong>b) Potència a l’eix de les rodes:</strong>
+            <br><strong>b) Potència total dissipada:</strong>
             <br>
-            - Aplicant rendiment del motor i del reductor:
+            - Aplicant la inversa dels rendiments:
             \\[
-            P_{subm} = P_{cons} \\times \\eta_{mot} \\times \\eta_{red} = 75\\,\\text{W} \\times 0,87 \\times 0,95 = 62,06\\,\\text{W}
+            P_{diss} = P_{elèctr} \\times \\ (1 - η_{mot} \\times \\ η_{red}) = 3850\\,\\text{W} \\times \\ (1 - 0,7956 \\times \\ 0,72) = 1645\\,\\text{W}
             \\]
-            <br><strong>c) Parell a l’eix del motor:</strong>
+            <br><strong>c) Potència mecànica per a elevar la càrrega i la massa:</strong>
             <br>
-            - Potència útil a l’eix del motor:
+            - Aplicant el rendiment η_{red}:
             \\[
-            P_{mot} = P_{cons} \\times \\eta_{mot} = 75\\,\\text{W} \\times 0,87 = 65,25\\,\\text{W}
+            η_{red} = \\frac{P_{càrrega}{P_m}
             \\]
-            - Parell:
             \\[
-            \\Gamma_{mot} = \\frac{P_{mot}}{\\omega_{mot}} = \\frac{65,25\\,\\text{W}}{128,5\\,\\text{rad/s}} = 0,5077\\,\\text{N·m}
+            P_{càrrega} = P_m \\times \\ η_{red} = 3063\\,\\text{W} \\times \\ 0,72 = 2205\\,\\text{W}
             \\]
-            <br><strong>d) Temps màxim de funcionament i distància recorreguda:</strong>
+            - Massa:
+            \\[
+            P_{càrrega} = \\frac{m \\times \\ g \\times \\ Δh}{t}
+            \\]
+            \\[
+            m = \\frac{P_{càrrega} \\times \\ t}{g \\times \\ Δh} = \\frac{2205\\,\\text{W} \\times \\ 50\\,\\text{s}}{9,81\\,\\text{m/s^2} \\times \\ 4,5\\,\\text{m}} = 2499\\,\\text{kg} 
+            \\]
+            <br><strong>d) El corrent que consumiria el motor si la massa de la càrrega fos la meitat:</strong>
             <br>
-            - Energia de la bateria:
+            - Fòrmula inicialment:
             \\[
-            E_{bat} = 240\\,\\text{Wh} = 240 \\times 3600\\,\\text{W·s} = 864000\\,\\text{J}
+            P_{elèctr} = U \\times \\ I = \\frac{P_{càrrega}}{η_{mot} \\times \\ η_{red}} 
             \\]
-            - Temps de funcionament:
             \\[
-            t = \\frac{E_{bat}}{P_{cons}} = \\frac{864000\\,\\text{J}}{75\\,\\text{W}} = 11520\\,\\text{s} = 3,2\\,\\text{h}
+            I = \\frac{P_{càrrega}}{U \\times \\ η_{mot} \\times \\ η_{red}} = \\frac{m \\times \\ g \\times \\ Δh}{t \\times \\ U \\times \\ η_{mot} \\times \\ η_{red}}
             \\]
-            - Distància màxima recorreguda:
+            - Canvi de massa m':
             \\[
-            s_{rec} = v \\times t = 1,028\\,\\text{m/s} \\times 11520\\,\\text{s} = 11830\\,\\text{m} = 11,83\\,\\text{km}
+            I' = \\frac{m/2 \\times \\ g \\times \\ Δh}{t \\times \\ U \\times \\ η_{mot} \\times \\ η_{red}}
             \\]
-            <br><br>
-            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+            \\[
+            I' = \\frac{m/2 \\times \\ g \\times \\ Δh}{t \\times \\ U \\times \\ η_{mot} \\times \\ η_{red}} = \\frac{I}{2}
+            \\]
+            \\[
+            I' = \\frac{2499\\,\\text{kg} \\times \\ 9,81\\,\\text{m/s^2} \\times \\ 4,5\\,\\text{m}}{2 \\times \\ 50\\,\\text{s} \\times \\ 220\\,\\text{v} \\times \\ 0,7956 \\times \\ 0,72} = 8,75\\,\\text{A}
+            \\]
+            <br><br>`,
     },
     {
         type: "exercicis",
@@ -862,48 +872,40 @@ punt \\(B\\). El diàmetre interior del cilindre és \\(d_{int} = 70\\,\\text{mm
             <br><br>`,
         correctAnswer: "",  
         steps: `
-            <strong>a) Velocitat angular de les rodes i del motor:</strong>
+            <strong>a) Diagrama de cos lliure:</strong>
             <br>
-            - Velocitat angular de les rodes auxiliars:
-            \\[
-            \\omega_r = \\frac{v}{r} = \\frac{1,028\\,\\text{m/s}}{0,1\\,\\text{m}} = 10,28\\,\\text{rad/s}
-            \\]
-            - Velocitat angular del motor:
-            \\[
-            \\omega_{mot} = \\frac{\\omega_r}{\\tau} = \\frac{10,28\\,\\text{rad/s}}{0,08} = 128,5\\,\\text{rad/s}
-            \\]
-            <br><strong>b) Potència a l’eix de les rodes:</strong>
+            <img src="6b.png" alt=Imatge relacionada amb la resposta"
+            <br><strong>b) La massa de la placa:</strong>
             <br>
-            - Aplicant rendiment del motor i del reductor:
             \\[
-            P_{subm} = P_{cons} \\times \\eta_{mot} \\times \\eta_{red} = 75\\,\\text{W} \\times 0,87 \\times 0,95 = 62,06\\,\\text{W}
+            m = V \\times \\ ρ_{acer} = L^2 \\times \\ e \\times \\ ρ_{acer} = 1^2\\,\\text{m^2} \\times \\ 0,1\\,\\text{m} \\times \\ 7850\\,\\text{kg/m^3} = 785\\,\\text{kg}
             \\]
-            <br><strong>c) Parell a l’eix del motor:</strong>
+            <br><strong>c) La força que fa el cilindre per a φ = 0:</strong>
             <br>
-            - Potència útil a l’eix del motor:
+            - Per a φ = 0:
             \\[
-            P_{mot} = P_{cons} \\times \\eta_{mot} = 75\\,\\text{W} \\times 0,87 = 65,25\\,\\text{W}
+            ΣM(O) = 0
             \\]
-            - Parell:
             \\[
-            \\Gamma_{mot} = \\frac{P_{mot}}{\\omega_{mot}} = \\frac{65,25\\,\\text{W}}{128,5\\,\\text{rad/s}} = 0,5077\\,\\text{N·m}
+            ΣM(O) = F_c \\times \\ O_c - F_{gm} \\times \\ O_{mg}
             \\]
-            <br><strong>d) Temps màxim de funcionament i distància recorreguda:</strong>
+            \\[
+            (F_c \\times \\ sin 45º) \\times \\ L = m \\times \\ g \\times \\ (L/2)
+            \\]
+            \\[
+            F_c = \\frac{m \\times \\ g \\times \\ (L/2)}{sin 45º \\times \\ L} = \\frac{785\\,\\text{kg} \\times \\ 9,81\\,\\text{m/s^2} \\times \\ (1\\,\\text{m}/2)}{sin 45º \\times \\ 1\\,\\text{m}} = 5444\\,\\text{N}
+            \\]
+            <br><strong>d) La tensió normal al mateix punt i la pressió relativa:</strong>
             <br>
-            - Energia de la bateria:
+            - Tensió de la tija:
             \\[
-            E_{bat} = 240\\,\\text{Wh} = 240 \\times 3600\\,\\text{W·s} = 864000\\,\\text{J}
+            σ = \\frac{F_c}{S} = \\frac{F_c}{π \\times \\ \\frac{d_{tija}^2}{4}} = \\frac{5444\\,\\text{N}}{π \\times \\ \\frac{0,04^2\\,\\text{m}}{4}} = 4,332\\,\\text{MPa}
             \\]
-            - Temps de funcionament:
+            - Pressió relativa:
             \\[
-            t = \\frac{E_{bat}}{P_{cons}} = \\frac{864000\\,\\text{J}}{75\\,\\text{W}} = 11520\\,\\text{s} = 3,2\\,\\text{h}
+            p_{int} = \\frac{F_c}{π \\times \\ \\frac{(d_{int}^2 - d_{tija}^2)}{4}} = \\frac{5444\\,\\text{N}}{π \\times \\ \\frac{0,07^2\\,\\text{m} - 0,04^2\\,\\text{m}}{4}} = 2,1\\,\\text{MPa}
             \\]
-            - Distància màxima recorreguda:
-            \\[
-            s_{rec} = v \\times t = 1,028\\,\\text{m/s} \\times 11520\\,\\text{s} = 11830\\,\\text{m} = 11,83\\,\\text{km}
-            \\]
-            <br><br>
-            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+            <br><br>`,
     },
 
         {
