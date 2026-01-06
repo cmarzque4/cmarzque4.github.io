@@ -1161,7 +1161,33 @@ l’eix d’entrada del multiplicador és \\(P_{entrada} = 1,966\\,\\text{MW}\\)
         ],
         correctAnswer: "c",
         steps: `
-            <strong>Càlcul de la quantitat de niobi:</strong><br>
+            <strong>Tolerància f7:</strong><br>
+            - Forat (H7):
+            \\[
+            35 \\frac{+25}{0} => Màx = 35,025\\,\\text{mm} / Mín = 35,000\\,\\text{mm}
+            \\]
+            - Joc Màxim:
+            \\[
+            J_M = Forat_M - Eix_m 
+            \\]
+            \\[
+            Eix_m = Forat_M - J_M
+            \\]
+            \\[
+            Eix_m = 35,025 - 0,075 = 34,95
+            \\]
+            - Joc Mínim:
+            \\[
+            J_m = Forat_m - Eix_M 
+            \\]
+            \\[
+            Eix_M = Forat_m - J_m
+            \\]
+            \\[
+            Eix_m = 35,025 - 0,025 = 34,975
+            \\]
+            - Tolerància f7:
+            (\\frac{-25}{-50})
  `
     },
     {
@@ -1279,7 +1305,7 @@ motor si passa a tenir una velocitat de sincronisme de \\(1 200\\,\\text{min^{�
         category: "materials",
         text: `Un motor asíncron de corrent altern de dos parells de pols està connectat a la xarxa de
 tensió \\(U = 230\\,\\text{V}\\) i freqüència \\(f = 50\\,\\text{Hz}\\). Quin és el lliscament relatiu \\(s\\) del motor en tant per
-cent (%) si gira a \\(n = 1 400\\,\\text{min^{–1}\\)?`,
+cent (%) si gira a \\(n = 1 400\\,\\text{min^{–1}}\\)?`,
         options: [
             { text: "6,667 %", value: "a" },
             { text: "7,143 %", value: "b" },
@@ -1292,32 +1318,10 @@ cent (%) si gira a \\(n = 1 400\\,\\text{min^{–1}\\)?`,
             <br><br>
             Tensió aplicada:
             \\[
-            \\sigma = 250\\ \\text{MPa}
+            n_s = \\frac{60 \\times \\ f}{p} = \\frac{60 \\times \\ 50\\,\\text{Hz}}{2} = 1500\\,\\text{min^{–1}}
             \\]
             \\[
-            250\\ \\text{MPa} = 250 \\times 10^6\\ \\text{Pa}
-            \\]
-            <br>
-            Deformació:
-            \\[
-            \\varepsilon = 0,00227
-            \\]
-            <br>
-            Mòdul elàstic:
-            \\[
-            E = \\frac{\\sigma}{\\varepsilon}
-            \\]
-            \\[
-            E = \\frac{250 \\times 10^6\\ \\text{Pa}}{0,00227}
-            \\]
-            \\[
-            E = 110132158590,30838\\ \\text{Pa}
-            \\]
-            \\[
-            E = 110,13215859030838\\ \\text{GPa}
-            \\]
-            \\[
-            E \\approx 110\\ \\text{GPa}
+            s = \\frac{n_s - n}{n_s} = \\frac{1500\\,\\text{min^{–1}} - 1400\\,\\text{min^{–1}}}{1500\\,\\text{min^{–1}}} = \\frac{100}{1500} = 0,0667 = 6,67%
             \\]
             <br><br>
    `
@@ -1337,32 +1341,24 @@ aliar-lo amb 350 kg de magnesi?`,
         ],
         correctAnswer: "b",
         steps: `
-            <strong>Càlcul del volum total:</strong>
+            <strong>Porcentatge de Mg:</strong>
             <br>
-            Diàmetre del cilindre: \\(D = 79,5 \\, \\text{mm} = 0,0795 \\, \\text{m}\\)  
+            100 - (8 + 1 + 0,2) = 90,8% Mg  
             <br>
-            Cursa del pistó: \\(C = 80,5 \\, \\text{mm} = 0,0805 \\, \\text{m}\\)
-            <br><br>
-            Volum d'un cilindre:  
-            \\[
-            V_{1 \\, cilindre} = \\frac{\\pi}{4} \\times D^2 \\times C
-            \\]
-            \\[
-            V_{1 \\, cilindre} = \\frac{\\pi}{4} \\times (0,0795 \\, \\text{m})^2 \\times (0,0805 \\, \\text{m})
-            \\]
-            \\[
-            V_{1 \\, cilindre} = 0,00040084 \\, \\text{m}^3
-            \\]
+            - Massa de Mg: 350\\,\\text{kg}
             <br>
-            Volum total per 4 cilindres:  
             \\[
-            V_{total} = 4 \\times 0,00040084 \\, \\text{m}^3 = 0,00160336 \\, \\text{m}^3
+            M_{Mg} = M \\times \\ 0,908 
             \\]
             \\[
-            V_{total} \\times 10^6 = 1,603,36 \\, \\text{cm}^3
+            M = \\frac{M_{Mg}}{0,908}
             \\]
             \\[
-            V_{total} \\approx 1,598 \\, \\text{cm}^3
+            M = \\frac{350\\,\\text{kg}}{0,908} = 385,46\\,\\text{kg}
+            \\]
+            - Massa Zn:
+            \\[
+            M_{Zn} = 385,46\\,\\text{kg} \\times \\ 0,01 = 3,855\\,\\text{kg} Zn
             \\]
             <br><br>
 `
@@ -1380,33 +1376,15 @@ dels cilindres del motor són de \\(86\\,\\text{mm}\\). Quants cilindres té el 
         ],
         correctAnswer: "a",
         steps: `
-            <strong>Càlcul de la relació de transmissió:</strong><br>
+            <strong>Volum del cilindre:</strong><br>
             \\[
-            \\tau = \\frac{\\omega_{red}}{\\omega_{mot}}
-            \\]<br>
-            Motor nominal:<br>
+            V_c = \\frac{π \\times \\ d^2}{4} \\times \\ L = \\frac{π \\times \\ 8,6^2\\,\\text{cm}}{4} \\times \\ 8,6\\,\\text{cm} = 499,56\\,\\text{cm^3}
+            \\]
+            <br>
+            Nombre de cilindres:<br>
             \\[
-            n_{mot} = 1500\\,\\text{min}^{-1}
-            \\]<br>
-            Velocitat angular motor:<br>
-            \\[
-            \\omega_{mot} = \\frac{2\\pi \\times n_{mot}}{60\\,\\text{s/min}} = \\frac{2\\pi \\times 1500\\,\\text{min}^{-1}}{60\\,\\text{s/min}} = 157,08\\,\\text{rad/s}
-            \\]<br>
-            Velocitat de la porta:<br>
-            \\[
-            v_{nom} = 0,12\\,\\text{m/s}
-            \\]<br>
-            Radi del pinyó:<br>
-            \\[
-            r = 30\\,\\text{mm} = 0,03\\,\\text{m}
-            \\]<br>
-            Velocitat angular reductor:<br>
-            \\[
-            \\omega_{red} = \\frac{v_{nom}}{r} = \\frac{0,12\\,\\text{m/s}}{0,03\\,\\text{m}} = 4\\,\\text{rad/s}
-            \\]<br>
-            Relació de transmissió:<br>
-            \\[
-            \\tau = \\frac{\\omega_{red}}{\\omega_{mot}} = \\frac{4\\,\\text{rad/s}}{157,08\\,\\text{rad/s}} = 0,02546 = 25,46 \\times 10^{-3}
+            N = \\frac{V_{total}}{V_c} = \\frac{1998\\,\\text{cm^3}}{499,56\\,\\text{cm^3}} = 4
+            \\]
             \\]<br><br>
  `
     },
@@ -1425,37 +1403,18 @@ atmosfèrica real dels dos dies està compresa entre`,
         ],
         correctAnswer: "d",
         steps: `
-            <strong>Càlcul de la força sobre l'èmbol petit:</strong><br>
-            Pressió hidràulica:<br>
+            <strong>Diferencia medida:</strong><br>
+           
             \\[
-            F_1 = F_2 \\cdot \\frac{A_1}{A_2}
+            D_m = 1030\\,\\text{hPa} - 990\\,\\text{hPa} = 40\\,\\text{hPa}
             \\]<br>
-            Massa a aixecar:<br>
+            l'error acumulat màxim és la suma dels errors de precisió de totes dues mesures més la deriva per estabilitat<br>
             \\[
-            m = 1200\\,\\text{kg}
+            0,3 \\times \\ (medida 1) + 0,3 (medida 2) + 0,1 (estabilitat) = 0,7\\,\\text{hPa}
             \\]<br>
-            Gravetat:<br>
+            Rang:<br>
             \\[
-            g = 9,807\\,\\text{m·s²}
-            \\]<br>
-            Força sobre l'èmbol gran:<br>
-            \\[
-            F_2 = m \\cdot g = 1200\\,\\text{kg} \\times 9,807\\,\\text{m·s²} = 11768,4\\,\\text{N}
-            \\]<br>
-            Àrea de l'èmbol petit:<br>
-            \\[
-            A_1 = 1000\\,\\text{mm²} = 1000 \\times 10⁻⁶\\,\\text{m²} = 0,001\\,\\text{m²}
-            \\]<br>
-            Àrea de l'èmbol gran:<br>
-            \\[
-            A_2 = 30000\\,\\text{mm²} = 30000 \\times 10⁻⁶\\,\\text{m²} = 0,03\\,\\text{m²}
-            \\]<br>
-            Força sobre l'èmbol petit:<br>
-            \\[
-            F_1 = F_2 \\cdot \\frac{A_1}{A_2} = 11768,4\\,\\text{N} \\cdot \\frac{0,001\\,\\text{m²}}{0,03\\,\\text{m²}}
-            \\]<br>
-            \\[
-            F_1 = 392,28\\,\\text{N}
+            40 \pm 0,7\\,\\text{hPa} = 39,3\\,\\text{hPa} i 40,7\\,\\text{hPa}
             \\]
             <br><br>
 `
@@ -1476,33 +1435,21 @@ de tractament tèrmic?`,
         ],
         correctAnswer: "c",
         steps: `
-            <strong>Càlcul de la quantitat de niobi:</strong><br>
-            Percentatges components:<br>
+            <strong>Taxa de rebuig:</strong><br>
+            Rendiment:<br>
             \\[
-            \\%_{\\mathrm{Ti}} = 100\\% - (5{,}5\\% + 6{,}5\\% + 0{,}25\\% + 0{,}08\\%) = 87{,}67\\%
-            \\]<br>
-            Massa de titani disponible:<br>
+            rebuig de 3 % = rendiment del 97 %
+            \\]
+            Rendiment del process tèrmic:<br>
             \\[
-            m_{\\mathrm{Ti}} = 250\\,\\text{kg}
-            \\]<br>
-            Massa total de l'aliatge (convertint el % de Ti a fracció):<br>
+            0,97 \\times \\ R_t = 0,9321
+            \\]
             \\[
-            m_{\\mathrm{total}} = \\frac{m_{\\mathrm{Ti}}}{0{,}8767}
-            = \\frac{250\\,\\text{kg}}{0{,}8767}
-            = 285{,}16026006615715\\,\\text{kg}
-            \\]<br>
-            Percentatge de niobi:<br>
+            R_t = \\frac{0,9312}{0,97} = 0,96 = 96%
+            \\]
+            Tassa de rebuig total:<br>
             \\[
-            \\%_{\\mathrm{Nb}} = 6{,}5\\% = 0{,}065
-            \\]<br>
-            Massa de niobi necessària:<br>
-            \\[
-            m_{\\mathrm{Nb}} = 0{,}065 \\times 285{,}16026006615715\\,\\text{kg}
-            = 18{,}535416904300217\\,\\text{kg}
-            \\]<br>
-            Resultat arrodonit:<br>
-            \\[
-            m_{\\mathrm{Nb}} \\approx 18{,}54\\,\\text{kg}
+            100% - 96% = 4%
             \\]
             <br><br>
          `
