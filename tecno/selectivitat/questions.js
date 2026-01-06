@@ -930,48 +930,39 @@ gasolina i \\(0{,}73\\,\\text{€/L}\\) en el cas del GLP. Si el vehicle circula
             <br><br>`,
         correctAnswer: "",  
         steps: `
-            <strong>a) Velocitat angular de les rodes i del motor:</strong>
+            <strong>a) La potència tèrmica mitjana consumida:</strong>
             <br>
-            - Velocitat angular de les rodes auxiliars:
+            - Potència gasol:
             \\[
-            \\omega_r = \\frac{v}{r} = \\frac{1,028\\,\\text{m/s}}{0,1\\,\\text{m}} = 10,28\\,\\text{rad/s}
+            P_{gasol} = c_{gasol} \\times \\ ρ_{gasol} \\times \\ p_{c,gasol} \\times \\ v = \\frac{8\\,\\text{L}}{100\\,\\text{km}} \\times \\ 0,56\\,\\text{kg/L} \\times \\ 46\\,\\text{MJ/kg} \\times \\ 120\\,\\text{km/h} \\times \\ \\frac{1\\,\\text{h}}{3600\\,\\text{s}} = 0,085\\,\\text{MW} = 85\\,\\text{kW} 
             \\]
-            - Velocitat angular del motor:
+            - Potència GLP:
             \\[
-            \\omega_{mot} = \\frac{\\omega_r}{\\tau} = \\frac{10,28\\,\\text{rad/s}}{0,08} = 128,5\\,\\text{rad/s}
+            P_{GLP} = c_{GLP} \\times \\ ρ_{GLP} \\times \\ p_{c,GLP} \\times \\ v = \\frac{9,3\\,\\text{L}}{100\\,\\text{km}} \\times \\ 0,75\\,\\text{kg/L} \\times \\ 42,5\\,\\text{MJ/kg} \\times \\ 120\\,\\text{km/h} \\times \\ \\frac{1\\,\\text{h}}{3600\\,\\text{s}} = 0,07986\\,\\text{MW} = 79,86\\,\\text{kW} 
             \\]
-            <br><strong>b) Potència a l’eix de les rodes:</strong>
+            <br><strong>b) El cost per cada 100 km:</strong>
             <br>
-            - Aplicant rendiment del motor i del reductor:
+            - Cost gasol:
             \\[
-            P_{subm} = P_{cons} \\times \\eta_{mot} \\times \\eta_{red} = 75\\,\\text{W} \\times 0,87 \\times 0,95 = 62,06\\,\\text{W}
+            c_{gasol} = c_{gsol} \\times \\ p_{gasol} = \\frac{8\\,\\text{L}}{100\\,\\text{km}} \\times \\ 1,36\\,\\text{€/L} = \\frac{10,88\\,\\text{€}}{100\\,\\text{km}}
             \\]
-            <br><strong>c) Parell a l’eix del motor:</strong>
+            - Cost GLP:
+            \\[
+            c_{GLP} = c_{GLP} \\times \\ p_{GLP} = \\frac{9,3\\,\\text{L}}{100\\,\\text{km}} \\times \\ 0,73\\,\\text{€/L} = \\frac{6,789\\,\\text{€}}{100\\,\\text{km}}
+            \\]
+            <br><strong>c) La distància mitjana anual per a 3 anys:</strong>
             <br>
-            - Potència útil a l’eix del motor:
+            - Anual:
             \\[
-            P_{mot} = P_{cons} \\times \\eta_{mot} = 75\\,\\text{W} \\times 0,87 = 65,25\\,\\text{W}
+            d_{any} = \\frac{preu}{t} \\times \\ \\frac{d}{c_{gasol} - c{GLP}} = \\frac{2000\\,\\text{€}}{3\\,\\text{any}} \\times \\ \\frac{100\\,\\text{km}}{\\frac{10,88\\,\\text{€}}{100\\,\\text{km}} - \\frac{6,789\\,\\text{€}}{100\\,\\text{km}}} = 16296\\,\\text{km/any}
             \\]
-            - Parell:
-            \\[
-            \\Gamma_{mot} = \\frac{P_{mot}}{\\omega_{mot}} = \\frac{65,25\\,\\text{W}}{128,5\\,\\text{rad/s}} = 0,5077\\,\\text{N·m}
-            \\]
-            <br><strong>d) Temps màxim de funcionament i distància recorreguda:</strong>
+            <br><strong>d) La distància estimada que pot recórrer el vehicle amb GLP si es troba ple al 85 % :</strong>
             <br>
-            - Energia de la bateria:
+            - Distància estimada:
             \\[
-            E_{bat} = 240\\,\\text{Wh} = 240 \\times 3600\\,\\text{W·s} = 864000\\,\\text{J}
+            d_{est} = 0,85 \\times \\ V \\times \\ c_{GLP} = 0,85 \\times \\ 40\\,\\text{L} \\times \\ \\frac{100\\,\\text{km}}{\\frac{9,3\\,\\text{L}} = 365,6\\,\\text{km}
             \\]
-            - Temps de funcionament:
-            \\[
-            t = \\frac{E_{bat}}{P_{cons}} = \\frac{864000\\,\\text{J}}{75\\,\\text{W}} = 11520\\,\\text{s} = 3,2\\,\\text{h}
-            \\]
-            - Distància màxima recorreguda:
-            \\[
-            s_{rec} = v \\times t = 1,028\\,\\text{m/s} \\times 11520\\,\\text{s} = 11830\\,\\text{m} = 11,83\\,\\text{km}
-            \\]
-            <br><br>
-            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+            <br><br>`, 
     },    
     {
         type: "questions", // Tipus de pregunta
