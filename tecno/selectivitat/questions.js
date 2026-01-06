@@ -980,36 +980,37 @@ estat l’ocupació mitjana global?`,
         ],
         correctAnswer: "b",
         steps: `
-            <strong>Càlcul del mòdul elàstic:</strong>
+            <strong>Passatgers transportats en un any:</strong>
             <br><br>
-            Tensió aplicada:
+            - Passatgers matí:
             \\[
-            \\sigma = 250\\ \\text{MPa}
+            2 vols \\times \\ 200 places \\times \\ 0,843 = 337,2 passatgers
             \\]
+            - Passatgers tarda:
             \\[
-            250\\ \\text{MPa} = 250 \\times 10^6\\ \\text{Pa}
+            1 vol  \\times \\ 200 places \\times \\ 0,773 = 154,6 passatgers
+            \\]
+            - Passatgers de nit:
+            \\[
+            1 vol \\times \\ 200 places \\ 0,823 = 164,6 passatgers
             \\]
             <br>
-            Deformació:
+            - Suma de passatgers per dia:
             \\[
-            \\varepsilon = 0,00227
+            Pass_{dia} = 337,2 + 154,6 + 164,6 = 656,4 passatgers/dia
+            \\]
+            - Passatgers annuals:
+            \\[
+            Pass_{any} = Pass_{dia} \\times \\ 365 = 656,4 \\times \\ 365 = 239 586 passatgers
             \\]
             <br>
-            Mòdul elàstic:
+            <b> Ocupació mitjana:<b>
+            <br>
             \\[
-            E = \\frac{\\sigma}{\\varepsilon}
+            Places_{dia} = 4 vols \\times \\ 200 places = 800 places/dia
             \\]
             \\[
-            E = \\frac{250 \\times 10^6\\ \\text{Pa}}{0,00227}
-            \\]
-            \\[
-            E = 110132158590,30838\\ \\text{Pa}
-            \\]
-            \\[
-            E = 110,13215859030838\\ \\text{GPa}
-            \\]
-            \\[
-            E \\approx 110\\ \\text{GPa}
+            Ocupació = \\frac{Pass_dia}{Places_dia} = \\frac{656,4}{800} = 0,8205 = 82,05%
             \\]
             <br><br>
    `
@@ -1028,32 +1029,16 @@ barra sense que es trenqui?`,
         ],
         correctAnswer: "c",
         steps: `
-            <strong>Càlcul del volum total:</strong>
+            <strong>Força de tracció màx:</strong>
             <br>
-            Diàmetre del cilindre: \\(D = 79,5 \\, \\text{mm} = 0,0795 \\, \\text{m}\\)  
+            - Àrea:  
             <br>
-            Cursa del pistó: \\(C = 80,5 \\, \\text{mm} = 0,0805 \\, \\text{m}\\)
-            <br><br>
-            Volum d'un cilindre:  
             \\[
-            V_{1 \\, cilindre} = \\frac{\\pi}{4} \\times D^2 \\times C
+            A = \\frac{π \\times \\ d^2}{4} = \\frac{π \\times \\ 3^2\\,\\text{mm}}{4} = 7,0686\\,\\text{mm^2}
             \\]
+            - Força de trencament:
             \\[
-            V_{1 \\, cilindre} = \\frac{\\pi}{4} \\times (0,0795 \\, \\text{m})^2 \\times (0,0805 \\, \\text{m})
-            \\]
-            \\[
-            V_{1 \\, cilindre} = 0,00040084 \\, \\text{m}^3
-            \\]
-            <br>
-            Volum total per 4 cilindres:  
-            \\[
-            V_{total} = 4 \\times 0,00040084 \\, \\text{m}^3 = 0,00160336 \\, \\text{m}^3
-            \\]
-            \\[
-            V_{total} \\times 10^6 = 1,603,36 \\, \\text{cm}^3
-            \\]
-            \\[
-            V_{total} \\approx 1,598 \\, \\text{cm}^3
+            F = σ_r \\times \\ A = 800\\,\\text{MPa} \\times \\ \\frac{10^6\\,\\text{Pa}}{1\\,\\text{MPa}} \\times \\ 7,0686\\,\\text{mm^2} \\times \\ \\frac{1\\,\\text{m^2}}{10^6\\,\\text{mm^2} = 5655\\,\\text{N}
             \\]
             <br><br>
 `
@@ -1070,34 +1055,17 @@ barra sense que es trenqui?`,
         ],
         correctAnswer: "a",
         steps: `
-            <strong>Càlcul de la relació de transmissió:</strong><br>
+            <strong> Diàmetre de fil de r:</strong><br>
             \\[
-            \\tau = \\frac{\\omega_{red}}{\\omega_{mot}}
-            \\]<br>
-            Motor nominal:<br>
+            R = ρ \\times \\ \\frac{L}{A} = ρ \\times \\ \\frac{L}{π \\times \\ d^2/4}
+            \\]
             \\[
-            n_{mot} = 1500\\,\\text{min}^{-1}
-            \\]<br>
-            Velocitat angular motor:<br>
+            d^2 = \\frac{4 \\times \\ ρ \\times \\ L}{π \\times \\ R} = \\frac{4 \\times \\ 4,9 x 10^{-7}\\,\\text{Ω m} \\times \\ 4,508\\,\\text{m}}{π \\times \\ 5\\,\\text{Ω}} = 5,625 x 10^{-7}\\,\\text{m^2}
+            \\]
             \\[
-            \\omega_{mot} = \\frac{2\\pi \\times n_{mot}}{60\\,\\text{s/min}} = \\frac{2\\pi \\times 1500\\,\\text{min}^{-1}}{60\\,\\text{s/min}} = 157,08\\,\\text{rad/s}
-            \\]<br>
-            Velocitat de la porta:<br>
-            \\[
-            v_{nom} = 0,12\\,\\text{m/s}
-            \\]<br>
-            Radi del pinyó:<br>
-            \\[
-            r = 30\\,\\text{mm} = 0,03\\,\\text{m}
-            \\]<br>
-            Velocitat angular reductor:<br>
-            \\[
-            \\omega_{red} = \\frac{v_{nom}}{r} = \\frac{0,12\\,\\text{m/s}}{0,03\\,\\text{m}} = 4\\,\\text{rad/s}
-            \\]<br>
-            Relació de transmissió:<br>
-            \\[
-            \\tau = \\frac{\\omega_{red}}{\\omega_{mot}} = \\frac{4\\,\\text{rad/s}}{157,08\\,\\text{rad/s}} = 0,02546 = 25,46 \\times 10^{-3}
-            \\]<br><br>
+            d = √(5,625 x 10^{-7}) = 0,00075\\,\\text{m} = 0,75\\,\\text{mm}
+            \\]
+            <br><br>
  `
     },
     {
@@ -1114,37 +1082,18 @@ l’eix d’entrada del multiplicador és \\(P_{entrada} = 1,966\\,\\text{MW}\\)
         ],
         correctAnswer: "c",
         steps: `
-            <strong>Càlcul de la força sobre l'èmbol petit:</strong><br>
-            Pressió hidràulica:<br>
+            <strong> Aerogenerador:</strong><br>
+            Rendiment multiplicador (η_m = 0,7):<br>
             \\[
-            F_1 = F_2 \\cdot \\frac{A_1}{A_2}
-            \\]<br>
-            Massa a aixecar:<br>
+            P_entrada = P \\times \\ η_m = 1,966\\,\\text{MW} \\times \\ 0,7 = 1,3762\\,\\text{MW}
+            \\]
+            Rendiment generador:<br>
             \\[
-            m = 1200\\,\\text{kg}
-            \\]<br>
-            Gravetat:<br>
+            η_{gen} = \\frac{P_{elèctrica}}{P_{entrada}} = \\frac{1,2\\,\\text{MW}}{1,3762\\,\\text{MW}} = 0,872
+            \\]
+            Potència dissipada:<br>
             \\[
-            g = 9,807\\,\\text{m·s²}
-            \\]<br>
-            Força sobre l'èmbol gran:<br>
-            \\[
-            F_2 = m \\cdot g = 1200\\,\\text{kg} \\times 9,807\\,\\text{m·s²} = 11768,4\\,\\text{N}
-            \\]<br>
-            Àrea de l'èmbol petit:<br>
-            \\[
-            A_1 = 1000\\,\\text{mm²} = 1000 \\times 10⁻⁶\\,\\text{m²} = 0,001\\,\\text{m²}
-            \\]<br>
-            Àrea de l'èmbol gran:<br>
-            \\[
-            A_2 = 30000\\,\\text{mm²} = 30000 \\times 10⁻⁶\\,\\text{m²} = 0,03\\,\\text{m²}
-            \\]<br>
-            Força sobre l'èmbol petit:<br>
-            \\[
-            F_1 = F_2 \\cdot \\frac{A_1}{A_2} = 11768,4\\,\\text{N} \\cdot \\frac{0,001\\,\\text{m²}}{0,03\\,\\text{m²}}
-            \\]<br>
-            \\[
-            F_1 = 392,28\\,\\text{N}
+            P_{diss} = P_{entra} - P_{elèctrica} = 1,966\\,\\text{MW} - 1,2\\,\\text{MW} = 0,766\\,\\text{MW} = 766\\,\\text{kW}
             \\]
             <br><br>
 `
@@ -1250,7 +1199,14 @@ a obtenir beneficis quan s’han venut 2 500 unitats, quin ha de ser el preu de 
         ],
         correctAnswer: "a",
         steps: `
-            <strong>Càlcul de la quantitat de niobi:</strong><br>
+            <strong>Potència de la bomba:</strong><br>
+            \\[
+            p = 4 bar = 4 \\times \\frac{10^5\\,\\text{Pa}}{1 bar} = 4 \\times \\ 10^5\\,\\text{Pa}
+            \\]
+            \\[
+            P = p \\times \\ q = 4 \\times \\ 10^5\\,\\text{Pa} \\times \\ 7\\,\\text{m^3/h} \\times \\ \\frac{1\\,\\text{h}}{3600\\,\\text{s}} = 777,78\\,\\text{W}
+            \\]
+            <br><br>
  `
     },
      {
@@ -1267,7 +1223,16 @@ dos primers anys. Tenint en compte aquesta informació, la fiabilitat (probabili
         ],
         correctAnswer: "a",
         steps: `
-            <strong>Càlcul de la quantitat de niobi:</strong><br>
+            <strong>Fiabilitat de bateríes:</strong><br>
+            - Funcionen correctament:
+            \\[
+            100 - 94 = 906
+            \\]
+            - Fiabilitat:
+            \\[
+            \\frac{906}{1000} = 0,906 = 90,6%
+            \\]
+            <br><br>
  `
     },
     {
@@ -1284,33 +1249,17 @@ motor si passa a tenir una velocitat de sincronisme de \\(1 200\\,\\text{min^{�
         ],
         correctAnswer: "d",
         steps: `
-            <strong>Càlcul de la quantitat de niobi:</strong><br>
-            Percentatges components:<br>
+            <strong> Freqüència i velocitat de sincronisme:</strong><br>
+            - Parell de pols:<br>
             \\[
-            \\%_{\\mathrm{Ti}} = 100\\% - (5{,}5\\% + 6{,}5\\% + 0{,}25\\% + 0{,}08\\%) = 87{,}67\\%
-            \\]<br>
-            Massa de titani disponible:<br>
+            n_s = \\frac{60\\times \\ f}{p}
+            \\]
             \\[
-            m_{\\mathrm{Ti}} = 250\\,\\text{kg}
-            \\]<br>
-            Massa total de l'aliatge (convertint el % de Ti a fracció):<br>
+            p = \\frac{60\\times \\ f}{n_s} = \\frac{60\\times \\ 50}{1000} = 3 parells de pols
+            \\]
+            - Freqüència f':<br>
             \\[
-            m_{\\mathrm{total}} = \\frac{m_{\\mathrm{Ti}}}{0{,}8767}
-            = \\frac{250\\,\\text{kg}}{0{,}8767}
-            = 285{,}16026006615715\\,\\text{kg}
-            \\]<br>
-            Percentatge de niobi:<br>
-            \\[
-            \\%_{\\mathrm{Nb}} = 6{,}5\\% = 0{,}065
-            \\]<br>
-            Massa de niobi necessària:<br>
-            \\[
-            m_{\\mathrm{Nb}} = 0{,}065 \\times 285{,}16026006615715\\,\\text{kg}
-            = 18{,}535416904300217\\,\\text{kg}
-            \\]<br>
-            Resultat arrodonit:<br>
-            \\[
-            m_{\\mathrm{Nb}} \\approx 18{,}54\\,\\text{kg}
+            f' = \\frac{n_s \\times \\ p}{60} = \\frac{3 \\times \\ 1200\\,\\text{min^{-1}}}{60} = \\frac{1200\\,\\text{min^{-1}}}{20} = 60\\,\\text{Hz}
             \\]
             <br><br>
          `
