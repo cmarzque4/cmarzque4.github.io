@@ -1188,6 +1188,7 @@ l’eix d’entrada del multiplicador és \\(P_{entrada} = 1,966\\,\\text{MW}\\)
             \\]
             - Tolerància f7:
             (\\frac{-25}{-50})
+            <br><br>
  `
     },
     {
@@ -1203,7 +1204,12 @@ es cargola en una femella fixa, quantes voltes ha de fer el cargol per a avança
         ],
         correctAnswer: "c",
         steps: `
-            <strong>Càlcul de la quantitat de niobi:</strong><br>
+            <strong>Cargolar:</strong><br>
+            - Avenç:
+            \\[
+            Voltes = \\frac{d}{d/voltes} = \\frac{8\\,\\text{mm}}{2\\,\\text{mm}/volta} = 4 voltes
+            \\]
+            <br><br>
  `
     },
      {
@@ -1219,7 +1225,16 @@ a obtenir beneficis quan s’han venut 2 500 unitats, quin ha de ser el preu de 
         ],
         correctAnswer: "a",
         steps: `
-            <strong>Càlcul de la quantitat de niobi:</strong><br>
+            <strong>Preu de venda:</strong><br>
+            - Cost:
+            \\[
+            C = 45000 + 34 \\times \\ n = 45000 + 34 \\times \\ 2500 = 45000 + 85000 = 130000\\,\\text{€}
+            \\]
+            - Preu unitari: 
+            \\[
+            P = \\frac{C}{n} = \\frac{130000\\,\\text{€}}{2500} = 52\\,\\text{€}
+            \\]
+            <br><br>
  `
     },
      {
