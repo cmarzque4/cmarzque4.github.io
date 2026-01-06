@@ -577,6 +577,7 @@ i del mateix valor. Determineu:
             - Aplicant la fòrmula de la massa:
             \\[
             m = ρ \\times \\ V = ρ_{fusta} \\times \\ h \\times \\ b \\times \\ e = 530\\,\\text{kg/m^3} \\times \\ 0,9\\,\\text{m} \\times \\ 0,6\\,\\text{m} \\times \\ 0,011\\,\\text{m} = 3,148\\,\\text{kg}
+            \\]
             <br><strong>b) Força que el cartell rep als punts A i B:</strong>
             <br>
             - Pel conjunt dels dos taulers, la suma de forces en direcció vertical és nul·la.
@@ -597,7 +598,7 @@ i del mateix valor. Determineu:
             \\]
             - Força excercida:
             \\[
-            F = \\frac{m \\times \\g}{2} \\times \\ tan (\\frac{x}{2}) = \\frac{3,148\\,\\text{kg} \\times \\9,81\\,\\text{m/s^2}}{2} \\times \\ tan (\\frac{40}{2}) = 5,619\\,\\text{N}
+            F = \\frac{m \\times \\ g}{2} \\times \\ tan (\\frac{x}{2}) = \\frac{3,148\\,\\text{kg} \\times \\ 9,81\\,\\text{m/s^2}}{2} \\times \\ tan (\\frac{40}{2}) = 5,619\\,\\text{N}
             \\]
             <br><strong>d) Tensió normal:</strong>
             <br>
@@ -632,7 +633,7 @@ i del mateix valor. Determineu:
             \\]
             - Temps màxim:
             \\[
-            t_{màx} = \\frac{V \\times \\ρ}{c} = \\frac{24 000\\,\\text{L} \\times \\ 0,8075\\,\\text{kg/L}}{2700\\,\\text{kg/h}} = 7,1778\\,\\text{h}
+            t_{màx} = \\frac{V \\times \\ ρ}{c} = \\frac{24 000\\,\\text{L} \\times \\ 0,8075\\,\\text{kg/L}}{2700\\,\\text{kg/h}} = 7,1778\\,\\text{h}
             \\]
             -Distància màxima:
             \\[
@@ -645,7 +646,9 @@ i del mateix valor. Determineu:
             C = d_{100} \\times \\ \\frac{c}{v \\times \\ ρ} = 100\\,\\text{km} \\times \\ \\frac{2700\\,\\text{kg/h}}{850\\,\\{km/h} \\times \\ 0,8075\\,\\text{kg/L}} = 393,37\\,\\text{L}
             \\]
             - Consum per passatger:
+            \\[
             C_p = \\frac{C}{N} = \\frac{393,37\\,\\text{L}}{144\\,\\text{passatgers}} = 2,732\\,\\text{L/passatger} cada 100\\,\\text{km}
+            \\]
             <br><strong>c) Rendiment dels motors:</strong>
             <br>
             - Potència del motor:
@@ -821,7 +824,7 @@ i es mantingués la velocitat (considereu que els rendiments i la tensió d’al
             <br>
             - Aplicant el rendiment η_{red}:
             \\[
-            η_{red} = \\frac{P_{càrrega}{P_m}
+            η_{red} = \\frac{P_{càrrega}}{P_m}
             \\]
             \\[
             P_{càrrega} = P_m \\times \\ η_{red} = 3063\\,\\text{W} \\times \\ 0,72 = 2205\\,\\text{W}
@@ -881,7 +884,8 @@ punt \\(B\\). El diàmetre interior del cilindre és \\(d_{int} = 70\\,\\text{mm
             <strong>a) Diagrama de cos lliure:</strong>
             <br>
             <img src="6b.png" alt=Imatge relacionada amb la resposta"
-            <br><strong>b) La massa de la placa:</strong>
+            <br>
+            <strong>b) La massa de la placa:</strong>
             <br>
             \\[
             m = V \\times \\ ρ_{acer} = L^2 \\times \\ e \\times \\ ρ_{acer} = 1^2\\,\\text{m^2} \\times \\ 0,1\\,\\text{m} \\times \\ 7850\\,\\text{kg/m^3} = 785\\,\\text{kg}
@@ -940,17 +944,23 @@ gasolina i \\(0{,}73\\,\\text{€/L}\\) en el cas del GLP. Si el vehicle circula
             <br>
             - Potència gasol:
             \\[
-            P_{gasol} = c_{gasol} \\times \\ ρ_{gasol} \\times \\ p_{c,gasol} \\times \\ v = \\frac{8\\,\\text{L}}{100\\,\\text{km}} \\times \\ 0,56\\,\\text{kg/L} \\times \\ 46\\,\\text{MJ/kg} \\times \\ 120\\,\\text{km/h} \\times \\ \\frac{1\\,\\text{h}}{3600\\,\\text{s}} = 0,085\\,\\text{MW} = 85\\,\\text{kW} 
+            P_{gasol} = c_{gasol} \\times \\ ρ_{gasol} \\times \\ p_{c,gasol} \\times \\ v 
+            \\]
+            \\[
+            P_{gasol} = \\frac{8\\,\\text{L}}{100\\,\\text{km}} \\times \\ 0,56\\,\\text{kg/L} \\times \\ 46\\,\\text{MJ/kg} \\times \\ 120\\,\\text{km/h} \\times \\ \\frac{1\\,\\text{h}}{3600\\,\\text{s}} = 0,085\\,\\text{MW} = 85\\,\\text{kW} 
             \\]
             - Potència GLP:
             \\[
-            P_{GLP} = c_{GLP} \\times \\ ρ_{GLP} \\times \\ p_{c,GLP} \\times \\ v = \\frac{9,3\\,\\text{L}}{100\\,\\text{km}} \\times \\ 0,75\\,\\text{kg/L} \\times \\ 42,5\\,\\text{MJ/kg} \\times \\ 120\\,\\text{km/h} \\times \\ \\frac{1\\,\\text{h}}{3600\\,\\text{s}} = 0,07986\\,\\text{MW} = 79,86\\,\\text{kW} 
+            P_{GLP} = c_{GLP} \\times \\ ρ_{GLP} \\times \\ p_{c,GLP} \\times \\ v
+            \\]
+            \\[
+            P_{GLP} = \\frac{9,3\\,\\text{L}}{100\\,\\text{km}} \\times \\ 0,75\\,\\text{kg/L} \\times \\ 42,5\\,\\text{MJ/kg} \\times \\ 120\\,\\text{km/h} \\times \\ \\frac{1\\,\\text{h}}{3600\\,\\text{s}} = 0,07986\\,\\text{MW} = 79,86\\,\\text{kW} 
             \\]
             <br><strong>b) El cost per cada 100 km:</strong>
             <br>
             - Cost gasol:
             \\[
-            c_{gasol} = c_{gsol} \\times \\ p_{gasol} = \\frac{8\\,\\text{L}}{100\\,\\text{km}} \\times \\ 1,36\\,\\text{€/L} = \\frac{10,88\\,\\text{€}}{100\\,\\text{km}}
+            c_{gasol} = c_{gasol} \\times \\ p_{gasol} = \\frac{8\\,\\text{L}}{100\\,\\text{km}} \\times \\ 1,36\\,\\text{€/L} = \\frac{10,88\\,\\text{€}}{100\\,\\text{km}}
             \\]
             - Cost GLP:
             \\[
@@ -960,13 +970,13 @@ gasolina i \\(0{,}73\\,\\text{€/L}\\) en el cas del GLP. Si el vehicle circula
             <br>
             - Anual:
             \\[
-            d_{any} = \\frac{preu}{t} \\times \\ \\frac{d}{c_{gasol} - c{GLP}} = \\frac{2000\\,\\text{€}}{3\\,\\text{any}} \\times \\ \\frac{100\\,\\text{km}}{\\frac{10,88\\,\\text{€}}{100\\,\\text{km}} - \\frac{6,789\\,\\text{€}}{100\\,\\text{km}}} = 16296\\,\\text{km/any}
+            d_{any} = \\frac{preu}{t} \\times \\ \\frac{d}{c_{gasol} - c_{GLP}} = \\frac{2000\\,\\text{€}}{3\\,\\text{any}} \\times \\ \\frac{100\\,\\text{km}}{\\frac{10,88\\,\\text{€}}{100\\,\\text{km}} - \\frac{6,789\\,\\text{€}}{100\\,\\text{km}}} = 16296\\,\\text{km/any}
             \\]
             <br><strong>d) La distància estimada que pot recórrer el vehicle amb GLP si es troba ple al 85 % :</strong>
             <br>
             - Distància estimada:
             \\[
-            d_{est} = 0,85 \\times \\ V \\times \\ c_{GLP} = 0,85 \\times \\ 40\\,\\text{L} \\times \\ \\frac{100\\,\\text{km}}{\\frac{9,3\\,\\text{L}} = 365,6\\,\\text{km}
+            d_{est} = 0,85 \\times \\ V \\times \\ c_{GLP} = 0,85 \\times \\ 40\\,\\text{L} \\times \\ \\frac{100\\,\\text{km}}{\\frac{9,3\\,\\text{L}}} = 365,6\\,\\text{km}
             \\]
             <br><br>`, 
     },    
