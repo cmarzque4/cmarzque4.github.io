@@ -741,8 +741,12 @@ elaborades directament a un proveïdor, el cost de cada peça és de \\(0{,}65\\
             S_3 = S_4 = \\frac{b/2 \\times \\ b/2}{2} = \\frac{b^2}{8} = \\frac{(0,25)^2\\,\\text{m}}{8} = 0,007813\\,\\text{m^2}
             \\]
             - Superfície total:
+            \\[
             ΣS_tot = 0,007813\\,\\text{m^2} + (2 \\times \\ 0,003906\\,\\text{m^2}) + (2 \\times \\ 0,01563\\,\\text{m^2}) + (2 \\times \\ 0,007813\\,\\text{m^2}) = 0,625\\,\\text{m^2}
+            \\]
+            \\[
             S_tot = b^2 = (0,25\\,\\text{m^2})^2 = 0,625\\,\\text{m^2}
+            \\]
             <br>
             <br><strong>b) Perímetre de les peces tallades:</strong>
             <br>
@@ -761,12 +765,14 @@ elaborades directament a un proveïdor, el cost de cada peça és de \\(0{,}65\\
             p_3 = p_4 = 4 \\times \\ \\frac{b}{2 \\times \\ √(2)} = 4 \\times \\ \\frac{0,25\\,\\text{m}}{2 \\times \\ √(2)} = 0,3536\\,\\text{m}
             \\]
             - Perímetre total:
+            \\[
             Σp_tot = 0,4268\\,\\text{m} + (2 \\times \\ 0,3018\\,\\text{m}) + (2 \\times \\ 0,6036\\,\\text{m}) + (2 \\times \\ 0,3536\\,\\text{m} = 2,945\\,\\text{m}
+            \\]
             <br><strong>d) Cost de producció i cost de comprar les peces:</strong>
             <br>
             - Producció:
             \\[
-            c_prod = c_1 \\times \\ s + c_2 \\times \\ p = 13,5\\,\\text{€/m^2} \\times \\ 0,625\\,\\text{m^2}  + 0,85\\,\\text{€/m} \\times \\ 2,945\\,\\text{m} = 3,35€
+            c_prod = c_1 \\times \\ s + c_2 \\times \\ p = 13,5\\,\\text{€/m^2} \\times \\ 0,625\\,\\text{m^2} + 0,85\\,\\text{€/m} \\times \\ 2,945\\,\\text{m} = 3,35€
             \\]
             - Compra:
             \\[
