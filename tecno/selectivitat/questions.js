@@ -1026,7 +1026,7 @@ estat l’ocupació mitjana global?`,
             Places_{dia} = 4 vols \\times \\ 200 places = 800 places/dia
             \\]
             \\[
-            Ocupació = \\frac{Pass_dia}{Places_dia} = \\frac{656,4}{800} = 0,8205 = 82,05%
+            Ocupació = \\frac{Pass_dia}{Places_dia} = \\frac{656,4}{800} = 0,8205 = 82,05\\,\\text{%}
             \\]
             <br><br>
    `
@@ -1054,7 +1054,7 @@ barra sense que es trenqui?`,
             \\]
             - Força de trencament:
             \\[
-            F = σ_r \\times \\ A = 800\\,\\text{MPa} \\times \\ \\frac{10^6\\,\\text{Pa}}{1\\,\\text{MPa}} \\times \\ 7,0686\\,\\text{mm^2} \\times \\ \\frac{1\\,\\text{m^2}}{10^6\\,\\text{mm^2} = 5655\\,\\text{N}
+            F = σ_r \\times \\ A = 800\\,\\text{MPa} \\times \\ \\frac{10^6\\,\\text{Pa}}{1\\,\\text{MPa}} \\times \\ 7,0686\\,\\text{mm^2} \\times \\ \\frac{1\\,\\text{m^2}}{10^6\\,\\text{mm^2}} = 5655\\,\\text{N}
             \\]
             <br><br>
 `
@@ -1119,10 +1119,10 @@ l’eix d’entrada del multiplicador és \\(P_{entrada} = 1,966\\,\\text{MW}\\)
         category: "materials_i_assaigs",
         text: `En un ajust amb joc 35 H7/f7, el joc màxim és 75 μm i el joc mínim 25 μm. Si la tolerància H7 del forat és (\\frac{+25}{0})\\,\\text{μm}, quina és la tolerància f7 de l’eix?`,
         options: [
-            { text: "(\\frac{+25}{0})\\,\\text{μm}", value: "a" },
-            { text: "(\\frac{+50}{25})\\,\\text{μm}", value: "b" },
-            { text: "(\\frac{-25}{-50})\\,\\text{μm}", value: "c" },
-            { text: "(\\frac{0}{+75})\\,\\text{μm}", value: "d" }
+            { text: "\\frac{+25}{0}\\,\\text{μm}", value: "a" },
+            { text: "\\frac{+50}{25}\\,\\text{μm}", value: "b" },
+            { text: "\\frac{-25}{-50}\\,\\text{μm}", value: "c" },
+            { text: "\\frac{0}{+75}\\,\\text{μm}", value: "d" }
         ],
         correctAnswer: "c",
         steps: `
@@ -1152,7 +1152,7 @@ l’eix d’entrada del multiplicador és \\(P_{entrada} = 1,966\\,\\text{MW}\\)
             Eix_m = 35,025 - 0,025 = 34,975
             \\]
             - Tolerància f7:
-            (\\frac{-25}{-50})
+            \\frac{-25}{-50}
             <br><br>
  `
     },
@@ -1206,7 +1206,7 @@ a obtenir beneficis quan s’han venut 2 500 unitats, quin ha de ser el preu de 
         type: "questions", // Tipus de pregunta
         category: "materials_i_assaigs",
         text: `Una bomba de paletes per a oli treballa a una pressió de 4 bar i proporciona un cabal de
-7\\,\\text{m^3/h} quan gira a 600\\,\\text{min^{–1}}. Quina potència proporciona la bomba?`,
+\\(7\\,\\text{m^3/h}\\) quan gira a \\(600\\,\\text{min^{–1}}\\). Quina potència proporciona la bomba?`,
         options: [
             { text: "777,8 W", value: "a" },
             { text: "2400 W", value: "b" },
@@ -1323,9 +1323,11 @@ aliar-lo amb 350 kg de magnesi?`,
         steps: `
             <strong>Porcentatge de Mg:</strong>
             <br>
+            \\[
             100 - (8 + 1 + 0,2) = 90,8% Mg  
+            \\]
             <br>
-            - Massa de Mg: 350\\,\\text{kg}
+            - Massa de Mg: \\(350\\,\\text{kg}\\)
             <br>
             \\[
             M_{Mg} = M \\times \\ 0,908 
@@ -1365,7 +1367,7 @@ dels cilindres del motor són de \\(86\\,\\text{mm}\\). Quants cilindres té el 
             \\[
             N = \\frac{V_{total}}{V_c} = \\frac{1998\\,\\text{cm^3}}{499,56\\,\\text{cm^3}} = 4
             \\]
-            \\]<br><br>
+        <br><br>
  `
     },
     {
@@ -1384,15 +1386,14 @@ atmosfèrica real dels dos dies està compresa entre`,
         correctAnswer: "d",
         steps: `
             <strong>Diferencia medida:</strong><br>
-           
             \\[
             D_m = 1030\\,\\text{hPa} - 990\\,\\text{hPa} = 40\\,\\text{hPa}
             \\]<br>
-            l'error acumulat màxim és la suma dels errors de precisió de totes dues mesures més la deriva per estabilitat<br>
+            - L'error acumulat màxim és la suma dels errors de precisió de totes dues mesures més la deriva per estabilitat<br>
             \\[
             0,3 \\times \\ (medida 1) + 0,3 (medida 2) + 0,1 (estabilitat) = 0,7\\,\\text{hPa}
             \\]<br>
-            Rang:<br>
+            - Rang:<br>
             \\[
             40 \pm 0,7\\,\\text{hPa} = 39,3\\,\\text{hPa} i 40,7\\,\\text{hPa}
             \\]
@@ -1417,9 +1418,7 @@ de tractament tèrmic?`,
         steps: `
             <strong>Taxa de rebuig:</strong><br>
             Rendiment:<br>
-            \\[
-            rebuig de 3 % = rendiment del 97 %
-            \\]
+             rebuig de 3 % = rendiment del 97 %
             Rendiment del process tèrmic:<br>
             \\[
             0,97 \\times \\ R_t = 0,9321
@@ -1429,7 +1428,7 @@ de tractament tèrmic?`,
             \\]
             Tassa de rebuig total:<br>
             \\[
-            100% - 96% = 4%
+            100\\,\\text{%} - 96\\,\\text{%} = 4\\,\\text{%}
             \\]
             <br><br>
          `
