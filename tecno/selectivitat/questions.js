@@ -36,7 +36,7 @@ const questions = [
         text: `<br>Volem utilitzar captadors solars de superfície \\(S = 2{,}1\\)\\(m^2\\) per a produir aigua calenta en un
         habitatge familiar. Els captadors es complementen amb un escalfador elèctric per als dies en
         què no hi ha prou radiació solar. El rendiment energètic d’un captador solar s’obté mitjançant
-        l’equació  \\(η = η_0\\) - \\(k_1\\) \\(frac{T_m - T_a}{I}\\), en què \\(η_0\\) és el rendiment òptic, \\(k_1\\) 
+        l’equació  \\(η = η_0\\) - \\(k_1\\) \\(\\frac{{T_m} - {T_a}}{I}\\), en què \\(η_0\\) és el rendiment òptic, \\(k_1\\) 
         és el coeficient de pèrdues, \\(T_m\\) és la temperatura de treball del captador, \\(T_a\\) és la temperatura 
         ambient i \\(I\\) és la radiació solar en \\(W/m^2\\). Disposem de dos models de captador solar amb les 
         característiques següents:
@@ -64,7 +64,7 @@ const questions = [
             η_a = η_{0 A} \\times \\ k_{1 A} \\frac{Tm - Ta}{I} 
             \\]
             \\[
-            η_a = \\ 0,8 - 8,9\\,\\text{W/ m^2 ºC}\\times \\frac{50 - 18\\,\\text{ºC}}{800\\,\\text{ m^2 }} = 0,444\\
+            η_a = \\ 0,8 - 8,9 W/ m^2 ºC \\times \\frac{50 - 18\\,\\text{ºC}}{800 m^2 } = 0,444\\
             \\]
             \\[
             η_a = 44,4%
@@ -74,7 +74,7 @@ const questions = [
             η_b = η_{0 B} \\times \\ k_{1 B} \\frac{Tm - Ta}{I} 
             \\]
             \\[
-            η_b = 0,66 - 3,2\\,\\text{W/ m^2 ºC} \\frac{50 - 18\\,\\text{ºC}}{800\\,\\text{ m^2 }} = 0,532
+            η_b = 0,66 - 3,2 W/ m^2 ºC \\frac{50 - 18\\,\\text{ºC}}{800 m^2 } = 0,532
             \\]
             \\[
             η_b = 53,2%
@@ -105,10 +105,10 @@ const questions = [
              \\]
              - Superficie necessaria:
              \\[
-             S_{necessaria} = \\frac{E_{solar}}{I\\times \\ t}\\ = \\frac{29,79\\,\\text{kWh}}{800\\,\\text{m^2}\\times \\ 8\\,\\text{h}}\\
+             S_{necessaria} = \\frac{E_{solar}}{I\\times \\ t}\\ = \\frac{29,79\\,\\text{kWh}}{800 m^2 } \\times \\ 8\\,\\text{h}}\\
              \\] 
              \\[
-             S_{necessaria} = 4,655\\,\\text{m^2}
+             S_{necessaria} = 4,655\\,\\text{m^{2}}
              \\] 
              - nobre de captadors:
              \\[
