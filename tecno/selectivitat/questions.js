@@ -108,11 +108,11 @@ const questions = [
              S_{necessaria} = \\frac{E_{solar}}{I\\times \\ t}\\ = \\frac{29,79\\,\\text{kWh}}{800 m^2 } \\times \\ 8\\,\\text{h}}\\
              \\] 
              \\[
-             S_{necessaria} = 4,655\\,\\text{m^{2}}
+             S_{necessaria} = 4,655 m^2
              \\] 
              - nobre de captadors:
              \\[
-             n = \\frac{S_{necessaria}}{S}\\ = \\frac{4,655\\,\\text{m^2}}{2,1\\,\\text{m^2}}\\ = 2,217
+             n = \\frac{S_{necessaria}}{S}\\ = \\frac{4,655 m^2 }{2,1 m^2 }\\ = 2,217
              \\]
             \\[
              n = 3 captadors
@@ -124,7 +124,7 @@ const questions = [
             η_b = η_{0 B}\\times \\ k_{1 B} \\frac{Tm - Ta}{I}\\
             \\]
             \\[
-            η_b = 0,66 - 3,2\\,\\text{W/m^2ºC} \\frac{50 - 18\\,\\text{ºC}}{400\\,\\text{m^2}} = 0,404
+            η_b = 0,66 - 3,2 W/m^2ºC \\frac{50 - 18\\,\\text{ºC}}{400 m^2 } = 0,404
             \\]
             \\[
             η_b = 40,4%
@@ -134,7 +134,7 @@ const questions = [
              E_{solar}' =  n \\times \\ S \\times \\ I' \\times \\ t
              \\] 
              \\[
-             E_{solar} =  3\\times \\ 2,1\\,\\text{m^2} \\times \\ 400\\,\\text{W/m^2} \\times \\ 8\\,\\text{h}
+             E_{solar} =  3\\times \\ 2,1 m^2 \\times \\ 400 W/m^2 \\times \\ 8\\,\\text{h}
              \\]
              \\[
              E_{solar} = 20,16\\,\\text{kWh}
@@ -227,7 +227,7 @@ const questions = [
             P_{roda} = Γ_{roda} \\times \\ \\omega_{roda} 
             \\]
             \\[
-            Γ_{roda} = \\frac{P_{roda}}{\\omega_{roda}} = \\frac{4674\\,\\text{W}}}{44,80\\,\\text{rad/s}} = 104,33\\,\\text{N·m}
+            Γ_{roda} = \\frac{P_{roda}}{\\omega_{roda}} = \\frac{4674\\,\\text{W}}{44,80\\,\\text{rad/s}} = 104,33\\,\\text{N·m}
             \\]
             <br><br>`,
     },
@@ -287,13 +287,13 @@ const questions = [
             R_{cable} = ρ \\frac{2L_{max}}{S} = ρ \\frac{2L_{max}}{π \\times \\ d^2/4}
             \\]
             \\[
-            L_{max} =  \\frac{R_{cable} \\times \\ π \\times \\ d^2}{8 \\times \\ ρ} = \\frac{0,0689\\,\\text{Ω} \\times \\ π \\times \\ (2,5 x 10^{-3})^2\\,\\text{m^2}}{8 \\times \\ 1,7 x 10^{–8}\\,\\text{Ω m}} = 9,947\\,\\text{m} 
+            L_{max} =  \\frac{R_{cable} \\times \\ π \\times \\ d^2}{8 \\times \\ ρ} = \\frac{0,0689\\,\\text{Ω} \\times \\ π \\times \\ (2,5 x 10^{-3})^2 m^2 }{8 \\times \\ 1,7 x 10^{–8}\\,\\text{Ω m}} = 9,947\\,\\text{m} 
             \\]
-            <br><strong>c) Resistència del conjunt si L = 4\\,\\text{m}:</strong>
+            <br><strong>c) Resistència del conjunt si \\(L = 4\\,\\text{m}\\):</strong>
             <br>
             - R_{cable}:
             \\[
-            R_{cable} = ρ \\frac{2L_{max}}{S} = ρ \\frac{2L_{max}}{π \\times \\ d^2/4} = 1,7 x 10^{–8}\\,\\text{Ω m} \\frac{8 \\times \\ 4\\,\\text{m}}{π \\times \\ 2,5 x 10^{-3})^2\\,\\text{m^2}} = 0,02771\\,\\text{Ω}
+            R_{cable} = ρ \\frac{2L_{max}}{S} = ρ \\frac{2L_{max}}{π \\times \\ d^2/4} = 1,7 x 10^{–8}\\,\\text{Ω m} \\frac{8 \\times \\ 4\\,\\text{m}}{π \\times \\ 2,5 x 10^{-3})^2 m^2 } = 0,02771\\,\\text{Ω}
             \\]
             <br><strong>d) La potència total P_{total} consumida:</strong>
             <br>
@@ -340,10 +340,10 @@ cicle de gas és \\(η_g = 0,32\\). Determineu:
             P_{cons} = \\frac{p \\times \\ ρ \\times \\ V}{t}
             \\]
             \\[
-            V = \\frac{P_{cons} \\times \\t}{p \\times \\ ρ} = \\frac{869,6\\,\\text{MW} \\times \\ 24\\,\\text{h}\\frac{3600\,\\text{s}}{1\,\\text{h}}}{32,5\,\\text{MJ/kg} \\times \\ 0,423\,\\text{kg/L}} = 5,4652 x 10^6\,\\text{L}
+            V = \\frac{P_{cons} \\times \\ t}{p \\times \\ ρ} = \\frac{869,6\\,\\text{MW} \\times \\ 24\\,\\text{h}\\frac{3600\,\\text{s}}{1\,\\text{h}}}{32,5\\,\\text{MJ/kg} \\times \\ 0,423\\,\\text{kg/L}} = 5,4652 x 10^6\\,\\text{L}
             \\]
             \\[
-            V = 5,4652 x 10^6\,\\text{L} \\frac{1\\,\\text{dm^3}}{1\\,\\text{L}} \\times \\ \\frac{1\\,\\text{m^3}}{1 x 10^3\\,\\text{dm^3}} = 5465\\,\\text{m^3}
+            V = 5,4652 x 10^6\\,\\text{L} \\frac{1 dm^3 }{1\\,\\text{L}} \\times \\ \\frac{1 m^3}{1 x 10^3 dm^3 } = 5465 m^3
             \\]
             <br><strong>c) La potència dissipada:</strong>
             <br>
@@ -365,8 +365,7 @@ cicle de gas és \\(η_g = 0,32\\). Determineu:
             \\[
             s_{rec} = v \\times t = 1,028\\,\\text{m/s} \\times 11520\\,\\text{s} = 11830\\,\\text{m} = 11,83\\,\\text{km}
             \\]
-            <br><br>
-            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+            <br><br>`,  // Imatge opcional al final de la resposta
     },
         {
         type: "exercicis",
@@ -443,7 +442,7 @@ Si quan el vehicle avança a una velocitat constant \\(v = 60\\,\\text{km/h}\\) 
             η = \\frac{P}{Γ \\times \\eta}
             \\]
             \\[
-            Γ = \\frac{(63,89 v + 0,03611 \\times \\ v^3)}{η \\times \\ 2 \\times \\ π \\times \\ n/60} = \\frac{(63,89 \\times \\ 60 + 0,03611 \\times \\ 60^3)}{0,8 \\times \\ 2 \\times \\ π \\times \\ 2500\\,\\text{min^{-1}}/60} = 55,55\\,\\text{Nm}
+            Γ = \\frac{(63,89 v + 0,03611 \\times \\ v^3)}{η \\times \\ 2 \\times \\ π \\times \\ n/60} = \\frac{(63,89 \\times \\ 60 + 0,03611 \\times \\ 60^3)}{0,8 \\times \\ 2 \\times \\ π \\times \\ 2500 min^{-1} /60} = 55,55\\,\\text{Nm}
             \\]
             - Parell:
             \\[
@@ -463,8 +462,7 @@ Si quan el vehicle avança a una velocitat constant \\(v = 60\\,\\text{km/h}\\) 
             \\[
             s_{rec} = v \\times t = 1,028\\,\\text{m/s} \\times 11520\\,\\text{s} = 11830\\,\\text{m} = 11,83\\,\\text{km}
             \\]
-            <br><br>
-            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+            <br><br>`,  // Imatge opcional al final de la resposta
     },
         {
         type: "exercicis",
@@ -487,7 +485,7 @@ tancat. La potència de la planxa és, en tots dos casos, \\(P = 1 000\\,\\text{
             <br><br>`,
         correctAnswer: "",  
         steps: `
-            <strong>a) valor de les resistències R_1 i R_2:</strong>
+            <strong>a) Valor de les resistències \\(R_1\\) i \\(R_2\\):</strong>
             <br>
             - Resistència 1:
             \\[
@@ -503,7 +501,7 @@ tancat. La potència de la planxa és, en tots dos casos, \\(P = 1 000\\,\\text{
             \\[
             R_2 = \\frac{U_2^2}{P} - R_1 = \\frac{230^2\\,\\text{V}}{1000\\,\\text{W}} - 14,4\\,\\text{Ω} = 38,5\\,\\text{Ω}
             \\]
-            <br><strong>b) valor de les intensitats I_1 i I_2:</strong>
+            <br><strong>b) Valor de les intensitats \\(I_1\\) i \\(I_2\\):</strong>
             <br>
             - Intensitat 1:
             \\[
@@ -540,8 +538,7 @@ tancat. La potència de la planxa és, en tots dos casos, \\(P = 1 000\\,\\text{
             \\[
             s_{rec} = v \\times t = 1,028\\,\\text{m/s} \\times 11520\\,\\text{s} = 11830\\,\\text{m} = 11,83\\,\\text{km}
             \\]
-            <br><br>
-            <img src="ruta/a/imatgeResposta.jpg" alt="Imatge relacionada amb la resposta">`,  // Imatge opcional al final de la resposta
+            <br><br>`,  // Imatge opcional al final de la resposta
     },
         {
         type: "exercicis",
@@ -549,14 +546,14 @@ tancat. La potència de la planxa és, en tots dos casos, \\(P = 1 000\\,\\text{
         text: `
         <img src="ex.cartell.png" alt="Imatge cartell">
         <br>El cartell publicitari d’un bar de menús està format per dos taulers homogenis de fusta
-de dimensions \\(h × b = 900 × 600\\,\\text{mm^2}\\) i un gruix \\(e = 11\\,\\text{mm}\\). Els dos taulers estan articulats
-en el punt \\(C\\) i hi ha dos cables de secció \\(s = 1,8\\,\\text{mm^2}\\) que els uneixen pel punt mitjà dels seus
+de dimensions \\(h × b = 900 × 600 mm^2 \\) i un gruix \\(e = 11\\,\\text{mm}\\). Els dos taulers estan articulats
+en el punt \\(C\\) i hi ha dos cables de secció \\(s = 1,8 mm^2 \\) que els uneixen pel punt mitjà dels seus
 costats, tal com es mostra en la figura. Els cables mantenen una obertura \\(α = 40\\,\\text{°}\\) entre els
 taulers. Quan el cartell recolza sobre el terra, la força \\(N\\) que rep en els punts \\(A\\) i \\(B\\) és vertical
 i del mateix valor. Determineu:
          
             <br><br>
-            <strong>a)</strong> La massa \\(m\\) de cada tauler, si \\(ρ_{fusta} = 530\\,\\text{kg/m^3}\\). [0,5 punts]
+            <strong>a)</strong> La massa \\(m\\) de cada tauler, si \\(ρ_{fusta} = 530 kg/m^3 \\). [0,5 punts]
             <br>
             <strong>b)</strong> La força \\(N\\) que el cartell rep del terra en els punts \\(A\\) i \\(B\\). [0,5 punts]
             <br>
@@ -569,7 +566,7 @@ i del mateix valor. Determineu:
             <br>
             - Aplicant la fòrmula de la massa:
             \\[
-            m = ρ \\times \\ V = ρ_{fusta} \\times \\ h \\times \\ b \\times \\ e = 530\\,\\text{kg/m^3} \\times \\ 0,9\\,\\text{m} \\times \\ 0,6\\,\\text{m} \\times \\ 0,011\\,\\text{m} = 3,148\\,\\text{kg}
+            m = ρ \\times \\ V = ρ_{fusta} \\times \\ h \\times \\ b \\times \\ e = 530 kg/m^3 \\times \\ 0,9\\,\\text{m} \\times \\ 0,6\\,\\text{m} \\times \\ 0,011\\,\\text{m} = 3,148\\,\\text{kg}
             \\]
             <br><strong>b) Força que el cartell rep als punts A i B:</strong>
             <br>
@@ -578,7 +575,7 @@ i del mateix valor. Determineu:
             ΣF_{verticals} = 2N - 2 m \\times \\ g = 0
             \\]
             \\[
-            N = m \\times \\ g =  3,148\\,\\text{kg} \\times \\ 9,81\\,\\text{m/s^2} = 30,87\\,\\text{N}
+            N = m \\times \\ g =  3,148\\,\\text{kg} \\times \\ 9,81 m/s^2 = 30,87\\,\\text{N}
             \\]
             <br><strong>c) La força que fa cadascun dels cables:</strong>
             <br>
@@ -591,13 +588,13 @@ i del mateix valor. Determineu:
             \\]
             - Força excercida:
             \\[
-            F = \\frac{m \\times \\ g}{2} \\times \\ tan (\\frac{x}{2}) = \\frac{3,148\\,\\text{kg} \\times \\ 9,81\\,\\text{m/s^2}}{2} \\times \\ tan (\\frac{40}{2}) = 5,619\\,\\text{N}
+            F = \\frac{m \\times \\ g}{2} \\times \\ tan (\\frac{x}{2}) = \\frac{3,148\\,\\text{kg} \\times \\ 9,81 m/s^2 }{2} \\times \\ tan (\\frac{40}{2}) = 5,619\\,\\text{N}
             \\]
             <br><strong>d) Tensió normal:</strong>
             <br>
             - Aplicant la fòrmula:
             \\[
-            σ = \\frac{F}{s} = \\frac{5,619\\,\\text{N}}{1,8\\,\\text{mm^2}\\frac{1\\,\\text{m^2}}{10^6\\,\\text{mm^2}}} = 3,121\\,\\text{MPa}
+            σ = \\frac{F}{s} = \\frac{5,619\\,\\text{N}}{1,8 mm^2 \\frac{1 m^2 }{10^6 mm^2}} = 3,121\\,\\text{MPa}
             \\]
             <br><br>`,
     },
@@ -630,13 +627,13 @@ i del mateix valor. Determineu:
             \\]
             -Distància màxima:
             \\[
-            d_{màx} = \\frac{850\\,\\{km/h}}{7,1778\\,\\text{h}} = 6101\\,\\text{km}
+            d_{màx} = \\frac{850\\,\\text{km/h}}{7,1778\\,\\text{h}} = 6101\\,\\text{km}
             \\]
             <br><strong>b) Consum mínim de combustible per passatger:</strong>
             <br>
             - Consum total:
             \\[
-            C = d_{100} \\times \\ \\frac{c}{v \\times \\ ρ} = 100\\,\\text{km} \\times \\ \\frac{2700\\,\\text{kg/h}}{850\\,\\{km/h} \\times \\ 0,8075\\,\\text{kg/L}} = 393,37\\,\\text{L}
+            C = d_{100} \\times \\ \\frac{c}{v \\times \\ ρ} = 100\\,\\text{km} \\times \\ \\frac{2700\\,\\text{kg/h}}{850\\,\\text{km/h} \\times \\ 0,8075\\,\\text{kg/L}} = 393,37\\,\\text{L}
             \\]
             - Consum per passatger:
             \\[
@@ -701,8 +698,8 @@ les qüestions que hi ha a continuació utilitzant les variables d’estat segü
 el quadrat de costat \\(b = 0,25\\,\\text{m}\\) que es mostra en la figura. Una empresa es planteja produir el puzle o comprar les peces ja elaborades directament a un proveïdor.
 Si l’empresa produeix el puzle, el cost de producció es calcula amb l’expressió \\(c = c_1s + c_2p\\), en què \\(s\\) és la
 superfície de fusta utilitzada i \\(p\\) és el perímetre de les peces tallades per a construir el puzle. En aquest cas, el
-primer coeficient de cost és \\(c_1 = 13{,}5\\,\\text{€/m^2}\\)  i el segon és \\(c_2 = 0{,}85\\,\\text{€/m}\\). En canvi, si l’empresa compra les peces ja
-elaborades directament a un proveïdor, el cost de cada peça és de \\(0{,}65\\,\\text{€}\\) si la peça fa menys de \\(100\\,\\text{cm^2}\\), i de \\(0{,}95\\,\\text{€}\\) si la peça fa més de \\(100\\,\\text{cm^2}\\). Determineu:
+primer coeficient de cost és \\(c_1 = 13{,}5\\)\\(€/m^2\\)  i el segon és \\(c_2 = 0{,}85\\,\\text{€/m}\\). En canvi, si l’empresa compra les peces ja
+elaborades directament a un proveïdor, el cost de cada peça és de \\(0{,}65\\,\\text{€}\\) si la peça fa menys de \\(100\\)(\\cm^2\\), i de \\(0{,}95\\,\\text{€}\\) si la peça fa més de \\(100\\)(\\cm^2\\). Determineu:
 
                <img src="ex.puzle.png" alt="imatge puzle">
 
@@ -721,27 +718,27 @@ elaborades directament a un proveïdor, el cost de cada peça és de \\(0{,}65\\
             S = \\frac{b \\times \\ h}{2}
             \\]
             \\[
-            S_1 = \\frac{b/2 \\times \\ b/2}{2} = \\frac{b^2}{8} = \\frac{(0,25)^2\\,\\text{m}}{8} = 0,007813\\,\\text{m^2}
+            S_1 = \\frac{b/2 \\times \\ b/2}{2} = \\frac{b^2}{8} = \\frac{(0,25)^2\\,\\text{m}}{8} = 0,007813 m^2
             \\]
             \\[
-            S_2 = S_5 = \\frac{b/2 \\times \\ b/2}{2} \\times \\ \\frac{1}{2}= \\frac{b^2}{16} = \\frac{(0,25)^2\\,\\text{m}}{16} = 0,003906\\,\\text{m^2}
+            S_2 = S_5 = \\frac{b/2 \\times \\ b/2}{2} \\times \\ \\frac{1}{2}= \\frac{b^2}{16} = \\frac{(0,25)^2\\,\\text{m}}{16} = 0,003906 m^2
             \\]
             \\[
-            S_6 = S_7 = \\frac{b/2 \\times \\ b/2}{2} \\times \\ 2 = \\frac{b^2}{4} = \\frac{(0,25)^2\\,\\text{m}}{4} = 0,01563\\,\\text{m^2}
+            S_6 = S_7 = \\frac{b/2 \\times \\ b/2}{2} \\times \\ 2 = \\frac{b^2}{4} = \\frac{(0,25)^2\\,\\text{m}}{4} = 0,01563 m^2
             \\]
             - Superfície d'un quadrat:
             \\[
             S = b \\times \\ h
             \\]
             \\[
-            S_3 = S_4 = \\frac{b/2 \\times \\ b/2}{2} = \\frac{b^2}{8} = \\frac{(0,25)^2\\,\\text{m}}{8} = 0,007813\\,\\text{m^2}
+            S_3 = S_4 = \\frac{b/2 \\times \\ b/2}{2} = \\frac{b^2}{8} = \\frac{(0,25)^2\\,\\text{m}}{8} = 0,007813 m^2
             \\]
             - Superfície total:
             \\[
-            ΣS_tot = 0,007813\\,\\text{m^2} + (2 \\times \\ 0,003906\\,\\text{m^2}) + (2 \\times \\ 0,01563\\,\\text{m^2}) + (2 \\times \\ 0,007813\\,\\text{m^2}) = 0,625\\,\\text{m^2}
+            ΣS_{tot} = 0,007813 m^2 + (2 \\times \\ 0,003906 m^2 ) + (2 \\times \\ 0,01563 m^2 ) + (2 \\times \\ 0,007813 m^2 ) = 0,625 m^2
             \\]
             \\[
-            S_tot = b^2 = (0,25\\,\\text{m^2})^2 = 0,625\\,\\text{m^2}
+            S_tot = b^2 = (0,25 m^2 )^2 = 0,625 m^2
             \\]
             <br>
             <br><strong>b) Perímetre de les peces tallades:</strong>
@@ -762,19 +759,19 @@ elaborades directament a un proveïdor, el cost de cada peça és de \\(0{,}65\\
             \\]
             - Perímetre total:
             \\[
-            Σp_tot = 0,4268\\,\\text{m} + (2 \\times \\ 0,3018\\,\\text{m}) + (2 \\times \\ 0,6036\\,\\text{m}) + (2 \\times \\ 0,3536\\,\\text{m} = 2,945\\,\\text{m}
+            Σp_{tot} = 0,4268\\,\\text{m} + (2 \\times \\ 0,3018\\,\\text{m}) + (2 \\times \\ 0,6036\\,\\text{m}) + (2 \\times \\ 0,3536\\,\\text{m}) = 2,945\\,\\text{m}
             \\]
             <br><strong>d) Cost de producció i cost de comprar les peces:</strong>
             <br>
             - Producció:
             \\[
-            c_prod = c_1 \\times \\ s + c_2 \\times \\ p = 13,5\\,\\text{€/m^2} \\times \\ 0,625\\,\\text{m^2} + 0,85\\,\\text{€/m} \\times \\ 2,945\\,\\text{m} = 3,35€
+            c_{prod} = c_1 \\times \\ s + c_2 \\times \\ p = 13,5 €/m^2 \\times \\ 0,625 m^2 + 0,85\\,\\text{€/m} \\times \\ 2,945\\,\\text{m} = 3,35\\,\\text{€}
             \\]
             - Compra:
             \\[
-            c_comp = 2 \\times \\ 0,95 + 5 \\times \\ 0,65 = 5,15€
+            c_{comp} = 2 \\times \\ 0,95 + 5 \\times \\ 0,65 = 5,15€
             \\]
-            - L'opció de producció en la pròpia empresa és la més econòmica:
+            - L'opció de producció en la pròpia empresa és la més econòmica
             <br><br>`, 
     },
     {
@@ -783,7 +780,7 @@ elaborades directament a un proveïdor, el cost de cada peça és de \\(0{,}65\\
         text: `<br>Una plataforma elevadora puja amb una velocitat constant una càrrega fins a una altura
 \\(Δh = 4{,}5\\,\\text{m}\\) en un temps \\(t = 50\\,\\text{s}\\). La plataforma s’acciona amb un motor elèctric de corrent
 continu en sèrie amb un reductor d’engranatges. Segons el catàleg del fabricant, el rendiment
-del reductor d’engranatges és \\(η_{red} = 0,72\\). El motor s’alimenta amb una tensió \\(U = 220\\,\\text{V}\\), consumeix un corrent \\(I = 17,5\\,\\text{A}\\) i gira a una velocitat \\(n = 1 500\\,\\text{min^{–1}}\\). El parell a l’eix de sortida
+del reductor d’engranatges és \\(η_{red} = 0,72\\). El motor s’alimenta amb una tensió \\(U = 220\\,\\text{V}\\), consumeix un corrent \\(I = 17,5\\,\\text{A}\\) i gira a una velocitat \\(n = 1 500\\)\\(min^{–1}\\). El parell a l’eix de sortida
 del motor és \\(Γ_m = 19{,}5\\,\\text{N m}\\). Si les resistències passives a la plataforma elevadora es consideren negligibles, determineu: 
             <br><br>
             <strong>a)</strong> La potència elèctrica \\(P_{elèctr}\\) que consumeix el motor i el rendiment electromecànic \\(η_{mot}\\) d’aquest motor. [1 punt]
@@ -805,7 +802,7 @@ i es mantingués la velocitat (considereu que els rendiments i la tensió d’al
             \\]
             - Rendiment:
             \\[
-            η_{mot} = \\frac{P_m}{P_{elèctr}} = \\frac{Γ_m \\times \\ \\omega_{m}}{P_{elèctr}} = \\frac{Γ_m \\times \\ n \\times \\ (\\frac{2 \\times \\ π}{60})}{P_{elèctr}} = \\frac{19,5\\,\\text{N m} \\times \\ 1500\\,\\text{min^{-1}} \\times \\ (\\frac{2 \\times \\ π}{60})}{3850\\,\\text{W}} = 0,7956
+            η_{mot} = \\frac{P_m}{P_{elèctr}} = \\frac{Γ_m \\times \\ \\omega_{m}}{P_{elèctr}} = \\frac{Γ_m \\times \\ n \\times \\ (\\frac{2 \\times \\ π}{60})}{P_{elèctr}} = \\frac{19,5\\,\\text{N m} \\times \\ 1500 min^{-1} \\times \\ (\\frac{2 \\times \\ π}{60})}{3850\\,\\text{W}} = 0,7956
             \\]
             <br><strong>b) Potència total dissipada:</strong>
             <br>
@@ -827,7 +824,7 @@ i es mantingués la velocitat (considereu que els rendiments i la tensió d’al
             P_{càrrega} = \\frac{m \\times \\ g \\times \\ Δh}{t}
             \\]
             \\[
-            m = \\frac{P_{càrrega} \\times \\ t}{g \\times \\ Δh} = \\frac{2205\\,\\text{W} \\times \\ 50\\,\\text{s}}{9,81\\,\\text{m/s^2} \\times \\ 4,5\\,\\text{m}} = 2499\\,\\text{kg} 
+            m = \\frac{P_{càrrega} \\times \\ t}{g \\times \\ Δh} = \\frac{2205\\,\\text{W} \\times \\ 50\\,\\text{s}}{9,81 m/s^2 \\times \\ 4,5\\,\\text{m}} = 2499\\,\\text{kg} 
             \\]
             <br><strong>d) El corrent que consumiria el motor si la massa de la càrrega fos la meitat:</strong>
             <br>
@@ -846,7 +843,7 @@ i es mantingués la velocitat (considereu que els rendiments i la tensió d’al
             I' = \\frac{m/2 \\times \\ g \\times \\ Δh}{t \\times \\ U \\times \\ η_{mot} \\times \\ η_{red}} = \\frac{I}{2}
             \\]
             \\[
-            I' = \\frac{2499\\,\\text{kg} \\times \\ 9,81\\,\\text{m/s^2} \\times \\ 4,5\\,\\text{m}}{2 \\times \\ 50\\,\\text{s} \\times \\ 220\\,\\text{v} \\times \\ 0,7956 \\times \\ 0,72} = 8,75\\,\\text{A}
+            I' = \\frac{2499\\,\\text{kg} \\times \\ 9,81 m/s^2 \\times \\ 4,5\\,\\text{m}}{2 \\times \\ 50\\,\\text{s} \\times \\ 220\\,\\text{v} \\times \\ 0,7956 \\times \\ 0,72} = 8,75\\,\\text{A}
             \\]
             <br><br>`,
     },
@@ -858,7 +855,7 @@ i es mantingués la velocitat (considereu que els rendiments i la tensió d’al
 paret en el punt \\(O\\). Per a controlar la inclinació \\(φ\\) de la placa, s’utilitza un cilindre hidràulic de doble efecte.
 Un dels extrems del cilindre està articulat a la paret en el punt \\(A\\), i l’altre extrem està articulat a la placa en el
 punt \\(B\\). El diàmetre interior del cilindre és \\(d_{int} = 70\\,\\text{mm}\\) i el diàmetre de la tija és \\(d_{tija} = 40\\,\\text{mm}\\). La densitat de l’acer
-és \\(ρ_{acer} = 7 850\\,\\text{kg/m^3}\\). 
+és \\(ρ_{acer} = 7 850\\)\\(kg/m^3\\). 
 
 <img src="ex.placa.png" alt="Imatge placa d'acer">
          
@@ -881,7 +878,7 @@ punt \\(B\\). El diàmetre interior del cilindre és \\(d_{int} = 70\\,\\text{mm
             <strong>b) La massa de la placa:</strong>
             <br>
             \\[
-            m = V \\times \\ ρ_{acer} = L^2 \\times \\ e \\times \\ ρ_{acer} = 1^2\\,\\text{m^2} \\times \\ 0,1\\,\\text{m} \\times \\ 7850\\,\\text{kg/m^3} = 785\\,\\text{kg}
+            m = V \\times \\ ρ_{acer} = L^2 \\times \\ e \\times \\ ρ_{acer} = 1^2 m^2 \\times \\ 0,1\\,\\text{m} \\times \\ 7850 kg/m^3 = 785\\,\\text{kg}
             \\]
             <br><strong>c) La força que fa el cilindre per a φ = 0:</strong>
             <br>
@@ -896,7 +893,7 @@ punt \\(B\\). El diàmetre interior del cilindre és \\(d_{int} = 70\\,\\text{mm
             (F_c \\times \\ sin 45º) \\times \\ L = m \\times \\ g \\times \\ (L/2)
             \\]
             \\[
-            F_c = \\frac{m \\times \\ g \\times \\ (L/2)}{sin 45º \\times \\ L} = \\frac{785\\,\\text{kg} \\times \\ 9,81\\,\\text{m/s^2} \\times \\ (1\\,\\text{m}/2)}{sin 45º \\times \\ 1\\,\\text{m}} = 5444\\,\\text{N}
+            F_c = \\frac{m \\times \\ g \\times \\ (L/2)}{sin 45º \\times \\ L} = \\frac{785\\,\\text{kg} \\times \\ 9,81 m/s^2 \\times \\ (1\\,\\text{m}/2)}{sin 45º \\times \\ 1\\,\\text{m}} = 5444\\,\\text{N}
             \\]
             <br><strong>d) La tensió normal al mateix punt i la pressió relativa:</strong>
             <br>
@@ -969,7 +966,7 @@ gasolina i \\(0{,}73\\,\\text{€/L}\\) en el cas del GLP. Si el vehicle circula
             <br>
             - Distància estimada:
             \\[
-            d_{est} = 0,85 \\times \\ V \\times \\ c_{GLP} = 0,85 \\times \\ 40\\,\\text{L} \\times \\ \\frac{100\\,\\text{km}}{\\frac{9,3\\,\\text{L}}} = 365,6\\,\\text{km}
+            d_{est} = 0,85 \\times \\ V \\times \\ c_{GLP} = 0,85 \\times \\ 40\\,\\text{L} \\times \\ \\frac{100\\,\\text{km}}{9,3\\,\\text{L}} = 365,6\\,\\text{km}
             \\]
             <br><br>`, 
     },    
