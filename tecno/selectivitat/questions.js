@@ -24,14 +24,7 @@ const questions = [
             <br>
             <strong>b) Determinació de la funció lògica entre les variables :</strong>
             <br>
-            \\[ _   _        _                   _
-            \\]
-            \\[
-            a = b · j · i +  b · j · i + b · j · i + b · j · i
-            \\]
-            \\[
-            a = b · i + b · j 
-            \\]
+            <img src="1b.png" alt="Imatge relacionada amb la resposta">
             <br>
             <strong>c) Dibuix de l’esquema de contactes:</strong>
             <br><br>
@@ -40,10 +33,10 @@ const questions = [
     {
         type: "exercicis",
         category: "energia",
-        text: `<br>Volem utilitzar captadors solars de superfície \\(S = 2{,}1\\,\\text{m^2}\\) per a produir aigua calenta en un
+        text: `<br>Volem utilitzar captadors solars de superfície \\(S = 2{,}1\\)\\(m^2\\) per a produir aigua calenta en un
         habitatge familiar. Els captadors es complementen amb un escalfador elèctric per als dies en
         què no hi ha prou radiació solar. El rendiment energètic d’un captador solar s’obté mitjançant
-        l’equació  \\(η = η_0\\) - \\(k_1\\) \\(dfrac{{T_m - T_a}}{I}\\), en què \\(η_0\\) és el rendiment òptic, \\(k_1\\) 
+        l’equació  \\(η = η_0\\) - \\(k_1\\) \\(frac{T_m - T_a}{I}\\), en què \\(η_0\\) és el rendiment òptic, \\(k_1\\) 
         és el coeficient de pèrdues, \\(T_m\\) és la temperatura de treball del captador, \\(T_a\\) és la temperatura 
         ambient i \\(I\\) és la radiació solar en \\(W/m^2\\). Disposem de dos models de captador solar amb les 
         característiques següents:
@@ -51,7 +44,7 @@ const questions = [
                <img src="Taula_ex3.png" alt="Taula \\(η_0\\) i \\(k_1\\) segons Captador A i B">
 
             <br>
-            Si les condicions de treball del captador són \\(T_m = 50\\,\\text{ºC}\\), \\(T_a = 18\\,\\text{ºC}\\) i \\(I = 800\\,\\text{m^2}\\), determineu:
+            Si les condicions de treball del captador són \\(T_m = 50\\,\\text{ºC}\\), \\(T_a = 18\\,\\text{ºC}\\) i \\(I = 800\\)\\(m^2\\), determineu:
             <br>
             <br><strong>a)</strong> El rendiment \\(η_a\\) i \\(η_b\\) dels captadors A i B en aquestes condicions de treball. Quina és l’opció més eficient?. [0,5 punts]
             <br><br>
@@ -71,7 +64,7 @@ const questions = [
             η_a = η_{0 A} \\times \\ k_{1 A} \\frac{Tm - Ta}{I} 
             \\]
             \\[
-            η_a = \\ 0,8 - 8,9\\,\\text{W/M^2ºC}\\times \\frac{50 - 18\\,\\text{ºC}}{800\\,\\text{m^2}} = 0,444\\
+            η_a = \\ 0,8 - 8,9\\,\\text{W/ m^2 ºC}\\times \\frac{50 - 18\\,\\text{ºC}}{800\\,\\text{ m^2 }} = 0,444\\
             \\]
             \\[
             η_a = 44,4%
@@ -81,7 +74,7 @@ const questions = [
             η_b = η_{0 B} \\times \\ k_{1 B} \\frac{Tm - Ta}{I} 
             \\]
             \\[
-            η_b = 0,66 - 3,2\\,\\text{W/m^2ºC} \\frac{50 - 18\\,\\text{ºC}}{800\\,\\text{m^2}} = 0,532
+            η_b = 0,66 - 3,2\\,\\text{W/ m^2 ºC} \\frac{50 - 18\\,\\text{ºC}}{800\\,\\text{ m^2 }} = 0,532
             \\]
             \\[
             η_b = 53,2%
@@ -1101,7 +1094,7 @@ l’eix d’entrada del multiplicador és \\(P_{entrada} = 1,966\\,\\text{MW}\\)
             <strong> Aerogenerador:</strong><br>
             Rendiment multiplicador (η_m = 0,7):<br>
             \\[
-            P_entrada = P \\times \\ η_m = 1,966\\,\\text{MW} \\times \\ 0,7 = 1,3762\\,\\text{MW}
+            P_{entrada} = P \\times \\ η_m = 1,966\\,\\text{MW} \\times \\ 0,7 = 1,3762\\,\\text{MW}
             \\]
             Rendiment generador:<br>
             \\[
@@ -1109,7 +1102,7 @@ l’eix d’entrada del multiplicador és \\(P_{entrada} = 1,966\\,\\text{MW}\\)
             \\]
             Potència dissipada:<br>
             \\[
-            P_{diss} = P_{entra} - P_{elèctrica} = 1,966\\,\\text{MW} - 1,2\\,\\text{MW} = 0,766\\,\\text{MW} = 766\\,\\text{kW}
+            P_{diss} = P_{entrada} - P_{elèctrica} = 1,3762\\,\\text{MW} - 1,2\\,\\text{MW} = 0,1762\\,\\text{MW} = 176,2\\,\\text{kW}
             \\]
             <br><br>
 `
