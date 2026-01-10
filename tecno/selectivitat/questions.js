@@ -1016,7 +1016,7 @@ estat l’ocupació mitjana global?`,
             Places_{dia} = 4 vols \\times \\ 200 places = 800 places/dia
             \\]
             \\[
-            Ocupació = \\frac{Pass_dia}{Places_dia} = \\frac{656,4}{800} = 0,8205 = 82,05\\,\\text{%}
+            Ocupació = \\frac{Pass_{dia}}{Places_{dia}} = \\frac{656,4}{800} = 0,8205 = 82,05\\,\\text{%}
             \\]
             <br><br>
    `
@@ -1040,11 +1040,11 @@ barra sense que es trenqui?`,
             - Àrea:  
             <br>
             \\[
-            A = \\frac{π \\times \\ d^2}{4} = \\frac{π \\times \\ 3^2\\,\\text{mm}}{4} = 7,0686\\,\\text{mm^2}
+            A = \\frac{π \\times \\ d^2}{4} = \\frac{π \\times \\ 3^2\\,\\text{mm}}{4} = 7,0686 mm^2
             \\]
             - Força de trencament:
             \\[
-            F = σ_r \\times \\ A = 800\\,\\text{MPa} \\times \\ \\frac{10^6\\,\\text{Pa}}{1\\,\\text{MPa}} \\times \\ 7,0686\\,\\text{mm^2} \\times \\ \\frac{1\\,\\text{m^2}}{10^6\\,\\text{mm^2}} = 5655\\,\\text{N}
+            F = σ_r \\times \\ A = 800\\,\\text{MPa} \\times \\ \\frac{10^6\\,\\text{Pa}}{1\\,\\text{MPa}} \\times \\ 7,0686 mm^2 \\times \\ \\frac{1 m^2 }{10^6 mm^2 } = 5655\\,\\text{N}
             \\]
             <br><br>
 `
@@ -1066,7 +1066,7 @@ barra sense que es trenqui?`,
             R = ρ \\times \\ \\frac{L}{A} = ρ \\times \\ \\frac{L}{π \\times \\ d^2/4}
             \\]
             \\[
-            d^2 = \\frac{4 \\times \\ ρ \\times \\ L}{π \\times \\ R} = \\frac{4 \\times \\ 4,9 x 10^{-7}\\,\\text{Ω m} \\times \\ 4,508\\,\\text{m}}{π \\times \\ 5\\,\\text{Ω}} = 5,625 x 10^{-7}\\,\\text{m^2}
+            d^2 = \\frac{4 \\times \\ ρ \\times \\ L}{π \\times \\ R} = \\frac{4 \\times \\ 4,9 x 10^{-7}\\,\\text{Ω m} \\times \\ 4,508\\,\\text{m}}{π \\times \\ 5\\,\\text{Ω}} = 5,625 x 10^{-7} m^2
             \\]
             \\[
             d = √(5,625 x 10^{-7}) = 0,00075\\,\\text{m} = 0,75\\,\\text{mm}
@@ -1107,19 +1107,25 @@ l’eix d’entrada del multiplicador és \\(P_{entrada} = 1,966\\,\\text{MW}\\)
     {
         type: "questions", // Tipus de pregunta
         category: "materials_i_assaigs",
-        text: `En un ajust amb joc 35 H7/f7, el joc màxim és 75 μm i el joc mínim 25 μm. Si la tolerància H7 del forat és (\\frac{+25}{0})\\,\\text{μm}, quina és la tolerància f7 de l’eix?`,
+        text: `En un ajust amb joc 35 H7/f7, el joc màxim és 75 μm i el joc mínim 25 μm. Si la tolerància H7 del forat és \\( \\frac{+25}{0} \\) \\(μm\\), quina és la tolerància f7 de l’eix?`,
         options: [
-            { text: "\\frac{+25}{0}\\,\\text{μm}", value: "a" },
-            { text: "\\frac{+50}{25}\\,\\text{μm}", value: "b" },
-            { text: "\\frac{-25}{-50}\\,\\text{μm}", value: "c" },
-            { text: "\\frac{0}{+75}\\,\\text{μm}", value: "d" }
+            { text: "\\( ( \\frac{+25}{0}) \\) \\(μm\\)", value: "a" },
+            { text: "\\( ( \\frac{+50}{25}) \\) \\(μm\\)", value: "b" },
+            { text: "\\( ( \\frac{-25}{-50}) \\) \\(μm\\)", value: "c" },
+            { text: "\\( ( \\frac{0}{+75}) \\) \\(μm\\)", value: "d" }
         ],
         correctAnswer: "c",
         steps: `
             <strong>Tolerància f7:</strong><br>
             - Forat (H7):
             \\[
-            35 \\frac{+25}{0} => Màx = 35,025\\,\\text{mm} / Mín = 35,000\\,\\text{mm}
+            35 \\frac{+25}{0}
+            \\]
+            \\[
+            Màx = 35,025\\,\\text{mm}
+            \\]
+            \\[
+            Mín = 35,000\\,\\text{mm}
             \\]
             - Joc Màxim:
             \\[
@@ -1142,7 +1148,9 @@ l’eix d’entrada del multiplicador és \\(P_{entrada} = 1,966\\,\\text{MW}\\)
             Eix_m = 35,025 - 0,025 = 34,975
             \\]
             - Tolerància f7:
+            \\[
             \\frac{-25}{-50}
+            \\]
             <br><br>
  `
     },
@@ -1196,7 +1204,7 @@ a obtenir beneficis quan s’han venut 2 500 unitats, quin ha de ser el preu de 
         type: "questions", // Tipus de pregunta
         category: "materials_i_assaigs",
         text: `Una bomba de paletes per a oli treballa a una pressió de 4 bar i proporciona un cabal de
-\\(7\\,\\text{m^3/h}\\) quan gira a \\(600\\,\\text{min^{–1}}\\). Quina potència proporciona la bomba?`,
+\\(7\\)\\(m^3/h\\) quan gira a \\(600\\)\\(min^{–1}\\). Quina potència proporciona la bomba?`,
         options: [
             { text: "777,8 W", value: "a" },
             { text: "2400 W", value: "b" },
@@ -1210,7 +1218,7 @@ a obtenir beneficis quan s’han venut 2 500 unitats, quin ha de ser el preu de 
             p = 4 bar = 4 \\times \\frac{10^5\\,\\text{Pa}}{1 bar} = 4 \\times \\ 10^5\\,\\text{Pa}
             \\]
             \\[
-            P = p \\times \\ q = 4 \\times \\ 10^5\\,\\text{Pa} \\times \\ 7\\,\\text{m^3/h} \\times \\ \\frac{1\\,\\text{h}}{3600\\,\\text{s}} = 777,78\\,\\text{W}
+            P = p \\times \\ q = 4 \\times \\ 10^5\\,\\text{Pa} \\times \\ 7 m^3/h \\times \\ \\frac{1\\,\\text{h}}{3600\\,\\text{s}} = 777,78\\,\\text{W}
             \\]
             <br><br>
  `
@@ -1245,8 +1253,8 @@ dos primers anys. Tenint en compte aquesta informació, la fiabilitat (probabili
         type: "questions", // Tipus de pregunta
         category: "materials_i_assaigs",
         text: `La velocitat de sincronisme d’un motor asíncron que està connectat a la xarxa de tensió
-\\(U = 230\\,\\text{V}\\) i freqüència \\(f = 50\\,\\text{Hz}\\) és de \\(1 000\\,\\text{min^{–1}}\\). A quina freqüència està connectat aquest
-motor si passa a tenir una velocitat de sincronisme de \\(1 200\\,\\text{min^{–1}}\\)?`,
+\\(U = 230\\,\\text{V}\\) i freqüència \\(f = 50\\,\\text{Hz}\\) és de \\(1 000\\)\\(min^{–1}\\). A quina freqüència està connectat aquest
+motor si passa a tenir una velocitat de sincronisme de \\(1 200\\)\\(min^{–1}\\)?`,
         options: [
             { text: "120 Hz", value: "a" },
             { text: "No ho podem saber, perquè depèn de la tensió de la xarxa", value: "b" },
@@ -1265,7 +1273,7 @@ motor si passa a tenir una velocitat de sincronisme de \\(1 200\\,\\text{min^{�
             \\]
             - Freqüència f':<br>
             \\[
-            f' = \\frac{n_s \\times \\ p}{60} = \\frac{3 \\times \\ 1200\\,\\text{min^{-1}}}{60} = \\frac{1200\\,\\text{min^{-1}}}{20} = 60\\,\\text{Hz}
+            f' = \\frac{n_s \\times \\ p}{60} = \\frac{3 \\times \\ 1200 min^{-1} }{60} = \\frac{1200 min^{-1} }{20} = 60\\,\\text{Hz}
             \\]
             <br><br>
          `
@@ -1275,7 +1283,7 @@ motor si passa a tenir una velocitat de sincronisme de \\(1 200\\,\\text{min^{�
         category: "materials",
         text: `Un motor asíncron de corrent altern de dos parells de pols està connectat a la xarxa de
 tensió \\(U = 230\\,\\text{V}\\) i freqüència \\(f = 50\\,\\text{Hz}\\). Quin és el lliscament relatiu \\(s\\) del motor en tant per
-cent (%) si gira a \\(n = 1 400\\,\\text{min^{–1}}\\)?`,
+cent (%) si gira a \\(n = 1 400\\)\\(min^{–1}\\)?`,
         options: [
             { text: "6,667 %", value: "a" },
             { text: "7,143 %", value: "b" },
@@ -1288,10 +1296,10 @@ cent (%) si gira a \\(n = 1 400\\,\\text{min^{–1}}\\)?`,
             <br><br>
             Tensió aplicada:
             \\[
-            n_s = \\frac{60 \\times \\ f}{p} = \\frac{60 \\times \\ 50\\,\\text{Hz}}{2} = 1500\\,\\text{min^{–1}}
+            n_s = \\frac{60 \\times \\ f}{p} = \\frac{60 \\times \\ 50\\,\\text{Hz}}{2} = 1500 min^{–1} }
             \\]
             \\[
-            s = \\frac{n_s - n}{n_s} = \\frac{1500\\,\\text{min^{–1}} - 1400\\,\\text{min^{–1}}}{1500\\,\\text{min^{–1}}} = \\frac{100}{1500} = 0,0667 = 6,67%
+            s = \\frac{n_s - n}{n_s} = \\frac{1500 min^{–1} } - 1400 min^{–1} }{1500 min^{–1} } = \\frac{100}{1500} = 0,0667 = 6,67%
             \\]
             <br><br>
    `
@@ -1300,8 +1308,8 @@ cent (%) si gira a \\(n = 1 400\\,\\text{min^{–1}}\\)?`,
         type: "questions", // Tipus de pregunta
         category: "pneumatics_hydraulics",
         text: `El magal és un aliatge resistent i lleuger que s’utilitza per a l’elaboració d’instruments
-quirúrgics. Conté un 8 % d’alumini (Al), un 1 % de zinc (Zn), un 0,2 % de manganès (Mn)
-i la resta és magnesi (Mg). En l’obtenció d’aquest aliatge, quina quantitat de zinc cal per a
+quirúrgics. Conté un \\(8 %\\) d’alumini \\((Al)\\), un \\(1 %\\) de zinc \\((Zn)\\), un \\(0,2 %\\) de manganès \\((Mn)\\)
+i la resta és magnesi \\((Mg)\\). En l’obtenció d’aquest aliatge, quina quantitat de zinc cal per a
 aliar-lo amb 350 kg de magnesi?`,
         options: [
             { text: "3,5 kg", value: "a" },
@@ -1338,7 +1346,7 @@ aliar-lo amb 350 kg de magnesi?`,
     {
         type: "questions", // Tipus de pregunta
         category: "motors_reductors",
-        text: `La cilindrada d’un motor de combustió és de \\(1 998\\,\\text{cm^3}\\). Tant el diàmetre com la cursa
+        text: `La cilindrada d’un motor de combustió és de \\(1 998\\)\\(cm^3\\). Tant el diàmetre com la cursa
 dels cilindres del motor són de \\(86\\,\\text{mm}\\). Quants cilindres té el motor?`,
         options: [
             { text: "4", value: "a" },
@@ -1350,12 +1358,12 @@ dels cilindres del motor són de \\(86\\,\\text{mm}\\). Quants cilindres té el 
         steps: `
             <strong>Volum del cilindre:</strong><br>
             \\[
-            V_c = \\frac{π \\times \\ d^2}{4} \\times \\ L = \\frac{π \\times \\ 8,6^2\\,\\text{cm}}{4} \\times \\ 8,6\\,\\text{cm} = 499,56\\,\\text{cm^3}
+            V_c = \\frac{π \\times \\ d^2}{4} \\times \\ L = \\frac{π \\times \\ 8,6^2\\,\\text{cm}}{4} \\times \\ 8,6\\,\\text{cm} = 499,56 cm^3
             \\]
             <br>
             Nombre de cilindres:<br>
             \\[
-            N = \\frac{V_{total}}{V_c} = \\frac{1998\\,\\text{cm^3}}{499,56\\,\\text{cm^3}} = 4
+            N = \\frac{V_{total}}{V_c} = \\frac{1998 cm^3 }{499,56 cm^3 } = 4
             \\]
         <br><br>
  `
@@ -1363,7 +1371,7 @@ dels cilindres del motor són de \\(86\\,\\text{mm}\\). Quants cilindres té el 
     {
         type: "questions", // Tipus de pregunta
         category: "pneumatics_hydraulics",
-        text: `Un sensor de pressió atmosfèrica té una precisió de ±0,3 hPa i una estabilitat en la mesura
+        text: `Un sensor de pressió atmosfèrica té una precisió de \\(±0,3\\,\\text{hPa}\\) i una estabilitat en la mesura
 al llarg del temps de \\(±0,1\\,\\text{hPa/any}\\). La mesura de la pressió atmosfèrica l’1 de març de 2017
 va ser de \\(990\\,\\text{hPa}\\) i la del mateix dia de l’any 2018, de \\(1 030\\,\\text{hPa}\\). La diferència entre la pressió
 atmosfèrica real dels dos dies està compresa entre`,
@@ -1395,8 +1403,8 @@ atmosfèrica real dels dos dies està compresa entre`,
         category: "materials_i_assaigs",
         text: `La fabricació d’una peça metàŀlica es duu a terme en dos processos. En primer lloc, la
 peça es mecanitza en un torn i, posteriorment, se’n milloren les propietats mecàniques mitjançant un tractament tèrmic. Després de cada procés, es controla la qualitat de les peces i
-es desestimen les que no són correctes. Si s’acaba produint correctament el 93,12 % de les
-peces inicials i la taxa de rebuig del tornejat és del 3 %, quina és la taxa de rebuig del procés
+es desestimen les que no són correctes. Si s’acaba produint correctament el \\(93,12 %\\) de les
+peces inicials i la taxa de rebuig del tornejat és del \\(3 %\\), quina és la taxa de rebuig del procés
 de tractament tèrmic?`,
         options: [
             { text: "3,5 %", value: "a" },
