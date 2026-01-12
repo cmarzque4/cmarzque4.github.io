@@ -105,7 +105,7 @@ const questions = [
              \\]
              - Superficie necessaria:
              \\[
-             S_{necessaria} = \\frac{E_{solar}}{I\\times \\ t}\\ = \\frac{29,79\\,\\text{kWh}}{800 m^2 } \\times \\ 8\\,\\text{h}}\\
+             S_{necessaria} = \\frac{E_{solar}}{I \\times \\ t}\\ = \\frac{29,79\\,\\text{kWh}}{800 m^2 } \\times \\ 8\\,\\text{h}
              \\] 
              \\[
              S_{necessaria} = 4,655 m^2
@@ -218,7 +218,7 @@ const questions = [
             P_{roda} = P_{mec} = m \\times \\ g \\times \\ v \\times \\ sin x
             \\]
             \\[
-            x = arcsin ( \\frac{P_{mec}}{m \\times \\ g \\times \\ v } ) = arcsin ( \\frac{4674\\,\\text{W}}{150\\,\\text{kg} \\times \\ 9,81\\,\\text{m/s^2} \\times \\ 13,889\\,\\text{m/s}} ) = 13,22\\,\\text{º}
+            x = arcsin ( \\frac{P_{mec}}{m \\times \\ g \\times \\ v } ) = arcsin ( \\frac{4674\\,\\text{W}}{150\\,\\text{kg} \\times \\ 9,81 m/s^2 \\times \\ 13,889\\,\\text{m/s}} ) = 13,22\\,\\text{º}
             \\]
             <br><strong>d) Parell de la roda:</strong>
             <br>
@@ -698,8 +698,8 @@ les qüestions que hi ha a continuació utilitzant les variables d’estat segü
 el quadrat de costat \\(b = 0,25\\,\\text{m}\\) que es mostra en la figura. Una empresa es planteja produir el puzle o comprar les peces ja elaborades directament a un proveïdor.
 Si l’empresa produeix el puzle, el cost de producció es calcula amb l’expressió \\(c = c_1s + c_2p\\), en què \\(s\\) és la
 superfície de fusta utilitzada i \\(p\\) és el perímetre de les peces tallades per a construir el puzle. En aquest cas, el
-primer coeficient de cost és \\(c_1 = 13{,}5\\)\\(€/m^2\\)  i el segon és \\(c_2 = 0{,}85\\,\\text{€/m}\\). En canvi, si l’empresa compra les peces ja
-elaborades directament a un proveïdor, el cost de cada peça és de \\(0{,}65\\,\\text{€}\\) si la peça fa menys de \\(100\\)(\\cm^2\\), i de \\(0{,}95\\,\\text{€}\\) si la peça fa més de \\(100\\)(\\cm^2\\). Determineu:
+primer coeficient de cost és \\(c_1 = 13{,}5\\) \\( €/m^2 \\)  i el segon és \\(c_2 = 0{,}85\\,\\text{€/m}\\). En canvi, si l’empresa compra les peces ja
+elaborades directament a un proveïdor, el cost de cada peça és de \\(0{,}65\\,\\text{€}\\) si la peça fa menys de \\(100\\)\\(cm^2\\), i de \\(0{,}95\\,\\text{€}\\) si la peça fa més de \\(100\\)(\\cm^2\\). Determineu:
 
                <img src="ex.puzle2018.png" alt="imatge puzle">
 
