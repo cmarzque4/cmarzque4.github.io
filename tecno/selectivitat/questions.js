@@ -698,8 +698,8 @@ les qüestions que hi ha a continuació utilitzant les variables d’estat segü
 el quadrat de costat \\(b = 0,25\\,\\text{m}\\) que es mostra en la figura. Una empresa es planteja produir el puzle o comprar les peces ja elaborades directament a un proveïdor.
 Si l’empresa produeix el puzle, el cost de producció es calcula amb l’expressió \\(c = c_1s + c_2p\\), en què \\(s\\) és la
 superfície de fusta utilitzada i \\(p\\) és el perímetre de les peces tallades per a construir el puzle. En aquest cas, el
-primer coeficient de cost és \\(c_1 = 13{,}5\\) \\( €/m^2 \\)  i el segon és \\(c_2 = 0{,}85\\,\\text{€/m}\\). En canvi, si l’empresa compra les peces ja
-elaborades directament a un proveïdor, el cost de cada peça és de \\(0{,}65\\,\\text{€}\\) si la peça fa menys de \\(100\\)\\(cm^2\\), i de \\(0{,}95\\,\\text{€}\\) si la peça fa més de \\(100\\)(\\cm^2\\). Determineu:
+primer coeficient de cost és \\(c_1 = 13{,}5\\)\\(€/m^2\\) i el segon és \\(c_2 = 0{,}85\\,\\text{€/m}\\). En canvi, si l’empresa compra les peces ja
+elaborades directament a un proveïdor, el cost de cada peça és de \\(0{,}65\\,\\text{€}\\) si la peça fa menys de \\(100\\)\\(cm^2\\), i de \\(0{,}95\\,\\text{€}\\) si la peça fa més de \\(100\\)\\(cm^2\\). Determineu:
 
                <img src="ex.puzle2018.png" alt="imatge puzle">
 
@@ -765,11 +765,11 @@ elaborades directament a un proveïdor, el cost de cada peça és de \\(0{,}65\\
             <br>
             - Producció:
             \\[
-            c_{prod} = c_1 \\times \\ s + c_2 \\times \\ p = 13,5 €/m^2 \\times \\ 0,625 m^2 + 0,85\\,\\text{€/m} \\times \\ 2,945\\,\\text{m} = 3,35\\,\\text{€}
+            c_{prod} = c_1 \\times \\ s + c_2 \\times \\ p = 13{,}5 €/m^2 \\times \\ 0,625 m^2 + 0,85\\,\\text{€/m} \\times \\ 2,945\\,\\text{m} = 3,35\\,\\text{€}
             \\]
             - Compra:
             \\[
-            c_{comp} = 2 \\times \\ 0,95 + 5 \\times \\ 0,65 = 5,15€
+            c_{comp} = 2 \\times \\ 0,95 + 5 \\times \\ 0,65 = 5,15\\,\\text{€}
             \\]
             - L'opció de producció en la pròpia empresa és la més econòmica
             <br><br>`, 
