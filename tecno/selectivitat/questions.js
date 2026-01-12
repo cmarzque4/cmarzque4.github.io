@@ -10,7 +10,7 @@ const questions = [
         La cadira disposa d’un botó que permet seleccionar un d’aquests dos sistemes de control.
         Responeu a les qüestions que hi ha a continuació utilitzant les variables d’estat següents:            
         <br>
-            <br><img src="Variables.png" alt="Variables d'estat">
+            <br><img src="Variables2018.png" alt="Variables d'estat">
         <br>
             <br><br><strong>a)</strong> Escriviu la taula de veritat del sistema. [1 punt]
             <br><strong>b)</strong> Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la. [1 punt]
@@ -20,15 +20,15 @@ const questions = [
         steps: `
             <strong>a)Taula de la veritat del sistema</strong>
             <br>
-        <img src="sol.ex1a.png" alt="Imatge relacionada amb la resposta">
+        <img src="sol.ex1a2018.png" alt="Imatge relacionada amb la resposta">
             <br>
             <strong>b) Determinació de la funció lògica entre les variables :</strong>
             <br>
-            <img src="1b.png" alt="Imatge relacionada amb la resposta">
+            <img src="1b2018.png" alt="Imatge relacionada amb la resposta">
             <br>
             <strong>c) Dibuix de l’esquema de contactes:</strong>
             <br><br>
-            <img src="sol.ex1c.png" alt="Imatge relacionada amb la resposta">`, 
+            <img src="sol.ex1c2018.png" alt="Imatge relacionada amb la resposta">`, 
     },
     {
         type: "exercicis",
@@ -41,7 +41,7 @@ const questions = [
         ambient i \\(I\\) és la radiació solar en \\(W/m^2\\). Disposem de dos models de captador solar amb les 
         característiques següents:
 
-               <img src="Taula_ex3.png" alt="Taula \\(η_0\\) i \\(k_1\\) segons Captador A i B">
+               <img src="Taula_ex32018.png" alt="Taula \\(η_0\\) i \\(k_1\\) segons Captador A i B">
 
             <br>
             Si les condicions de treball del captador són \\(T_m = 50\\,\\text{ºC}\\), \\(T_a = 18\\,\\text{ºC}\\) i \\(I = 800\\)\\(m^2\\), determineu:
@@ -167,7 +167,7 @@ const questions = [
         una transmissió per cadena de rendiment \\(η_{cad} = 0,85\\). La roda té un diàmetre \\(d = 620\\,\\text{mm}\\) i la
         massa total de la motorista més la moto és \\(m = 150\\,\\text{kg}\\). Si el parell a l’eix de sortida del motor
         és \\(Γ_{motor} = 6\\,\\text{N m}\\) i la fricció amb l’aire es considera negligible, determineu: 
-        <img src="ex.moto.png" alt="Imatge moto">
+        <img src="ex.moto2018.png" alt="Imatge moto">
             <br><br>
             <strong>a)</strong> Les velocitats de gir de la roda \\(ω_{roda}\\) i de l’eix del motor \\(ω_{motor}\\), en rad/s. [0,5 punts]
             <br>
@@ -235,7 +235,7 @@ const questions = [
         type: "exercicis",
         category: "energia",
         text: `
-        <img src="ex.corrent.png" alt="Imatge cirquit">
+        <img src="ex.corrent2018.png" alt="Imatge cirquit">
         <br>Els dos llums d’encreuament d’un vehicle es connecten en paraŀlel a una bateria de tensió
         \\(U = 12\\,\\text{V}\\). La bateria i els llums es connecten mitjançant un cable bipolar de coure de diàmetre
         \\(d = 2{,}5\\,\\text{mm}\\). El coure té una resistivitat \\(ρ = 1{,}7 x 10^{–8}\\,\\text{Ω m}\\). La resistència \\(R_{cable}\\) de l’esquema de
@@ -375,7 +375,7 @@ quan la mesura de la velocitat mitjana dels vehicles en dos punts de mesurament 
 és inferior al 80 % de la limitació indicada pel senyal lluminós. Responeu a les qüestions que
 hi ha a continuació utilitzant les variables d’estat següents:
 
-  <img src="variables.ex.png" alt="Imatge variables exercici">
+  <img src="variables.ex2018.png" alt="Imatge variables exercici">
   
             <br><br>
             <strong>a)</strong> Elaboreu la taula de veritat del sistema. [1 punt]
@@ -390,13 +390,13 @@ hi ha a continuació utilitzant les variables d’estat següents:
         steps: `
             <strong>a) Taula de veritat del sistema:</strong>
             <br>
-           <img src="2a.png" alt="Imatge relacionada amb la resposta">
+           <img src="2a2018.png" alt="Imatge relacionada amb la resposta">
             <br><strong>b) Funció lògica:</strong>
             <br>
-           <img src="2b.png" alt="Imatge relacionada amb la resposta">
+           <img src="2b2018.png" alt="Imatge relacionada amb la resposta">
             <br><strong>c) Esquema de portes lògiques:</strong>
             <br>
-          <img src="2c.png" alt="Imatge relacionada amb la resposta">
+          <img src="2c2018.png" alt="Imatge relacionada amb la resposta">
             <br><br>`,  
     },
         {
@@ -434,7 +434,7 @@ Si quan el vehicle avança a una velocitat constant \\(v = 60\\,\\text{km/h}\\) 
             P =  F_r \\times \\ v = (230 + 0,13v^2) \\times \\ \\frac{v}{3,6} = (63,89 v + 0,03611 \\times \\ v^3)
             \\]
             - Representen aquesta funció en una gràfica:
-            <img src="3b.png" alt="Imatge relacionada amb la resposta">
+            <img src="3b2018.png" alt="Imatge relacionada amb la resposta">
             <br><strong>c) Parell que desenvolupa el motor:</strong>
             <br>
             - Aplicant el rendiment:
@@ -468,7 +468,7 @@ Si quan el vehicle avança a una velocitat constant \\(v = 60\\,\\text{km/h}\\) 
         type: "exercicis",
         category: "energia",
         text: `
-       <img src="ex.cirquit_planxa.png" alt="Imatge cirquit"> 
+       <img src="ex.cirquit_planxa2018.png" alt="Imatge cirquit"> 
         Una planxa de viatge pot funcionar connectada a la xarxa de tensió \\(U_1 = 120\\,\\text{V}\\) i a la xarxa
 de tensió \\(U_2 = 230\\,\\text{V}\\). L’esquema elèctric de la planxa és el que es mostra en la figura. Quan
 funciona a \\(230\\,\\text{V}\\), l’interruptor A està obert, i quan funciona a \\(120\\,\\text{V}\\), l’interruptor A està
@@ -544,7 +544,7 @@ tancat. La potència de la planxa és, en tots dos casos, \\(P = 1 000\\,\\text{
         type: "exercicis",
         category: "energia",
         text: `
-        <img src="ex.cartell.png" alt="Imatge cartell">
+        <img src="ex.cartell2018.png" alt="Imatge cartell">
         <br>El cartell publicitari d’un bar de menús està format per dos taulers homogenis de fusta
 de dimensions \\(h × b = 900 × 600 mm^2 \\) i un gruix \\(e = 11\\,\\text{mm}\\). Els dos taulers estan articulats
 en el punt \\(C\\) i hi ha dos cables de secció \\(s = 1,8 mm^2 \\) que els uneixen pel punt mitjà dels seus
@@ -670,7 +670,7 @@ de la persona i l’exoesquelet gràcies a un sensor de força. A més, el motor
 l’usuari ha activat el funcionament de l’aparell mitjançant una aplicació mòbil. Responeu a
 les qüestions que hi ha a continuació utilitzant les variables d’estat següents:            
         <br>
-            <br><img src="Variable.ex.png" alt="Variables exoesquelet robòtic">
+            <br><img src="Variable.ex2018.png" alt="Variables exoesquelet robòtic">
         <br>
             <br><br><strong>a)</strong> Elaboreu la taula de veritat del sistema. [1 punt]
             <br><strong>b)</strong> Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la.  [1 punt]
@@ -680,15 +680,15 @@ les qüestions que hi ha a continuació utilitzant les variables d’estat segü
         steps: `
             <strong>a) Taula de veritat del sistema:</strong>
             <br>
-            <br><img src="5a.png" alt=" Imatge relacionada amb la resposta">
+            <br><img src="5a2018.png" alt=" Imatge relacionada amb la resposta">
             <br>
             <strong>b) Funció lògica:</strong>
            <br>
-            <br><img src="5b.png" alt=" Imatge relacionada amb la resposta">
+            <br><img src="5b2018.png" alt=" Imatge relacionada amb la resposta">
             <br>
             <strong>c) Esquema de contactes equivalent:</strong>
             <br>
-            <br><img src="5c.png" alt=" Imatge relacionada amb la resposta">
+            <br><img src="5c2018.png" alt=" Imatge relacionada amb la resposta">
             <br><br>`, 
     },
     {
@@ -701,7 +701,7 @@ superfície de fusta utilitzada i \\(p\\) és el perímetre de les peces tallade
 primer coeficient de cost és \\(c_1 = 13{,}5\\)\\(€/m^2\\)  i el segon és \\(c_2 = 0{,}85\\,\\text{€/m}\\). En canvi, si l’empresa compra les peces ja
 elaborades directament a un proveïdor, el cost de cada peça és de \\(0{,}65\\,\\text{€}\\) si la peça fa menys de \\(100\\)(\\cm^2\\), i de \\(0{,}95\\,\\text{€}\\) si la peça fa més de \\(100\\)(\\cm^2\\). Determineu:
 
-               <img src="ex.puzle.png" alt="imatge puzle">
+               <img src="ex.puzle2018.png" alt="imatge puzle">
 
             <br>
             <br><strong>a)</strong> La superfície de cadascuna de les set peces. Comproveu que la suma de la superfície de totes les peces equival a la superfície \\(s\\) del quadrat de la figura. [1 punt]
@@ -857,7 +857,7 @@ Un dels extrems del cilindre està articulat a la paret en el punt \\(A\\), i l�
 punt \\(B\\). El diàmetre interior del cilindre és \\(d_{int} = 70\\,\\text{mm}\\) i el diàmetre de la tija és \\(d_{tija} = 40\\,\\text{mm}\\). La densitat de l’acer
 és \\(ρ_{acer} = 7 850\\)\\(kg/m^3\\). 
 
-<img src="ex.placa.png" alt="Imatge placa d'acer">
+<img src="ex.placa2018.png" alt="Imatge placa d'acer">
          
             <br><br>
             <strong>a)</strong> Dibuixeu el diagrama de cos lliure de la placa per a \\(φ = 0\\,\\text{°}\\). [0,5 punts]
@@ -873,7 +873,7 @@ punt \\(B\\). El diàmetre interior del cilindre és \\(d_{int} = 70\\,\\text{mm
         steps: `
             <strong>a) Diagrama de cos lliure:</strong>
             <br>
-            <img src="6b.png" alt=Imatge relacionada amb la resposta"
+            <img src="6b2018.png" alt=Imatge relacionada amb la resposta"
             <br>
             <strong>b) La massa de la placa:</strong>
             <br>
