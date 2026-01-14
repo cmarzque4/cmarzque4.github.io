@@ -344,7 +344,7 @@
 }
 
 .nav-links a {
-  color: white;
+  color: #023e8a;
   text-decoration: none;
   font-weight: 500;
 }
@@ -457,10 +457,6 @@ button {
   cursor: pointer;
   background: #90e0ef;
   color: white;
-}
-
-button:hover {
-  background: #90e0ef;
 }
 
 /* ---------- RESPUESTAS ---------- */
