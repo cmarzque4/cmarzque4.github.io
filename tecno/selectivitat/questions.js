@@ -654,7 +654,7 @@ i del mateix valor. Determineu:
             η = \\frac{P_{mot}}{P_{cons}} = \\frac{10153\\,\\text{kW}}{31815\\,\\text{kW}} = 0,3191
             \\]
             \\[
-            η = 31,91 \,\text{%}
+            η = 31,91\\,\\text{%}
             \\]
             <br><br>`,
     },
@@ -765,7 +765,7 @@ elaborades directament a un proveïdor, el cost de cada peça és de \\(0{,}65\\
             <br>
             - Producció:
             \\[
-            c_{prod} = c_1 \\times \\ s + c_2 \\times \\ p = 13{,}5\\,\\{€} /m^2 \\times \\ 0,625 m^2 + 0,85\\,\\text{€/m} \\times \\ 2,945\\,\\text{m} = 3,35\\,\\text{€}
+            c_{prod} = c_1 \\times \\ s + c_2 \\times \\ p = 13{,}5\\,\\{€/} m^2 \\times \\ 0,625 m^2 + 0,85\\,\\text{€/m} \\times \\ 2,945\\,\\text{m} = 3,35\\,\\text{€}
             \\]
             - Compra:
             \\[
@@ -803,6 +803,9 @@ i es mantingués la velocitat (considereu que els rendiments i la tensió d’al
             - Rendiment:
             \\[
             η_{mot} = \\frac{P_m}{P_{elèctr}} = \\frac{Γ_m \\times \\ \\omega_{m}}{P_{elèctr}} = \\frac{Γ_m \\times \\ n \\times \\ (\\frac{2 \\times \\ π}{60})}{P_{elèctr}} = \\frac{19,5\\,\\text{N m} \\times \\ 1500 min^{-1} \\times \\ (\\frac{2 \\times \\ π}{60})}{3850\\,\\text{W}} = 0,7956
+            \\]
+            \\[
+            η_{mot} = 79,56\\,\\text{%}
             \\]
             <br><strong>b) Potència total dissipada:</strong>
             <br>
