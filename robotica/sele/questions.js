@@ -1,0 +1,1441 @@
+const questions = [
+    {
+        type: "exercicis",
+        category: "control_logic",
+        text: `<br>Una cadira de rodes elèctrica disposa de dos sistemes per a controlar la marxa endavant. El
+        primer sistema és una palanca de control (o <i>joystick</i>). Si es fa servir aquest sistema, la cadira es
+        desplaça endavant quan l’usuari mou la palanca en la direcció corresponent. El segon sistema
+        permet a l’usuari controlar el moviment de la cadira inclinant el tronc cap endavant. Si es fa
+        servir aquest sistema, la cadira avança quan un sensor detecta que l’usuari s’inclina cap endavant.
+        La cadira disposa d’un botó que permet seleccionar un d’aquests dos sistemes de control.
+        Responeu a les qüestions que hi ha a continuació utilitzant les variables d’estat següents:            
+        <br>
+            <br><img src="Variables2018.png" alt="Variables d'estat">
+        <br>
+            <br><br><strong>a)</strong> Escriviu la taula de veritat del sistema. [1 punt]
+            <br><strong>b)</strong> Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la. [1 punt]
+            <br><strong>c)</strong> Dibuixeu l’esquema de contactes equivalent. [0,5 punts]
+            <br><br>`, 
+        correctAnswer: "",  
+        steps: `
+            <strong>a)Taula de la veritat del sistema</strong>
+            <br>
+        <img src="sol.ex1a2018.png" alt="Imatge relacionada amb la resposta">
+            <br>
+            <strong>b) Determinació de la funció lògica entre les variables :</strong>
+            <br>
+            <img src="1b2018.png" alt="Imatge relacionada amb la resposta">
+            <br>
+            <strong>c) Dibuix de l’esquema de contactes:</strong>
+            <br><br>
+            <img src="sol.ex1c2018.png" alt="Imatge relacionada amb la resposta">`, 
+    },
+    {
+        type: "exercicis",
+        category: "energia",
+        text: `<br>Volem utilitzar captadors solars de superfície \\(S = 2{,}1\\)\\(m^2\\) per a produir aigua calenta en un
+        habitatge familiar. Els captadors es complementen amb un escalfador elèctric per als dies en
+        què no hi ha prou radiació solar. El rendiment energètic d’un captador solar s’obté mitjançant
+        l’equació  \\(η = η_0\\) - \\(k_1\\) \\(\\frac{{T_m} - {T_a}}{I}\\), en què \\(η_0\\) és el rendiment òptic, \\(k_1\\) 
+        és el coeficient de pèrdues, \\(T_m\\) és la temperatura de treball del captador, \\(T_a\\) és la temperatura 
+        ambient i \\(I\\) és la radiació solar en \\(W/m^2\\). Disposem de dos models de captador solar amb les 
+        característiques següents:
+
+               <img src="Taula_ex32018.png" alt="Taula \\(η_0\\) i \\(k_1\\) segons Captador A i B">
+
+            <br>
+            Si les condicions de treball del captador són \\(T_m = 50\\,\\text{ºC}\\), \\(T_a = 18\\,\\text{ºC}\\) i \\(I = 800\\)\\(m^2\\), determineu:
+            <br>
+            <br><strong>a)</strong> El rendiment \\(η_a\\) i \\(η_b\\) dels captadors A i B en aquestes condicions de treball. Quina és l’opció més eficient?. [0,5 punts]
+            <br><br>
+            Escollim el model de captador més eficient de l’apartat anterior i l’utilitzem durant un temps \\(t = 8\\,\\text{h}\\) al dia. Sabent que el consum diari 
+            d’aigua és \\(c = 390\\,\\text{L}\\),  que s’escalfa \\(∆T = 35\\,\\text{ºC}\\) i que la calor específica de l’aigua és \\(Ce = 4{,}18\\,\\text{J/(g ºC)}\\) determineu:
+            <br>
+            <br><strong>b)</strong> El nombre de captadors \\(n\\) que caldria instaŀlar per a escalfar tota l’aigua consumida mitjançant energia solar. [1 punt]
+            <br><strong>c)</strong> L’energia elèctrica consumida \\(E_{\\text{elèct}}\\), en \\(kW h\\) en un dia en el qual la radiació solar
+            disminueix a la meitat, tenint en compte que el nombre de captadors és l’obtingut en l’apartat anterior. [1 punt]
+            <br><br>`, 
+        correctAnswer: "",  // No és necessari aquí perquè es tracta d'un exercici obert
+        steps: `
+            <strong>a) Rendiment \\(η_a\\) i \\(η_b\\) dels captadors A i B en aquestes condicions de treball:</strong>
+            <br>
+            - rendiment \\(η_a\\):
+            \\[
+            η_a = η_{0 A} \\times \\ k_{1 A} \\frac{Tm - Ta}{I} 
+            \\]
+            \\[
+            η_a = \\ 0,8 - 8,9 W/ m^2 ºC \\times \\frac{50 - 18\\,\\text{ºC}}{800 m^2 } = 0,444\\
+            \\]
+            \\[
+            η_a = 44,4\\,\\text{%}
+            \\]
+            - rendiment \\(η_b\\):
+            \\[
+            η_b = η_{0 B} \\times \\ k_{1 B} \\frac{Tm - Ta}{I} 
+            \\]
+            \\[
+            η_b = 0,66 - 3,2 W/ m^2 ºC \\frac{50 - 18\\,\\text{ºC}}{800 m^2 } = 0,532
+            \\]
+            \\[
+            η_b = 53,2\\,\\text{%}
+            \\]
+             - L’opció més eficient és triar el model de captador B.
+            <br><strong>b) El nombre de captadors \\(n\\) que caldria instaŀlar per a escalfar tota l’aigua:</strong>
+            <br>
+            - Càlcul de la densitat ρ en grams:
+            \\[
+            ρ = \\frac{1\\,\\text{kg}}{1\\,\\text{L}} \\ = \\frac{1 x 10^{3}\\,\\text{g}}{1\\,\\text{L}} = 1 x 10^{3}\\,\\text{g/L}
+            \\]
+            - Càlcul de l'energia diaria del sistema:
+            \\[
+            E_{dia} = c \\times \\ ρ\\times \\ C_{e} \\times \\ ∆T 
+            \\]
+            \\[
+             E_{dia} = 390\\,\\text{L}\\times 1 x 10^{3}\\,\\text{g/L}\\times 4,18\\,\\text{J/gºC} \\times 35\\,\\text{ºC} = 57,06\\,\\text{MJ}
+             \\]
+             \\[
+             E_{dia} =  57,06\\,\\text{MJ}\\times \\frac{1 x 10^{3}\\,\\text{J}}{3600\\,\\text{s}} = 15,85\\,\\text{kWh}
+             \\]
+              - Energia solar del sistema aplicant el rendiment:
+             \\[
+             E_{solar} =  \\frac{E_{dia}}{η_b}\\ = \\frac{57,06\\,\\text{MJ}}{0,66}\\ = 107,3\\,\\text{MJ}
+             \\] 
+             \\[
+             E_{solar} =  107,3\\,\\text{MJ}\\times \\frac{1 x 10^{3}\\,\\text{J}}{3600\\,\\text{s}} = 29,79\\,\\text{kWh}
+             \\]
+             - Superficie necessaria:
+             \\[
+             S_{necessaria} = \\frac{E_{solar}}{I \\times \\ t}\\ = \\frac{29,79\\,\\text{kWh}}{800 m^2 } \\times \\ 8\\,\\text{h}
+             \\] 
+             \\[
+             S_{necessaria} = 4,655 m^2
+             \\] 
+             - nobre de captadors:
+             \\[
+             n = \\frac{S_{necessaria}}{S}\\ = \\frac{4,655 m^2 }{2,1 m^2 }\\ = 2,217
+             \\]
+            \\[
+             n = 3 captadors
+             \\]
+            <br><strong>c) L’energia elèctrica consumida:</strong>
+            <br>
+            - rendiment \\(η_b\\)':
+            \\[
+            η_b = η_{0 B}\\times \\ k_{1 B} \\frac{Tm - Ta}{I}\\
+            \\]
+            \\[
+            η_b = 0,66 - 3,2 W/m^2ºC \\frac{50 - 18\\,\\text{ºC}}{400 m^2 } = 0,404
+            \\]
+            \\[
+            η_b = 40,4\\,\\text{%}
+            \\]
+            - Energia solar:
+             \\[
+             E_{solar}' =  n \\times \\ S \\times \\ I' \\times \\ t
+             \\] 
+             \\[
+             E_{solar} =  3\\times \\ 2,1 m^2 \\times \\ 400 W/m^2 \\times \\ 8\\,\\text{h}
+             \\]
+             \\[
+             E_{solar} = 20,16\\,\\text{kWh}
+             \\]
+             - Aplicar el rendiment:
+             \\[
+             E_{tèrmica} = η_b' \\times \\ E_{solar}
+             \\]
+             \\[
+             E_{tèrmica} = 0,404 \\times \\ 20,16\\,\\text{kWh}
+             \\]
+             \\[
+             E_{tèrmica} = 8,145\\,\\text{kWh}
+             \\]
+             - Energia electrice real:
+             \\[
+             E_{elèctr} = E_{dia} -  E_{tèrmica}
+             \\]
+             \\[
+             E_{elèctr} = 27,865\\,\\text{kWh} - 20,16\\,\\text{kWh} = 7,705\\,\\text{kWh}
+             \\]
+            <br><br>`,  
+    },
+    {
+        type: "exercicis",
+        category: "energia",
+        text: `<br>Una motorista puja un pendent a una velocitat constant \\(v = 50\\,\\text{km/h}\\) sense fer lliscar la
+        roda del darrere. La marxa que té posada fa que la relació de transmissió entre l’eix de sortida del motor i l’eix de la roda del darrere sigui \\(τ = ω_{roda}/ω_{motor} = 0{,}044\\). Aquesta reducció de
+        velocitat s’aconsegueix mitjançant una transmissió d’engranatges de rendiment \\(η_{eng} = 0{,}90\\) i
+        una transmissió per cadena de rendiment \\(η_{cad} = 0,85\\). La roda té un diàmetre \\(d = 620\\,\\text{mm}\\) i la
+        massa total de la motorista més la moto és \\(m = 150\\,\\text{kg}\\). Si el parell a l’eix de sortida del motor
+        és \\(Γ_{motor} = 6\\,\\text{N m}\\) i la fricció amb l’aire es considera negligible, determineu: 
+        <img src="ex.moto2018.png" alt="Imatge moto">
+            <br><br>
+            <strong>a)</strong> Les velocitats de gir de la roda \\(ω_{roda}\\) i de l’eix del motor \\(ω_{motor}\\), en rad/s. [0,5 punts]
+            <br>
+            <strong>b)</strong> La potència \\(P_{motor}\\) a l’eix de sortida del motor. [0,5 punts]
+            <br>
+            <strong>c)</strong> La potència mecànica \\(P_{roda}\\) a l’eix de la roda i l’angle α que forma el perfil de la carretera amb l’horitzontal. <nbsp> [1 punt]
+            <br>
+            <br><strong>d)</strong> El parell \\(Γ_{roda}\\) a l’eix de la roda. [0,5 punts]
+            <br><br>`,
+        correctAnswer: "",  
+        steps: `
+            <strong>a) Velocitat angular de les rodes i del motor:</strong>
+            <br>
+            - Velocitat angular de les rodes:
+            \\[
+            v = 50\\,\\text{km/h} \\times \\ \\frac{1000\\,\\text{m}}{3600\\,\\text{s}} = 13,889\\,\\text{m/s}
+            \\]
+            \\[
+            d = 620\\,\\text{mm} \\frac{1}{1000\\,\\text{m}} = 0,62\\,\\text{m}
+            \\]
+            \\[
+            \\omega_{roda} = \\frac{v}{d/2} = \\frac{2 \\times \\ 13,889\\,\\text{m/s}}{0,62\\,\\text{m}} = 44,80\\,\\text{rad/s}
+            \\]
+            - Velocitat angular del motor:
+            \\[
+            \\omega_{motor} = \\frac{\\omega_{roda}}{\\tau} = \\frac{44,80\\,\\text{rad/s}}{0,044} = 1018,247\\,\\text{rad/s}
+            \\]
+            <br><strong>b) Potència a l’eix de sortida del motor:</strong>
+            <br>
+            - Aplicant el parell del motor i la seva velocitat angular:
+            \\[
+            P_{motor} = Γ_{motor} \\times \\omega_{motor} = 6\\,\\text{N m} \\times \\ 1018,247\\,\\text{rad/s} = 6,109\\,\\text{kW}
+            \\]
+            <br><strong>c) Potència de a roda i l'angle que forma:</strong>
+            <br>
+            - Potència roda aplicant el rendiment total:
+            \\[
+            η_{total} = η_{cad} \\times \\ η_{eng} = \\frac{P_{roda}}{P_{motor}}
+            \\]
+            \\[
+            P_{roda} = P_{motor} \\times \\ η_{cad} \\times \\ η_{eng} = 6,109\\,\\text{kW} \\times \\ 0,85 \\times \\ 0,90
+            \\]
+            \\[
+            P_{roda} = 4,674\\,\\text{kW}
+            \\]
+            - Angle:
+            \\[
+            P_{roda} = P_{mec} = m \\times \\ g \\times \\ v \\times \\ sin x
+            \\]
+            \\[
+            x = arcsin ( \\frac{P_{mec}}{m \\times \\ g \\times \\ v } ) = arcsin ( \\frac{4674\\,\\text{W}}{150\\,\\text{kg} \\times \\ 9,81 m/s^2 \\times \\ 13,889\\,\\text{m/s}} ) = 13,22\\,\\text{º}
+            \\]
+            <br><strong>d) Parell de la roda:</strong>
+            <br>
+            - Energia de la bateria:
+            \\[
+            P_{roda} = Γ_{roda} \\times \\ \\omega_{roda} 
+            \\]
+            \\[
+            Γ_{roda} = \\frac{P_{roda}}{\\omega_{roda}} = \\frac{4674\\,\\text{W}}{44,80\\,\\text{rad/s}} = 104,33\\,\\text{N·m}
+            \\]
+            <br><br>`,
+    },
+    {
+        type: "exercicis",
+        category: "energia",
+        text: `
+        <img src="ex.corrent2018.png" alt="Imatge cirquit">
+        <br>Els dos llums d’encreuament d’un vehicle es connecten en paraŀlel a una bateria de tensió
+        \\(U = 12\\,\\text{V}\\). La bateria i els llums es connecten mitjançant un cable bipolar de coure de diàmetre
+        \\(d = 2{,}5\\,\\text{mm}\\). El coure té una resistivitat \\(ρ = 1{,}7 x 10^{–8}\\,\\text{Ω m}\\). La resistència \\(R_{cable}\\) de l’esquema de
+        la figura correspon als dos conductors del cable bipolar. Si cada llum té una potència nominal
+        \\(P_{llum} = 55\\,\\text{W}\\) quan s’alimenta directament amb una tensió \\(U = 12\\,\\text{V}\\), determineu:
+         
+            <br><br>
+            <strong>a)</strong> La resistència equivalent \\(R_{eq}\\) dels dos llums connectats en paraŀlel. [0,5 punts]
+            <br>
+            <strong>b)</strong> La longitud màxima \\(L_{màx}\\) que pot tenir el cable si es vol que la caiguda de tensió del cable no sigui superior al 5 %. [1 punt]
+            <br><br>
+            Si s’utilitza un cable amb una longitud \\(L = 4\\,\\text{m}\\), determineu:
+            <br><br>
+            <strong>c)</strong> La resistència del cable \\(R_{cable}\\). [0,5 punts]
+            <br><strong>d)</strong> La potència total \\(P_{total}\\) consumida conjuntament pel cable i els dos llums. [0,5 punts]
+            <br><br>`,
+        correctAnswer: "",  
+        steps: `
+            <strong>a) La resistència \\(R_{eq}\\) dels llums connectats en paraŀlel.</strong>
+            <br>
+            - Resistencia d'una llum:
+            \\[
+            P_{llum} = \\frac{U^2}{R} 
+            \\]
+            \\[
+            R = \\frac{U^2}{P_{llum}} = \\frac{12^2\\,\\text{V}}{55\\,\\text{W}} = 2,618\\,\\text{Ω}
+            \\]
+            - Resistencia de les dues llums:
+            \\[
+            R_{eq} = \\frac{R}{2} = \\frac{12^2\\,\\text{V}}{2} = 1,309\\,\\text{Ω}
+            \\]
+            <br><strong>b) La longitud màxima \\(L_{màx}\\) del cable (5%):</strong>
+            <br>
+            - Intensitat del sistema:
+            \\[
+            I \\times \\ R_{eq} = 0,95 \\times \\ U
+            \\]
+            \\[
+            I = \\frac{0,95 \\times \\ U}{R_{eq}} = \\frac{0,95 \\times \\ 12\\,\\text{v}}{1,309\\,\\text{Ω}} = 8,708\\,\\text{A}
+            \\]
+            - Resistència del cable:
+            \\[
+            I \\times \\ R_{cable} = 0,05 \\times \\ U
+            \\]
+            \\[
+            R_{cable} = \\frac{0,05 \\times \\ U}{I} = \\frac{0,05 \\times \\ 12\\,\\text{v}}{8,708\\,\\text{A}} = 0,0689\\,\\text{Ω}
+            \\]
+            \\[
+            R_{cable} = ρ \\frac{2L_{max}}{S} = ρ \\frac{2L_{max}}{π \\times \\ d^2/4}
+            \\]
+            \\[
+            L_{max} =  \\frac{R_{cable} \\times \\ π \\times \\ d^2}{8 \\times \\ ρ} = \\frac{0,0689\\,\\text{Ω} \\times \\ π \\times \\ (2,5 x 10^{-3})^2 m^2 }{8 \\times \\ 1,7 x 10^{–8}\\,\\text{Ω m}} = 9,947\\,\\text{m} 
+            \\]
+            <br><strong>c) Resistència del conjunt si \\(L = 4\\,\\text{m}\\):</strong>
+            <br>
+            - R_{cable}:
+            \\[
+            R_{cable} = ρ \\frac{2L_{max}}{S} = ρ \\frac{2L_{max}}{π \\times \\ d^2/4} = 1,7 x 10^{–8}\\,\\text{Ω m} \\frac{8 \\times \\ 4\\,\\text{m}}{π \\times \\ 2,5 x 10^{-3})^2 m^2 } = 0,02771\\,\\text{Ω}
+            \\]
+            <br><strong>d) La potència total P_{total} consumida:</strong>
+            <br>
+            - La potència total P_{total}:
+            \\[
+            P_{total} = \\frac{U^2}{R_{cable} + R_{eq}} = \\frac{U^2}{R_{cable} + R_{eq}} = \\frac{12^2\\,\\text{v}}{0,02771\\,\\text{Ω} + 1,309\\,\\text{Ω}} = 107,7\\,\\text{W}
+            \\]
+            <br><br>`,  
+    },
+
+        {
+        type: "exercicis",
+        category: "energia",
+        text: `<br>Una central elèctrica de cicle combinat produeix electricitat mitjançant dos cicles termodinàmics: un primer cicle de combustió de gas natural, de poder calorífic \\(p = 32,5\\,\\text{MJ/kg}\\), i un
+segon cicle en què s’aprofita la calor residual del primer per a moure una turbina de vapor.
+El gas natural es distribueix liquat, amb una densitat \\(ρ = 0,423\\,\\text{kg/L}\\). La potència elèctrica que
+proporciona la central és \\(P_{elèctr} = 500\\,\\text{MW}\\) i el rendiment total és \\(η = 0,575\\). El rendiment del
+cicle de gas és \\(η_g = 0,32\\). Determineu:
+         
+            <br><br>
+            <strong>a)</strong> La potència consumida \\(P_{cons}\\) per la central. [0,5 punts]
+            <br>
+            <strong>b)</strong> El volum \\(V\\) de gas natural liquat que es crema a la central durant 24 hores de funcionament. [0,5 punts]
+            <br>
+            <strong>c)</strong> La potència dissipada en el cicle de gas \\(P_{diss,cg}\\). [0,5 punts]
+            <br>
+            <br><strong>d)</strong> El rendiment del cicle de vapor \\(η_v\\). [1 punt]
+            <br><br>`,
+        correctAnswer: "",  
+        steps: `
+            <strong>a) La potència consumida:</strong>
+            <br>
+            - Apliquem el rendiment:
+            \\[
+            η = \\frac{P_{elèctr}}{P_{cons}}
+            \\]
+            \\[
+            P_{cons} = \\frac{P_{elèctr}}{η} = \\frac{500\\,\\text{MW}}{0,575} = 869,6\\,\\text{MW}
+            \\]
+            <br><strong>b) El volum  que es crema durant 24 hores:</strong>
+            <br>
+            - Aplicant la fòrmula de la potència:
+            \\[
+            P_{cons} = \\frac{p \\times \\ ρ \\times \\ V}{t}
+            \\]
+            \\[
+            V = \\frac{P_{cons} \\times \\ t}{p \\times \\ ρ} = \\frac{869,6\\,\\text{MW} \\times \\ 24\\,\\text{h}\\frac{3600\,\\text{s}}{1\,\\text{h}}}{32,5\\,\\text{MJ/kg} \\times \\ 0,423\\,\\text{kg/L}} = 5,4652 x 10^6\\,\\text{L}
+            \\]
+            \\[
+            V = 5,4652 x 10^6\\,\\text{L} \\frac{1 dm^3 }{1\\,\\text{L}} \\times \\ \\frac{1 m^3}{1 x 10^3 dm^3 } = 5465 m^3
+            \\]
+            <br><strong>c) La potència dissipada:</strong>
+            <br>
+            - Aplicant la contraria del rendiment útil:
+            \\[
+            P_{diss cg} = P_{cons} \\times \\ (1 - η_g) = 869,6\\,\\text{MW} \\times \\ (1 - 0,32) = 591,3\\,\\text{MW}
+            \\]
+            <br><strong>d) Rendiment del cicle:</strong>
+            <br>
+            - Aplicant la fòrmula de rendiment:
+            \\[
+            η_v = \\frac{P_{cv}}{P_{diss cg}} = \\frac{P_{elèctr} - P_{cg}}{P_{diss cg}} = \\frac{P_{elèctr} - (P_{cons} \\times \\ η_g)}{P_{diss cg}} = \\frac{500\\,\\text{MW} - (869,6\\,\\text{MW} \\times \\ 0,32)}{591,3\\,\\text{MW}} = 0,375
+            \\]
+            - Temps de funcionament:
+            \\[
+            t = \\frac{E_{bat}}{P_{cons}} = \\frac{864000\\,\\text{J}}{75\\,\\text{W}} = 11520\\,\\text{s} = 3,2\\,\\text{h}
+            \\]
+            - Distància màxima recorreguda:
+            \\[
+            s_{rec} = v \\times t = 1,028\\,\\text{m/s} \\times 11520\\,\\text{s} = 11830\\,\\text{m} = 11,83\\,\\text{km}
+            \\]
+            <br><br>`,  // Imatge opcional al final de la resposta
+    },
+        {
+        type: "exercicis",
+        category: "energia",
+        text: `<br>Els senyals lluminosos de limitació de velocitat en una via d’accés a una ciutat es controlen automàticament. Redueixen la velocitat màxima permesa quan la contaminació és alta o
+quan la mesura de la velocitat mitjana dels vehicles en dos punts de mesurament determinats
+és inferior al 80 % de la limitació indicada pel senyal lluminós. Responeu a les qüestions que
+hi ha a continuació utilitzant les variables d’estat següents:
+
+  <img src="variables.ex2018.png" alt="Imatge variables exercici">
+  
+            <br><br>
+            <strong>a)</strong> Elaboreu la taula de veritat del sistema. [1 punt]
+            <br>
+            <strong>b)</strong> Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la. [1 punt]
+            <br><br>
+            Si s’utilitza un cable amb una longitud \\(L = 4\\,\\text{m}\\), determineu:
+            <br><br>
+            <strong>c)</strong> Dibuixeu l’esquema de portes lògiques equivalent. [0,5 punts]
+            <br><br>`,
+        correctAnswer: "",  
+        steps: `
+            <strong>a) Taula de veritat del sistema:</strong>
+            <br>
+           <img src="2a2018.png" alt="Imatge relacionada amb la resposta">
+            <br><strong>b) Funció lògica:</strong>
+            <br>
+           <img src="2b2018.png" alt="Imatge relacionada amb la resposta">
+            <br><strong>c) Esquema de portes lògiques:</strong>
+            <br>
+          <img src="2c2018.png" alt="Imatge relacionada amb la resposta">
+            <br><br>`,  
+    },
+        {
+        type: "exercicis",
+        category: "energia",
+        text: `<br>La suma de la resistència aerodinàmica i la resistència al rodolament constitueix la
+demanda bàsica de potència d’un automòbil. La força resistent, expressada com una força
+que s’oposa a l’avanç del vehicle, és donada per l’expressió \\(F_r = (230 + 0,13v^2)\\,\\text{N}\\), en què \\(v\\) és la
+velocitat del vehicle en km/h. 
+         
+            <br><br>
+            <strong>a)</strong> Determineu la força resistent quan el vehicle avança a una velocitat \\(v = 60\\,\\text{km/h}\\). [0,5 punts]
+            <br>
+            <strong>b)</strong> Dibuixeu, d’una manera aproximada i indicant les escales, la corba característica
+potència-velocitat quan el vehicle circula a velocitats compreses entre \\(v = 0\\) i
+\\(v = 120\\,\\text{km/h}\\). [1 punt]
+            <br><br>
+            El rendiment mecànic de la transmissió (de la sortida del motor a les rodes) és \\(η = 0,8\\).
+Si quan el vehicle avança a una velocitat constant \\(v = 60\\,\\text{km/h}\\) el motor gira a \\(n = 2 500 min^{–1}\\):
+            <br><br>
+            <strong>c)</strong> Determineu el parell \\(Γ\\) que desenvolupa el motor. [1 punt]
+            <br><br>`,
+        correctAnswer: "",  
+        steps: `
+            <strong>a) Força resistent:</strong>
+            <br>
+            - Aplicant la fòrmula donada:
+            \\[
+            F_r = (230 + 0,13v^2) = (230 + 0,13 \\times \\ 60^2) = 698\\,\\text{N}
+            \\]
+            <br><strong>b) Gràfic potència-velocitat entre v = 0 i v = 120 km/h:</strong>
+            <br>
+            - Esbrinant la P:
+            \\[
+            P =  F_r \\times \\ v = (230 + 0,13v^2) \\times \\ \\frac{v}{3,6} = (63,89 v + 0,03611 \\times \\ v^3)
+            \\]
+            - Representen aquesta funció en una gràfica:
+            <img src="3b2018.png" alt="Imatge relacionada amb la resposta">
+            <br><strong>c) Parell que desenvolupa el motor:</strong>
+            <br>
+            - Aplicant el rendiment:
+            \\[
+            η = \\frac{P}{Γ \\times \\eta}
+            \\]
+            \\[
+            Γ = \\frac{(63,89 v + 0,03611 \\times \\ v^3)}{η \\times \\ 2 \\times \\ π \\times \\ n/60} = \\frac{(63,89 \\times \\ 60 + 0,03611 \\times \\ 60^3)}{0,8 \\times \\ 2 \\times \\ π \\times \\ 2500 min^{-1} /60} = 55,55\\,\\text{Nm}
+            \\]
+            - Parell:
+            \\[
+            \\Gamma_{mot} = \\frac{P_{mot}}{\\omega_{mot}} = \\frac{65,25\\,\\text{W}}{128,5\\,\\text{rad/s}} = 0,5077\\,\\text{N·m}
+            \\]
+            <br><strong>d) Temps màxim de funcionament i distància recorreguda:</strong>
+            <br>
+            - Energia de la bateria:
+            \\[
+            E_{bat} = 240\\,\\text{Wh} = 240 \\times 3600\\,\\text{W·s} = 864000\\,\\text{J}
+            \\]
+            - Temps de funcionament:
+            \\[
+            t = \\frac{E_{bat}}{P_{cons}} = \\frac{864000\\,\\text{J}}{75\\,\\text{W}} = 11520\\,\\text{s} = 3,2\\,\\text{h}
+            \\]
+            - Distància màxima recorreguda:
+            \\[
+            s_{rec} = v \\times t = 1,028\\,\\text{m/s} \\times 11520\\,\\text{s} = 11830\\,\\text{m} = 11,83\\,\\text{km}
+            \\]
+            <br><br>`,  // Imatge opcional al final de la resposta
+    },
+        {
+        type: "exercicis",
+        category: "energia",
+        text: `
+       <img src="ex.cirquit_planxa2018.png" alt="Imatge cirquit"> 
+        Una planxa de viatge pot funcionar connectada a la xarxa de tensió \\(U_1 = 120\\,\\text{V}\\) i a la xarxa
+de tensió \\(U_2 = 230\\,\\text{V}\\). L’esquema elèctric de la planxa és el que es mostra en la figura. Quan
+funciona a \\(230\\,\\text{V}\\), l’interruptor A està obert, i quan funciona a \\(120\\,\\text{V}\\), l’interruptor A està
+tancat. La potència de la planxa és, en tots dos casos, \\(P = 1 000\\,\\text{W}\\). Determineu:
+         
+            <br><br>
+            <strong>a)</strong> El valor de les resistències \\(R_1\\) i \\(R_2\\). [1 punt]
+            <br>
+            <strong>b)</strong>El valor de les intensitats \\(I_1\\) i \\(I_2\\) que circulen pel circuit en cada cas. [0,5 punts]
+            <br><br>
+           Si s’espatlla l’interruptor, de manera que quan està tancat equival a una resistència \\(R_A = 3\\,\\text{Ω}\\), determineu:
+            <br><br>
+            <strong>c)</strong> La potència \\(P_e\\) de la planxa quan s’alimenta amb \\(120\\,\\text{V}\\). [1 punt]
+            <br><br>`,
+        correctAnswer: "",  
+        steps: `
+            <strong>a) Valor de les resistències \\(R_1\\) i \\(R_2\\):</strong>
+            <br>
+            - Resistència 1:
+            \\[
+            P = \\frac{U_1^2}{R_1}
+            \\]
+            \\[
+            R_1 = \\frac{U_1^2}{P} = \\frac{120^2\\,\\text{V}}{1000\\,\\text{W}} = 14,4\\,\\text{Ω}
+            \\]
+            - Resistència 2:
+            \\[
+            P = \\frac{U_2^2}{R_1 + R_2}
+            \\]
+            \\[
+            R_2 = \\frac{U_2^2}{P} - R_1 = \\frac{230^2\\,\\text{V}}{1000\\,\\text{W}} - 14,4\\,\\text{Ω} = 38,5\\,\\text{Ω}
+            \\]
+            <br><strong>b) Valor de les intensitats \\(I_1\\) i \\(I_2\\):</strong>
+            <br>
+            - Intensitat 1:
+            \\[
+            I_1 = \\frac{U_1}{R_1} = \\frac{120\\,\\text{V}}{14,4\\,\\text{Ω}} = 8,33314,4\\,\\text{A}
+            \\]
+            - Intensitat 2:
+            \\[
+            I_2 = \\frac{U_2}{R_2} = \\frac{230\\,\\text{V}}{38,5\\,\\text{Ω}} = 4,348\\,\\text{A}
+            \\]
+            <br><strong>c) Potència de la planxa amb 120V:</strong>
+            <br>
+            - R_{2eq}:
+            \\[
+            R_{2eq} = \\frac{R_2 \\times \\ R_A}{R_2 + R_A}
+            \\]
+            \\[
+            P_{e} = \\frac{U_1}{R_1 + R_2eq} = \\frac{U_1}{R_1 + \\frac{R_2 \\times \\ R_A}{R_2 + R_A}} = \\frac{120\\,\\text{V}}{14,4\\,\\text{Ω} + \\frac{38,5\\,\\text{Ω} \\times \\ 3\\,\\text{Ω}}{38,5\\,\\text{Ω} + 3\\,\\text{Ω}}} = 838\\,\\text{W}
+            \\]
+            - Parell:
+            \\[
+            \\Gamma_{mot} = \\frac{P_{mot}}{\\omega_{mot}} = \\frac{65,25\\,\\text{W}}{128,5\\,\\text{rad/s}} = 0,5077\\,\\text{N·m}
+            \\]
+            <br><strong>d) Temps màxim de funcionament i distància recorreguda:</strong>
+            <br>
+            - Energia de la bateria:
+            \\[
+            E_{bat} = 240\\,\\text{Wh} = 240 \\times 3600\\,\\text{W·s} = 864000\\,\\text{J}
+            \\]
+            - Temps de funcionament:
+            \\[
+            t = \\frac{E_{bat}}{P_{cons}} = \\frac{864000\\,\\text{J}}{75\\,\\text{W}} = 11520\\,\\text{s} = 3,2\\,\\text{h}
+            \\]
+            - Distància màxima recorreguda:
+            \\[
+            s_{rec} = v \\times t = 1,028\\,\\text{m/s} \\times 11520\\,\\text{s} = 11830\\,\\text{m} = 11,83\\,\\text{km}
+            \\]
+            <br><br>`,  // Imatge opcional al final de la resposta
+    },
+        {
+        type: "exercicis",
+        category: "energia",
+        text: `
+        <img src="ex.cartell2018.png" alt="Imatge cartell">
+        <br>El cartell publicitari d’un bar de menús està format per dos taulers homogenis de fusta
+de dimensions \\(h × b = 900 × 600 mm^2 \\) i un gruix \\(e = 11\\,\\text{mm}\\). Els dos taulers estan articulats
+en el punt \\(C\\) i hi ha dos cables de secció \\(s = 1,8 mm^2 \\) que els uneixen pel punt mitjà dels seus
+costats, tal com es mostra en la figura. Els cables mantenen una obertura \\(α = 40\\,\\text{°}\\) entre els
+taulers. Quan el cartell recolza sobre el terra, la força \\(N\\) que rep en els punts \\(A\\) i \\(B\\) és vertical
+i del mateix valor. Determineu:
+         
+            <br><br>
+            <strong>a)</strong> La massa \\(m\\) de cada tauler, si \\(ρ_{fusta} = 530 kg/m^3 \\). [0,5 punts]
+            <br>
+            <strong>b)</strong> La força \\(N\\) que el cartell rep del terra en els punts \\(A\\) i \\(B\\). [0,5 punts]
+            <br>
+            <strong>c)</strong> La força \\(F\\) que fa cadascun dels cables [1 punt]
+            <br><strong>d)</strong> La tensió normal \\(σ\\) dels cables causada per la força que fan. [0,5 punts]
+            <br><br>`,
+        correctAnswer: "",  
+        steps: `
+            <strong>a) La massa de cada tauler:</strong>
+            <br>
+            - Aplicant la fòrmula de la massa:
+            \\[
+            m = ρ \\times \\ V = ρ_{fusta} \\times \\ h \\times \\ b \\times \\ e = 530 kg/m^3 \\times \\ 0,9\\,\\text{m} \\times \\ 0,6\\,\\text{m} \\times \\ 0,011\\,\\text{m} = 3,148\\,\\text{kg}
+            \\]
+            <br><strong>b) Força que el cartell rep als punts A i B:</strong>
+            <br>
+            - Pel conjunt dels dos taulers, la suma de forces en direcció vertical és nul·la.
+            \\[
+            ΣF_{verticals} = 2N - 2 m \\times \\ g = 0
+            \\]
+            \\[
+            N = m \\times \\ g =  3,148\\,\\text{kg} \\times \\ 9,81 m/s^2 = 30,87\\,\\text{N}
+            \\]
+            <br><strong>c) La força que fa cadascun dels cables:</strong>
+            <br>
+            - Per a un dels dos taulers:
+            \\[
+            ΣM(C) = 0
+            \\]
+            \\[
+            ΣM(C) = N \\times \\ h \\times \\ sin (\\frac{x}{2}) - m \\times \\ g \\times \\ \\frac{h}{2} \\times \\ sin (\\frac{x}{2}) - 2 \\times \\ F \\times \\ \\frac{h}{2} \\times \\ cos (\\frac{x}{2}) = 0
+            \\]
+            - Força excercida:
+            \\[
+            F = \\frac{m \\times \\ g}{2} \\times \\ tan (\\frac{x}{2}) = \\frac{3,148\\,\\text{kg} \\times \\ 9,81 m/s^2 }{2} \\times \\ tan (\\frac{40}{2}) = 5,619\\,\\text{N}
+            \\]
+            <br><strong>d) Tensió normal:</strong>
+            <br>
+            - Aplicant la fòrmula:
+            \\[
+            σ = \\frac{F}{s} = \\frac{5,619\\,\\text{N}}{1,8 mm^2 \\frac{1 m^2 }{10^6 mm^2}} = 3,121\\,\\text{MPa}
+            \\]
+            <br><br>`,
+    },
+        {
+        type: "exercicis",
+        category: "energia",
+        text: `
+        <br>Un avió comercial utilitza un combustible de poder calorífic \\(p_c = 42,42\\,\\text{MJ/kg}\\) i densitat
+\\(ρ = 0,8075\\,\\text{kg/L}\\). L’avió té una capacitat de \\(N = 144\\) seients i disposa d’un dipòsit per al combustible de \\(V= 24 000\\,\\text{L}\\). Quan l’avió viatja a una velocitat \\(v = 850\\,\\text{km/h}\\) els motors consumeixen, entre tots dos, \\(c = 2 700\\,\\text{kg/h}\\) i proporcionen a l’avió una força d’empenyiment \\(F_E = 43\\,\\text{kN}\\)
+(força en el sentit d’avanç de l’avió). Determineu, en aquestes condicions:
+         
+            <br><br>
+            <strong>a)</strong> La distància màxima \\(d_{màx}\\), en km, que pot recórrer l’avió. [0,5 punts]
+            <br>
+            <strong>b)</strong> El consum mínim de combustible per passatger \\(c_p\\), en litres per cada \\(100\\,\\text{km}\\). [1 punt]
+            <br>
+            <strong>c)</strong> El rendiment \\(η\\) dels motors. [1 punt]
+            <br><br>`,
+        correctAnswer: "",  
+        steps: `
+            <strong>a) La distància màxima que pot recórrer:</strong>
+            <br>
+            - Distància:
+            \\[
+            d_{màx} = \\frac{v}{t_{màx}}
+            \\]
+            - Temps màxim:
+            \\[
+            t_{màx} = \\frac{V \\times \\ ρ}{c} = \\frac{24 000\\,\\text{L} \\times \\ 0,8075\\,\\text{kg/L}}{2700\\,\\text{kg/h}} = 7,1778\\,\\text{h}
+            \\]
+            -Distància màxima:
+            \\[
+            d_{màx} = \\frac{850\\,\\text{km/h}}{7,1778\\,\\text{h}} = 6101\\,\\text{km}
+            \\]
+            <br><strong>b) Consum mínim de combustible per passatger:</strong>
+            <br>
+            - Consum total:
+            \\[
+            C = d_{100} \\times \\ \\frac{c}{v \\times \\ ρ} = 100\\,\\text{km} \\times \\ \\frac{2700\\,\\text{kg/h}}{850\\,\\text{km/h} \\times \\ 0,8075\\,\\text{kg/L}} = 393,37\\,\\text{L}
+            \\]
+            - Consum per passatger:
+            \\[
+            C_p = \\frac{C}{N} = \\frac{393,37\\,\\text{L}}{144\\,\\text{passatgers}} = 2,732\\,\\text{L/passatger} cada 100\\,\\text{km}
+            \\]
+            <br><strong>c) Rendiment dels motors:</strong>
+            <br>
+            - Potència del motor:
+            \\[
+            P_{mot} = F \\times \\ v = F_E \\times \\ v = 43\\,\\text{kN} \\frac{10^3\\,\\text{N}}{1\\,\\text{kN}} \\times \\ 850\\,\\text{km/h} \\frac{1000\\,\\text{m}}{3600\\,\\text{s}} = 10153\\,\\text{kW}
+            \\]
+            - Potència consumida:
+            \\[
+            P_{cons} = p_c \\times \\ c = 42,42\\,\\text{MJ/kg} \\times \\ 2700\\,\\text{kg/h} \\frac{1\\,\\text{h}}{3600\\,\\text{s}} = 31815\\,\\text{kW}
+            \\]
+            - Rendiment del sistema:
+            \\[
+            η = \\frac{P_{mot}}{P_{cons}} = \\frac{10153\\,\\text{kW}}{31815\\,\\text{kW}} = 0,3191
+            \\]
+            \\[
+            η = 31,91\\,\\text{%}
+            \\]
+            <br><br>`,
+    },
+        {
+        type: "exercicis",
+        category: "control_logic",
+        text: `<br>S’ha dissenyat un exoesquelet robòtic per a la rehabilitació de les extremitats superiors
+de persones amb lesions neurològiques. Aquest aparell disposa d’un motor elèctric per a
+assistir el moviment del colze afectat per la lesió. El motor s’activa quan l’aparell detecta la
+intenció de l’usuari de fer un moviment, ja sigui perquè detecta activitat muscular mitjançant
+un sensor d’electromiografia o bé perquè detecta que hi ha força d’interacció entre el braç
+de la persona i l’exoesquelet gràcies a un sensor de força. A més, el motor només funciona si
+l’usuari ha activat el funcionament de l’aparell mitjançant una aplicació mòbil. Responeu a
+les qüestions que hi ha a continuació utilitzant les variables d’estat següents:            
+        <br>
+            <br><img src="Variable.ex2018.png" alt="Variables exoesquelet robòtic">
+        <br>
+            <br><br><strong>a)</strong> Elaboreu la taula de veritat del sistema. [1 punt]
+            <br><strong>b)</strong> Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la.  [1 punt]
+            <br><strong>c)</strong> Dibuixeu l’esquema de contactes equivalent. [0,5 punts]
+            <br><br>`, 
+        correctAnswer: "",  
+        steps: `
+            <strong>a) Taula de veritat del sistema:</strong>
+            <br>
+            <br><img src="5a2018.png" alt=" Imatge relacionada amb la resposta">
+            <br>
+            <strong>b) Funció lògica:</strong>
+           <br>
+            <br><img src="5b2018.png" alt=" Imatge relacionada amb la resposta">
+            <br>
+            <strong>c) Esquema de contactes equivalent:</strong>
+            <br>
+            <br><img src="5c2018.png" alt=" Imatge relacionada amb la resposta">
+            <br><br>`, 
+    },
+    {
+        type: "exercicis",
+        category: "energia",
+        text: `<br>S’ha dissenyat un puzle per a infants format per set peces. L’objectiu del joc és construir amb totes les peces
+el quadrat de costat \\(b = 0,25\\,\\text{m}\\) que es mostra en la figura. Una empresa es planteja produir el puzle o comprar les peces ja elaborades directament a un proveïdor.
+Si l’empresa produeix el puzle, el cost de producció es calcula amb l’expressió \\(c = c_1s + c_2p\\), en què \\(s\\) és la
+superfície de fusta utilitzada i \\(p\\) és el perímetre de les peces tallades per a construir el puzle. En aquest cas, el
+primer coeficient de cost és \\(c_1 = 13{,}5\\,\\text{€/}\\)\\(m^2\\) i el segon és \\(c_2 = 0{,}85\\,\\text{€/m}\\). En canvi, si l’empresa compra les peces ja
+elaborades directament a un proveïdor, el cost de cada peça és de \\(0{,}65\\,\\text{€}\\) si la peça fa menys de \\(100\\)\\(cm^2\\), i de \\(0{,}95\\,\\text{€}\\) si la peça fa més de \\(100\\)\\(cm^2\\). Determineu:
+
+               <img src="ex.puzle2018.png" alt="imatge puzle">
+
+            <br>
+            <br><strong>a)</strong> La superfície de cadascuna de les set peces. Comproveu que la suma de la superfície de totes les peces equival a la superfície \\(s\\) del quadrat de la figura. [1 punt]
+            <br>
+            <br><strong>b)</strong> El perímetre p de les peces tallades per a construir el puzle. [1 punt]
+            <br><strong>c)</strong> El cost de producció del puzle, d’una banda, i el cost de comprar les peces ja elaborades a un proveïdor, de l’altra. Quina és l’opció més econòmica per a l’empresa? [0,5 punts]
+            <br><br>`, 
+        correctAnswer: "", 
+        steps: `
+            <strong>a) Velocitat angular de les rodes i del motor:</strong>
+            <br>
+            - Superfície d'un triangle:
+            \\[
+            S = \\frac{b \\times \\ h}{2}
+            \\]
+            \\[
+            S_1 = \\frac{b/2 \\times \\ b/2}{2} = \\frac{b^2}{8} = \\frac{(0,25)^2\\,\\text{m}}{8} = 0,007813 m^2
+            \\]
+            \\[
+            S_2 = S_5 = \\frac{b/2 \\times \\ b/2}{2} \\times \\ \\frac{1}{2}= \\frac{b^2}{16} = \\frac{(0,25)^2\\,\\text{m}}{16} = 0,003906 m^2
+            \\]
+            \\[
+            S_6 = S_7 = \\frac{b/2 \\times \\ b/2}{2} \\times \\ 2 = \\frac{b^2}{4} = \\frac{(0,25)^2\\,\\text{m}}{4} = 0,01563 m^2
+            \\]
+            - Superfície d'un quadrat:
+            \\[
+            S = b \\times \\ h
+            \\]
+            \\[
+            S_3 = S_4 = \\frac{b/2 \\times \\ b/2}{2} = \\frac{b^2}{8} = \\frac{(0,25)^2\\,\\text{m}}{8} = 0,007813 m^2
+            \\]
+            - Superfície total:
+            \\[
+            ΣS_{tot} = 0,007813 m^2 + (2 \\times \\ 0,003906 m^2 ) + (2 \\times \\ 0,01563 m^2 ) + (2 \\times \\ 0,007813 m^2 ) = 0,625 m^2
+            \\]
+            \\[
+            S_tot = b^2 = (0,25 m^2 )^2 = 0,625 m^2
+            \\]
+            <br>
+            <br><strong>b) Perímetre de les peces tallades:</strong>
+            <br>
+            - Perímetres triangulats:
+            \\[
+            p_1 = \\frac{b}{2} + \\frac{b}{2} + √(\\frac{b}{2} + \\frac{b}{2}) = 2 \\times \\ \\frac{b}{2} + √(\\frac{b^2}{2}) = 2 \\times \\ \\frac{b}{2} + \\frac{b}{√(2)} =2 \\times \\ \\frac{0,25\\,\\text{m}}{2} + \\frac{0,25\\,\\text{m}}{√(2)} = 0,4268\\,\\text{m}
+            \\]
+            \\[
+            p_2 = p_5 = \\frac{b}{2} + 2 \\times \\ \\frac{b}{√(2)} \\times \\ \\frac{1}{2} = \\frac{b}{2} + 2 \\times \\ \\frac{b}{2 \\times \\ √(2)} = \\frac{0,25\\,\\text{m}}{2} + \\frac{0,25\\,\\text{m}}{√(2)} = 0,3018\\,\\text{m}
+            \\]
+            \\[
+            p_6 = p_7 = b + 2 \\times \\ \\frac{b}{√(2)} = 0,25\\,\\text{m} + 2 \\times \\ \\frac{0,25\\,\\text{m}}{√(2)} = 0,6036\\,\\text{m}
+            \\]
+            - Perímetre quadriculat:
+            \\[
+            p_3 = p_4 = 4 \\times \\ \\frac{b}{2 \\times \\ √(2)} = 4 \\times \\ \\frac{0,25\\,\\text{m}}{2 \\times \\ √(2)} = 0,3536\\,\\text{m}
+            \\]
+            - Perímetre total:
+            \\[
+            Σp_{tot} = 0,4268\\,\\text{m} + (2 \\times \\ 0,3018\\,\\text{m}) + (2 \\times \\ 0,6036\\,\\text{m}) + (2 \\times \\ 0,3536\\,\\text{m}) = 2,945\\,\\text{m}
+            \\]
+            <br><strong>d) Cost de producció i cost de comprar les peces:</strong>
+            <br>
+            - Producció:
+            \\[
+            c_{prod} = c_1 \\times \\ s + c_2 \\times \\ p = 13{,}5\\,\\text{€/m}^2 \\times \\ 0,625\\,\\text{m}^2 + 0,85\\,\\text{€/m} \\times \\ 2,945\\,\\text{m} = 3,35\\,\\text{€}
+            \\]
+            - Compra:
+            \\[
+            c_{comp} = 2 \\times \\ 0,95 + 5 \\times \\ 0,65 = 5,15\\,\\text{€}
+            \\]
+            - L'opció de producció en la pròpia empresa és la més econòmica
+            <br><br>`, 
+    },
+    {
+        type: "exercicis",
+        category: "energia",
+        text: `<br>Una plataforma elevadora puja amb una velocitat constant una càrrega fins a una altura
+\\(Δh = 4{,}5\\,\\text{m}\\) en un temps \\(t = 50\\,\\text{s}\\). La plataforma s’acciona amb un motor elèctric de corrent
+continu en sèrie amb un reductor d’engranatges. Segons el catàleg del fabricant, el rendiment
+del reductor d’engranatges és \\(η_{red} = 0,72\\). El motor s’alimenta amb una tensió \\(U = 220\\,\\text{V}\\), consumeix un corrent \\(I = 17,5\\,\\text{A}\\) i gira a una velocitat \\(n = 1 500\\)\\(min^{–1}\\). El parell a l’eix de sortida
+del motor és \\(Γ_m = 19{,}5\\,\\text{N m}\\). Si les resistències passives a la plataforma elevadora es consideren negligibles, determineu: 
+            <br><br>
+            <strong>a)</strong> La potència elèctrica \\(P_{elèctr}\\) que consumeix el motor i el rendiment electromecànic \\(η_{mot}\\) d’aquest motor. [1 punt]
+            <br>
+            <strong>b)</strong> La potència total dissipada \\(P_{diss}\\) pel conjunt motor-reductor. [0,5 punts]
+            <br>
+            <strong>c)</strong> La potència mecànica \\(P_{càrrega}\\) requerida per a elevar la càrrega i la massa \\(m\\) d’aquesta càrrega. [0,5 punts]
+            <br>
+            <br><strong>d)</strong> El corrent \\(I′\\) que consumiria el motor si la massa de la càrrega fos la meitat, \\(m′ = m/2\\),
+i es mantingués la velocitat (considereu que els rendiments i la tensió d’alimentació del motor es mantenen constants). [0,5 punts]
+            <br><br>`,
+        correctAnswer: "",  
+        steps: `
+            <strong>a) Potència elèctrica i rendiment electromecànic:</strong>
+            <br>
+            - Fòrmula de la potència utilitzant el voltatge i la intensitat:
+            \\[
+            P_{elèctr} = U \\times \\ I = 220\\,\\text{v} \\times \\ 17,5\\,\\text{A} = 3850\\,\\text{W}
+            \\]
+            - Rendiment:
+            \\[
+            η_{mot} = \\frac{P_m}{P_{elèctr}} = \\frac{Γ_m \\times \\ \\omega_{m}}{P_{elèctr}} = \\frac{Γ_m \\times \\ n \\times \\ (\\frac{2 \\times \\ π}{60})}{P_{elèctr}} = \\frac{19,5\\,\\text{N m} \\times \\ 1500 min^{-1} \\times \\ (\\frac{2 \\times \\ π}{60})}{3850\\,\\text{W}} = 0,7956
+            \\]
+            \\[
+            η_{mot} = 79,56\\,\\text{%}
+            \\]
+            <br><strong>b) Potència total dissipada:</strong>
+            <br>
+            - Aplicant la inversa dels rendiments:
+            \\[
+            P_{diss} = P_{elèctr} \\times \\ (1 - η_{mot} \\times \\ η_{red}) = 3850\\,\\text{W} \\times \\ (1 - 0,7956 \\times \\ 0,72) = 1645\\,\\text{W}
+            \\]
+            <br><strong>c) Potència mecànica per a elevar la càrrega i la massa:</strong>
+            <br>
+            - Aplicant el rendiment η_{red}:
+            \\[
+            η_{red} = \\frac{P_{càrrega}}{P_m}
+            \\]
+            \\[
+            P_{càrrega} = P_m \\times \\ η_{red} = 3063\\,\\text{W} \\times \\ 0,72 = 2205\\,\\text{W}
+            \\]
+            - Massa:
+            \\[
+            P_{càrrega} = \\frac{m \\times \\ g \\times \\ Δh}{t}
+            \\]
+            \\[
+            m = \\frac{P_{càrrega} \\times \\ t}{g \\times \\ Δh} = \\frac{2205\\,\\text{W} \\times \\ 50\\,\\text{s}}{9,81 m/s^2 \\times \\ 4,5\\,\\text{m}} = 2499\\,\\text{kg} 
+            \\]
+            <br><strong>d) El corrent que consumiria el motor si la massa de la càrrega fos la meitat:</strong>
+            <br>
+            - Fòrmula inicialment:
+            \\[
+            P_{elèctr} = U \\times \\ I = \\frac{P_{càrrega}}{η_{mot} \\times \\ η_{red}} 
+            \\]
+            \\[
+            I = \\frac{P_{càrrega}}{U \\times \\ η_{mot} \\times \\ η_{red}} = \\frac{m \\times \\ g \\times \\ Δh}{t \\times \\ U \\times \\ η_{mot} \\times \\ η_{red}}
+            \\]
+            - Canvi de massa m':
+            \\[
+            I' = \\frac{m/2 \\times \\ g \\times \\ Δh}{t \\times \\ U \\times \\ η_{mot} \\times \\ η_{red}}
+            \\]
+            \\[
+            I' = \\frac{m/2 \\times \\ g \\times \\ Δh}{t \\times \\ U \\times \\ η_{mot} \\times \\ η_{red}} = \\frac{I}{2}
+            \\]
+            \\[
+            I' = \\frac{2499\\,\\text{kg} \\times \\ 9,81 m/s^2 \\times \\ 4,5\\,\\text{m}}{2 \\times \\ 50\\,\\text{s} \\times \\ 220\\,\\text{v} \\times \\ 0,7956 \\times \\ 0,72} = 8,75\\,\\text{A}
+            \\]
+            <br><br>`,
+    },
+    {
+        type: "exercicis",
+        category: "energia",
+        text: `
+        <br>La placa quadrada d’acer de la figura, de costat \\(L = 1 000\\,\\text{mm}\\) i gruix \\(e = 100\\,\\text{mm}\\), està articulada a la
+paret en el punt \\(O\\). Per a controlar la inclinació \\(φ\\) de la placa, s’utilitza un cilindre hidràulic de doble efecte.
+Un dels extrems del cilindre està articulat a la paret en el punt \\(A\\), i l’altre extrem està articulat a la placa en el
+punt \\(B\\). El diàmetre interior del cilindre és \\(d_{int} = 70\\,\\text{mm}\\) i el diàmetre de la tija és \\(d_{tija} = 40\\,\\text{mm}\\). La densitat de l’acer
+és \\(ρ_{acer} = 7 850\\)\\(kg/m^3\\). 
+
+<img src="ex.placa2018.png" alt="Imatge placa d'acer">
+         
+            <br><br>
+            <strong>a)</strong> Dibuixeu el diagrama de cos lliure de la placa per a \\(φ = 0\\,\\text{°}\\). [0,5 punts]
+            <br>
+            Determineu:
+            <br>
+            <strong>b)</strong> La massa \\(m\\) de la placa. [0,5 punts]
+            <br>
+            <strong>c)</strong> La força \\(F_c\\) que fa el cilindre hidràulic si la placa està en repòs amb una inclinació \\(φ = 0\\,\\text{°}\\). [0,5 punts]
+            <br><strong>d)</strong> La tensió normal a tracció σ de la tija del cilindre en la situació anterior. Quina és la pressió relativa \\(p_{int}\\) a l’interior del cilindre? [1 punt]
+            <br><br>`,
+        correctAnswer: "",  
+        steps: `
+            <strong>a) Diagrama de cos lliure:</strong>
+            <br>
+            <img src="6b2018.png" alt=Imatge relacionada amb la resposta"
+            <br>
+            <br>
+            <strong>b) La massa de la placa:</strong>
+            <br>
+            \\[
+            m = V \\times \\ ρ_{acer} = L^2 \\times \\ e \\times \\ ρ_{acer} = 1^2 m^2 \\times \\ 0,1\\,\\text{m} \\times \\ 7850 kg/m^3 = 785\\,\\text{kg}
+            \\]
+            <br><strong>c) La força que fa el cilindre per a φ = 0:</strong>
+            <br>
+            - Per a φ = 0:
+            \\[
+            ΣM(O) = 0
+            \\]
+            \\[
+            ΣM(O) = F_c \\times \\ O_c - F_{gm} \\times \\ O_{mg}
+            \\]
+            \\[
+            (F_c \\times \\ sin 45º) \\times \\ L = m \\times \\ g \\times \\ (L/2)
+            \\]
+            \\[
+            F_c = \\frac{m \\times \\ g \\times \\ (L/2)}{sin 45º \\times \\ L} = \\frac{785\\,\\text{kg} \\times \\ 9,81 m/s^2 \\times \\ (1\\,\\text{m}/2)}{sin 45º \\times \\ 1\\,\\text{m}} = 5444\\,\\text{N}
+            \\]
+            <br><strong>d) La tensió normal al mateix punt i la pressió relativa:</strong>
+            <br>
+            - Tensió de la tija:
+            \\[
+            σ = \\frac{F_c}{S} = \\frac{F_c}{π \\times \\ \\frac{d_{tija}^2}{4}} = \\frac{5444\\,\\text{N}}{π \\times \\ \\frac{0,04^2\\,\\text{m}}{4}} = 4,332\\,\\text{MPa}
+            \\]
+            - Pressió relativa:
+            \\[
+            p_{int} = \\frac{F_c}{π \\times \\ \\frac{(d_{int}^2 - d_{tija}^2)}{4}} = \\frac{5444\\,\\text{N}}{π \\times \\ \\frac{0,07^2\\,\\text{m} - 0,04^2\\,\\text{m}}{4}} = 2,1\\,\\text{MPa}
+            \\]
+            <br><br>`,
+    },
+
+        {
+        type: "exercicis",
+        category: "energia",
+        text: `<br>Per a reduir l’emissió de partícules de \\(CO^2\\)
+ d’un vehicle que funciona amb gasolina, és possible instaŀlar-hi un sistema que fa que el motor pugui funcionar també amb gas liquat del petroli (GLP). La instaŀlació d’aquest sistema té un cost de \\(2 000\\,\\text{€}\\) addicionals, que caldria sumar al
+cost del vehicle, i inclou la coŀlocació d’un dipòsit de GLP de \\(V = 40\\,\\text{L}\\) al maleter. Quan el vehicle
+circula a una velocitat \\(v = 120\\,\\text{km/h}\\), consumeix una mitjana de \\(8 L/100\\,\\text{km}\\) si funciona amb
+gasolina, o de \\(9{,}3 L/100\\,\\text{km}\\) si funciona amb GLP. La gasolina té una densitat \\(ρ_{gasol} = 0,75\\,\\text{kg/L}\\)
+i un poder calorífic \\(p_{c,gasol} = 42{,}5\\,\\text{MJ/kg}\\), i el GLP té una densitat \\(ρ_{GLP} = 0{,}56\\,\\text{kg/L}\\) i un poder
+calorífic \\(p_{c,GLP} = 46\\,\\text{MJ/kg}\\). El preu de cada combustible és el següent: \\(1{,}36\\,\\text{€/L}\\) en el cas de la
+gasolina i \\(0{,}73\\,\\text{€/L}\\) en el cas del GLP. Si el vehicle circula a una velocitat \\(v = 120\\,\\text{km/h}\\), determineu:        
+            <br><br>
+            <strong>a)</strong> La potència tèrmica mitjana \\(P_{gasol}\\) i \\(P_{GLP}\\) consumida amb cada combustible. [1 punt]
+            <br>
+            <strong>b)</strong> El cost \\(c_{gasol}\\) i \\(c_{GLP}\\), en euros per cada 100 km, d’utilitzar cadascun dels combustibles. [0,5 punts]
+            <br>
+            <strong>c)</strong> La distància mitjana anual \\(d_{any}\\), en km per any, que ha de recórrer el vehicle si es vol amortitzar la instaŀlació del sistema GLP en \\(t = 3 anys\\). [0,5 punts]
+            <br>
+            <br><strong>d)</strong> La distància estimada \\(d_{est}\\) que pot recórrer el vehicle amb GLP si el dipòsit instaŀlat es troba ple fins al 85 % de la seva capacitat.  [0,5 punts]
+            <br><br>`,
+        correctAnswer: "",  
+        steps: `
+            <strong>a) La potència tèrmica mitjana consumida:</strong>
+            <br>
+            - Potència gasol:
+            \\[
+            P_{gasol} = c_{gasol} \\times \\ ρ_{gasol} \\times \\ p_{c,gasol} \\times \\ v 
+            \\]
+            \\[
+            P_{gasol} = \\frac{8\\,\\text{L}}{100\\,\\text{km}} \\times \\ 0,56\\,\\text{kg/L} \\times \\ 46\\,\\text{MJ/kg} \\times \\ 120\\,\\text{km/h} \\times \\ \\frac{1\\,\\text{h}}{3600\\,\\text{s}} = 0,085\\,\\text{MW} = 85\\,\\text{kW} 
+            \\]
+            - Potència GLP:
+            \\[
+            P_{GLP} = c_{GLP} \\times \\ ρ_{GLP} \\times \\ p_{c,GLP} \\times \\ v
+            \\]
+            \\[
+            P_{GLP} = \\frac{9,3\\,\\text{L}}{100\\,\\text{km}} \\times \\ 0,75\\,\\text{kg/L} \\times \\ 42,5\\,\\text{MJ/kg} \\times \\ 120\\,\\text{km/h} \\times \\ \\frac{1\\,\\text{h}}{3600\\,\\text{s}} = 0,07986\\,\\text{MW} = 79,86\\,\\text{kW} 
+            \\]
+            <br><strong>b) El cost per cada 100 km:</strong>
+            <br>
+            - Cost gasol:
+            \\[
+            c_{gasol} = c_{gasol} \\times \\ p_{gasol} = \\frac{8\\,\\text{L}}{100\\,\\text{km}} \\times \\ 1,36\\,\\text{€/L} = \\frac{10,88\\,\\text{€}}{100\\,\\text{km}}
+            \\]
+            - Cost GLP:
+            \\[
+            c_{GLP} = c_{GLP} \\times \\ p_{GLP} = \\frac{9,3\\,\\text{L}}{100\\,\\text{km}} \\times \\ 0,73\\,\\text{€/L} = \\frac{6,789\\,\\text{€}}{100\\,\\text{km}}
+            \\]
+            <br><strong>c) La distància mitjana anual per a 3 anys:</strong>
+            <br>
+            - Anual:
+            \\[
+            d_{any} = \\frac{preu}{t} \\times \\ \\frac{d}{c_{gasol} - c_{GLP}} = \\frac{2000\\,\\text{€}}{3\\,\\text{any}} \\times \\ \\frac{100\\,\\text{km}}{\\frac{10,88\\,\\text{€}}{100\\,\\text{km}} - \\frac{6,789\\,\\text{€}}{100\\,\\text{km}}} = 16296\\,\\text{km/any}
+            \\]
+            <br><strong>d) La distància estimada que pot recórrer el vehicle amb GLP si es troba ple al 85 % :</strong>
+            <br>
+            - Distància estimada:
+            \\[
+            d_{est} = 0,85 \\times \\ V \\times \\ c_{GLP} = 0,85 \\times \\ 40\\,\\text{L} \\times \\ \\frac{100\\,\\text{km}}{9,3\\,\\text{L}} = 365,6\\,\\text{km}
+            \\]
+            <br><br>`, 
+    },    
+    {
+        type: "questions", // Tipus de pregunta
+        category: "materials",
+        text: `Una companyia aèria té programats quatre vols diaris entre dues ciutats: dos al matí,
+un a la tarda i un altre a la nit. Els vols del matí registren una ocupació mitjana del \\(84,3 %\\),
+el vol de la tarda del \\(77,3 %\\) i el de la nit del \\(82,3 %\\). Si la capacitat de l’avió que s’utilitza en
+aquests vols és de 200 persones, quants passatgers s’han transportat en un any i quina ha
+estat l’ocupació mitjana global?`,
+        options: [
+            { text: "292 000 passatgers, amb una ocupació mitjana del 82,05 %", value: "a" },
+            { text: "239 586 passatgers, amb una ocupació mitjana del 82,05 %", value: "b" },
+            { text: "239 586 passatgers, amb una ocupació mitjana del 81,3 %", value: "c" },
+            { text: "292 000 passatgers, amb una ocupació mitjana del 81,3 %", value: "d" }
+        ],
+        correctAnswer: "b",
+        steps: `
+            <strong>Passatgers transportats en un any:</strong>
+            <br><br>
+            - Passatgers matí:
+            \\[
+            2 vols \\times \\ 200 places \\times \\ 0,843 = 337,2 passatgers
+            \\]
+            - Passatgers tarda:
+            \\[
+            1 vol  \\times \\ 200 places \\times \\ 0,773 = 154,6 passatgers
+            \\]
+            - Passatgers de nit:
+            \\[
+            1 vol \\times \\ 200 places \\ 0,823 = 164,6 passatgers
+            \\]
+            <br>
+            - Suma de passatgers per dia:
+            \\[
+            Pass_{dia} = 337,2 + 154,6 + 164,6 = 656,4 passatgers/dia
+            \\]
+            - Passatgers annuals:
+            \\[
+            Pass_{any} = Pass_{dia} \\times \\ 365 = 656,4 \\times \\ 365 = 239 586 passatgers
+            \\]
+            <br>
+            <b> Ocupació mitjana:<b>
+            <br>
+            \\[
+            Places_{dia} = 4 vols \\times \\ 200 places = 800 places/dia
+            \\]
+            \\[
+            Ocupació = \\frac{Pass_{dia}}{Places_{dia}} = \\frac{656,4}{800} = 0,8205 = 82,05\\,\\text{%}
+            \\]
+            <br><br>
+   `
+    },
+    {
+        type: "questions", // Tipus de pregunta
+        category: "pneumatics_hydraulics",
+        text: `Una barra cilíndrica té un diàmetre de \\(3\\,\\text{mm}\\), una tensió de ruptura \\(σr = 800\\,\\text{MPa}\\) i un
+límit elàstic \\(σe = 640\\,\\text{MPa}\\). Quina és la força de tracció màxima a la qual es pot sotmetre la
+barra sense que es trenqui?`,
+        options: [
+            { text: "800 N", value: "a" },
+            { text: "22 619 N", value: "b" },
+            { text: "5 655 N", value: "c" },
+            { text: "4 524 N", value: "d" }
+        ],
+        correctAnswer: "c",
+        steps: `
+            <strong>Força de tracció màx:</strong>
+            <br>
+            - Àrea:  
+            <br>
+            \\[
+            A = \\frac{π \\times \\ d^2}{4} = \\frac{π \\times \\ 3^2\\,\\text{mm}}{4} = 7,0686 mm^2
+            \\]
+            - Força de trencament:
+            \\[
+            F = σ_r \\times \\ A = 800\\,\\text{MPa} \\times \\ \\frac{10^6\\,\\text{Pa}}{1\\,\\text{MPa}} \\times \\ 7,0686 mm^2 \\times \\ \\frac{1 m^2 }{10^6 mm^2 } = 5655\\,\\text{N}
+            \\]
+            <br><br>
+`
+    },
+    {
+        type: "questions", // Tipus de pregunta
+        category: "motors_reductors",
+        text: `Una resistència de \\(5\\,\\text{Ω}\\) està feta amb fil de constantà de \\(4{,}508\\,\\text{m}\\) de longitud i una resistivitat de \\(0{,}49\\,\\text{μΩ m}\\). Quin és el diàmetre del fil utilitzat?`,
+        options: [
+            { text: "0,75 mm", value: "a" },
+            { text: "0,375 mm", value: "b" },
+            { text: "0,4418 mm", value: "c" },
+            { text: "0,8319 mm", value: "d" }
+        ],
+        correctAnswer: "a",
+        steps: `
+            <strong> Diàmetre de fil de r:</strong><br>
+            \\[
+            R = ρ \\times \\ \\frac{L}{A} = ρ \\times \\ \\frac{L}{π \\times \\ d^2/4}
+            \\]
+            \\[
+            d^2 = \\frac{4 \\times \\ ρ \\times \\ L}{π \\times \\ R} = \\frac{4 \\times \\ 4,9 x 10^{-7}\\,\\text{Ω m} \\times \\ 4,508\\,\\text{m}}{π \\times \\ 5\\,\\text{Ω}} = 5,625 x 10^{-7} m^2
+            \\]
+            \\[
+            d = √(5,625 x 10^{-7}) = 0,00075\\,\\text{m} = 0,75\\,\\text{mm}
+            \\]
+            <br><br>
+ `
+    },
+    {
+        type: "questions", // Tipus de pregunta
+        category: "pneumatics_hydraulics",
+        text: `Un aerogenerador està format per un rotor amb tres pales, un multiplicador d’engranatges i un generador elèctric. En unes condicions determinades, la potència elèctrica generada
+és \\(P_{elèctr} = 1,2\\,\\text{MW}\\). Si el rendiment del multiplicador és \\(η_{mult} = 0,70\\) i la potència mecànica a
+l’eix d’entrada del multiplicador és \\(P_{entrada} = 1,966\\,\\text{MW}\\), quin és el rendiment \\(η_{gen}\\) del generador i la potència \\(P_{diss}\\) que s’hi dissipa?`,
+        options: [
+            { text: "\\(η_{gen}\\) = 0,8550 i \\(P_{diss}\\) = 203,5 kW", value: "a" },
+            { text: "\\(η_{gen}\\) = 0,8720 i \\(P_{diss}\\) = 766 kW", value: "b" },
+            { text: "\\(η_{gen}\\) = 0,8720 i \\(P_{diss}\\) = 176,2 kW", value: "c" },
+            { text: "\\(η_{gen}\\) = 0,6104 i \\(P_{diss}\\) = 766 kW", value: "d" }
+        ],
+        correctAnswer: "c",
+        steps: `
+            <strong> Aerogenerador:</strong><br>
+            Rendiment multiplicador \\(η_m = 0{,}7\\):<br>
+            \\[
+            P_{entrada} = P \\times \\ η_m = 1,966\\,\\text{MW} \\times \\ 0,7 = 1,3762\\,\\text{MW}
+            \\]
+            Rendiment generador:<br>
+            \\[
+            η_{gen} = \\frac{P_{elèctrica}}{P_{entrada}} = \\frac{1,2\\,\\text{MW}}{1,3762\\,\\text{MW}} = 0,872
+            \\]
+            \\[
+            η_{gen} = 87,2\\,\\text{%}
+            \\]
+            Potència dissipada:<br>
+            \\[
+            P_{diss} = P_{entrada} - P_{elèctrica} = 1,3762\\,\\text{MW} - 1,2\\,\\text{MW} = 0,1762\\,\\text{MW} = 176,2\\,\\text{kW}
+            \\]
+            <br><br>
+`
+    },
+    {
+        type: "questions", // Tipus de pregunta
+        category: "materials_i_assaigs",
+        text: `En un ajust amb joc \\(35 H7/f7\\), el joc màxim és \\(75 μm\\) i el joc mínim \\(25 μm\\). Si la tolerància H7 del forat és \\( \\frac{+25}{0} \\) \\(μm\\), quina és la tolerància \\(f7\\) de l’eix?`,
+        options: [
+            { text: "\\( ( \\frac{+25}{0}) \\) \\(μm\\)", value: "a" },
+            { text: "\\( ( \\frac{+50}{25}) \\) \\(μm\\)", value: "b" },
+            { text: "\\( ( \\frac{-25}{-50}) \\) \\(μm\\)", value: "c" },
+            { text: "\\( ( \\frac{0}{+75}) \\) \\(μm\\)", value: "d" }
+        ],
+        correctAnswer: "c",
+        steps: `
+            <strong>Tolerància f7:</strong><br>
+            - Forat (H7):
+            \\[
+            35 \\frac{+25}{0}
+            \\]
+            \\[
+            Màx = 35,025\\,\\text{mm}
+            \\]
+            \\[
+            Mín = 35,000\\,\\text{mm}
+            \\]
+            - Joc Màxim:
+            \\[
+            J_M = Forat_M - Eix_m 
+            \\]
+            \\[
+            Eix_m = Forat_M - J_M
+            \\]
+            \\[
+            Eix_m = 35,025 - 0,075 = 34,95
+            \\]
+            - Joc Mínim:
+            \\[
+            J_m = Forat_m - Eix_M 
+            \\]
+            \\[
+            Eix_M = Forat_m - J_m
+            \\]
+            \\[
+            Eix_m = 35,025 - 0,025 = 34,975
+            \\]
+            - Tolerància f7:
+            \\[
+            \\frac{-25}{-50}
+            \\]
+            <br><br>
+ `
+    },
+    {
+        type: "questions", // Tipus de pregunta
+        category: "materials_i_assaigs",
+        text: `Un cargol \\(M16 × 2\\) normalitzat té un diàmetre exterior de \\(16 mm\\) i un pas de \\(2 mm\\). Si
+es cargola en una femella fixa, quantes voltes ha de fer el cargol per a avançar \\(8 mm\\)?`,
+        options: [
+            { text: "2 voltes", value: "a" },
+            { text: "8 voltes", value: "b" },
+            { text: "4 voltes", value: "c" },
+            { text: "16 voltes", value: "d" }
+        ],
+        correctAnswer: "c",
+        steps: `
+            <strong>Cargolar:</strong><br>
+            - Avenç:
+            \\[
+            Voltes = \\frac{d}{d/voltes} = \\frac{8\\,\\text{mm}}{2\\,\\text{mm}/volta} = 4 voltes
+            \\]
+            <br><br>
+ `
+    },
+     {
+        type: "questions", // Tipus de pregunta
+        category: "materials_i_assaigs",
+        text: `El cost de producció de n unitats d’un producte és \\(c = (45 000 + 34n)\\,\\text{€}\\). Si es vol començar
+a obtenir beneficis quan s’han venut \\(2 500\\) unitats, quin ha de ser el preu de venda unitari?`,
+        options: [
+            { text: "52€", value: "a" },
+            { text: "34€", value: "b" },
+            { text: "35€", value: "c" },
+            { text: "53€", value: "d" }
+        ],
+        correctAnswer: "a",
+        steps: `
+            <strong>Preu de venda:</strong><br>
+            - Cost:
+            \\[
+            C = 45000 + 34 \\times \\ n = 45000 + 34 \\times \\ 2500 = 45000 + 85000 = 130000\\,\\text{€}
+            \\]
+            - Preu unitari: 
+            \\[
+            P = \\frac{C}{n} = \\frac{130000\\,\\text{€}}{2500} = 52\\,\\text{€}
+            \\]
+            <br><br>
+ `
+    },
+     {
+        type: "questions", // Tipus de pregunta
+        category: "materials_i_assaigs",
+        text: `Una bomba de paletes per a oli treballa a una pressió de 4 bar i proporciona un cabal de
+\\(7\\)\\(m^3/h\\) quan gira a \\(600\\)\\(min^{–1}\\). Quina potència proporciona la bomba?`,
+        options: [
+            { text: "777,8 W", value: "a" },
+            { text: "2400 W", value: "b" },
+            { text: "280 W", value: "c" },
+            { text: "4667 W", value: "d" }
+        ],
+        correctAnswer: "a",
+        steps: `
+            <strong>Potència de la bomba:</strong><br>
+            \\[
+            p = 4 bar = 4 \\times \\frac{10^5\\,\\text{Pa}}{1 bar} = 4 \\times \\ 10^5\\,\\text{Pa}
+            \\]
+            \\[
+            P = p \\times \\ q = 4 \\times \\ 10^5\\,\\text{Pa} \\times \\ 7 m^3/h \\times \\ \\frac{1\\,\\text{h}}{3600\\,\\text{s}} = 777,78\\,\\text{W}
+            \\]
+            <br><br>
+ `
+    },
+     {
+        type: "questions", // Tipus de pregunta
+        category: "materials_i_assaigs",
+        text: `En un estudi sobre la durabilitat de les bateries d’ió liti, es van analitzar \\(1 000\\) bateries
+durant tres anys. D’aquestes bateries, \\(94\\) havien deixat de funcionar un cop transcorreguts els
+dos primers anys. Tenint en compte aquesta informació, la fiabilitat (probabilitat de funcionar correctament durant un cert temps) d’aquest tipus de bateries al cap de dos anys és del`,
+        options: [
+            { text: "90,6%", value: "a" },
+            { text: "94%", value: "b" },
+            { text: "85,9%", value: "c" },
+            { text: "66,7%", value: "d" }
+        ],
+        correctAnswer: "a",
+        steps: `
+            <strong>Fiabilitat de bateríes:</strong><br>
+            - Funcionen correctament:
+            \\[
+            1000 - 94 = 906
+            \\]
+            - Fiabilitat:
+            \\[
+            \\frac{906}{1000} = 0,906 = 90,6\\,\\text{%}
+            \\]
+            <br><br>
+ `
+    },
+    {
+        type: "questions", // Tipus de pregunta
+        category: "materials_i_assaigs",
+        text: `La velocitat de sincronisme d’un motor asíncron que està connectat a la xarxa de tensió
+\\(U = 230\\,\\text{V}\\) i freqüència \\(f = 50\\,\\text{Hz}\\) és de \\(1 000\\)\\(min^{–1}\\). A quina freqüència està connectat aquest
+motor si passa a tenir una velocitat de sincronisme de \\(1 200\\)\\(min^{–1}\\)?`,
+        options: [
+            { text: "120 Hz", value: "a" },
+            { text: "No ho podem saber, perquè depèn de la tensió de la xarxa", value: "b" },
+            { text: "75 Hz", value: "c" },
+            { text: "60 Hz", value: "d" }
+        ],
+        correctAnswer: "d",
+        steps: `
+            <strong> Freqüència i velocitat de sincronisme:</strong><br>
+            - Parell de pols:<br>
+            \\[
+            n_s = \\frac{60\\times \\ f}{p}
+            \\]
+            \\[
+            p = \\frac{60\\times \\ f}{n_s} = \\frac{60\\times \\ 50}{1000} = 3 parells de pols
+            \\]
+            - Freqüència f':<br>
+            \\[
+            f' = \\frac{n_s \\times \\ p}{60} = \\frac{3 \\times \\ 1200 min^{-1} }{60} = \\frac{1200 min^{-1} }{20} = 60\\,\\text{Hz}
+            \\]
+            <br><br>
+         `
+    },
+    {
+        type: "questions", // Tipus de pregunta
+        category: "materials",
+        text: `Un motor asíncron de corrent altern de dos parells de pols està connectat a la xarxa de
+tensió \\(U = 230\\,\\text{V}\\) i freqüència \\(f = 50\\,\\text{Hz}\\). Quin és el lliscament relatiu \\(s\\) del motor en tant per
+cent (%) si gira a \\(n = 1 400\\)\\(min^{–1}\\)?`,
+        options: [
+            { text: "6,667 %", value: "a" },
+            { text: "7,143 %", value: "b" },
+            { text: "5 %", value: "c" },
+            { text: "53,33 %", value: "d" }
+        ],
+        correctAnswer: "a",
+        steps: `
+            <strong>Càlcul del mòdul elàstic:</strong>
+            <br><br>
+            Tensió aplicada:
+            \\[
+            n_s = \\frac{60 \\times \\ f}{p} = \\frac{60 \\times \\ 50\\,\\text{Hz}}{2} = 1500 min^{–1}
+            \\]
+            \\[
+            s = \\frac{n_s - n}{n_s} = \\frac{1500 min^{–1} - 1400 min^{–1} }{1500 min^{–1} } = \\frac{100}{1500} = 0,0667 = 6,67\\,\\text{%}
+            \\]
+            <br><br>
+   `
+    },
+    {
+        type: "questions", // Tipus de pregunta
+        category: "pneumatics_hydraulics",
+        text: `El magal és un aliatge resistent i lleuger que s’utilitza per a l’elaboració d’instruments
+quirúrgics. Conté un \\(8 %\\) d’alumini \\((Al)\\), un \\(1 %\\) de zinc \\((Zn)\\), un \\(0,2 %\\) de manganès \\((Mn)\\)
+i la resta és magnesi \\((Mg)\\). En l’obtenció d’aquest aliatge, quina quantitat de zinc cal per a
+aliar-lo amb \\(350\\,\\text{kg}\\) de magnesi?`,
+        options: [
+            { text: "3,5 kg", value: "a" },
+            { text: "3,855 kg", value: "b" },
+            { text: "30,84 kg", value: "c" },
+            { text: "35 kg", value: "d" }
+        ],
+        correctAnswer: "b",
+        steps: `
+            <strong>Porcentatge de Mg:</strong>
+            <br>
+            \\[
+            100 - (8 + 1 + 0,2) = 90,8\\,\\text{%} Mg  
+            \\]
+            <br>
+            - Massa de Mg: \\(350\\,\\text{kg}\\)
+            <br>
+            \\[
+            M_{Mg} = M \\times \\ 0,908 
+            \\]
+            \\[
+            M = \\frac{M_{Mg}}{0,908}
+            \\]
+            \\[
+            M = \\frac{350\\,\\text{kg}}{0,908} = 385,46\\,\\text{kg}
+            \\]
+            - Massa Zn:
+            \\[
+            M_{Zn} = 385,46\\,\\text{kg} \\times \\ 0,01 = 3,855\\,\\text{kg} Zn
+            \\]
+            <br><br>
+`
+    },
+    {
+        type: "questions", // Tipus de pregunta
+        category: "motors_reductors",
+        text: `La cilindrada d’un motor de combustió és de \\(1 998\\)\\(cm^3\\). Tant el diàmetre com la cursa
+dels cilindres del motor són de \\(86\\,\\text{mm}\\). Quants cilindres té el motor?`,
+        options: [
+            { text: "4", value: "a" },
+            { text: "5", value: "b" },
+            { text: "6", value: "c" },
+            { text: "8", value: "d" }
+        ],
+        correctAnswer: "a",
+        steps: `
+            <strong>Volum del cilindre:</strong><br>
+            \\[
+            V_c = \\frac{π \\times \\ d^2}{4} \\times \\ L = \\frac{π \\times \\ 8,6^2\\,\\text{cm}}{4} \\times \\ 8,6\\,\\text{cm} = 499,56 cm^3
+            \\]
+            <br>
+            Nombre de cilindres:<br>
+            \\[
+            N = \\frac{V_{total}}{V_c} = \\frac{1998 cm^3 }{499,56 cm^3 } = 4
+            \\]
+        <br><br>
+ `
+    },
+    {
+        type: "questions", // Tipus de pregunta
+        category: "pneumatics_hydraulics",
+        text: `Un sensor de pressió atmosfèrica té una precisió de \\(±0,3\\,\\text{hPa}\\) i una estabilitat en la mesura
+al llarg del temps de \\(±0,1\\,\\text{hPa/any}\\). La mesura de la pressió atmosfèrica l’1 de març de 2017
+va ser de \\(990\\,\\text{hPa}\\) i la del mateix dia de l’any 2018, de \\(1 030\\,\\text{hPa}\\). La diferència entre la pressió
+atmosfèrica real dels dos dies està compresa entre`,
+        options: [
+            { text: "40 hPa i 40,3 hPa", value: "a" },
+            { text: "39,4 hPa i 40,6 hPa", value: "b" },
+            { text: "39,7 hPa i 40,3 hPa", value: "c" },
+            { text: "39,3 hPa i 40,7 hPa", value: "d" }
+        ],
+        correctAnswer: "d",
+        steps: `
+            <strong>Diferencia medida:</strong><br>
+            \\[
+            D_m = 1030\\,\\text{hPa} - 990\\,\\text{hPa} = 40\\,\\text{hPa}
+            \\]<br>
+            - L'error acumulat màxim és la suma dels errors de precisió de totes dues mesures més la deriva per estabilitat<br>
+            \\[
+            0,3 \\times \\ (medida 1) + 0,3 (medida 2) + 0,1 (estabilitat) = 0,7\\,\\text{hPa}
+            \\]<br>
+            - Rang:<br>
+            \\[
+            40 \pm 0,7\\,\\text{hPa} = 39,3\\,\\text{hPa} i 40,7\\,\\text{hPa}
+            \\]
+            <br><br>
+`
+    },
+    {
+        type: "questions", // Tipus de pregunta
+        category: "materials_i_assaigs",
+        text: `La fabricació d’una peça metàŀlica es duu a terme en dos processos. En primer lloc, la
+peça es mecanitza en un torn i, posteriorment, se’n milloren les propietats mecàniques mitjançant un tractament tèrmic. Després de cada procés, es controla la qualitat de les peces i
+es desestimen les que no són correctes. Si s’acaba produint correctament el \\(93,12 %\\) de les
+peces inicials i la taxa de rebuig del tornejat és del \\(3 %\\), quina és la taxa de rebuig del procés
+de tractament tèrmic?`,
+        options: [
+            { text: "3,5 %", value: "a" },
+            { text: "3,88 %", value: "b" },
+            { text: "4 %", value: "c" },
+            { text: "4,82 %", value: "d" }
+        ],
+        correctAnswer: "c",
+        steps: `
+            <strong>Taxa de rebuig:</strong><br>
+            Rendiment:<br>
+             rebuig de 3 % = rendiment del 97 %
+            Rendiment del process tèrmic:<br>
+            \\[
+            0,97 \\times \\ R_t = 0,9321
+            \\]
+            \\[
+            R_t = \\frac{0,9312}{0,97} = 0,96 = 96\\,\\text{%}
+            \\]
+            Tassa de rebuig total:<br>
+            \\[
+            100\\,\\text{%} - 96\\,\\text{%} = 4\\,\\text{%}
+            \\]
+            <br><br>
+         `
+    }
+];
