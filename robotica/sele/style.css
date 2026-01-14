@@ -1,3 +1,51 @@
+/* ===== NAVBAR LAYOUT ===== */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  z-index: 999;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 14px;
+  color: var(--blue-dark);
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background: var(--blue-extra-light);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* DARK MODE DROPDOWN */
+body.dark-mode .dropdown-content {
+  background: #071e34;
+}
+
+body.dark-mode .dropdown-content a {
+  color: #d6ecff;
+}
+
 /* ---------- RESET ---------- */
 * {
   box-sizing: border-box;
