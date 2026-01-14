@@ -765,7 +765,7 @@ elaborades directament a un proveïdor, el cost de cada peça és de \\(0{,}65\\
             <br>
             - Producció:
             \\[
-            c_{prod} = c_1 \\times s + c_2 \\times p = 13{,}5\\,\\text{€/m}^2 \\times 0,625\\,\\text{m}^2 + 0,85\\,\\text{€/m} \\times 2,945\\,\\text{m} = 3,35\\,\\text{€}
+            c_{prod} = c_1 \\times \\ s + c_2 \\times \\ p = 13{,}5\\,\\text{€/m}^2 \\times \\ 0,625\\,\\text{m}^2 + 0,85\\,\\text{€/m} \\times \\ 2,945\\,\\text{m} = 3,35\\,\\text{€}
             \\]
             - Compra:
             \\[
