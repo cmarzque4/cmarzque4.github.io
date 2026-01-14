@@ -698,7 +698,7 @@ les qüestions que hi ha a continuació utilitzant les variables d’estat segü
 el quadrat de costat \\(b = 0,25\\,\\text{m}\\) que es mostra en la figura. Una empresa es planteja produir el puzle o comprar les peces ja elaborades directament a un proveïdor.
 Si l’empresa produeix el puzle, el cost de producció es calcula amb l’expressió \\(c = c_1s + c_2p\\), en què \\(s\\) és la
 superfície de fusta utilitzada i \\(p\\) és el perímetre de les peces tallades per a construir el puzle. En aquest cas, el
-primer coeficient de cost és \\(c_1 = 13{,}5\\)\\(€/m^2\\) i el segon és \\(c_2 = 0{,}85\\,\\text{€/m}\\). En canvi, si l’empresa compra les peces ja
+primer coeficient de cost és \\(c_1 = 13{,}5\\,\\text{€/})\\(m^2\\) i el segon és \\(c_2 = 0{,}85\\,\\text{€/m}\\). En canvi, si l’empresa compra les peces ja
 elaborades directament a un proveïdor, el cost de cada peça és de \\(0{,}65\\,\\text{€}\\) si la peça fa menys de \\(100\\)\\(cm^2\\), i de \\(0{,}95\\,\\text{€}\\) si la peça fa més de \\(100\\)\\(cm^2\\). Determineu:
 
                <img src="ex.puzle2018.png" alt="imatge puzle">
@@ -765,7 +765,7 @@ elaborades directament a un proveïdor, el cost de cada peça és de \\(0{,}65\\
             <br>
             - Producció:
             \\[
-            c_{prod} = c_1 \\times \\ s + c_2 \\times \\ p = 13{,}5 €/m^2 \\times \\ 0,625 m^2 + 0,85\\,\\text{€/m} \\times \\ 2,945\\,\\text{m} = 3,35\\,\\text{€}
+            c_{prod} = c_1 \\times \\ s + c_2 \\times \\ p = 13{,}5\\,\\{€/}m^2 \\times \\ 0,625 m^2 + 0,85\\,\\text{€/m} \\times \\ 2,945\\,\\text{m} = 3,35\\,\\text{€}
             \\]
             - Compra:
             \\[
@@ -875,6 +875,7 @@ punt \\(B\\). El diàmetre interior del cilindre és \\(d_{int} = 70\\,\\text{mm
             <br>
             <img src="6b2018.png" alt=Imatge relacionada amb la resposta"
             <br>
+            <br>
             <strong>b) La massa de la placa:</strong>
             <br>
             \\[
@@ -974,8 +975,8 @@ gasolina i \\(0{,}73\\,\\text{€/L}\\) en el cas del GLP. Si el vehicle circula
         type: "questions", // Tipus de pregunta
         category: "materials",
         text: `Una companyia aèria té programats quatre vols diaris entre dues ciutats: dos al matí,
-un a la tarda i un altre a la nit. Els vols del matí registren una ocupació mitjana del 84,3 %,
-el vol de la tarda del 77,3 % i el de la nit del 82,3 %. Si la capacitat de l’avió que s’utilitza en
+un a la tarda i un altre a la nit. Els vols del matí registren una ocupació mitjana del \\(84,3 %\\),
+el vol de la tarda del \\(77,3 %\\) i el de la nit del \\(82,3 %\\). Si la capacitat de l’avió que s’utilitza en
 aquests vols és de 200 persones, quants passatgers s’han transportat en un any i quina ha
 estat l’ocupació mitjana global?`,
         options: [
@@ -1089,7 +1090,7 @@ l’eix d’entrada del multiplicador és \\(P_{entrada} = 1,966\\,\\text{MW}\\)
         correctAnswer: "c",
         steps: `
             <strong> Aerogenerador:</strong><br>
-            Rendiment multiplicador (η_m = 0,7):<br>
+            Rendiment multiplicador \\(η_m = 0{,}7\\):<br>
             \\[
             P_{entrada} = P \\times \\ η_m = 1,966\\,\\text{MW} \\times \\ 0,7 = 1,3762\\,\\text{MW}
             \\]
@@ -1107,7 +1108,7 @@ l’eix d’entrada del multiplicador és \\(P_{entrada} = 1,966\\,\\text{MW}\\)
     {
         type: "questions", // Tipus de pregunta
         category: "materials_i_assaigs",
-        text: `En un ajust amb joc 35 H7/f7, el joc màxim és 75 μm i el joc mínim 25 μm. Si la tolerància H7 del forat és \\( \\frac{+25}{0} \\) \\(μm\\), quina és la tolerància f7 de l’eix?`,
+        text: `En un ajust amb joc \\(35 H7/f7\\), el joc màxim és \\(75 μm\\) i el joc mínim \\(25 μm\\). Si la tolerància H7 del forat és \\( \\frac{+25}{0} \\) \\(μm\\), quina és la tolerància \\(f7\\) de l’eix?`,
         options: [
             { text: "\\( ( \\frac{+25}{0}) \\) \\(μm\\)", value: "a" },
             { text: "\\( ( \\frac{+50}{25}) \\) \\(μm\\)", value: "b" },
@@ -1157,8 +1158,8 @@ l’eix d’entrada del multiplicador és \\(P_{entrada} = 1,966\\,\\text{MW}\\)
     {
         type: "questions", // Tipus de pregunta
         category: "materials_i_assaigs",
-        text: `Un cargol M16 × 2 normalitzat té un diàmetre exterior de 16 mm i un pas de 2 mm. Si
-es cargola en una femella fixa, quantes voltes ha de fer el cargol per a avançar 8 mm?`,
+        text: `Un cargol \\(M16 × 2\\) normalitzat té un diàmetre exterior de \\(16 mm\\) i un pas de \\(2 mm\\). Si
+es cargola en una femella fixa, quantes voltes ha de fer el cargol per a avançar \\(8 mm\\)?`,
         options: [
             { text: "2 voltes", value: "a" },
             { text: "8 voltes", value: "b" },
@@ -1178,8 +1179,8 @@ es cargola en una femella fixa, quantes voltes ha de fer el cargol per a avança
      {
         type: "questions", // Tipus de pregunta
         category: "materials_i_assaigs",
-        text: `El cost de producció de n unitats d’un producte és c = (45 000 + 34n) €. Si es vol començar
-a obtenir beneficis quan s’han venut 2 500 unitats, quin ha de ser el preu de venda unitari?`,
+        text: `El cost de producció de n unitats d’un producte és \\(c = (45 000 + 34n)\\,\\text{€}\\). Si es vol començar
+a obtenir beneficis quan s’han venut \\(2 500\\) unitats, quin ha de ser el preu de venda unitari?`,
         options: [
             { text: "52€", value: "a" },
             { text: "34€", value: "b" },
@@ -1226,8 +1227,8 @@ a obtenir beneficis quan s’han venut 2 500 unitats, quin ha de ser el preu de 
      {
         type: "questions", // Tipus de pregunta
         category: "materials_i_assaigs",
-        text: `En un estudi sobre la durabilitat de les bateries d’ió liti, es van analitzar 1 000 bateries
-durant tres anys. D’aquestes bateries, 94 havien deixat de funcionar un cop transcorreguts els
+        text: `En un estudi sobre la durabilitat de les bateries d’ió liti, es van analitzar \\(1 000\\) bateries
+durant tres anys. D’aquestes bateries, \\(94\\) havien deixat de funcionar un cop transcorreguts els
 dos primers anys. Tenint en compte aquesta informació, la fiabilitat (probabilitat de funcionar correctament durant un cert temps) d’aquest tipus de bateries al cap de dos anys és del`,
         options: [
             { text: "90,6%", value: "a" },
@@ -1296,10 +1297,10 @@ cent (%) si gira a \\(n = 1 400\\)\\(min^{–1}\\)?`,
             <br><br>
             Tensió aplicada:
             \\[
-            n_s = \\frac{60 \\times \\ f}{p} = \\frac{60 \\times \\ 50\\,\\text{Hz}}{2} = 1500 min^{–1} }
+            n_s = \\frac{60 \\times \\ f}{p} = \\frac{60 \\times \\ 50\\,\\text{Hz}}{2} = 1500 min^{–1}
             \\]
             \\[
-            s = \\frac{n_s - n}{n_s} = \\frac{1500 min^{–1} } - 1400 min^{–1} }{1500 min^{–1} } = \\frac{100}{1500} = 0,0667 = 6,67%
+            s = \\frac{n_s - n}{n_s} = \\frac{1500 min^{–1} - 1400 min^{–1} }{1500 min^{–1} } = \\frac{100}{1500} = 0,0667 = 6,67%
             \\]
             <br><br>
    `
@@ -1310,7 +1311,7 @@ cent (%) si gira a \\(n = 1 400\\)\\(min^{–1}\\)?`,
         text: `El magal és un aliatge resistent i lleuger que s’utilitza per a l’elaboració d’instruments
 quirúrgics. Conté un \\(8 %\\) d’alumini \\((Al)\\), un \\(1 %\\) de zinc \\((Zn)\\), un \\(0,2 %\\) de manganès \\((Mn)\\)
 i la resta és magnesi \\((Mg)\\). En l’obtenció d’aquest aliatge, quina quantitat de zinc cal per a
-aliar-lo amb 350 kg de magnesi?`,
+aliar-lo amb \\(350\\,\\text{kg}\\) de magnesi?`,
         options: [
             { text: "3,5 kg", value: "a" },
             { text: "3,855 kg", value: "b" },
