@@ -1101,6 +1101,9 @@ l’eix d’entrada del multiplicador és \\(P_{entrada} = 1,966\\,\\text{MW}\\)
             \\[
             η_{gen} = \\frac{P_{elèctrica}}{P_{entrada}} = \\frac{1,2\\,\\text{MW}}{1,3762\\,\\text{MW}} = 0,872
             \\]
+            \\[
+            η_{gen} = 87,2\\,\\text{%}
+            \\]
             Potència dissipada:<br>
             \\[
             P_{diss} = P_{entrada} - P_{elèctrica} = 1,3762\\,\\text{MW} - 1,2\\,\\text{MW} = 0,1762\\,\\text{MW} = 176,2\\,\\text{kW}
@@ -1244,11 +1247,11 @@ dos primers anys. Tenint en compte aquesta informació, la fiabilitat (probabili
             <strong>Fiabilitat de bateríes:</strong><br>
             - Funcionen correctament:
             \\[
-            100 - 94 = 906
+            1000 - 94 = 906
             \\]
             - Fiabilitat:
             \\[
-            \\frac{906}{1000} = 0,906 = 90,6\,\text{%}
+            \\frac{906}{1000} = 0,906 = 90,6\\,\\text{%}
             \\]
             <br><br>
  `
@@ -1303,7 +1306,7 @@ cent (%) si gira a \\(n = 1 400\\)\\(min^{–1}\\)?`,
             n_s = \\frac{60 \\times \\ f}{p} = \\frac{60 \\times \\ 50\\,\\text{Hz}}{2} = 1500 min^{–1}
             \\]
             \\[
-            s = \\frac{n_s - n}{n_s} = \\frac{1500 min^{–1} - 1400 min^{–1} }{1500 min^{–1} } = \\frac{100}{1500} = 0,0667 = 6,67\,\text{%}
+            s = \\frac{n_s - n}{n_s} = \\frac{1500 min^{–1} - 1400 min^{–1} }{1500 min^{–1} } = \\frac{100}{1500} = 0,0667 = 6,67\\,\\text{%}
             \\]
             <br><br>
    `
@@ -1326,7 +1329,7 @@ aliar-lo amb \\(350\\,\\text{kg}\\) de magnesi?`,
             <strong>Porcentatge de Mg:</strong>
             <br>
             \\[
-            100 - (8 + 1 + 0,2) = 90,8\,\text{%} Mg  
+            100 - (8 + 1 + 0,2) = 90,8\\,\\text{%} Mg  
             \\]
             <br>
             - Massa de Mg: \\(350\\,\\text{kg}\\)
@@ -1426,7 +1429,7 @@ de tractament tèrmic?`,
             0,97 \\times \\ R_t = 0,9321
             \\]
             \\[
-            R_t = \\frac{0,9312}{0,97} = 0,96 = 96\,\text{%}
+            R_t = \\frac{0,9312}{0,97} = 0,96 = 96\\,\\text{%}
             \\]
             Tassa de rebuig total:<br>
             \\[
