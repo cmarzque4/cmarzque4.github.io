@@ -67,7 +67,7 @@ const questions = [
             η_a = \\ 0,8 - 8,9 W/ m^2 ºC \\times \\frac{50 - 18\\,\\text{ºC}}{800 m^2 } = 0,444\\
             \\]
             \\[
-            η_a = 44,4%
+            η_a = 44,4\\,\\text{%}
             \\]
             - rendiment \\(η_b\\):
             \\[
@@ -77,7 +77,7 @@ const questions = [
             η_b = 0,66 - 3,2 W/ m^2 ºC \\frac{50 - 18\\,\\text{ºC}}{800 m^2 } = 0,532
             \\]
             \\[
-            η_b = 53,2%
+            η_b = 53,2\\,\\text{%}
             \\]
              - L’opció més eficient és triar el model de captador B.
             <br><strong>b) El nombre de captadors \\(n\\) que caldria instaŀlar per a escalfar tota l’aigua:</strong>
@@ -127,7 +127,7 @@ const questions = [
             η_b = 0,66 - 3,2 W/m^2ºC \\frac{50 - 18\\,\\text{ºC}}{400 m^2 } = 0,404
             \\]
             \\[
-            η_b = 40,4%
+            η_b = 40,4\,\text{%}
             \\]
             - Energia solar:
              \\[
@@ -654,7 +654,7 @@ i del mateix valor. Determineu:
             η = \\frac{P_{mot}}{P_{cons}} = \\frac{10153\\,\\text{kW}}{31815\\,\\text{kW}} = 0,3191
             \\]
             \\[
-            η = 31,91 %
+            η = 31,91 \,\text{%}
             \\]
             <br><br>`,
     },
@@ -1245,7 +1245,7 @@ dos primers anys. Tenint en compte aquesta informació, la fiabilitat (probabili
             \\]
             - Fiabilitat:
             \\[
-            \\frac{906}{1000} = 0,906 = 90,6%
+            \\frac{906}{1000} = 0,906 = 90,6\,\text{%}
             \\]
             <br><br>
  `
@@ -1300,7 +1300,7 @@ cent (%) si gira a \\(n = 1 400\\)\\(min^{–1}\\)?`,
             n_s = \\frac{60 \\times \\ f}{p} = \\frac{60 \\times \\ 50\\,\\text{Hz}}{2} = 1500 min^{–1}
             \\]
             \\[
-            s = \\frac{n_s - n}{n_s} = \\frac{1500 min^{–1} - 1400 min^{–1} }{1500 min^{–1} } = \\frac{100}{1500} = 0,0667 = 6,67%
+            s = \\frac{n_s - n}{n_s} = \\frac{1500 min^{–1} - 1400 min^{–1} }{1500 min^{–1} } = \\frac{100}{1500} = 0,0667 = 6,67\,\text{%}
             \\]
             <br><br>
    `
@@ -1323,7 +1323,7 @@ aliar-lo amb \\(350\\,\\text{kg}\\) de magnesi?`,
             <strong>Porcentatge de Mg:</strong>
             <br>
             \\[
-            100 - (8 + 1 + 0,2) = 90,8% Mg  
+            100 - (8 + 1 + 0,2) = 90,8\,\text{%} Mg  
             \\]
             <br>
             - Massa de Mg: \\(350\\,\\text{kg}\\)
@@ -1423,7 +1423,7 @@ de tractament tèrmic?`,
             0,97 \\times \\ R_t = 0,9321
             \\]
             \\[
-            R_t = \\frac{0,9312}{0,97} = 0,96 = 96%
+            R_t = \\frac{0,9312}{0,97} = 0,96 = 96\,\text{%}
             \\]
             Tassa de rebuig total:<br>
             \\[
