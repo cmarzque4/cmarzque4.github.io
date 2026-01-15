@@ -14,11 +14,6 @@
       color: var(--blue-dark);
     }
 
-p, .question-images, .math-content {
-    overflow-x: auto; /* Si el contingut no cap, apareix una barreta a sota */
-    overflow-y: hidden;
-    padding-bottom: 5px;
-}
 
     header {
       background: linear-gradient(to right, var(--blue-dark), var(--blue-mid));
@@ -385,6 +380,15 @@ li button:hover {
   color: #023e8a;
   text-decoration: none;
   font-weight: 500;
+}
+
+#quiz-container img {
+  max-width: 100% !important; 
+  height: auto !important;    
+  display: block;             
+  margin: 20px auto;         
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+  border-radius: 8px;        
 }
 
 /* ===== DARK MODE CINEMÀTIC ===== */
