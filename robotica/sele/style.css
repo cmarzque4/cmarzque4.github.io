@@ -91,7 +91,7 @@
     }
 
 h2{
-align: center;
+text-align: center;
 font-family: 'Poppins', sans-serif;
 font-size: 2.2rem;
 color: var(--blue-mid);
@@ -389,14 +389,12 @@ body.dark-mode {
     animation: gradientShiftDark 20s ease infinite;
 }
 
-   body.dark-mode main {
-      max-width: 960px;
-      margin: 2.5rem auto;
-      padding: 2rem;
-      background: var(--blue-dark);
-      border-radius: 14px;
-      box-shadow: 0 8px 20px var(--shadow);
-    }
+body.dark-mode #quiz-container, 
+body.dark-mode main {
+  background: #1f1f3a;
+  color: #e0e0ff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
 
 @keyframes gradientShiftDark {
     0% { background-position: 0% 50%; }
