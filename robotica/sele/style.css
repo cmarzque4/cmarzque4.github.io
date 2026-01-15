@@ -32,7 +32,7 @@
 }
 
 #quiz-container {
-    max-width: 800px;
+    max-width: 1300px;
     margin: 20px auto;
     background: #fff;
     padding: 25px;
@@ -70,7 +70,7 @@
     }
 
     main {
-      max-width: 960px;
+      max-width: 1200px;
       margin: 2.5rem auto;
       padding: 2rem;
       background: var(--white);
@@ -438,10 +438,7 @@ body.dark-mode img {
 
 body.dark-mode h2 { color: #f0f0ff; }
 body.dark-mode p { color:--light-blue; }
-body.dark-mode #quiz-container { 
-    background: #1f1f3a; 
-    color: #e0e0ff; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.6); 
+
 }
 body.dark-mode label { color: #c8c8ff; }
 body.dark-mode select { 
