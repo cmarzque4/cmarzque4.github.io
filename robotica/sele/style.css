@@ -424,24 +424,24 @@ body.dark-mode select {
 }
 
 body.dark-mode li button {
-    background: linear-gradient(145deg, #7a6aff, #4d4fff);
+    background: linear-gradient(145deg, #0077b6, #e0f7fa);
     color: #f0f0ff;
     box-shadow: 0 0 12px rgba(77,79,255,0.7), 0 4px 12px rgba(0,0,0,0.4);
 }
 
 body.dark-mode li button:hover {
-    background: linear-gradient(145deg, #4d4fff, #7a6aff);
+    background: linear-gradient(145deg, #e0f7fa, #0077b6);
     transform: translateY(-2px);
     box-shadow: 0 0 25px rgba(77,79,255,0.9), 0 6px 15px rgba(0,0,0,0.5);
 }
 
 body.dark-mode .solution-button {
-    background: linear-gradient(145deg, #ffa35c, #ff7a00);
+    background: linear-gradient(145deg, #7096E6, #073491);
     box-shadow: 0 0 12px rgba(255,123,0,0.7), 0 4px 12px rgba(0,0,0,0.4);
 }
 
 body.dark-mode .solution-button:hover {
-    background: linear-gradient(145deg, #ff7a00, #ffa35c);
+    background: linear-gradient(145deg, #073491, #7096E6);
     transform: translateY(-2px);
     box-shadow: 0 0 25px rgba(255,123,0,0.9), 0 6px 15px rgba(0,0,0,0.5);
 }
@@ -600,7 +600,7 @@ button {
 
 .solution-button {
     width: 80%;
-    background: linear-gradient(145deg, #4290ff, #22cae6);
+    background: linear-gradient(145deg, #7096E6, #073491);
     color: white;
     border: none;
     padding: 14px;
@@ -613,7 +613,7 @@ button {
 }
 
 .solution-button:hover {
-    background: linear-gradient(145deg, #22cae6, #4290ff);
+    background: linear-gradient(145deg, #073491, #7096E6);
     transform: translateY(-2px);
     box-shadow: 0 0 20px rgba(35,126,255,0.8), 0 6px 15px rgba(0,0,0,0.2);
 }
