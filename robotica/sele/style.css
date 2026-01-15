@@ -399,11 +399,35 @@ body.dark-mode {
     animation: gradientShiftDark 20s ease infinite;
 }
 
-body.dark-mode #quiz-container, 
-body.dark-mode main {
-  background: #1f1f3a;
-  color: #e0e0ff;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+
+body.dark-mode main, 
+body.dark-mode #quiz-container {
+    background-color: #0d1117 !important; /* Un fons blau molt fosc/negre */
+    background-image: none !important;     /* Elimina degradats que puguin molestar */
+    border: 1px solid #30363d;             /* Una vora fina per definir el quadre */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode p, 
+body.dark-mode li, 
+body.dark-mode label,
+body.dark-mode .brand-text {
+    color: #90e0ef !important; /* El teu blau clar --blue-light */
+}
+
+body.dark-mode .projecte, 
+body.dark-mode #quiz-container div {
+    background-color: #161b22 !important;
+    color: #90e0ef !important;
+}
+
+body.dark-mode img {
+    filter: brightness(0.9) contrast(1.1);
+    background-color: #f0f0f0; /* Manté un fons neutre per a les fórmules */
+    padding: 10px;
 }
 
 @keyframes gradientShiftDark {
