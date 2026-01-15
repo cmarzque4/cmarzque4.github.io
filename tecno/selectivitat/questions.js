@@ -1,7 +1,7 @@
 const questions = [
     {
         type: "exercicis",
-        category: "control_logic",
+        category: "control",
         text: `<br>Una cadira de rodes elèctrica disposa de dos sistemes per a controlar la marxa endavant. El
         primer sistema és una palanca de control (o <i>joystick</i>). Si es fa servir aquest sistema, la cadira es
         desplaça endavant quan l’usuari mou la palanca en la direcció corresponent. El segon sistema
@@ -160,7 +160,7 @@ const questions = [
     },
     {
         type: "exercicis",
-        category: "energia",
+        category: "motors",
         text: `<br>Una motorista puja un pendent a una velocitat constant \\(v = 50\\,\\text{km/h}\\) sense fer lliscar la
         roda del darrere. La marxa que té posada fa que la relació de transmissió entre l’eix de sortida del motor i l’eix de la roda del darrere sigui \\(τ = ω_{roda}/ω_{motor} = 0{,}044\\). Aquesta reducció de
         velocitat s’aconsegueix mitjançant una transmissió d’engranatges de rendiment \\(η_{eng} = 0{,}90\\) i
@@ -233,7 +233,7 @@ const questions = [
     },
     {
         type: "exercicis",
-        category: "energia",
+        category: "electrics",
         text: `
         <img src="ex.corrent2018.png" alt="Imatge cirquit">
         <br>Els dos llums d’encreuament d’un vehicle es connecten en paraŀlel a una bateria de tensió
@@ -369,7 +369,7 @@ cicle de gas és \\(η_g = 0,32\\). Determineu:
     },
         {
         type: "exercicis",
-        category: "energia",
+        category: "control",
         text: `<br>Els senyals lluminosos de limitació de velocitat en una via d’accés a una ciutat es controlen automàticament. Redueixen la velocitat màxima permesa quan la contaminació és alta o
 quan la mesura de la velocitat mitjana dels vehicles en dos punts de mesurament determinats
 és inferior al 80 % de la limitació indicada pel senyal lluminós. Responeu a les qüestions que
@@ -401,7 +401,7 @@ hi ha a continuació utilitzant les variables d’estat següents:
     },
         {
         type: "exercicis",
-        category: "energia",
+        category: "motors",
         text: `<br>La suma de la resistència aerodinàmica i la resistència al rodolament constitueix la
 demanda bàsica de potència d’un automòbil. La força resistent, expressada com una força
 que s’oposa a l’avanç del vehicle, és donada per l’expressió \\(F_r = (230 + 0,13v^2)\\,\\text{N}\\), en què \\(v\\) és la
@@ -466,7 +466,7 @@ Si quan el vehicle avança a una velocitat constant \\(v = 60\\,\\text{km/h}\\) 
     },
         {
         type: "exercicis",
-        category: "energia",
+        category: "electrics",
         text: `
        <img src="ex.cirquit_planxa2018.png" alt="Imatge cirquit"> 
         Una planxa de viatge pot funcionar connectada a la xarxa de tensió \\(U_1 = 120\\,\\text{V}\\) i a la xarxa
@@ -542,7 +542,7 @@ tancat. La potència de la planxa és, en tots dos casos, \\(P = 1 000\\,\\text{
     },
         {
         type: "exercicis",
-        category: "energia",
+        category: "maquines",
         text: `
         <img src="ex.cartell2018.png" alt="Imatge cartell">
         <br>El cartell publicitari d’un bar de menús està format per dos taulers homogenis de fusta
@@ -660,7 +660,7 @@ i del mateix valor. Determineu:
     },
         {
         type: "exercicis",
-        category: "control_logic",
+        category: "control",
         text: `<br>S’ha dissenyat un exoesquelet robòtic per a la rehabilitació de les extremitats superiors
 de persones amb lesions neurològiques. Aquest aparell disposa d’un motor elèctric per a
 assistir el moviment del colze afectat per la lesió. El motor s’activa quan l’aparell detecta la
@@ -693,7 +693,7 @@ les qüestions que hi ha a continuació utilitzant les variables d’estat segü
     },
     {
         type: "exercicis",
-        category: "energia",
+        category: "organització",
         text: `<br>S’ha dissenyat un puzle per a infants format per set peces. L’objectiu del joc és construir amb totes les peces
 el quadrat de costat \\(b = 0,25\\,\\text{m}\\) que es mostra en la figura. Una empresa es planteja produir el puzle o comprar les peces ja elaborades directament a un proveïdor.
 Si l’empresa produeix el puzle, el cost de producció es calcula amb l’expressió \\(c = c_1s + c_2p\\), en què \\(s\\) és la
@@ -776,7 +776,7 @@ elaborades directament a un proveïdor, el cost de cada peça és de \\(0{,}65\\
     },
     {
         type: "exercicis",
-        category: "energia",
+        category: "motors",
         text: `<br>Una plataforma elevadora puja amb una velocitat constant una càrrega fins a una altura
 \\(Δh = 4{,}5\\,\\text{m}\\) en un temps \\(t = 50\\,\\text{s}\\). La plataforma s’acciona amb un motor elèctric de corrent
 continu en sèrie amb un reductor d’engranatges. Segons el catàleg del fabricant, el rendiment
@@ -852,7 +852,7 @@ i es mantingués la velocitat (considereu que els rendiments i la tensió d’al
     },
     {
         type: "exercicis",
-        category: "energia",
+        category: "maquines",
         text: `
         <br>La placa quadrada d’acer de la figura, de costat \\(L = 1 000\\,\\text{mm}\\) i gruix \\(e = 100\\,\\text{mm}\\), està articulada a la
 paret en el punt \\(O\\). Per a controlar la inclinació \\(φ\\) de la placa, s’utilitza un cilindre hidràulic de doble efecte.
@@ -976,7 +976,7 @@ gasolina i \\(0{,}73\\,\\text{€/L}\\) en el cas del GLP. Si el vehicle circula
     },    
     {
         type: "questions", // Tipus de pregunta
-        category: "materials",
+        category: "organitzacio",
         text: `Una companyia aèria té programats quatre vols diaris entre dues ciutats: dos al matí,
 un a la tarda i un altre a la nit. Els vols del matí registren una ocupació mitjana del \\(84,3 %\\),
 el vol de la tarda del \\(77,3 %\\) i el de la nit del \\(82,3 %\\). Si la capacitat de l’avió que s’utilitza en
@@ -1027,7 +1027,7 @@ estat l’ocupació mitjana global?`,
     },
     {
         type: "questions", // Tipus de pregunta
-        category: "pneumatics_hydraulics",
+        category: "materials",
         text: `Una barra cilíndrica té un diàmetre de \\(3\\,\\text{mm}\\), una tensió de ruptura \\(σr = 800\\,\\text{MPa}\\) i un
 límit elàstic \\(σe = 640\\,\\text{MPa}\\). Quina és la força de tracció màxima a la qual es pot sotmetre la
 barra sense que es trenqui?`,
@@ -1055,7 +1055,7 @@ barra sense que es trenqui?`,
     },
     {
         type: "questions", // Tipus de pregunta
-        category: "motors_reductors",
+        category: "materials",
         text: `Una resistència de \\(5\\,\\text{Ω}\\) està feta amb fil de constantà de \\(4{,}508\\,\\text{m}\\) de longitud i una resistivitat de \\(0{,}49\\,\\text{μΩ m}\\). Quin és el diàmetre del fil utilitzat?`,
         options: [
             { text: "0,75 mm", value: "a" },
@@ -1080,7 +1080,7 @@ barra sense que es trenqui?`,
     },
     {
         type: "questions", // Tipus de pregunta
-        category: "pneumatics_hydraulics",
+        category: "metrologia",
         text: `Un aerogenerador està format per un rotor amb tres pales, un multiplicador d’engranatges i un generador elèctric. En unes condicions determinades, la potència elèctrica generada
 és \\(P_{elèctr} = 1,2\\,\\text{MW}\\). Si el rendiment del multiplicador és \\(η_{mult} = 0,70\\) i la potència mecànica a
 l’eix d’entrada del multiplicador és \\(P_{entrada} = 1,966\\,\\text{MW}\\), quin és el rendiment \\(η_{gen}\\) del generador i la potència \\(P_{diss}\\) que s’hi dissipa?`,
@@ -1113,7 +1113,7 @@ l’eix d’entrada del multiplicador és \\(P_{entrada} = 1,966\\,\\text{MW}\\)
     },
     {
         type: "questions", // Tipus de pregunta
-        category: "materials_i_assaigs",
+        category: "metrologia",
         text: `En un ajust amb joc \\(35 H7/f7\\), el joc màxim és \\(75 μm\\) i el joc mínim \\(25 μm\\). Si la tolerància H7 del forat és \\( \\frac{+25}{0} \\) \\(μm\\), quina és la tolerància \\(f7\\) de l’eix?`,
         options: [
             { text: "\\( ( \\frac{+25}{0}) \\) \\(μm\\)", value: "a" },
@@ -1163,7 +1163,7 @@ l’eix d’entrada del multiplicador és \\(P_{entrada} = 1,966\\,\\text{MW}\\)
     },
     {
         type: "questions", // Tipus de pregunta
-        category: "materials_i_assaigs",
+        category: "metrologia",
         text: `Un cargol \\(M16 × 2\\) normalitzat té un diàmetre exterior de \\(16 mm\\) i un pas de \\(2 mm\\). Si
 es cargola en una femella fixa, quantes voltes ha de fer el cargol per a avançar \\(8 mm\\)?`,
         options: [
@@ -1184,7 +1184,7 @@ es cargola en una femella fixa, quantes voltes ha de fer el cargol per a avança
     },
      {
         type: "questions", // Tipus de pregunta
-        category: "materials_i_assaigs",
+        category: "organitzacio",
         text: `El cost de producció de n unitats d’un producte és \\(c = (45 000 + 34n)\\,\\text{€}\\). Si es vol començar
 a obtenir beneficis quan s’han venut \\(2 500\\) unitats, quin ha de ser el preu de venda unitari?`,
         options: [
@@ -1209,7 +1209,7 @@ a obtenir beneficis quan s’han venut \\(2 500\\) unitats, quin ha de ser el pr
     },
      {
         type: "questions", // Tipus de pregunta
-        category: "materials_i_assaigs",
+        category: "pneumatica",
         text: `Una bomba de paletes per a oli treballa a una pressió de 4 bar i proporciona un cabal de
 \\(7\\)\\(m^3/h\\) quan gira a \\(600\\)\\(min^{–1}\\). Quina potència proporciona la bomba?`,
         options: [
@@ -1232,7 +1232,7 @@ a obtenir beneficis quan s’han venut \\(2 500\\) unitats, quin ha de ser el pr
     },
      {
         type: "questions", // Tipus de pregunta
-        category: "materials_i_assaigs",
+        category: "energia",
         text: `En un estudi sobre la durabilitat de les bateries d’ió liti, es van analitzar \\(1 000\\) bateries
 durant tres anys. D’aquestes bateries, \\(94\\) havien deixat de funcionar un cop transcorreguts els
 dos primers anys. Tenint en compte aquesta informació, la fiabilitat (probabilitat de funcionar correctament durant un cert temps) d’aquest tipus de bateries al cap de dos anys és del`,
@@ -1258,7 +1258,7 @@ dos primers anys. Tenint en compte aquesta informació, la fiabilitat (probabili
     },
     {
         type: "questions", // Tipus de pregunta
-        category: "materials_i_assaigs",
+        category: "electrics",
         text: `La velocitat de sincronisme d’un motor asíncron que està connectat a la xarxa de tensió
 \\(U = 230\\,\\text{V}\\) i freqüència \\(f = 50\\,\\text{Hz}\\) és de \\(1 000\\)\\(min^{–1}\\). A quina freqüència està connectat aquest
 motor si passa a tenir una velocitat de sincronisme de \\(1 200\\)\\(min^{–1}\\)?`,
@@ -1287,7 +1287,7 @@ motor si passa a tenir una velocitat de sincronisme de \\(1 200\\)\\(min^{–1}\
     },
     {
         type: "questions", // Tipus de pregunta
-        category: "materials",
+        category: "electrics",
         text: `Un motor asíncron de corrent altern de dos parells de pols està connectat a la xarxa de
 tensió \\(U = 230\\,\\text{V}\\) i freqüència \\(f = 50\\,\\text{Hz}\\). Quin és el lliscament relatiu \\(s\\) del motor en tant per
 cent (%) si gira a \\(n = 1 400\\)\\(min^{–1}\\)?`,
@@ -1313,7 +1313,7 @@ cent (%) si gira a \\(n = 1 400\\)\\(min^{–1}\\)?`,
     },
     {
         type: "questions", // Tipus de pregunta
-        category: "pneumatics_hydraulics",
+        category: "materials",
         text: `El magal és un aliatge resistent i lleuger que s’utilitza per a l’elaboració d’instruments
 quirúrgics. Conté un \\(8 %\\) d’alumini \\((Al)\\), un \\(1 %\\) de zinc \\((Zn)\\), un \\(0,2 %\\) de manganès \\((Mn)\\)
 i la resta és magnesi \\((Mg)\\). En l’obtenció d’aquest aliatge, quina quantitat de zinc cal per a
@@ -1352,7 +1352,7 @@ aliar-lo amb \\(350\\,\\text{kg}\\) de magnesi?`,
     },
     {
         type: "questions", // Tipus de pregunta
-        category: "motors_reductors",
+        category: "maquines",
         text: `La cilindrada d’un motor de combustió és de \\(1 998\\)\\(cm^3\\). Tant el diàmetre com la cursa
 dels cilindres del motor són de \\(86\\,\\text{mm}\\). Quants cilindres té el motor?`,
         options: [
@@ -1377,7 +1377,7 @@ dels cilindres del motor són de \\(86\\,\\text{mm}\\). Quants cilindres té el 
     },
     {
         type: "questions", // Tipus de pregunta
-        category: "pneumatics_hydraulics",
+        category: "metrologia",
         text: `Un sensor de pressió atmosfèrica té una precisió de \\(±0,3\\,\\text{hPa}\\) i una estabilitat en la mesura
 al llarg del temps de \\(±0,1\\,\\text{hPa/any}\\). La mesura de la pressió atmosfèrica l’1 de març de 2017
 va ser de \\(990\\,\\text{hPa}\\) i la del mateix dia de l’any 2018, de \\(1 030\\,\\text{hPa}\\). La diferència entre la pressió
@@ -1407,7 +1407,7 @@ atmosfèrica real dels dos dies està compresa entre`,
     },
     {
         type: "questions", // Tipus de pregunta
-        category: "materials_i_assaigs",
+        category: "organitzacio",
         text: `La fabricació d’una peça metàŀlica es duu a terme en dos processos. En primer lloc, la
 peça es mecanitza en un torn i, posteriorment, se’n milloren les propietats mecàniques mitjançant un tractament tèrmic. Després de cada procés, es controla la qualitat de les peces i
 es desestimen les que no són correctes. Si s’acaba produint correctament el \\(93,12 %\\) de les
