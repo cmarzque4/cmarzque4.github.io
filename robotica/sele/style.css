@@ -14,6 +14,12 @@
       color: var(--blue-dark);
     }
 
+p, .question-images, .math-content {
+    overflow-x: auto; /* Si el contingut no cap, apareix una barreta a sota */
+    overflow-y: hidden;
+    padding-bottom: 5px;
+}
+
     header {
       background: linear-gradient(to right, var(--blue-dark), var(--blue-mid));
       color: var(--white);
@@ -538,10 +544,11 @@ body.dark-mode .question-images img {
     display: flex;
     gap: 20px; /* Espai entre els dos selectors */
     justify-content: center;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto 30px auto;
     padding: 0 20px;
 }
+
 
 .filter-group {
     flex: 1; /* Fa que els dos ocupin el mateix espai */
