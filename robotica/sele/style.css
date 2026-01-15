@@ -542,54 +542,63 @@ body.dark-mode .question-images img {
 /* ---------- FILTROS ---------- */
 .filters {
     display: flex;
-    gap: 20px; /* Espai entre els dos selectors */
+    gap: 25px;
     justify-content: center;
     max-width: 1000px;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 40px auto;
     padding: 0 20px;
 }
 
-
 .filter-group {
-    flex: 1; /* Fa que els dos ocupin el mateix espai */
+    flex: 1;
     display: flex;
     flex-direction: column;
 }
 
-.filters label {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    color: var(--blue-dark);
-    margin-bottom: 8px;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
 .filters select {
+    appearance: none; /* Elimina el diseño básico del navegador */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
     width: 100%;
-    padding: 12px 15px;
+    padding: 14px 45px 14px 18px; /* Espacio para la flecha a la derecha */
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
+    font-weight: 500;
     color: var(--blue-dark);
     background-color: var(--white);
+    
+    /* Borde y sombra coherente con tus tarjetas */
     border: 2px solid var(--blue-light);
-    border-radius: 12px;
+    border-radius: 14px;
+    box-shadow: 0 5px 15px var(--shadow);
+    
     cursor: pointer;
-    box-shadow: 0 4px 10px var(--shadow);
-    transition: all 0.3s ease;
-    appearance: none; 
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%230077b6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%230077b6' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
     background-repeat: no-repeat;
-    background-position: right 15px center;
+    background-position: right 18px center;
     background-size: 18px;
 }
 
-.filters select:hover, .filters select:focus {
+.filters select:hover {
     border-color: var(--blue-mid);
-    outline: none;
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 119, 182, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 119, 182, 0.25);
+}
+
+.filters select:focus {
+    outline: none;
+    border-color: var(--blue-dark);
+    box-shadow: 0 0 0 4px rgba(144, 224, 239, 0.4);
+}
+
+body.dark-mode .filters select {
+    background-color: #2b2b4a;
+    color: #f0f0ff;
+    border-color: #4a4a8a;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2390e0ef' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
 }
 
 
