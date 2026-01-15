@@ -91,7 +91,7 @@
     }
 
 h2{
-alaign: center;
+align: center;
 font-family: 'Poppins', sans-serif;
 font-size: 2.2rem;
 color: var(--blue-mid);
@@ -165,10 +165,6 @@ li button:hover {
       nav a {
         display: block;
         margin: 0.4rem 0;
-      }
-
-      main {
-        margin: 1rem;
       }
     }
 
@@ -432,18 +428,18 @@ body.dark-mode li button {
 body.dark-mode li button:hover {
     background: linear-gradient(145deg, #e0f7fa, #0077b6);
     transform: translateY(-2px);
-    box-shadow: 0 0 25px rgba(77,79,255,0.9), 0 6px 15px rgba(0,0,0,0.5);
+    box-shadow: 0 0 25px rgba(37,79,255,0.9), 0 6px 15px rgba(0,0,0,0.5);
 }
 
 body.dark-mode .solution-button {
     background: linear-gradient(145deg, #7096E6, #073491);
-    box-shadow: 0 0 12px rgba(255,123,0,0.7), 0 4px 12px rgba(0,0,0,0.4);
+    box-shadow: 0 0 12px rgba(25,33,255,0.7), 0 4px 12px rgba(0,0,0,0.4);
 }
 
 body.dark-mode .solution-button:hover {
     background: linear-gradient(145deg, #073491, #7096E6);
     transform: translateY(-2px);
-    box-shadow: 0 0 25px rgba(255,123,0,0.9), 0 6px 15px rgba(0,0,0,0.5);
+    box-shadow: 0 0 25px rgba(25,23,255,0.9), 0 6px 15px rgba(0,0,0,0.5);
 }
 
 /* ===== RESPONSIVE ===== */
@@ -579,6 +575,7 @@ select {
 /* ---------- OPCIONES ---------- */
 
 button {
+  align: center;
   padding: 8px 14px;
   border-radius: 8px;
   border: none;
@@ -623,9 +620,11 @@ button {
 
 .question-images img {
   max-width: 100%;
-  object-fit: quiz-container;
+  object-fit: #quiz-container;
   border-radius: 8px;
-  margin: 10px 10px;
+  margin-left: 10px ;
+  margin-right: 10px ;
+  align: center;
 }
 
 /* ---------- FOOT ---------- */
