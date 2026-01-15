@@ -481,6 +481,16 @@ body.dark-mode .dark-toggle:hover {
     background: linear-gradient(145deg, #3b3b7f, #5555aa);
 }
 
+body.dark-mode .question-images img {
+  display: block;         
+  max-width: 100%;       
+  height: auto;           
+  margin: 20px auto;      
+  border-radius: 12px;   
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+  border: 1px solid var(--blue-light);
+}
+
 
 /* ---------- RESET ---------- */
 * {
@@ -619,12 +629,11 @@ button {
 .visible { display: block; }
 
 .question-images img {
-  max-width: 100%;
-  object-fit: #quiz-container;
-  border-radius: 8px;
-  margin-left: 10px ;
-  margin-right: 10px ;
-  align: center;
+  display: block;         
+  max-width: 100%;       
+  height: auto;           
+  margin: 20px auto;      
+  border-radius: 12px;   
 }
 
 /* ---------- FOOT ---------- */
