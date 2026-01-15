@@ -90,10 +90,18 @@
       margin-bottom: 1.5rem;
     }
 
+h2{
+alaign: center;
+font-family: 'Poppins', sans-serif;
+font-size: 2.5rem;
+color: var(--blue-mid);
+margin-bottom: 1.5rem;
+}
+
 /* ===== BUTTONS WITH GLOW ===== */
 li button {
     flex-grow: 1;
-    background: linear-gradient(145deg, #6a8aff, #4a6fff);
+    background: linear-gradient(145deg, #0077b6, #e0f7fa);
     color: white;
     border: none;
     padding: 14px;
@@ -105,7 +113,7 @@ li button {
 }
 
 li button:hover {
-    background: linear-gradient(145deg, #4a6fff, #6a8aff);
+    background: linear-gradient(145deg, #e0f7fa, #0077b6);
     transform: translateY(-2px);
     box-shadow: 0 0 20px rgba(74,111,255,0.8), 0 6px 15px rgba(0,0,0,0.2);
 }
@@ -137,7 +145,7 @@ li button:hover {
 
     .projecte:hover {
       transform: translateY(-5px);
-      background: #caf0f8;
+      background: #0077b6;
     }
 
     .emoji {
@@ -294,7 +302,7 @@ li button:hover {
 }
 
 .dropdown-content a:hover {
-  background-color: #ade8f4; /* un blau clar que contrasti */
+  background-color: #0077b6; /* un blau clar que contrasti */
   color: var(--blue-dark); /* manté la visibilitat en hover */
 }
 
